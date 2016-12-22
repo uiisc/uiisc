@@ -2,14 +2,14 @@
     <div class="container">
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-left text-muted credit">
-                <li>&copy; 2016 <?=$title?></li>
+                <li>&copy; 2016 <?=$title_s?></li>
             </ul>
             <ul class="legal navbar-right list-inline text-center">
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="./index.php">Terms of service</a></li>
-                <li><a href="./contact.php">Contact us</a></li>
-                <li><a href="./news.php">Hosting news</a></li>
-                <li><a href="./signup.php">Signup</a></li>
+                <li><a href="./index1.php">Home</a></li>
+                <li><a href="./legal_terms.php">Terms of service</a></li>
+                <li><a href="./contact1.php">Contact us</a></li>
+                <li><a href="./news1.php">Hosting news</a></li>
+                <li><a href="./signup1.php">Signup</a></li>
             </ul>
         </div>
     </div>
