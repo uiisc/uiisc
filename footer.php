@@ -14,3 +14,8 @@
         </div>
     </div>
 </nav>
+<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="./js/ie10-viewport-bug-workaround.js"></script>
+<script src="./js/common.js"></script>

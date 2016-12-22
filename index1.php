@@ -5,11 +5,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <title><?=$title?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
-    <title><?=$title?></title>
     <link href="favicon.ico" rel="icon">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css?v=<?=$static_release?>" rel="stylesheet"><!--[if lt IE 9]>
@@ -20,7 +20,7 @@
 </head>
 <body>
 <?php include ("header.php"); ?>
-<div class="container" id="result">
+<div class="container">
 	<div class="jumbotron">
 		<h1>Instant activation</h1>
         <p>Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately!  A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain ...</p>
@@ -45,8 +45,5 @@
     </div>
 </div>
 <?php include ("footer.php"); ?>
-<script src="https://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="./js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
