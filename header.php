@@ -12,8 +12,8 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index1.php">Home</a></li>
-                <li><a href="product.php">Product</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="product1.php">Product</a></li>
+                <li><a href="contact1.php">Contact</a></li>
                 <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="javascript:void(0)">home</a></li>
