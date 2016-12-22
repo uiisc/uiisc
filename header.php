@@ -22,10 +22,10 @@
                         <li><a href="javascript:void(0)" onclick="turnPage('http://www.baidu.com')">Terms of service</a></li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Legal Information</li>
-                        <li><a href="./legal/terms.php">Terms of Service</a></li>
-                        <li><a href="./legal/cancellation-refund.php">Cancellation & Refund</a></li>
-                        <li><a href="./legal/privacy.php">Privacy Policy</a></li>
-                        <li><a href="./legal/payment-methods.php">Payment Methods & Information</a></li>
+                        <li><a href="./legal_terms.php">Terms of Service</a></li>
+                        <li><a href="./legal_cancellation-refund.php">Cancellation & Refund</a></li>
+                        <li><a href="./legal_privacy.php">Privacy Policy</a></li>
+                        <li><a href="./legal_payment-methods.php">Payment Methods & Information</a></li>
                     </ul>
                 </li>
             </ul>
