@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-left text-muted credit">
-                <li>&copy; 2016 <?=$title_s?></li>
+                <li>&copy; 2016 <?=$title_s?>, Powered By <a href="https://ifastnet.com">iFastNet</a>.</li>
             </ul>
             <ul class="legal navbar-right list-inline text-center">
                 <li><a href="./index1.php">Home</a></li>
