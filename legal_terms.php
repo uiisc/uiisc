@@ -1,5 +1,5 @@
 <?php
-	require_once ("core.php");
+    require_once ("core.php");
     $html = file_get_contents('https://ifastnet.com/portal/terms.php');
     // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
 ?>
