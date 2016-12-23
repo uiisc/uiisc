@@ -1,9 +1,8 @@
-
 jQuery.i18n.properties({
     name: 'lang',
     path: './locales/',
     mode: 'both',
-    // language:'zh_CN',
+    // language: 'zh_CN',
     checkAvailableLanguages: true,
     async: true,
     callback: function () {
