@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
-    <link href="favicon.ico" rel="icon">
+    <link href="favicon.ico?v=<?=$static_release?>" rel="icon">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css?v=<?=$static_release?>" rel="stylesheet"><!--[if lt IE 9]>
     <script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
