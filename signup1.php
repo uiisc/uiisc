@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <title><?=$title?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
     <link rel="icon" href="favicon.ico?_=<?=$static_release?>">
