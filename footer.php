@@ -8,8 +8,8 @@
                 <li><a href="./index1.php" data-i18n="home">Home</a></li>
                 <li><a href="./legal_terms.php" data-i18n="tos">Terms of service</a></li>
                 <li><a href="./contact1.php" data-i18n="contact_us">Contact us</a></li>
-                <li><a href="./news1.php" data-i18n="tos">Hosting news</a></li>
-                <li><a href="./signup1.php" data-i18n="signup">Signup</a></li>
+                <li><a href="//help.<?=$domain?>" data-i18n="help">Help</a></li>
+                <li><a href="./news1.php" data-i18n="news">News</a></li>
             </ul>
         </div>
     </div>
