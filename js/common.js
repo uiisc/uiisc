@@ -1,20 +1,25 @@
 
-loadProperties();
-
-function loadProperties() {
-    $.i18n.properties({
-        name: 'hupu-lang',
-        path: 'i18n/',
-        mode: 'map',
-        language: $.i18n.browserLang(),
-        callback: function () {
-            $("[data-locale]").each(function () {
-                $(this).html($.i18n.prop($(this).data("locale")));
-            });
-        }
-    });
-}
-
+jQuery.i18n.properties({
+    name: 'lang',
+    path: './locales/',
+    mode: 'both',
+    // language:'zh_CN',
+    checkAvailableLanguages: true,
+    async: true,
+    callback: function () {
+        $("[data-i18n]").each(function () {
+            var elem = $(this),
+                localizedValue = jQuery.i18n.map[elem.data("i18n")];
+            if (elem.is("input[type=text]") || elem.is("input[type=password]") || elem.is("input[type=email]")) {
+                elem.attr("placeholder", localizedValue);
+            } else if (elem.is("input[type=button]") || elem.is("input[type=submit]")) {
+                elem.attr("value", localizedValue);
+            } else {
+                elem.text(localizedValue);
+            }
+        });
+    }
+});
 function turnPage(url) {
     $.ajax({
         url: url,
