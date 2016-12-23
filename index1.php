@@ -11,12 +11,12 @@
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
     <link href="favicon.ico?v=<?=$static_release?>" rel="icon">
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css?v=<?=$static_release?>" rel="stylesheet"><!--[if lt IE 9]>
     <script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./js/ie-emulation-modes-warning.js"></script><!--[if lt IE 9]>
-    <script src="https://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <script src="//cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body>
 <?php include ("header.php"); ?>

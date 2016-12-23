@@ -1,3 +1,20 @@
+
+loadProperties();
+
+function loadProperties() {
+    $.i18n.properties({
+        name: 'hupu-lang',
+        path: 'i18n/',
+        mode: 'map',
+        language: $.i18n.browserLang(),
+        callback: function () {
+            $("[data-locale]").each(function () {
+                $(this).html($.i18n.prop($(this).data("locale")));
+            });
+        }
+    });
+}
+
 function turnPage(url) {
     $.ajax({
         url: url,
