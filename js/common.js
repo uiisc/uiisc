@@ -5,6 +5,7 @@ jQuery.i18n.properties({
     // language: 'zh_CN',
     checkAvailableLanguages: true,
     async: true,
+    cache: true,
     callback: function () {
         $("[data-i18n]").each(function () {
             var elem = $(this),

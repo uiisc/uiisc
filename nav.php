@@ -11,7 +11,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index1.php" data-i18n="home">Home</a></li>
+                <li><a href="index1.php" data-i18n="home">Home</a></li>
                 <li><a href="product1.php" data-i18n="production">Product</a></li>
                 <li><a href="contact1.php" data-i18n="contact">Contact</a></li>
                 <li><a href="//help.<?=$domain?>" data-i18n="help">Help</a></li>
@@ -32,7 +32,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="./index.php" data-i18n="home">Home</a></li>
-                <li class="active"><a href="//cpanel.<?=$domain?>" data-i18n="login">Login</a></li>
+                <li><a href="//cpanel.<?=$domain?>" data-i18n="login">Login</a></li>
                 <li><a href="./signup1.php" data-i18n="signup">Signup</a></li>
             </ul>
         </div>
