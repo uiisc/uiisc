@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
-    <link href="favicon.ico" rel="icon">
+    <link href="favicon.ico?_=<?=$static_release?>" rel="icon">
     <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css?_=<?=$static_release?>" rel="stylesheet"><!--[if lt IE 9]>
     <script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
