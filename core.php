@@ -5,5 +5,5 @@
     $description = "uiisc, freewebhost, webhost, Crogram";
     $rooturl = $_SERVER['HTTP_HOST'];
     $domain = preg_replace('/^www\./', '', $rooturl);
-    $static_release = "142346575444";
+    $static_release = "2016122617430333";
 ?>
