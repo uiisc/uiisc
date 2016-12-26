@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-bottom">
+<footer class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-left text-muted credit">
@@ -13,7 +13,7 @@
             </ul>
         </div>
     </div>
-</nav>
+</footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="//ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"></script>
 <!--<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>-->

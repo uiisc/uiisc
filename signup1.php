@@ -20,7 +20,7 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body>
-<?php include ("header.php"); ?>
+<?php include ("nav.php"); ?>
 <div class="container">
     <div class="row">
         <h2>Sign Up<!-- For Free Hosting--></h2>

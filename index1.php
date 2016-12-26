@@ -19,7 +19,7 @@
     <script src="//ajax.aspnetcdn.com/ajax/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
 <body>
-<?php include ("header.php"); ?>
+<?php include ("nav.php"); ?>
 <div class="container">
 	<div class="jumbotron">
 		<h1>Instant activation</h1>
