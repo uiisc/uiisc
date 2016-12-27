@@ -37,6 +37,7 @@
         </div>-->
         <div class="panel-body">
             <form class="form-horizontal" role="form" method=post action="https://order.<?=$domain?>/register.php">
+                <input type="hidden" name="plan_name" value="free webhosting">
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-4 control-label" data-i18n="username">Username</label>
                     <div class="col-sm-5">
