@@ -32,7 +32,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="./index.php" data-i18n="home">Home</a></li>
-                <li><a href="//cpanel.<?=$domain?>" data-i18n="login">Login</a></li>
+                <li><a href="./login.php" data-i18n="login">Login</a></li>
                 <li><a href="./signup.php" data-i18n="signup">Signup</a></li>
             </ul>
         </div>
