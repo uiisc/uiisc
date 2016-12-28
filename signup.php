@@ -36,7 +36,7 @@
             </p></h3>
         </div>-->
         <div class="panel-body">
-            <form class="form-horizontal" role="form" method=post action="https://order.<?=$domain?>/register.php">
+            <form class="form-horizontal" role="form" method=post action="//order.<?=$domain?>/register.php"><!--remote_reg.php-->
                 <input type="hidden" name="plan_name" value="free webhosting">
                 <div class="form-group">
                     <label for="inputUsername" class="col-sm-4 control-label" data-i18n="username">Username</label>
@@ -84,7 +84,7 @@
                 <div class="form-group">
                     <label for="inputID" class="col-sm-4 control-label" data-i18n="security_code">Security Code</label>
                     <div class="col-sm-5">
-                    <img width="90px" height="25px" src="https://order.<?=$domain?>/image.php?id=<?=$security_id?>">
+                    <img width="90px" height="25px" src="//order.<?=$domain?>/image.php?id=<?=$security_id?>">
                     <input type="hidden" name="id" class="form-control" id="inputID" placeholder="ID" value="<?=$security_id?>">
                     </div>
                 </div>
