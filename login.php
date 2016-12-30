@@ -26,13 +26,9 @@
         <input type="text" name="uname" class="form-control" placeholder="Username" data-i18n="input_username" required autofocus>
         <input type="password" name="passwd" class="form-control" placeholder="Password" data-i18n="input_password" required>
         <input type="hidden" name="language" value="English" data-i18n="language">
-        <select class="form-control" name="theme">
-            <option selected>cPanel X3</option>
-            <option>VistaPanel</option>
-        </select>
         <div class="checkbox">
             <label>
-                <input type="checkbox" value="remember-me"><span data-i18n="remember_me"> Remember me</span>
+                <input type="checkbox" value="remember-me"><span data-i18n="remember_me">Remember me</span>
                 <a href="//cpanel.<?=$domain?>/lostpassword.php" data-i18n="lost_password">Lost your password?</a>
             </label>
         </div>

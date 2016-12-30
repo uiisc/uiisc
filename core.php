@@ -5,7 +5,7 @@
     $description = "uiisc, freewebhost, webhost, Crogram";
     $rooturl = $_SERVER['HTTP_HOST'];
     $domain = preg_replace('/^www\./', '', $rooturl);
-    $static_release = "2016122717430333";
+    $static_release = "crogram_build_20161230";
     function curlrequest($url, $data, $method="post") {
         $ch = curl_init(); // 初始化CURL句柄
         curl_setopt($ch, CURLOPT_URL, $url); // 设置请求的URL

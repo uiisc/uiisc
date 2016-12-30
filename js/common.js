@@ -2,7 +2,7 @@ jQuery.i18n.properties({
     name: 'lang',
     path: './locales/',
     mode: 'both',
-    language: 'zh_CN',
+    // language: 'zh_CN',
     checkAvailableLanguages: true,
     async: true,
     cache: true,
@@ -19,7 +19,6 @@ jQuery.i18n.properties({
             }
         });
         if (window.location.pathname == "/login.php") {
-            console.log(jQuery.i18n.map["language"]);
             jQuery("input[name=language]").attr("value", jQuery.i18n.map["language"])
         }
     }
