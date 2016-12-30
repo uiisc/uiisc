@@ -65,7 +65,6 @@
                             <option data-i18n="business">Business</option>
                             <option data-i18n="hobby">Hobby</option>
                             <option data-i18n="forum">Forum</option>
-                            <option data-i18n="adult">Adult</option>
                             <option data-i18n="dating">Dating</option>
                             <option data-i18n="software_download">Software / Download</option>
                         </select>
