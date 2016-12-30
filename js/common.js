@@ -23,3 +23,14 @@ jQuery.i18n.properties({
         }
     }
 });
+// if (window.location.pathname == "/legal_payment-methods.php") {
+//     console.log('aaaaaaaa');
+// }
+switch (window.location.pathname) {
+    case "/legal_terms.php":
+        console.log('legal_terms');
+        break;
+    case "/legal_payment-methods.php":
+        console.log('legal_payment-methods');
+        break;
+}

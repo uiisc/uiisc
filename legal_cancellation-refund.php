@@ -75,13 +75,12 @@
                             free domain name (if included with the service being canceled ) will be minused from the refund
                             amount (this could sometimes lead to a negative value).</p>
 
-                        <p class="alert alert-warning"><i class="glyphicon glyphicon-info-sign"></i> Domain name renewal / registration fees and costs are
-                            non-refundable.</p>
+                        <p class="alert alert-warning"><i class="glyphicon glyphicon-info-sign"></i> Domain name renewal / registration fees and costs are non-refundable.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-wrap sectionPolicies">
+        <section class="section-wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 terms_policies_menu">

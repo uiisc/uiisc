@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-wrap sectionPolicies">
+        <section class="section-wrap">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 terms_policies_menu">
