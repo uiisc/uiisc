@@ -12,12 +12,12 @@
     <meta name="description" content="<?=$description?>">
     <meta name="author" content="<?=$author?>">
     <link href="favicon.ico?_=<?=$static_release?>" rel="icon">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//<?=$static_bootstrap_css?>" rel="stylesheet">
     <link href="./css/style.css?_=<?=$static_release?>" rel="stylesheet"><!--[if lt IE 9]>
     <script src="./js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./js/ie-emulation-modes-warning.js"></script><!--[if lt IE 9]>
-    <script src="//cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <script src="//apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="//apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script><![endif]-->
 </head>
 <body>
 <?php include ("nav.php"); ?>
