@@ -83,7 +83,7 @@
                 <div class="form-group">
                     <label for="inputID" class="col-sm-4 control-label" data-i18n="security_code">Security Code</label>
                     <div class="col-sm-5">
-                    <img width="90px" height="25px" src="//order.<?=$domain?>/image.php?id=<?=$security_id?>">
+                    <img width="90px" height="25px" src="./security_code.php?id=<?=$security_id?>">
                     <input type="hidden" name="id" class="form-control" id="inputID" placeholder="ID" value="<?=$security_id?>">
                     </div>
                 </div>
