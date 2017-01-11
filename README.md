@@ -1,5 +1,5 @@
 # myownfreehost-template
-a template for myownfreehost site uiisc.com by bootstrap
+a bootstrap template for myownfreehost site uiisc.com by crogram
 
-author : doudoudzj@sina.com
-site : https://uiisc.com
+* author : doudoudzj@sina.com
+* site : https://uiisc.com
