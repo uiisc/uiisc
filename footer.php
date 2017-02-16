@@ -1,7 +1,7 @@
 <footer class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
-            <ul class="navbar-left list-inline text-left text-muted credit">
+            <ul class="navbar-left list-inline text-center text-muted credit">
                 <li>&copy; 2016 <a href="./index.php"><?=$title_s?></a> &nbsp;&nbsp;&nbsp; Powered By <a href="https://crogram.com" target="blank">Crogram</a> & <a href="https://ifastnet.com" target="blank">iFastNet</a></li>
             </ul>
             <ul class="legal navbar-right list-inline text-center">
