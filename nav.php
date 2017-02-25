@@ -7,12 +7,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="javascript:void(0)"><?=$title_s?></a>
+            <a class="navbar-brand" href="index.php"><?=$title_s?></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a href="index.php" data-i18n="home">Home</a></li>
-                <li><a href="product.php" data-i18n="production">Product</a></li>
+                <!--<li><a href="product.php" data-i18n="production">Product</a></li>-->
                 <li><a href="contact.php" data-i18n="contact">Contact</a></li>
                 <li><a href="//help.<?=$domain?>" data-i18n="help">Help</a></li>
                 <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Others <span class="caret"></span></a>
