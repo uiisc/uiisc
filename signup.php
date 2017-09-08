@@ -1,6 +1,6 @@
 <?php
-	require_once ("core.php");
-    $security_id = md5(rand(6000,getrandmax())); // $security_id = md5(rand(6000,99999999999999991000));
+require_once ("core.php");
+   $security_id = md5(rand(6000,getrandmax())); // $security_id = md5(rand(6000,PHP_INT_MAX));
 ?>
 <!DOCTYPE html>
 <html lang="en">
