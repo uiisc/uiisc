@@ -1,11 +1,12 @@
 <?php
-	require_once ("core.php");
+  define('IN_SYS', true);
+  require_once ("core.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $current_language; ?>">
 <head>
     <meta charset="utf-8">
-    <title><?=$title?> - News</title>
+    <title><?=$title?> - <?php echo $LANG['contact_us']; ?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?=$description?>">
@@ -24,7 +25,9 @@
         <section class="section-wrap">
             <div class="container">
                 <div class="row">
-                    <div class="hidden-xs col-sm-12 col-md-12 termsHead"><h1 data-i18n="contact_us">Contact Us</h1></div>
+                    <div class="hidden-xs col-sm-12 col-md-12 termsHead">
+                      <h1><?php echo $LANG['contact_us']; ?></h1>
+                    </div>
                     <div class="col-sm-12 col-md-12">
                         <h2>Contact</h2>
                         <p>If you have any problems or have the need to contact us to ask a question, 
@@ -33,7 +36,7 @@
                         <p>For technical support please look at the <a href="http://byet.net/forumdisplay.php?f=28" target="_blank">Knowledge Base</a></p>
                     </div>
                     <div class="col-sm-12 col-md-12">
-                        <h2 data-i18n="address">Address</h2>
+                        <h2><?php echo $LANG['address']; ?></h2>
                         <p>Shanghai China.</p>
                     </div>
                     <div class="col-sm-12 col-md-12">

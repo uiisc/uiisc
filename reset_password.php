@@ -1,10 +1,11 @@
 <?php
-	require_once ("core.php");
-    $domain = "uiisc.com";
-    // $html = file_get_contents("http://cpanel.".$domain."/lostpassword.php");
-    // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
-    $password_reset_token_id = "b374b5bd4e35d2cadd98caa77d68c19a";
-    $logged_ipaddress = "116.228.234.98";
+  define('IN_SYS', true);
+  require_once ("core.php");
+  $domain = "uiisc.com";
+  // $html = file_get_contents("http://cpanel.".$domain."/lostpassword.php");
+  // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+  $password_reset_token_id = "b374b5bd4e35d2cadd98caa77d68c19a";
+  $logged_ipaddress = "116.228.234.98";
 ?>
 <!DOCTYPE html>
 <html lang="en">

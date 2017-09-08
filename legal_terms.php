@@ -1,13 +1,14 @@
 <?php
-    require_once ("core.php");
-    // $html = file_get_contents('https://ifastnet.com/portal/terms.php');
-    // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+  define('IN_SYS', true);
+  require_once ("core.php");
+  // $html = file_get_contents('https://ifastnet.com/portal/terms.php');
+  // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $current_language; ?>">
 <head>
     <meta charset="utf-8">
-    <title><?=$title?> - Terms of Service</title>
+    <title><?=$title?> - <?php echo $LANG['tos']; ?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?=$description?>">
@@ -26,7 +27,7 @@
     <div class="row">
         <section class="section-wrap title">
             <div class="container">
-                <h2 class="text-center">Terms of Service</h2>
+                <h2 class="text-center"><?php echo $LANG['tos']; ?></h2>
                 <p class="text-center">Service conditions and policies</p>
             </div>
         </section>
@@ -857,10 +858,10 @@
                             </div>
                             <div class="panel-body">
                                 <ul>
-                                    <li class="active" data-i18n="tos">Terms of Service</li>
-                                    <li><a href="./legal_cancellation-refund.php" data-i18n="cancellation_refund">Cancellation &amp; Refund</a></li>
-                                    <li><a href="./legal_privacy.php" data-i18n="privacy_policy">Privacy Policy</a></li>
-                                    <li><a href="./legal_payment-methods.php" data-i18n="payment_methods">Payment Methods &amp; Information</a></li>
+                                    <li class="active"><?php echo $LANG['tos']; ?></li>
+                                    <li><a href="./legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
+                                    <li><a href="./legal_privacy.php"><?php echo $LANG['privacy_policy']; ?></a></li>
+                                    <li><a href="./legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
                                 </ul>
                             </div>
                         </div>

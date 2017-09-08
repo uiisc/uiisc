@@ -1,10 +1,11 @@
 <?php
-    require_once ("core.php");
-    // $html = file_get_contents('https://ifastnet.com/portal/cancellation-refund.php');
-    // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+  define('IN_SYS', true);
+  require_once ("core.php");
+  // $html = file_get_contents('https://ifastnet.com/portal/cancellation-refund.php');
+  // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $current_language; ?>">
 <head>
     <meta charset="utf-8">
     <title><?=$title?> - Cancellation & Refund</title>
@@ -87,10 +88,10 @@
                             <div class="panel-heading"><i class="glyphicon glyphicon-list-alt"></i> Other legal information</div>
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="./legal_terms.php" data-i18n="tos">Terms of Service</a></li>
-                                    <li class="active" data-i18n="cancellation_refund">Cancellation &amp; Refund</li>
-                                    <li><a href="./legal_privacy.php" data-i18n="privacy_policy">Privacy Policy</a></li>
-                                    <li><a href="./legal_payment-methods.php" data-i18n="payment_methods">Payment Methods &amp; Information</a></li>
+                                  <li><a href="./legal_terms.php"><?php echo $LANG['tos']; ?></a></li>
+                                  <li class="active"><?php echo $LANG['cancellation_refund']; ?></li>
+                                  <li><a href="./legal_privacy.php"><?php echo $LANG['privacy_policy']; ?></a></li>
+                                  <li><a href="./legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
                                 </ul>
                             </div>
                         </div>
