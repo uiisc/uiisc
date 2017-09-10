@@ -2,7 +2,7 @@
 $LANG = array(
   'language' => 'Chinese_traditional',
   'home' => '主頁',
-  'production' => '產品',
+  'solution' => '方案',
   'news' => '新聞',
   'contact' => '聯繫',
   'contact_us' => '聯繫我們',
@@ -39,6 +39,19 @@ $LANG = array(
   'remember_me' => '記住我',
   'please_login' => '請登錄',
   'lost_password' => '忘記密碼了？',
-  'address' => '地址'
+  'address' => '地址',
+  'host-plan' => '主機方案',
+  'host-plan-free' => '免費主機',
+  'host-plan-paid' => '收費主機',
+  'ftp-accounts' => 'FTP 帳號',
+  'sub-domains' => '子網域',
+  'add-on-domains' => '附加網域',
+  'parked-domains' => '寄放網域',
+  'mysql-databases' => 'MySQL 資料庫',
+  'disk-quota' => '磁碟空間額度',
+  'bandwidth' => '月流量額度',
+  'daily-hits' => '每日點擊額度',
+  'host-inodes' => '信息節點額度',
+  'unlimited' => '無限'
 );
 

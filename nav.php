@@ -19,7 +19,7 @@
     <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="index.php"><?php echo $LANG['home']; ?></a></li>
-          <!--<li><a href="product.php"><?php echo $LANG['production']; ?></a></li>-->
+          <li><a href="solution.php"><?php echo $LANG['solution']; ?></a></li>
           <li><a href="contact.php"><?php echo $LANG['contact']; ?></a></li>
           <li><a href="//help.<?=$domain?>"><?php echo $LANG['help']; ?></a></li>
           <li class="dropdown">

@@ -14,8 +14,8 @@
             <ul class="legal navbar-right list-inline text-center">
                 <li class="dropup">
                     <div class="dropdown-toggle" id="changelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="glyphicon glyphicon-globe"></span>
                       <a href="#"><?php echo $languages[$current_language]; ?></a>
-                      <span class="caret"></span>
                     </div>
                     <ul class="dropdown-menu" aria-labelledby="changelanguage">
                       <?php foreach($languages as $key=>$value) {
