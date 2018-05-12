@@ -21,6 +21,16 @@
   </div>
 </div>
 <div class="container">
+
+  <div class="form-group">
+    <label for="domainInput">Domain</label>
+    <input type="text" class="form-control" id="domainInput" placeholder="uiisc.com">
+    <input type="button" class="btn btn-default check-domain" value="Check" />
+  </div>
+  <button class="btn btn-default check-domain">Check</button>
+
+</div>
+<div class="container">
   <div class="row">
     <div class="col-md-6">
       <h2>Automated features!</h2>
@@ -38,5 +48,23 @@
   </div>
 </div>
 <?php include ("footer.php"); ?>
+<script type="text/javascript">
+  $('.check-domain').click(function () {
+    var domain = $('#domainInput').val()
+    if (domain) {
+      $.ajax({
+        method: 'post',
+        url: 'http://api.uiisc.com/DomainCheck?i=1',
+        dataType: 'json',
+        data: {
+          domain: domain
+        },
+        success: function (x) {
+          console.log(x);
+        }
+      })
+    }
+  })
+</script>
 </body>
 </html>
