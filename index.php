@@ -13,21 +13,39 @@
 <?php include ("nav.php"); ?>
 <div class="jumbotron">
   <div class="container">
-    <h1>Instant activation</h1>
-    <p>Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately!  A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain ...</p>
-    <p>
-      <a class="btn btn-lg btn-primary" href="./signup.php" role="button">More &raquo;</a>
-    </p>
+    <h1>选择您的域名</h1>
+    <!-- <p>Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately!  A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain ...</p> -->
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="form-group form-horizontal">
+          <label for="domainInput">Choice Domain</label>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">www</span>
+            <input type="text" class="form-control" id="domainInput" placeholder="yourDomainName">
+            <span class="input-group-addon" id="basic-addon2">.com</span>
+            <!-- <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Action <span class="caret"></span>
+                <span class="sr-only">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="btn-group">
+            <input type="button" class="btn btn-default btn-lg check-domain" value="Check" />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container">
-
-  <div class="form-group">
-    <label for="domainInput">Domain</label>
-    <input type="text" class="form-control" id="domainInput" placeholder="uiisc.com">
-    <input type="button" class="btn btn-default check-domain" value="Check" />
-  </div>
-  <button class="btn btn-default check-domain">Check</button>
 
 </div>
 <div class="container">
