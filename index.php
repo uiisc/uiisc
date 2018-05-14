@@ -54,11 +54,12 @@
     if (domain) {
       $.ajax({
         method: 'post',
-        url: 'http://api.uiisc.com/DomainCheck?i=1',
+        url: 'https://api.croidc.cn/mofh/DomainCheck',
         dataType: 'json',
-        data: {
+        contentType : "application/json",
+        data: JSON.stringify({
           domain: domain
-        },
+        }),
         success: function (x) {
           console.log(x);
         }
