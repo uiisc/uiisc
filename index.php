@@ -53,7 +53,7 @@
     var domain = $('#domainInput').val()
     if (domain) {
       $.ajax({
-        method: 'post',
+        type: 'post',
         url: 'https://api.croidc.cn/mofh/DomainCheck',
         dataType: 'json',
         contentType : "application/json",
