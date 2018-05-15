@@ -23,10 +23,10 @@
           <li><a href="contact.php"><?php echo $LANG['contact']; ?></a></li>
           <li><a href="//help.<?=$domain?>"><?php echo $LANG['help']; ?></a></li>
           <li class="dropdown">
-            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Others <span class="caret"></span></a>
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="javascript:void(0)"><?php echo $LANG['home']; ?></a></li>
-              <li><a href="javascript:void(0)"><?php echo $LANG['tos']; ?></a></li>
+              <li><a href="javascript:void(0)">UIISC</a></li>
+              <li><a href="javascript:void(0)">CROGRAM</a></li>
               <li class="divider"></li>
               <li class="dropdown-header"><?php echo $LANG['legal_information']; ?></li>
               <li><a href="./legal_terms.php"><?php echo $LANG['tos']; ?></a></li>

@@ -13,7 +13,7 @@
 <?php include ("nav.php"); ?>
 <div class="jumbotron">
   <div class="container">
-    <h1>选择您的域名</h1>
+    <h1>Choice Domain</h1>
     <!-- <p>Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately!  A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain ...</p> -->
     <div class="row">
       <div class="col-sm-5">

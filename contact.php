@@ -28,7 +28,10 @@
           </div>
           <div class="col-sm-12 col-md-12">
             <h2><?php echo $LANG['address']; ?></h2>
-            <p>Shanghai China.</p>
+            <p>Yangpu, Shanghai China.</p>
+            <address>
+              <p>&#100;&#111;&#117;&#100;&#111;&#117;&#100;&#122;&#106;&#64;&#115;&#105;&#110;&#97;&#46;&#99;&#111;&#109;</p>
+            </address>
           </div>
           <div class="col-sm-12 col-md-12">
             <h2>Others</h2>
