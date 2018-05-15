@@ -26,7 +26,7 @@ class Language
       $this->initLanguageDir();
   }
   /* 
-  取得语言文件的绝对路径 
+  取得翻译文件的绝对路径 
   */
   public function getFileDir($file)
   {
@@ -40,11 +40,11 @@ class Language
         if (file_exists($dir . $this->language_country . "/" . $file)) {
           return $dir . $this->language_country . "/" . $file;
         } else {
-          if (file_exists($dir . "en-US/" . $file)) {
-            return $dir . "en-US/" . $file;
-          } else {
-            return false;
-          }
+          // if (file_exists($dir . "en-US/" . $file)) {
+          return $dir . "en-US/" . $file;
+          // } else {
+          //   return false;
+          // }
         }
       }
     }

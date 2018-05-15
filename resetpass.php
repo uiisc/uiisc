@@ -2,9 +2,6 @@
   define('IN_SYS', true);
   require_once ("core.php");
   $domain = "uiisc.com";
-  // $html = file_get_contents("http://cpanel.".$domain."/lostpassword.php");
-  // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
-  $password_reset_token_id = "b374b5bd4e35d2cadd98caa77d68c19a";
   $logged_ipaddress = "116.228.234.98";
 ?>
 <!DOCTYPE html>
@@ -16,14 +13,18 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
+<div class="bs-docs-header">
+  <div class="container">
+    <h1>Password Reset</h1>
+    <p>Lost Password Retrieval System</p>
+  </div>
+</div>
 <div class="container">
-    <!--<?=$match?>-->
-    <!--<?=$str_code?>-->
     <blink>ipaddress logged <?=$logged_ipaddress?></blink>
-    <h2 data-i18n="password_eset">Lost Password Retrieval System</h2>
-    <div class="form-group form-horizontal form-account" role="form" action="http://cpanel.<?=$domain?>/passwords.php" method="post" name="password_reset">
-        <h2 data-i18n="password_eset">Password Reset</h2>
-        <input type="hidden" name="token" value="<?=$password_reset_token_id?>">
+    <!-- <h2 data-i18n="password_eset">Lost Password Retrieval System</h2> -->
+    <div class="form-group form-horizontal form-account">
+        <!-- <h2 data-i18n="password_eset">Password Reset</h2> -->
+        <input type="hidden" name="ipaddress" value="<?=$logged_ipaddress?>">
         <div class="form-group">
             <label for="inputUsername" class="control-label" data-i18n="username">Username</label>
             <input type="text" name="username" class="form-control" id="inputUsername" placeholder="Username" data-i18n="input_username" required autofocus>
@@ -32,12 +33,12 @@
             <label for="inputEmail" class="control-label" data-i18n="email">Email Address</label>
             <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address" data-i18n="input_email" required>
         </div>
-        <div class="form-group checkbox">
-            <label>Not yet have an account?</label>
-            <a href="./register.php"><?php echo $LANG['register']; ?></a>
+        <div class="form-group">
+            <label>Not yet have an account ?</label>
+            <label><a href="./register.php"><?php echo $LANG['register']; ?></a></label>
         </div>
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" data-i18n="Fetch">Fetch</button>
+            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
         </div>
     </div>
     <div class="row">

@@ -13,14 +13,22 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
+
+<div class="bs-docs-header">
+    <div class="container">
+        <h1>Cancelation policy &amp; Refund policy</h1>
+        <p>Cancelation &amp; refund information</p>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
-        <section class="section-wrap title">
+        <!-- <section class="section-wrap title">
             <div class="container">
                 <h2 class="text-center">Cancelation policy &amp; Refund policy</h2>
                 <p class="text-center">Cancelation &amp; refund information</p>
             </div>
-        </section>
+        </section> -->
         <section class="section-wrap cancelationInfo">
             <div class="container">
                 <div class="row">

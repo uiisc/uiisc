@@ -8,7 +8,7 @@ $LANG = array(
   'contact_us' => '聯繫我們',
   'help' => '幫助',
   'login' => '登錄',
-  'signup' => '註冊',
+  'register' => '註冊',
   'username' => '用戶名',
   'input_username' => '請輸入用戶名',
   'password' => '密碼',
@@ -52,6 +52,9 @@ $LANG = array(
   'bandwidth' => '月流量額度',
   'daily-hits' => '每日點擊額度',
   'host-inodes' => '信息節點額度',
-  'unlimited' => '無限'
+  'unlimited' => '無限',
+  'resetpassword' => 'Reset Password',
+  'domain' => 'Domain',
+  'input_domain' => 'Please Input Domain',
 );
 
