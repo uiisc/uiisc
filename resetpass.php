@@ -35,7 +35,7 @@
         </div>
         <div class="form-group">
             <label>Not yet have an account ?</label>
-            <label><a href="./register.php"><?php echo $LANG['register']; ?></a></label>
+            <label><a href="register.php"><?php echo $LANG['register']; ?></a></label>
         </div>
         <div class="form-group">
             <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block">Submit</button>

@@ -21,7 +21,7 @@
     <!--<?=$str_code?>-->
     <blink>ipaddress logged <?=$logged_ipaddress?></blink>
     <h2 data-i18n="password_eset">Lost Password Retrieval System</h2>
-    <div class="form-group form-horizontal form-account" role="form" action="http://cpanel.<?=$domain?>/passwords.php" method="post" name="password_reset">
+    <form class="form-signin" role="form" action="http://cpanel.<?=$domain?>/passwords.php" method="post" name="password_reset">
         <h2 data-i18n="password_eset">Password Reset</h2>
         <input type="hidden" name="token" value="<?=$password_reset_token_id?>">
         <div class="form-group">
@@ -32,14 +32,10 @@
             <label for="inputEmail" class="control-label" data-i18n="email">Email Address</label>
             <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address" data-i18n="input_email" required>
         </div>
-        <div class="form-group checkbox">
-            <label>Not yet have an account?</label>
-            <a href="./register.php"><?php echo $LANG['register']; ?></a>
-        </div>
         <div class="form-group">
             <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" data-i18n="Fetch">Fetch</button>
         </div>
-    </div>
+    </form>
     <div class="row">
         <p>In the above form, enter the username and the REGISTERED email address that was used when signing up for the account.<br>
 		We will then email the registered email address with reset account details.

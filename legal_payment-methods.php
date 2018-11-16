@@ -13,22 +13,14 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
-
-<div class="bs-docs-header">
-    <div class="container">
-      <h1><?php echo $LANG['payment_methods']; ?></h1>
-      <p>Payment methods information</p>
-    </div>
-</div>
-
 <div class="container">
   <div class="row">
-    <!-- <section class="section-wrap title">
+    <section class="section-wrap title">
       <div class="container">
         <h2 class="text-center"><?php echo $LANG['payment_methods']; ?></h2>
         <p class="text-center">Payment methods information</p>
       </div>
-    </section> -->
+    </section>
     <section class="section-wrap paymentsInfo">
       <div class="container">
         <div class="row">

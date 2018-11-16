@@ -13,21 +13,21 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
-<div class="bs-docs-header">
+<!-- <div class="bs-docs-header">
     <div class="container">
-    <h1><?php echo $LANG['tos']; ?></h1>
-    <p>Service conditions and policies</p>
+        <h1><?php echo $LANG['tos']; ?></h1>
+        <p>Service conditions and policies</p>
     </div>
-</div>
+</div> -->
 
 <div class="container">
     <div class="row">
-        <!-- <section class="section-wrap title">
+        <section class="section-wrap title">
             <div class="container">
                 <h2 class="text-center"><?php echo $LANG['tos']; ?></h2>
                 <p class="text-center">Service conditions and policies</p>
             </div>
-        </section> -->
+        </section>
         <section class="section-wrap termsInfo">
             <div class="container">
                 <div class="row">

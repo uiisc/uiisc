@@ -14,21 +14,21 @@
 <body>
 <?php include ("nav.php"); ?>
 
-<div class="bs-docs-header">
+<!-- <div class="bs-docs-header">
     <div class="container">
     <h1><?php echo $LANG['privacy_policy']; ?></h1>
     <p>Privacy policy information</p>
     </div>
-</div>
+</div> -->
 
 <div class="container">
     <div class="row">
-        <!-- <section class="section-wrap title">
+        <section class="section-wrap title">
             <div class="container">
                 <h2 class="text-center"><?php echo $LANG['privacy_policy']; ?></h2>
                 <p class="text-center">Privacy policy information</p>
             </div>
-        </section> -->
+        </section>
         <section class="section-wrap privacyInfo">
             <div class="container">
                 <div class="row">
