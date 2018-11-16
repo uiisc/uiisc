@@ -10,18 +10,20 @@ require_once "core.php";
     <?php include "headmate.php";?>
 </head>
 <body>
-    <?php include "nav.php";?>
+<?php include "nav.php";?>
+
     <div class="bs-docs-header">
         <div class="container">
-            <h1>CROGRAM</h1>
-            <p>About Crogram, Inc.</p>
+            <h1>iFastNet</h1>
+            <p>About iFastNet, Inc.</p>
         </div>
     </div>
     <div class="container">
-        <div class="row">
+    <div class="row">
 
-        </div>
     </div>
-    <?php include "footer.php";?>
+    </div>
+
+<?php include "footer.php";?>
 </body>
 </html>

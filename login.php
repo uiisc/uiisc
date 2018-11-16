@@ -13,13 +13,12 @@
 <body>
 <?php include ("nav.php"); ?>
 
-
 <div class="container">
-    <form class="form-signin" role="form" action="//cpanel.<?=$domain?>/login.php" method="post" name="login">
-        <h2 class="form-signin-heading"><?php echo $LANG['please_login']; ?></h2>
-        <input type="text" name="uname" class="form-control" placeholder="<?php echo $LANG['input_username']; ?>" required autofocus>
-        <input type="password" name="passwd" class="form-control" placeholder="<?php echo $LANG['input_password']; ?>" required>
-        <input type="hidden" name="language" value="<?php echo $LANG['language']; ?>">
+    <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?=$domain?>/login.php" method="post" name="login">
+        <h2><?php echo $LANG['please_login']; ?></h2>
+        <input type="text" name="uname" class="form-control" placeholder="<?php echo $LANG['input_username']; ?>" required autofocus autocomplete="off">
+        <input type="password" name="passwd" class="form-control" placeholder="<?php echo $LANG['input_password']; ?>" required autocomplete="off">
+        <input type="hidden" name="language" class="hide" value="<?php echo $LANG['language']; ?>">
         <div class="checkbox">
         <label>
             <input type="checkbox" value="remember-me"><span><?php echo $LANG['remember_me']; ?></span>

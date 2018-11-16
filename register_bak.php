@@ -14,12 +14,6 @@
 <body>
 <?php include ("nav.php"); ?>
 
-<div class="bs-docs-header">
-    <div class="container">
-        <h1><?php echo $LANG['signup_free_hosting']; ?></h1>
-    </div>
-</div>
-
 <div class="container">
     <div class="form-group form-horizontal form-account">
         <input type="hidden" name="plan_name" value="free webhosting">

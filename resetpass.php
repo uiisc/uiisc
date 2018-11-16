@@ -13,12 +13,7 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
-<div class="bs-docs-header">
-  <div class="container">
-    <h1>Password Reset</h1>
-    <p>Lost Password Retrieval System</p>
-  </div>
-</div>
+
 <div class="container">
     <blink>ipaddress logged <?=$logged_ipaddress?></blink>
     <!-- <h2 data-i18n="password_eset">Lost Password Retrieval System</h2> -->

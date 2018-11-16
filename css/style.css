@@ -1,192 +1,215 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 input {
-  border: 0;
-  outline-width: 0 !important;
+    border: 0;
+    outline-width: 0 !important;
 }
 
 button {
-  outline-width: 0 !important;
+    outline-width: 0 !important;
 }
 
 body {
-  padding-top: 20px;
-  padding-bottom: 100px;
-  line-height: 1.5;
-  color: #000;
-  background-color: #fff;
-  outline: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .section-wrap {
-  padding: 10px 0;
+    padding: 10px 0;
 }
 
 .section-wrap.title {
-  border-bottom: 1px solid;
+    border-bottom: 1px solid;
 }
 
 .home {
-  width: 100%;
-  height: 100%;
-  height: 100vh;
-  min-height: 100%;
-  position: relative;
-  color: #fff;
-  background: #0000008a;
-  background-image: url(../images/banner.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    min-height: 100%;
+    position: relative;
+    color: #fff;
+    background: #0000008a;
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body.fixed-header-on {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 .fixed-header-on .navbar-nav>li>a,
 .fixed-header-on .navbar-brand {
-  color: #fff;
+    color: #fff;
 }
 
 .fixed-header-on .navbar-nav>li>a:hover,
 .fixed-header-on .navbar-brand:hover {
-  color: #ffc400;
+    color: #ffc400;
 }
 
 .fixed-header-on .header {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
 }
 
 .fixed-header-on .footer {
-  border-color: transparent;
-  background-color: transparent;
-  background: transparent;
+    border-color: transparent;
+    background-color: transparent;
+    background: transparent;
 }
 
 
 .home-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 20;
-  text-align: center;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .bs-docs-header {
-  position: relative;
-  padding: 30px 0;
-  color: #cdbfe3;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-  background-color: #6f5499;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
-  background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image: -o-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-  background-image: linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-  background-repeat: repeat-x;
+    position: relative;
+    padding: 30px 0;
+    color: #cdbfe3;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
+    background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
+    background-image: -o-linear-gradient(top, #563d7c 0%, #6f5499 100%);
+    background-image: linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+    background-repeat: repeat-x;
 }
 
 .bs-docs-header {
-  margin-bottom: 40px;
-  font-size: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
 }
 
 .bs-docs-header h1 {
-  margin-top: 0;
-  color: #fff;
+    margin-top: 0;
+    color: #fff;
 }
 
 .bs-docs-header p {
-  margin-bottom: 0;
-  font-weight: 300;
-  line-height: 1.4;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 .bs-docs-header .container {
-  position: relative;
+    position: relative;
 }
 
 @media (min-width: 768px) {
-  .bs-docs-header {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    font-size: 24px;
-    text-align: left;
-  }
-  .bs-docs-header h1 {
-    font-size: 60px;
-    line-height: 1;
-  }
+    .bs-docs-header {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .bs-docs-header h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
 }
 
 @media (min-width: 992px) {
-  .bs-docs-header h1,
-  .bs-docs-header p {
-    margin-right: 380px;
-  }
+
+    .bs-docs-header h1,
+    .bs-docs-header p {
+        margin-right: 380px;
+    }
 }
 
 .terms_policies_menu ul {
-  list-style-type: circle;
+    list-style-type: circle;
 }
 
 .form-account {
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 .form-account .form-control {
-  position: relative;
-  height: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-account .form-control:focus {
+    z-index: 2;
+}
+
+.form-account .checkbox {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.form-account input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-account input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .form-domain {
-  max-width: 430px;
-  padding: 15px;
-  margin: 0 auto;
+    max-width: 430px;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 .form-domain input {
-  color: #fff;
-  background: transparent;
+    color: #fff;
+    background: transparent;
 }
 
 .form-domain .form-control:hover {
-  color: #333;
-  background-color: #fff;
-  background-image: none;
+    color: #333;
+    background-color: #fff;
+    background-image: none;
 }
 
 @media (min-width: 300px) {
-  .form-domain {
-    min-width: 300px;
-  }
+    .form-domain {
+        min-width: 300px;
+    }
 }
 
 @media (min-width: 768px) {
-  .form-domain {
-    max-width: 530px;
-  }
+    .form-domain {
+        max-width: 530px;
+    }
 }
 
 @media (min-width: 992px) {
-  .form-domain {
-    max-width: 500px;
-  }
+    .form-domain {
+        max-width: 500px;
+    }
 }
