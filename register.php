@@ -43,7 +43,7 @@ $security_id = md5(rand(6000, getrandmax())); // $security_id = md5(rand(6000,PH
                     <label for="inputCategory" class="col-sm-4 control-label"><?php echo $LANG['site_category']; ?></label>
                     <div class="col-sm-5">
                         <select class="form-control" name="website_category" id="inputCategory">
-                            <option><?php echo $LANG['choose_from_below']; ?></option>
+                            <option value=""><?php echo $LANG['choose_from_below']; ?></option>
                             <option value="personal"><?php echo $LANG['personal']; ?></option>
                             <option value="business"><?php echo $LANG['business']; ?></option>
                             <option value="hobby"><?php echo $LANG['hobby']; ?></option>
@@ -57,9 +57,9 @@ $security_id = md5(rand(6000, getrandmax())); // $security_id = md5(rand(6000,PH
                     <label for="inputLanguage" class="col-sm-4 control-label"><?php echo $LANG['site_language']; ?></label>
                     <div class="col-sm-5">
                         <select class="form-control" name="website_language" id="inputLanguage">
-                            <option><?php echo $LANG['choose_from_below']; ?></option>
-                            <option data-i18n="english">English</option>
-                            <option data-i18n="non_english">Non-English</option>
+                            <option value=""><?php echo $LANG['choose_from_below']; ?></option>
+                            <option value="english" data-i18n="english">English</option>
+                            <option value="non-english" data-i18n="non_english">Non-English</option>
                         </select>
                     </div>
                 </div>

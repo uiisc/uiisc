@@ -11,7 +11,7 @@ $author = 'Crogram Inc.';
 $description = "uiisc, freewebhost, webhost, Crogram";
 $rooturl = $_SERVER['HTTP_HOST'];
 $domain = preg_replace('/^www\./', '', $rooturl);
-$static_release = "crogram_build_20181116";
+$static_release = 'build_20181124';
 function curlrequest($url, $data, $method = "post")
 {
     $ch = curl_init(); // 初始化CURL句柄
