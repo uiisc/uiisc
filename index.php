@@ -16,9 +16,7 @@
         <div class="jumbotron">
             <h1>Instant activation</h1>
             <p>Free hosting accounts are activated instantly, no need to wait for manual approval, you can start building your pages immediately!  A powerful Vista Panel control panel is provided to manage your website, packed with hundreds of great features including Email, FTP add-on domain ...</p>
-            <p>
-            <a class="btn btn-lg btn-primary" href="./signup.php" role="button">More &raquo;</a>
-            </p>
+            <p><a class="btn btn-primary" href="/register.php" role="button">Get More &raquo;</a></p>
         </div>
     </div>
     <div class="container">

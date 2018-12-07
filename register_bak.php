@@ -169,7 +169,7 @@
             <input type="text" name="number" class="form-control" id="inputSecurityCode" placeholder="<?php echo $LANG['input_security_code_above']; ?>">
         </div>
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-lg btn-primary"><?php echo $LANG['register']; ?></button>
+            <button type="submit" name="submit" class="btn btn-primary"><?php echo $LANG['register']; ?></button>
         </div>
     </div>
 </div>

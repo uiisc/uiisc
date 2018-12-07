@@ -33,7 +33,7 @@
             <label><a href="register.php"><?php echo $LANG['register']; ?></a></label>
         </div>
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block">Submit</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
         </div>
     </div>
     <div class="row">

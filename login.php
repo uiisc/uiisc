@@ -25,7 +25,7 @@
             <a href="//cpanel.<?=$domain?>/lostpassword.php"><?php echo $LANG['lost_password']; ?></a>
         </label>
         </div>
-        <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block"><?php echo $LANG['login']; ?></button>
+        <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo $LANG['login']; ?></button>
     </form>
 </div>
 

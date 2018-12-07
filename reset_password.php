@@ -33,7 +33,7 @@
             <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email Address" data-i18n="input_email" required>
         </div>
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-lg btn-primary btn-block" data-i18n="Fetch">Fetch</button>
+            <button type="submit" name="submit" class="btn btn-primary btn-block" data-i18n="Fetch">Fetch</button>
         </div>
     </form>
     <div class="row">
