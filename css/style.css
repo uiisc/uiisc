@@ -213,3 +213,8 @@ body.fixed-header-on {
         max-width: 500px;
     }
 }
+
+.language-change {
+    max-height: 500px;
+    overflow-y: auto;
+}

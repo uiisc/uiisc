@@ -11,8 +11,8 @@ if (!defined('IN_SYS')) {
             <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
                 <ul class="navbar-left list-inline text-center text-muted credit">
                     <li>
-                    &copy; 2018 <a href="/index.php"><?=$title_s?></a> &nbsp;&nbsp;&nbsp;
-                    Powered By <a href="https://crogram.com" target="blank">Crogram</a> & <a href="https://ifastnet.com" target="blank">iFastNet</a>
+                    &copy; 2018 <a href="/index.php"><?=$title_s?></a>&nbsp;&nbsp;
+                    Powered by <a href="https://crogram.com" target="blank">Crogram</a>, Partnered with <a href="https://ifastnet.com" target="blank">iFastNet</a>
                     </li>
                 </ul>
                 <ul class="legal navbar-right list-inline text-center">
@@ -21,10 +21,11 @@ if (!defined('IN_SYS')) {
                             <span class="glyphicon glyphicon-globe"></span>
                             <a href="#"><?php echo $languages[$current_language]; ?></a>
                         </div>
-                        <ul class="dropdown-menu" aria-labelledby="changelanguage">
+                        <ul class="dropdown-menu language-change" aria-labelledby="changelanguage">
                             <?php foreach ($languages as $key => $value) {
-                                echo '<li><a href="javascript://" onclick="change_language(\'', $key, '\')">', $languages[$key], '</a></li>';
+                                echo '<li><a class="language-change-click" data-language="' .$key. '" href="javascript://">' .$languages[$key]. '</a></li>';
                             }?>
+
                         </ul>
                     </li>
                     <li><a href="/contact.php"><?php echo $LANG['contact_us']; ?></a></li>
@@ -41,12 +42,14 @@ if (!defined('IN_SYS')) {
         var domain = "<?php echo $lang->getDomain(); ?>";
         var cur_language = "<?php echo $current_language; ?>";
         function change_language(lan) {
-        setCookie('lang', lan, 1, '/', domain, false);
-        if (cur_language == lan) {
-            return;
+            setCookie('lang', lan, 1, '/', domain, false);
+            if (cur_language == lan) {
+                return;
+            }
+            <?php if (!$_POST) {?>document.location.reload();<?php }?>
+
         }
-        <?php if (!$_POST) {?>
-        document.location.reload();
-        <?php }?>
-        }
+        $(".language-change-click").click(function (x) {
+            change_language(x.target.dataset.language);
+        })
     </script>

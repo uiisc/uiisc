@@ -11,7 +11,12 @@
 </head>
 <body>
 <?php include ("nav.php"); ?>
-
+<div class="bs-docs-header">
+    <div class="container">
+        <h1><?php echo $LANG['help']; ?></h1>
+        <p><?php echo $LANG['help']; ?></p>
+    </div>
+</div>
 <div class="container">
 <div class="row">
     <section class="section-wrap">

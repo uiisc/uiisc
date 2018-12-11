@@ -14,6 +14,13 @@
 <body>
 <?php include ("nav.php"); ?>
 
+<!-- <div class="container">
+    <div class="bs-docs-header">
+        <h1><?php echo $LANG['privacy_policy']; ?></h1>
+        <p>Privacy policy information</p>
+    </div>
+</div> -->
+
 <div class="container">
     <div class="row">
         <section class="section-wrap title">
