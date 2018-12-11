@@ -13,7 +13,7 @@ if (!defined('IN_SYS')) {
                     <li>
                         <span>&copy;&nbsp;2018 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
                         <span>&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
-                        <span>&nbsp;Partnered with <a href="https://ifastnet.com" target="blank">iFastNet</a>&nbsp;</span>
+                        <span>&nbsp;Partnered with <a href="https://ifastnet.com/portal/aff.php?aff=19474" target="blank">iFastNet</a>&nbsp;</span>
                     </li>
                 </ul>
                 <ul class="legal navbar-right list-inline text-center">
