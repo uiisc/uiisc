@@ -182,3 +182,15 @@ body.fixed-header-on {
     max-height: 500px;
     overflow-y: auto;
 }
+
+.octocat:hover .octocat-arm {
+    animation: wave-arm .56s infinite;
+    transform-origin: 13rem 10.6rem
+}
+.octocat .octocat-arm, .octocat .octocat-body {
+    fill: #f4f5f6
+}
+@keyframes wave-arm {
+    0%, 50% {transform: rotate(0)}
+    25%, 75% {transform: rotate(-25deg)}
+}
