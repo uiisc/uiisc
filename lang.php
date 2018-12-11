@@ -7,8 +7,8 @@ if (!defined('IN_SYS')) {
 include_once dirname(__FILE__) . '/include/language.php';
 $lang = new Language();
 // print_r($lang->language_area);
-$current_language = getCurrentLanguage();
-// print_r($current_language);
+$current_lang = getCurrentLanguage();
+// print_r($current_lang);
 function getCurrentLanguage()
 {
     global $lang, $languages;

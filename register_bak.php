@@ -4,7 +4,7 @@
    $security_id = md5(rand(6000,getrandmax())); // $security_id = md5(rand(6000,PHP_INT_MAX));
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $current_language; ?>">
+<html lang="<?php echo $current_lang; ?>">
 <head>
     <meta charset="utf-8">
     <title><?php echo $title; ?> - <?php echo $LANG['register']; ?></title>

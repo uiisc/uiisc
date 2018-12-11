@@ -3,7 +3,7 @@ define('IN_SYS', true);
 require_once "core.php";
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $current_language; ?>">
+<html lang="<?php echo $current_lang; ?>">
 <head>
     <meta charset="utf-8">
     <title>About UIISC - <?php echo $title;?></title>

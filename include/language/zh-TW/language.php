@@ -1,6 +1,5 @@
 <?php
 $LANG = array(
-  'language' => 'Chinese_traditional',
   'home' => '主頁',
   'solution' => '方案',
   'news' => '新聞',
@@ -60,6 +59,7 @@ $LANG = array(
   'domain' => '域名',
   'input-domain' => '請輸入域名',
   'support' => '支持',
-  'not-support' => '不支持'
+  'not-support' => '不支持',
+  'more'              => '更多'
 );
 

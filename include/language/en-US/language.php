@@ -1,6 +1,5 @@
 <?php
 $LANG = array(
-  'language' => 'English',
   'home' => 'Home',
   'solution' => 'Solution',
   'news' => 'News',
@@ -60,5 +59,6 @@ $LANG = array(
   'domain' => 'Domain',
   'input-domain' => 'Please Input Domain',
   'support' => 'Support',
-  'not-support' => 'Not Support'
+  'not-support' => 'Not Support',
+  'more'              => 'More'
 );

@@ -3,7 +3,7 @@
     require_once "core.php";
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $current_language; ?>">
+<html lang="<?php echo $current_lang; ?>">
 <head>
     <meta charset="utf-8">
     <title><?=$title?> - <?php echo $LANG['solution']; ?></title>
@@ -13,15 +13,13 @@
 
 <?php include "nav.php";?>
 
-<div class="container">
-  <div class="row">
-    <section class="section-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="hidden-xs col-sm-12 col-md-12 termsHead">
+    <div class="container">
+        <div class="page-header">
             <h1><?php echo $LANG['solution']; ?></h1>
-          </div>
         </div>
+    </div>
+
+    <div class="container">
         <div class="row">
             <div class="col-sm-4">
                 <div class="list-group">
@@ -30,7 +28,7 @@
                         <?php echo $LANG['host-plan-free']; ?>
                     </div>
                     <div class="list-group-item"><span class="badge">1</span><?php echo $LANG['ftp-accounts']; ?></div>
-                    <div class="list-group-item"><span class="badge"><?php echo $LANG['not-support']; ?></span><?php echo $LANG['free-domains']; ?></div>
+                    <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span><?php echo $LANG['free-domains']; ?></div>
                     <div class="list-group-item"><span class="badge">10</span><?php echo $LANG['sub-domains']; ?></div>
                     <div class="list-group-item"><span class="badge">10</span><?php echo $LANG['add-on-domains']; ?></div>
                     <div class="list-group-item"><span class="badge"><?php echo $LANG['unlimited']; ?></span><?php echo $LANG['parked-domains']; ?></div>
@@ -43,11 +41,12 @@
                     <div class="list-group-item">Latest PHP and mySQL</div>
                     <div class="list-group-item">SiteBuilder</div>
                     <div class="list-group-item">1 Click Script Installer</div>
-                    <div class="list-group-item"><span class="badge"><?php echo $LANG['not-support']; ?></span>Node.JS</div>
-                    <div class="list-group-item"><span class="badge"><?php echo $LANG['not-support']; ?></span>Postgres</div>
-                    <div class="list-group-item"><span class="badge"><?php echo $LANG['not-support']; ?></span>Free SSL Certificate</div>
-                    <div class="list-group-item"><span class="badge"><?php echo $LANG['not-support']; ?></span>Custom CRON Jobs</div>
+                    <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Node.JS</div>
+                    <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Postgres</div>
+                    <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Free SSL Certificate</div>
+                    <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Custom CRON Jobs</div>
                     <div class="list-group-item text-center">
+                        <!-- <a class="btn btn-default" href="/plan/free.php" role="button">详情</a> -->
                         <a class="btn btn-primary" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
                     </div>
                 </div>
@@ -109,10 +108,8 @@
                 </div>
             </div>
         </div>
-      </div>
-  </section>
-  </div>
-</div>
+    </div>
+
 <?php include "footer.php";?>
 </body>
 </html>
