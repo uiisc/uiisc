@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
             <label for="inputDomain" class="control-label"><?php echo $LANG['domain']; ?></label>
-            <input type="text" name="domain" class="form-control" id="inputDomain" placeholder="<?php echo $LANG['input_domain']; ?>" value="<?php if (isset($_GET['domain'])) { echo $_GET['domain']; }?>">
+            <input type="text" name="domain" class="form-control" id="inputDomain" placeholder="<?php echo $LANG['input-domain']; ?>" value="<?php if (isset($_GET['domain'])) { echo $_GET['domain']; }?>">
         </div>
         <div class="form-group">
             <label for="inputPassword" class="control-label"><?php echo $LANG['password']; ?></label>

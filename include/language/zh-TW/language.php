@@ -46,6 +46,7 @@ $LANG = array(
   'host-plan-super' => '高級主機套餐',
   'host-plan-ultimate' => '頂級主機套餐',
   'ftp-accounts' => 'FTP 帳號',
+  'free-domains'      => '免費域名',
   'sub-domains' => '子網域',
   'add-on-domains' => '附加網域',
   'parked-domains' => '寄放網域',
@@ -55,8 +56,10 @@ $LANG = array(
   'daily-hits' => '每日點擊額度',
   'host-inodes' => '信息節點額度',
   'unlimited' => '無限',
-  'resetpassword' => 'Reset Password',
-  'domain' => 'Domain',
-  'input_domain' => 'Please Input Domain',
+  'reset-password' => '重置密碼',
+  'domain' => '域名',
+  'input-domain' => '請輸入域名',
+  'support' => '支持',
+  'not-support' => '不支持'
 );
 
