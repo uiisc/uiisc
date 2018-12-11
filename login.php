@@ -14,19 +14,25 @@
 <?php include ("nav.php"); ?>
 
 <div class="container">
-    <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?=$domain?>/login.php" method="post" name="login">
-        <h2><?php echo $LANG['please_login']; ?></h2>
-        <input type="text" name="uname" class="form-control" placeholder="<?php echo $LANG['input_username']; ?>" required autofocus autocomplete="off">
-        <input type="password" name="passwd" class="form-control" placeholder="<?php echo $LANG['input_password']; ?>" required autocomplete="off">
-        <input type="hidden" name="language" class="hide" value="<?php echo $LANG['language']; ?>">
-        <div class="checkbox">
-        <label>
-            <input type="checkbox" value="remember-me"><span><?php echo $LANG['remember_me']; ?></span>
-            <a href="//cpanel.<?=$domain?>/lostpassword.php"><?php echo $LANG['lost_password']; ?></a>
-        </label>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><?php echo $LANG['please_login']; ?></h3>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo $LANG['login']; ?></button>
-    </form>
+        <div class="panel-body">
+            <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?=$domain?>/login.php" method="post" name="login">
+                <input type="text" name="uname" class="form-control" placeholder="<?php echo $LANG['input_username']; ?>" required autofocus autocomplete="off">
+                <input type="password" name="passwd" class="form-control" placeholder="<?php echo $LANG['input_password']; ?>" required autocomplete="off">
+                <input type="hidden" name="language" class="hide" value="<?php echo $LANG['language']; ?>">
+                <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"><span><?php echo $LANG['remember_me']; ?></span>
+                    <a href="//cpanel.<?=$domain?>/lostpassword.php"><?php echo $LANG['lost_password']; ?></a>
+                </label>
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo $LANG['login']; ?></button>
+            </form>
+        </div>
+    </div>
 </div>
 
 <?php include ("footer.php"); ?>
