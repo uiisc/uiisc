@@ -8,10 +8,10 @@ include_once 'lang.php';
 $title = "UIISC";
 $title_s = "UIISC";
 $author = 'Crogram Inc.';
-$description = "uiisc, freewebhost, webhost, Crogram";
+$description = "uiisc, freewebhost, webhost, Crogram, iFastNet";
 $rooturl = $_SERVER['HTTP_HOST'];
 $domain = preg_replace('/^www\./', '', $rooturl);
-$static_release = 'build_20181211';
+$static_release = 'build_1544600355643';
 function curlrequest($url, $data, $method = "post")
 {
     $ch = curl_init(); // 初始化CURL句柄

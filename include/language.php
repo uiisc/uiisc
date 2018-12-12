@@ -1,6 +1,11 @@
 <?php
 
 $languages = array(
+    'en-US' => array('English', 'English'),
+    'zh-CN' => array('简体中文', 'Chinese_simplified'),
+    'zh-SG' => array('简体中文（新加坡）', 'Chinese_simplified'),
+    'zh-HK' => array('繁體中文（香港）', 'Chinese_traditional'),
+    'zh-TW' => array('繁體中文（台湾）', 'Chinese_traditional'),
     'af' => array('Afrikaans', 'Afrikaans'),
     'sq' => array('የአልባኒያ', 'Albanian'),
     'am' => array('Amharic', 'Amharic'),
@@ -21,7 +26,6 @@ $languages = array(
     'cs' => array('Czech', 'Czech'),
     'da' => array('Danish', 'Danish'),
     'nl' => array('Dutch', 'Dutch'),
-    'en-US' => array('English', 'English'),
     'eo' => array('Esperanto', 'Esperanto'),
     'et' => array('Estonian', 'Estonian'),
     'fa' => array('Farsi', 'Farsi'),
@@ -46,7 +50,7 @@ $languages = array(
     'id' => array('Indonesian', 'Indonesian'),
     'ga' => array('Irish', 'Irish'),
     'it' => array('Italian', 'Italian'),
-    'jp' => array('日本の', 'Japanese'),
+    'jp' => array('日本語', 'Japanese'),
     'jv' => array('Wong Jawa', 'Javanese'),
     'kn' => array('Kannada', 'Kannada'),
     'kk' => array('Kazakh', 'Kazakh'),
@@ -103,11 +107,7 @@ $languages = array(
     'xh' => array('Xhosa', 'Xhosa'),
     'yi' => array('Yiddish', 'Yiddish'),
     'yo' => array('Yorùbá', 'Yoruba'),
-    'zu' => array('Zulu', 'Zulu'),
-    'zh-CN' => array('简体中文', 'Chinese_simplified'),
-    'zh-HK' => array('繁體中文（香港）', 'Chinese_traditional'),
-    'zh-SG' => array('简体中文（新加坡）', 'Chinese_simplified'),
-    'zh-TW' => array('繁體中文（台湾）', 'Chinese_traditional'),
+    'zu' => array('Zulu', 'Zulu')
 );
 
 class Language

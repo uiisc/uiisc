@@ -179,7 +179,7 @@ body.fixed-header-on {
 }
 
 .language-change {
-    max-height: 500px;
+    max-height: 450px;
     overflow-y: auto;
 }
 
@@ -193,4 +193,8 @@ body.fixed-header-on {
 @keyframes wave-arm {
     0%, 50% {transform: rotate(0)}
     25%, 75% {transform: rotate(-25deg)}
+}
+
+.footer .co {
+    display: inline-block;
 }

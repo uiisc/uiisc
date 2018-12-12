@@ -6,14 +6,14 @@ if (!defined('IN_SYS')) {
 }
 ?>
 
-    <footer class="navbar navbar-default navbar-fixed-bottom">
+    <footer class="footer navbar navbar-default navbar-fixed-bottom">
         <div class="container">
             <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
                 <ul class="navbar-left list-inline text-center text-muted credit">
                     <li>
-                        <span>&copy;&nbsp;2018 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
-                        <span>&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
-                        <span>&nbsp;Partnered with <a href="https://ifastnet.com/portal/aff.php?aff=19474" target="blank">iFastNet</a>&nbsp;</span>
+                        <span class="co">&copy;&nbsp;2018 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
+                        <span class="co">&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
+                        <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="blank">iFastNet</a>&nbsp;</span>
                     </li>
                 </ul>
                 <ul class="legal navbar-right list-inline text-center">
@@ -24,7 +24,8 @@ if (!defined('IN_SYS')) {
                         </div>
                         <ul class="dropdown-menu language-change" aria-labelledby="changelanguage">
                             <?php foreach ($languages as $key => $value) {
-                                echo '<li><a class="language-change-click" data-language="' .$key. '" href="javascript://">' .$languages[$key][0]. '</a></li>';
+                                $actived = $key == $current_lang ? ' class="active"' : '';
+                                echo '<li' .$actived . '><a class="language-change-click" data-language="' . $key . '" href="javascript://">' . $languages[$key][0] . '</a></li>';
                             }?>
 
                         </ul>
@@ -53,4 +54,11 @@ if (!defined('IN_SYS')) {
         $(".language-change-click").click(function (x) {
             change_language(x.target.dataset.language);
         })
+        if (document.getElementsByName("jump-ifastnet").length) {
+            document.getElementsByName("jump-ifastnet")[0].onclick = function (x) {
+                jumpLink("https://ifastnet.com/portal/aff.php?aff=" + ifastnet_aff, null, "_target");
+                x.preventDefault();
+                x.stopPropagation();
+            };
+        }
     </script>
