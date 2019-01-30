@@ -1,6 +1,6 @@
 # uiisc.com
 
-a bootstrap template for myownfreehost site uiisc.com by crogram
+A Template for MyOwnFreeHost based on Bootstrap with multi-language
 
 * author : doudoudzj
 * site : http://uiisc.com
