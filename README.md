@@ -1,6 +1,6 @@
 # uiisc.com
 
-A Template for MyOwnFreeHost based on Bootstrap with multi-language
+A Template for Reseller Site of MyOwnFreeHost based on Bootstrap with Multi-Language
 
 * author : doudoudzj
 * site : http://uiisc.com
