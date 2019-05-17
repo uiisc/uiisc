@@ -2,22 +2,22 @@
 
 A Template for Reseller Site of MyOwnFreeHost based on Bootstrap with Multi-Language
 
-* author : doudoudzj
-* site : http://uiisc.com
+* Official Site : [uiisc.com](http://uiisc.com "UIISC")
+* Author : [doudoudzj](https://github.com/doudoudzj "doudoudzj")
 
 ## Screenshot
 
-##### <u>solution page</u>
+##### <u>Solution Page</u>
 
 >
-> ![solution](screenshot/solution.png)
+> ![Solution Page](assets/screenshot/solution.png)
 
-##### <u>login page</u>
-
->
-> ![solution](screenshot/login.png)
-
-##### <u>register page</u>
+##### <u>Login Page</u>
 
 >
-> ![solution](screenshot/register.png)
+> ![Login Page](assets/screenshot/login.png)
+
+##### <u>Register Page</u>
+
+>
+> ![Register Page](assets/screenshot/register.png)
