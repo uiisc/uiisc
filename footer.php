@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
             <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
                 <ul class="navbar-left list-inline text-center text-muted credit">
                     <li>
-                        <span class="co">&copy;&nbsp;2018 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
+                        <span class="co">&copy;&nbsp;2019 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
                         <span class="co">&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
                         <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="blank">iFastNet</a>&nbsp;</span>
                     </li>
@@ -36,10 +36,9 @@ if (!defined('IN_SYS')) {
             </div>
         </div>
     </footer>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="/js/common.js?_=<?php echo $static_release; ?>"></script>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/common.js?_=<?php echo $static_release; ?>"></script>
     <script type="text/javascript">
         var domain = "<?php echo $lang->getDomain(); ?>";
         var cur_lang = "<?php echo $current_lang; ?>";
@@ -62,3 +61,11 @@ if (!defined('IN_SYS')) {
             };
         }
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28162642-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-28162642-10');
+    </script> -->
