@@ -3,18 +3,10 @@
   require_once ("core.php");
   // $html = file_get_contents('https://ifastnet.com/portal/cancellation-refund.php');
   // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+  $title = $title . ' - ' . $LANG['cancellation_refund'];
 ?>
-<!DOCTYPE html>
-<html lang="<?php echo $current_lang; ?>">
-<head>
-    <meta charset="utf-8">
-    <title><?=$title?> - Cancellation & Refund</title>
-    <?php include ("headmate.php"); ?>
-</head>
+<?php include ("header.php"); ?>
 
-<body>
-
-    <?php include ("nav.php"); ?>
     <div class="container">
         <div class="page-header">
             <h1 class="text-center"><?php echo $LANG['cancellation_refund']; ?></a></h1>
@@ -94,5 +86,3 @@
     </section>
 
 <?php include ("footer.php"); ?>
-</body>
-</html>

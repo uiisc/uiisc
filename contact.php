@@ -1,17 +1,9 @@
 <?php
-  define('IN_SYS', true);
-  require_once ("core.php");
+    define('IN_SYS', true);
+    require_once ("core.php");
+    $title = $title . ' - ' . $LANG['contact_us'];
 ?>
-<!DOCTYPE html>
-<html lang="<?php echo $current_lang; ?>">
-<head>
-    <meta charset="utf-8">
-    <title><?=$title?> - <?php echo $LANG['contact_us']; ?></title>
-    <?php include ("headmate.php"); ?>
-</head>
-<body>
-
-<?php include ("nav.php"); ?>
+<?php include ("header.php"); ?>
 
     <div class="container">
         <div class="page-header">
@@ -39,5 +31,3 @@
     </div>
 
 <?php include ("footer.php"); ?>
-</body>
-</html>

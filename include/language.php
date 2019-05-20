@@ -239,3 +239,21 @@ class Language
         }
     }
 }
+
+$lang = new Language();
+// print_r($lang->language_area);
+$current_lang = getCurrentLanguage();
+// print_r($current_lang);
+function getCurrentLanguage()
+{
+    global $lang, $languages;
+    if (array_key_exists($lang->language_area, $languages)) {
+        return $lang->language_area;
+    } else if (array_key_exists($lang->language_country, $languages)) {
+        return $lang->language_country;
+    } else {
+        return 'en-US';
+    }
+}
+$language_file = $lang->getFileDir('language.php');
+include $language_file;

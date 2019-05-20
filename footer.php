@@ -69,3 +69,6 @@ if (!defined('IN_SYS')) {
         gtag('js', new Date());
         gtag('config', 'UA-28162642-10');
     </script> -->
+
+</body>
+</html>

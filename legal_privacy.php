@@ -3,17 +3,10 @@
   require_once ("core.php");
   // $html = file_get_contents('https://ifastnet.com/privacy.php');
   // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+  $title = $title . ' - ' . $LANG['privacy_policy'];
 ?>
-<!DOCTYPE html>
-<html lang="<?php echo $current_lang; ?>">
-<head>
-    <meta charset="utf-8">
-    <title><?=$title?> - <?php echo $LANG['privacy_policy']; ?></title>
-    <?php include ("headmate.php"); ?>
-</head>
-<body>
+<?php include ("header.php"); ?>
 
-    <?php include ("nav.php"); ?>
     <div class="container">
         <div class="page-header">
             <h1 class="text-center"><?php echo $LANG['privacy_policy']; ?></a></h1>
@@ -102,5 +95,3 @@
     </section>
 
 <?php include ("footer.php"); ?>
-</body>
-</html>

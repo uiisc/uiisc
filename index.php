@@ -1,16 +1,8 @@
 <?php
-  define('IN_SYS', true);
-  require_once ("core.php");
+    define('IN_SYS', true);
+    require_once ("core.php");
 ?>
-<!DOCTYPE html>
-<html lang="<?php echo $current_lang; ?>">
-<head>
-    <meta charset="utf-8">
-    <title><?=$title?></title>
-    <?php include ("headmate.php"); ?>
-</head>
-<body>
-<?php include ("nav.php"); ?>
+<?php include ("header.php"); ?>
 
     <div class="container">
         <div class="jumbotron">
@@ -44,25 +36,23 @@
             </div>
         </div>
     </div>
-<?php include ("footer.php"); ?>
     <script type="text/javascript">
-    $('.check-domain').click(function () {
-        var domain = $('#domainInput').val()
-        if (domain) {
-            $.ajax({
-                method: 'post',
-                url: 'https://api.croidc.cn/mofh/DomainCheck',
-                dataType: 'json',
-                contentType : "application/json",
-                data: JSON.stringify({
-                domain: domain
-                }),
-                success: function (x) {
-                console.log(x);
-                }
-            })
-        }
-    })
+        $('.check-domain').click(function () {
+            var domain = $('#domainInput').val()
+            if (domain) {
+                $.ajax({
+                    method: 'post',
+                    url: 'https://api.croidc.cn/mofh/DomainCheck',
+                    dataType: 'json',
+                    contentType : "application/json",
+                    data: JSON.stringify({
+                    domain: domain
+                    }),
+                    success: function (x) {
+                    console.log(x);
+                    }
+                })
+            }
+        })
     </script>
-</body>
-</html>
+<?php include ("footer.php"); ?>
