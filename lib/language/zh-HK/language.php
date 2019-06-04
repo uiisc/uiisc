@@ -60,6 +60,8 @@ $LANG = array(
   'input-domain' => '請輸入域名',
   'support' => '支持',
   'not-support' => '不支持',
-  'more'              => '更多'
+  'more'              => '更多',
+  'about'             => '關於',
+  'aboutus'             => '關於我們',
 );
 

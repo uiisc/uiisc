@@ -60,5 +60,7 @@ $LANG = array(
   'input-domain' => 'Please Input Domain',
   'support' => 'Support',
   'not-support' => 'Not Support',
-  'more'              => 'More'
+  'more' => 'More',
+  'about' => 'About',
+  'aboutus'             => 'About',
 );

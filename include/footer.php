@@ -1,7 +1,7 @@
 <?php
 if (!defined('IN_SYS')) {
     // exit('禁止访问');
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
 }
 ?>
@@ -36,8 +36,8 @@ if (!defined('IN_SYS')) {
             </div>
         </div>
     </footer>
-    <script src="/lib/jquery/jquery.min.js"></script>
-    <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/jquery/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="/assets/js/common.js?_=<?php echo $static_release; ?>"></script>
     <script type="text/javascript">
         var domain = "<?php echo $lang->getDomain(); ?>";
@@ -62,13 +62,13 @@ if (!defined('IN_SYS')) {
         }
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28162642-10"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28162642-10"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-28162642-10');
-    </script> -->
+    </script>
 
 </body>
 </html>

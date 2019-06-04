@@ -60,5 +60,7 @@ $LANG = array(
   'input-domain' => 'Please Input Domain',
   'support' => '지원됨',
   'not-support' => '지원 안함',
-  'more'              => '많은'
+  'more'                => '많은',
+  'about'               => '정보',
+  'aboutus'             => '회사 소개',
 );

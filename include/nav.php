@@ -1,7 +1,7 @@
 <?php
   if(!defined('IN_SYS')) { 
     // exit('禁止访问');
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit;
   }
 ?>
@@ -23,17 +23,17 @@
                     <li><a href="/index.php"><?php echo $LANG['home']; ?></a></li>
                     <li><a href="/solution.php"><?php echo $LANG['solution']; ?></a></li>
                     <li><a href="/contact.php"><?php echo $LANG['contact']; ?></a></li>
-                    <li><a href="/help.php"><?php echo $LANG['help']; ?></a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo $LANG['more']; ?>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="javascript:void(0)"><?php echo $LANG['home']; ?></a></li>
+                            <li><a href="/about.php"><?php echo $LANG['about']; ?></a></li>
+                            <li><a href="/help.php"><?php echo $LANG['help']; ?></a></li>
                             <li><a href="javascript:void(0)"><?php echo $LANG['tos']; ?></a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"><?php echo $LANG['legal_information']; ?></li>
-                            <li><a href="/legal_terms.php"><?php echo $LANG['tos']; ?></a></li>
+                            <li><a href="/legal.php?s=terms"><?php echo $LANG['tos']; ?></a></li>
+                            <li><a href="/legal.php?s=privacy"><?php echo $LANG['privacy_policy']; ?></a></li>
                             <li><a href="/legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
-                            <li><a href="/legal_privacy.php"><?php echo $LANG['privacy_policy']; ?></a></li>
                             <li><a href="/legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
                         </ul>
                     </li>

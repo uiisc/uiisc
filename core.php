@@ -4,7 +4,7 @@ if (!defined('IN_SYS')) {
     header("Location: index.php");
     exit;
 }
-include_once dirname(__FILE__) . '/include/language.php';
+include_once dirname(__FILE__) . '/lib/language.php';
 $title = "UIISC";
 $title_s = "UIISC";
 $author = 'Crogram Inc.';

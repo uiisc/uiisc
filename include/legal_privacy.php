@@ -1,11 +1,13 @@
 <?php
-  define('IN_SYS', true);
-  require_once ("core.php");
-  // $html = file_get_contents('https://ifastnet.com/privacy.php');
-  // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
-  $title = $title . ' - ' . $LANG['privacy_policy'];
+    if (!defined('IN_SYS')) {
+        // exit('禁止访问');
+        header("Location: ../index.php");
+        exit;
+    }
+    // $html = file_get_contents('https://ifastnet.com/privacy.php');
+    // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
+    $title = $title . ' - ' . $LANG['privacy_policy'];
 ?>
-<?php include ("header.php"); ?>
 
     <div class="container">
         <div class="page-header">
@@ -93,5 +95,3 @@
             </div>
         </div>
     </section>
-
-<?php include ("footer.php"); ?>

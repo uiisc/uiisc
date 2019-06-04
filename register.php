@@ -4,7 +4,7 @@
     $security_id = md5(rand(6000, getrandmax())); // $security_id = md5(rand(6000,PHP_INT_MAX));
     $title = $title . ' - ' . $LANG['register'];
 ?>
-<?php include ("header.php"); ?>
+<?php include ("include/header.php"); ?>
 
     <div class="container">
         <div class="panel panel-default">
@@ -78,4 +78,4 @@
             </div>
         </div>
     </div>
-<?php include "footer.php";?>
+<?php include "include/footer.php";?>

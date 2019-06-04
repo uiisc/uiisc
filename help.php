@@ -3,7 +3,7 @@
     require_once ("core.php");
     $title = $title . ' - ' . $LANG['help'];
 ?>
-<?php include ("header.php"); ?>
+<?php include ("include/header.php"); ?>
 
     <div class="container">
         <div class="page-header">
@@ -22,4 +22,4 @@
         </div>
     </div>
 
-<?php include ("footer.php"); ?>
+<?php include ("include/footer.php"); ?>

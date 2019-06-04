@@ -60,5 +60,7 @@ $LANG = array(
     "input-domain"      => "请输入域名",
     'support'           => '支持',
     'not-support'       => '不支持',
-    'more'              => '更多'
+    'more'              => '更多',
+    'about'             => '关于',
+    'aboutus'             => '关于我们',
 );

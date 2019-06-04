@@ -5,7 +5,7 @@
   // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);
   $title = $title . ' - ' . $LANG['cancellation_refund'];
 ?>
-<?php include ("header.php"); ?>
+<?php include ("include/header.php"); ?>
 
     <div class="container">
         <div class="page-header">
@@ -85,4 +85,4 @@
         </div>
     </section>
 
-<?php include ("footer.php"); ?>
+<?php include ("include/footer.php"); ?>
