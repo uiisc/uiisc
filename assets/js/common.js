@@ -1,5 +1,23 @@
-var ifastnet_aff = 19474;
+$(".language-change-click").click(function (x) {
+    change_language(x.target.dataset.language);
+})
 
+if (document.getElementsByName("jump-ifastnet").length) {
+    document.getElementsByName("jump-ifastnet")[0].onclick = function (x) {
+        jumpLink("https://ifastnet.com/portal/aff.php?aff=" + ifastnet_aff, null, "_target");
+        x.preventDefault();
+        x.stopPropagation();
+    };
+}
+
+function change_language(lang) {
+    setCookie('lang', lang, 1, '/', domain, false);
+    if (cur_lang == lang) {
+        return;
+    }
+    // to reload after changed
+    window.location.href = window.location.href;
+}
 
 function jumpLink(action, params, target) {
     var fm = document.createElement("form");

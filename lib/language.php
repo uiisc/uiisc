@@ -130,8 +130,8 @@ class Language
         }
         $this->initLanguageDir();
     }
-    /*
-    取得翻译文件的绝对路径
+    /**
+     * get absolute path of language file
      */
     public function getFileDir($file)
     {
@@ -154,15 +154,16 @@ class Language
             }
         }
     }
-    /*
-    取得当前使用语言的文件夹
+    /**
+     * return current language directory
      */
     public function getLanguageDir()
     {
         return $this->language_dir;
     }
-    /*
-    初始化语言文件夹
+
+    /**
+     * get current language directory
      */
     private function initLanguageDir()
     {
@@ -177,8 +178,9 @@ class Language
             }
         }
     }
-    /*
-    初始化默认语言
+
+    /**
+     * get the default language
      */
     public function initDefaultLanguage()
     {
@@ -191,8 +193,8 @@ class Language
         @($this->language_country = $language[0][1]);
         $this->setCookieLanguage();
     }
-    /*
-    从cookie中导入语言种类
+    /**
+     * get language form cookie
      */
     public function getCookieLanguage()
     {
@@ -207,8 +209,8 @@ class Language
         }
         return false;
     }
-    /*
-    把当前的语言种类放到cookie中
+    /**
+     * set current language to cookie
      */
     public function setCookieLanguage($lang = "")
     {
@@ -224,6 +226,10 @@ class Language
         setcookie("lang", $lang, time() + 365 * 24 * 3600, "/", $this->getDomain());
         return true;
     }
+
+    /**
+     * get current domain
+     */
     public function getDomain()
     {
         if (empty($this->domain)) {
@@ -260,5 +266,11 @@ function getCurrentLanguage()
         return 'en-US';
     }
 }
-$language_file = $lang->getFileDir('language.php');
-include $language_file;
+
+include $lang->getFileDir('language.php');
+
+function I18N($key = "")
+{
+    global $LANG;
+    return isset($key) ? isset($LANG[$key]) ? $LANG[$key] : $key : "";
+}

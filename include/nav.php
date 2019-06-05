@@ -20,27 +20,27 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                    <li><a href="/index.php"><?php echo $LANG['home']; ?></a></li>
-                    <li><a href="/solution.php"><?php echo $LANG['solution']; ?></a></li>
-                    <li><a href="/contact.php"><?php echo $LANG['contact']; ?></a></li>
+                    <li><a href="index.php"><?php echo $LANG['home']; ?></a></li>
+                    <li><a href="solution.php"><?php echo $LANG['solution']; ?></a></li>
+                    <li><a href="contact.php"><?php echo $LANG['contact']; ?></a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo $LANG['more']; ?>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="/about.php"><?php echo $LANG['about']; ?></a></li>
-                            <li><a href="/help.php"><?php echo $LANG['help']; ?></a></li>
+                            <li><a href="about.php"><?php echo $LANG['about']; ?></a></li>
+                            <li><a href="help.php"><?php echo $LANG['help']; ?></a></li>
                             <li><a href="javascript:void(0)"><?php echo $LANG['tos']; ?></a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"><?php echo $LANG['legal_information']; ?></li>
-                            <li><a href="/legal.php?s=terms"><?php echo $LANG['tos']; ?></a></li>
-                            <li><a href="/legal.php?s=privacy"><?php echo $LANG['privacy_policy']; ?></a></li>
-                            <li><a href="/legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
-                            <li><a href="/legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
+                            <li><a href="legal.php?s=terms"><?php echo $LANG['tos']; ?></a></li>
+                            <li><a href="legal.php?s=privacy"><?php echo $LANG['privacy_policy']; ?></a></li>
+                            <li><a href="legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
+                            <li><a href="legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
                         </ul>
                     </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/login.php"><?php echo $LANG['login']; ?></a></li>
-                        <li><a href="/register.php"><?php echo $LANG['register']; ?></a></li>
+                        <li><a href="login.php"><?php echo $LANG['login']; ?></a></li>
+                        <li><a href="register.php"><?php echo $LANG['register']; ?></a></li>
                     </ul>
                 </div>
             </div>

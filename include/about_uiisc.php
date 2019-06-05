@@ -7,13 +7,13 @@ if (!defined('IN_SYS')) {
 
 ?>
 
-<div class="bs-docs-header">
-    <div class="container">
-        <h1>UIISC</h1>
-        <p>About UIISC</p>
+<div class="container">
+    <div class="bs-docs-header">
+        <h1><?php echo I18N('about'); ?> UIISC</h1>
     </div>
 </div>
 <div class="container">
-    <div class="row">
+    <div class="">
+        <a href="http://uiisc.com">UIISC</a>
     </div>
 </div>

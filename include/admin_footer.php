@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
             <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
                 <ul class="navbar-left list-inline text-center text-muted credit">
                     <li>
-                        <span class="co">&copy;&nbsp;2019 <a href="/index.php"><?=$title_s?></a>&nbsp;</span>
+                        <span class="co">&copy;&nbsp;<?php echo $CopyRightYear; ?>&nbsp;<a href="index.php"><?php echo $title_s;?></a>&nbsp;</span>
                         <span class="co">&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
                         <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="blank">iFastNet</a>&nbsp;</span>
                     </li>
@@ -30,37 +30,16 @@ if (!defined('IN_SYS')) {
 
                         </ul>
                     </li>
-                    <li><a href="/contact.php"><?php echo $LANG['contact_us']; ?></a></li>
-                    <li><a href="/help.php"><?php echo $LANG['help']; ?></a></li>
+                    <li><a href="about.php"><?php echo I18N('about'); ?></a></li>
+                    <li><a href="contact.php"><?php echo I18N('contact'); ?></a></li>
+                    <li><a href="support.php"><?php echo I18N('support'); ?></a></li>
                 </ul>
             </div>
         </div>
     </footer>
-    <script src="/assets/jquery/jquery.min.js"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/assets/js/common.js?_=<?php echo $static_release; ?>"></script>
-    <script type="text/javascript">
-        var domain = "<?php echo $lang->getDomain(); ?>";
-        var cur_lang = "<?php echo $current_lang; ?>";
-        function change_language(lang) {
-            setCookie('lang', lang, 1, '/', domain, false);
-            if (cur_lang == lang) {
-                return;
-            }
-            <?php if (!$_POST) {?>document.location.reload();<?php }?>
-
-        }
-        $(".language-change-click").click(function (x) {
-            change_language(x.target.dataset.language);
-        })
-        if (document.getElementsByName("jump-ifastnet").length) {
-            document.getElementsByName("jump-ifastnet")[0].onclick = function (x) {
-                jumpLink("https://ifastnet.com/portal/aff.php?aff=" + ifastnet_aff, null, "_target");
-                x.preventDefault();
-                x.stopPropagation();
-            };
-        }
-    </script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 
 </body>
 </html>

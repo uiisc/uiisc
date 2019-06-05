@@ -7,14 +7,13 @@ if (!defined('IN_SYS')) {
 
 ?>
 
-<div class="bs-docs-header">
-    <div class="container">
-        <h1>iFastNet</h1>
-        <p>About iFastNet, Inc.</p>
+<div class="container">
+    <div class="bs-docs-header">
+        <h1><?php echo I18N('about'); ?> iFastNet</h1>
     </div>
 </div>
 <div class="container">
-    <div class="row">
-
+    <div class="">
+        <a href="https://ifastnet.com/portal/aff.php?aff=<?php echo $iFastNetAff; ?>" target="blank">iFastNet</a>
     </div>
 </div>

@@ -12,7 +12,6 @@ body {
 }
 
 input {
-
     border: 0;
     outline-width: 0 !important;
 }
@@ -116,20 +115,11 @@ body.fixed-header-on {
         padding-top: 60px;
         padding-bottom: 60px;
         font-size: 24px;
-        text-align: left;
     }
 
     .bs-docs-header h1 {
         font-size: 60px;
         line-height: 1;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .bs-docs-header h1,
-    .bs-docs-header p {
-        margin-right: 380px;
     }
 }
 
@@ -183,12 +173,23 @@ body.fixed-header-on {
     animation: wave-arm .56s infinite;
     transform-origin: 13rem 10.6rem
 }
-.octocat .octocat-arm, .octocat .octocat-body {
+
+.octocat .octocat-arm,
+.octocat .octocat-body {
     fill: #f4f5f6
 }
+
 @keyframes wave-arm {
-    0%, 50% {transform: rotate(0)}
-    25%, 75% {transform: rotate(-25deg)}
+
+    0%,
+    50% {
+        transform: rotate(0)
+    }
+
+    25%,
+    75% {
+        transform: rotate(-25deg)
+    }
 }
 
 .footer .co {

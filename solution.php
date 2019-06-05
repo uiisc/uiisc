@@ -16,7 +16,7 @@
             <div class="col-sm-4">
                 <div class="list-group">
                     <div class="list-group-item">
-                        <a class="btn btn-link btn-xs pull-right" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
+                        <a class="btn btn-link btn-xs pull-right" href="register.php" role="button"><?php echo $LANG['register']; ?></a>
                         <?php echo $LANG['host-plan-free']; ?>
                     </div>
                     <div class="list-group-item"><span class="badge">1</span><?php echo $LANG['ftp-accounts']; ?></div>
@@ -38,15 +38,15 @@
                     <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Free SSL Certificate</div>
                     <div class="list-group-item disabled"><span class="badge"><?php echo $LANG['not-support']; ?></span>Custom CRON Jobs</div>
                     <div class="list-group-item text-center">
-                        <!-- <a class="btn btn-default" href="/plan/free.php" role="button">详情</a> -->
-                        <a class="btn btn-primary" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
+                        <!-- <a class="btn btn-default" href="plan/free.php" role="button">详情</a> -->
+                        <a class="btn btn-primary" href="register.php" role="button"><?php echo $LANG['register']; ?></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="list-group">
                     <div class="list-group-item">
-                        <a class="btn btn-link btn-xs pull-right" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
+                        <a class="btn btn-link btn-xs pull-right" href="register.php" role="button"><?php echo $LANG['register']; ?></a>
                         <?php echo $LANG['host-plan-super']; ?>
                     </div>
                     <div class="list-group-item"><span class="badge">100</span><?php echo $LANG['ftp-accounts']; ?></div>
@@ -68,14 +68,14 @@
                     <div class="list-group-item">Free SSL Certificate</div>
                     <div class="list-group-item">Custom CRON Jobs</div>
                     <div class="list-group-item text-center">
-                        <a class="btn btn-primary" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
+                        <a class="btn btn-primary" href="register.php" role="button"><?php echo $LANG['register']; ?></a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-4">
                 <div class="list-group">
                     <div class="list-group-item">
-                        <a class="btn btn-link btn-xs pull-right" href="/register.php" role="button"><?php echo $LANG['register']; ?></a>
+                        <a class="btn btn-link btn-xs pull-right" href="register.php" role="button"><?php echo $LANG['register']; ?></a>
                         <?php echo $LANG['host-plan-ultimate']; ?>
                     </div>
                     <div class="list-group-item"><span class="badge"><?php echo $LANG['unlimited']; ?></span><?php echo $LANG['ftp-accounts']; ?></div>
@@ -96,7 +96,7 @@
                     <div class="list-group-item">Postgres</div>
                     <div class="list-group-item">Free SSL Certificate</div>
                     <div class="list-group-item">Custom CRON Jobs</div>
-                    <div class="list-group-item text-center"><a class="btn btn-primary" href="/register.php" role="button"><?php echo $LANG['register']; ?></a></div>
+                    <div class="list-group-item text-center"><a class="btn btn-primary" href="register.php" role="button"><?php echo $LANG['register']; ?></a></div>
                 </div>
             </div>
         </div>

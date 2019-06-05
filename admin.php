@@ -5,9 +5,7 @@ define("IN_SYS", true);
 require_once("core.php");
 
 // $INDEX = __FILE__;
-$ROOT = __DIR__;
 
-include_once "{$ROOT}/data/config.php";
 include_once "{$ROOT}/include/common.php";
 include_once "{$ROOT}/lib/api.php";
 include_once "{$ROOT}/controllers/admin.php";
@@ -97,7 +95,7 @@ if (!file_exists("{$ROOT}/data/installed") || !isset($config) || $config['apiUse
                                         <td><?php echo $value["password"]; ?></td>
                                         <td><?php echo implode(",", $value["nameserver"]); ?></td>
                                         <td style="width: 206px;">
-                                            <a class="btn btn-default btn-xs" href="#" role="button">Login</a>
+                                            <a class="btn btn-default btn-xs" href="#" role="button"><?php echo $LANG['login']; ?></a>
                                             <button class="btn btn-default btn-xs" type="submit">View</button>
                                             <button class="btn btn-default btn-xs" type="submit">Active</button>
                                             <button class="btn btn-default btn-xs" type="submit">Disable</button>
@@ -189,20 +187,20 @@ if (!file_exists("{$ROOT}/data/installed") || !isset($config) || $config['apiUse
                         <form action="" method="POST" class="form-horizontal">
                             <label>
                                 <span>Admin:</span>
-                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="Admin Username" autofocus>
+                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="Admin Username" autofocus required>
                             </label>
                             <label>
                                 <span>Password:</span>
-                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="Admin Password">
+                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="Admin Password" required>
                             </label>
                             <label>
                                 <span>Captcha:</span>
-                                <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" autocomplete="off">
+                                <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off">
                             </label>
-                            <button type="submit" name="do_login" class="btn btn-primary">Login</button>
+                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo $LANG['login']; ?></button>
                         </form>
                     <?php } elseif ($is_admin && !isset($message[0])) { ?>
-                        <div class="alert alert-success">已经登录</div>
+                        <div class="alert alert-success">You have logged in</div>
                     <?php } ?>
                 <?php }
             if ($message) { ?>

@@ -24,6 +24,11 @@ if (!defined('IN_SYS')) {
     <script src="assets/html5shiv/html5shiv.min.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        var domain = "<?php echo $lang->getDomain(); ?>";
+        var cur_lang = "<?php echo $current_lang; ?>";
+        var ifastnet_aff = <?php echo $iFastNetAff; ?>;
+    </script>
 </head>
 
 <body>
@@ -42,7 +47,7 @@ if (!defined('IN_SYS')) {
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.php"><?php echo $LANG['home']; ?></a></li>
+                        <li><a href="index.php"><?php echo I18N('home'); ?></a></li>
                         <?php if ($is_admin) { ?>
                             <li class="dropdown">
                                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Account&nbsp;<span class="caret"></span></a>
@@ -65,9 +70,9 @@ if (!defined('IN_SYS')) {
                         <?php if ($is_admin) { ?>
                             <li><a href="admin.php?s=logout">Logout</a></li>
                         <?php } else { ?>
-                            <li><a href="admin.php?s=login"><?php echo $LANG['login']; ?></a></li>
+                            <li><a href="admin.php?s=login"><?php echo I18N('login'); ?></a></li>
                         <?php } ?>
-                        <li><a href="index.php"><?php echo $LANG['home']; ?></a></li>
+                        <li><a href="index.php"><?php echo I18N('home'); ?></a></li>
                     </ul>
                 </div>
             </div>

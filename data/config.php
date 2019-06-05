@@ -5,7 +5,15 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
+$static_release = '1559728996134';
 $brandName = "UIISC";
+$iFastNetAff = 19474;
+$CopyRightYear = "2013 - " . date("Y");
+$title = "UIISC";
+$title_s = "UIISC";
+$author = 'Crogram Inc.';
+$description = "uiisc, freewebhost, webhost, Crogram, iFastNet";
+$google_site_verification = "5O6Wxt0gIyGb7btMuXiQqddZJ516n-xBOW_9RLMBeSY";
 
 $admin = [
     "username" => "admin",

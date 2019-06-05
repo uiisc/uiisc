@@ -40,7 +40,7 @@
             <div class="panel-body">
                 <div class="media">
                     <div class="media-left media-middle">
-                        <img src="images/cluster.jpg" alt="rack">
+                        <img src="assets/images/cluster.jpg" alt="rack">
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">Value for free</h4>

@@ -6,14 +6,13 @@ if (!defined('IN_SYS')) {
 }
 ?>
 
-<div class="bs-docs-header">
-    <div class="container">
-        <h1>CROGRAM</h1>
-        <p>About Crogram, Inc.</p>
+<div class="container">
+    <div class="bs-docs-header">
+        <h1><?php echo I18N('about'); ?> Crogram</h1>
     </div>
 </div>
 <div class="container">
-    <div class="row">
-
+    <div class="">
+        <a href="https://crogram.com" target="blank">Crogram</a>
     </div>
 </div>
