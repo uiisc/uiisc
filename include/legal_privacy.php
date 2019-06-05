@@ -75,23 +75,3 @@
             </div>
         </div>
     </section>
-    <section class="section-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 terms_policies_menu">
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><i class="glyphicon glyphicon-list-alt"></i> Other legal information
-                        </div>
-                        <div class="panel-body">
-                            <ul>
-                                <li><a href="./legal_terms.php"><?php echo $LANG['tos']; ?></a></li>
-                                <li><a href="./legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
-                                <li class="active"><?php echo $LANG['privacy_policy']; ?></li>
-                                <li><a href="./legal_payment-methods.php"><?php echo $LANG['payment_methods']; ?></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>

@@ -1,2 +1,2 @@
 <?php
-echo "member";
+echo "wait";

@@ -35,41 +35,20 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="col-sm-12 col-md-12">
-                    <img src="./images/payment/paypal.jpg" border="0" alt="Paypal payments">
-                    <img src="./images/payment/poweredByWorldPay.gif" border="0" alt="Worldpay payments">
-                    <img src="./images/payment/2co11.jpg" border="0" alt="2CheckOut payments">
+                    <img src="assets/images/payment/paypal.jpg" border="0" alt="Paypal payments">
+                    <img src="assets/images/payment/poweredByWorldPay.gif" border="0" alt="Worldpay payments">
+                    <img src="assets/images/payment/2co11.jpg" border="0" alt="2CheckOut payments">
                     </div>
                     <div class="col-sm-12 col-md-12">
-                    <img src="./images/payment/visa_debit.gif" border="0" alt="Visa Debit payments supported by WorldPay">
-                    <img src="./images/payment/visa_electron.gif" border="0" alt="Visa Electron payments supported by WorldPay">
-                    <img src="./images/payment/mastercard.gif" border="0" alt="Mastercard payments supported by WorldPay">
-                    <img src="./images/payment/maestro.gif" border="0" alt="Maestro payments supported by WorldPay">
-                    <img src="./images/payment/AMEX.gif" border="0" alt="American Express payments supported by WorldPay">
-                    <img src="./images/payment/diners.gif" border="0" alt="Diners payments supported by WorldPay">
-                    <img src="./images/payment/JCB.gif" border="0" alt="JCB payments supported by WorldPay">
-                    <img src="./images/payment/laser.gif" border="0" alt="Laser payments supported by WorldPay">
-                    <img src="./images/payment/ELV.gif" border="0" alt="ELV payments supported by WorldPay">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-wrap">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 terms_policies_menu">
-                    <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="glyphicon glyphicon-list-alt"></i> Other legal information
-                    </div>
-                    <div class="panel-body">
-                        <ul>
-                        <li><a href="./legal_terms.php"><?php echo $LANG['tos']; ?></a></li>
-                        <li><a href="./legal_cancellation-refund.php"><?php echo $LANG['cancellation_refund']; ?></a></li>
-                        <li><a href="./legal_privacy.php"><?php echo $LANG['privacy_policy']; ?></a></li>
-                        <li class="active"><?php echo $LANG['payment_methods']; ?></li>
-                        </ul>
-                    </div>
+                    <img src="assets/images/payment/visa_debit.gif" border="0" alt="Visa Debit payments supported by WorldPay">
+                    <img src="assets/images/payment/visa_electron.gif" border="0" alt="Visa Electron payments supported by WorldPay">
+                    <img src="assets/images/payment/mastercard.gif" border="0" alt="Mastercard payments supported by WorldPay">
+                    <img src="assets/images/payment/maestro.gif" border="0" alt="Maestro payments supported by WorldPay">
+                    <img src="assets/images/payment/AMEX.gif" border="0" alt="American Express payments supported by WorldPay">
+                    <img src="assets/images/payment/diners.gif" border="0" alt="Diners payments supported by WorldPay">
+                    <img src="assets/images/payment/JCB.gif" border="0" alt="JCB payments supported by WorldPay">
+                    <img src="assets/images/payment/laser.gif" border="0" alt="Laser payments supported by WorldPay">
+                    <img src="assets/images/payment/ELV.gif" border="0" alt="ELV payments supported by WorldPay">
                     </div>
                 </div>
             </div>

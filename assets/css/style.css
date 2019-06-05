@@ -133,10 +133,6 @@ body.fixed-header-on {
     }
 }
 
-.terms_policies_menu ul {
-    list-style-type: circle;
-}
-
 .form-account {
     max-width: 300px;
     padding: 15px;

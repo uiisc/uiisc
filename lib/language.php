@@ -1,4 +1,9 @@
 <?php
+if (!defined('IN_SYS')) {
+    // exit('禁止访问');
+    header("Location: ../index.php");
+    exit;
+}
 
 $languages = array(
     'en-US' => array('English', 'English'),
