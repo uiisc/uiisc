@@ -1,0 +1,32 @@
+
+#section {
+    float: right;
+    display: block;
+    font-size: 14px;
+    margin: 8px 0;
+    color: #FFFFFF;
+}
+
+.clear {
+    clear: both;
+    width: 100%;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+label input,
+label select {
+    margin-top: 6px;
+}
+
+input[name="captcha"] {
+    background: url(/include/captcha.php) no-repeat;
+    background-size: 160px 30px;
+    background-position-x: right;
+    background-position-y: center;
+    padding-right: 170px;
+}
