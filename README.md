@@ -1,29 +1,49 @@
 # uiisc.com
 
-A Template for Reseller Site of MyOwnFreeHost based on Bootstrap with Multi-Language
+A simple Content Management System for Reseller of MyOwnFreeHost
 
 * Official Site : [uiisc.com](http://uiisc.com "UIISC")
 * Author : [doudoudzj](https://github.com/doudoudzj "doudoudzj")
 
-**New Functions:** 
+## Functions
 
-## Management Module
+### multi-language module
 
-Hosting Account Management System
+- [x] Load default language
 
-Modify the configuration file `data/config.php`, Log in via `/admin.php`
+- [x] Modify language
 
-This is a simple script for WHM myownfreehost made to manage hosting accounts through the api assigned to users with free reseller accounts.
 
-Available Functions:
+### member module
 
-- Verify if a domain is available.
-- Creation of account hosting from the panel.
-- Change password to hosting account.
-- Deactivate or disable a hosting account.
-- Activate or enable hosting account.
-- Verify how many domain and state of the hosting account.
+- [x] Account registration
+- [x] Account verification
+- [x] Account cancellation
+- [x] Email verification
+- [x] Login / Logout
+- [x] Profile modification
+- [x] Forget / Reset / Change password
+- [ ] Apply for a web hosting account
+- [ ] Hosting account deletion / deactivation
+- [ ] Login to hosting control panel
 
+### admin module
+
+- [x] Verify if a domain is available
+- [x] Creation of account hosting from the panel
+- [x] Change password to hosting account
+- [x] Deactivate or disable a hosting account
+- [x] Activate or enable hosting account
+- [x] Verify how many domain and state of the hosting account
+- [ ] Member management
+- [ ] Site configuration
+- [ ] API configuration
+- [ ] News management
+- [ ] Translation file management
+
+### forum module
+
+- [ ] Add/edit/delete posts
 
 
 ## Screenshot
