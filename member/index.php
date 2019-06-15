@@ -1,2 +1,2 @@
 <?php
-echo "wait";
+header("Location: ../member.php");
