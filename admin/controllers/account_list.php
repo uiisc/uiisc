@@ -1,10 +1,10 @@
 <?php
+
 if (!defined('IN_SYS')) {
     // exit('禁止访问');
-    header("Location: ../index.php");
+    header("Location: ../../admin.php");
     exit;
 }
-// test data
 
 $member = [
     [

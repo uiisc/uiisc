@@ -17,14 +17,14 @@ switch ($section) {
         break;
 }
 
-include("include/header.php");
+include("index/header.php");
 
 if (in_array($section, $enable_section)) {
-    include("include/about_" . $section . ".php");
+    include("index/about_" . $section . ".php");
 } else {
-    include("include/about_uiisc.php");
+    include("index/about_uiisc.php");
 }
 
 
 
-include("include/footer.php");
+include("index/footer.php");

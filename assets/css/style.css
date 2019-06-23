@@ -25,6 +25,12 @@ button {
     padding: 10px 0;
 }
 
+.margin-auto {
+    float: unset;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .home {
     width: 100%;
     height: 100%;

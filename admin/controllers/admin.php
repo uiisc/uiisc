@@ -5,27 +5,6 @@ if (!defined('IN_SYS')) {
     header("Location: ../admin.php");
     exit;
 }
-$session_name = session_name();
-if (!isset($_COOKIE[$session_name])) {
-    foreach ($_COOKIE as $key => $val) {
-        $key = strtoupper($key);
-        if (strpos($key, $session_name)) {
-            session_id($_COOKIE[$key]);
-        }
-    }
-}
-session_start();
-
-$is_admin = isset($_SESSION["is_login"]) && $_SESSION["is_login"] == true;
-$section = !$is_admin ? "login" : (empty($_GET["s"]) ? "main" : $_GET["s"]);
-
-// print(session_id());
-// echo $_COOKIE["session_id"];
-// print($_COOKIE(["session_id"]));
-// print($is_admin);
-
-$message = [];
-$section_title = "Main";
 
 switch ($section) {
     case "main":

@@ -4,15 +4,15 @@ require_once "core.php";
 // $title = 'About UIISC';
 $section = empty($_GET["s"]) ? "terms" : $_GET["s"];
 
-include("include/header.php");
+include("index/header.php");
 
 switch ($section) {
     case "privacy":
-        include("include/legal_privacy.php");
+        include("index/legal_privacy.php");
         break;
     case "terms":
     default:
-        include("include/legal_terms.php");
+        include("index/legal_terms.php");
 }
 
-include("include/footer.php");
+include("index/footer.php");
