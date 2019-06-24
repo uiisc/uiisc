@@ -1,7 +1,7 @@
 <?php
     if (!defined('IN_SYS')) {
         // exit('禁止访问');
-        header("Location: ../index.php");
+        header("Location: ../../index.php");
         exit;
     }
     // $html = file_get_contents('https://ifastnet.com/privacy.php');

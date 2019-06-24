@@ -1,18 +1,19 @@
 <?php
 if (!defined('IN_SYS')) {
     // exit('禁止访问');
-    header("Location: index.php");
+    header("Location: ../../index.php");
     exit;
 }
+
 ?>
 
 <div class="container">
     <div class="bs-docs-header">
-        <h1><?php echo I18N('about'); ?> Crogram</h1>
+        <h1><?php echo I18N('about'); ?> UIISC</h1>
     </div>
 </div>
 <div class="container">
     <div class="">
-        <a href="https://crogram.com" target="blank">Crogram</a>
+        <a href="http://uiisc.com">UIISC</a>
     </div>
 </div>
