@@ -1,0 +1,13 @@
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.img-avatar {
+    max-height: 200px;
+}

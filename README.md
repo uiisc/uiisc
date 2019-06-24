@@ -13,7 +13,7 @@ A simple Content Management System for Reseller of MyOwnFreeHost
 - [x] Change language
 
 
-### member module
+### ClientArea module
 
 - [x] Account registration
 - [x] Account verification
