@@ -10,8 +10,7 @@ A simple Content Management System for Reseller of MyOwnFreeHost
 ### multi-language module
 
 - [x] Load default language
-
-- [x] Modify language
+- [x] Change language
 
 
 ### member module
@@ -35,7 +34,7 @@ A simple Content Management System for Reseller of MyOwnFreeHost
 - [x] Deactivate or disable a hosting account
 - [x] Activate or enable hosting account
 - [x] Verify how many domain and state of the hosting account
-- [ ] Member management
+- [ ] Members management
 - [ ] Site configuration
 - [ ] API configuration
 - [ ] News management

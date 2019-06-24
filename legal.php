@@ -1,18 +1,10 @@
 <?php
 define('IN_SYS', true);
 require_once "core.php";
-// $title = 'About UIISC';
-$section = empty($_GET["s"]) ? "terms" : $_GET["s"];
 
-include("core/views/header.php");
+include("{$ROOT}/core/controllers/legal.php");
 
-switch ($section) {
-    case "privacy":
-        include("core/views/legal_privacy.php");
-        break;
-    case "terms":
-    default:
-        include("core/views/legal_terms.php");
-}
-
-include("core/views/footer.php");
+include("{$ROOT}/core/views/header.php");
+include("{$ROOT}/core/views/navbar.php");
+include("{$section_page}");
+include("{$ROOT}/core/views/footer.php");

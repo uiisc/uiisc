@@ -30,6 +30,7 @@ if (!defined('IN_SYS')) {
                             <li><a href="contact.php"><?php echo $LANG['contact']; ?></a></li>
                             <li><a href="help.php"><?php echo $LANG['help']; ?></a></li>
                             <li><a href="support.php"><?php echo $LANG['support']; ?></a></li>
+                            <li><a href="<?php echo setRouter('forum'); ?>"><?php echo I18N('forum'); ?></a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"><?php echo $LANG['aboutus']; ?></li>
                             <li><a href="about.php"><?php echo $LANG['about']; ?> UIISC</a></li>

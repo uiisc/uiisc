@@ -7,6 +7,7 @@ if (!defined('IN_SYS')) {
 $ROOT = __DIR__;
 include_once "{$ROOT}/data/config.php";
 include_once "{$ROOT}/library/language.php";
+include_once "{$ROOT}/library/functions.php";
 
 $rooturl = $_SERVER['HTTP_HOST'];
 $domain = preg_replace('/^www\./', '', $rooturl);

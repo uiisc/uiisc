@@ -29,8 +29,8 @@ if (!defined('IN_SYS')) {
         </div>
         <div class="col-md-4 text-center">
             <img src="assets/images/forums.jpg" alt="Forums">
-            <h3><?php echo I18N('Forums'); ?></h3>
-            <p>You can also join our community forums if you want to interact with other users and get instant answers.</p>
+            <h3><?php echo I18N('forum'); ?></h3>
+            <p>You can also join our <a href="<?php echo setRouter('forum'); ?>">community forums</a> if you want to interact with other users and get instant answers.</p>
         </div>
     </div>
 </div>

@@ -7,7 +7,6 @@ require_once("core.php");
 
 include_once "{$ROOT}/library/common.php";
 include_once "{$ROOT}/library/api.php";
-include_once "{$ROOT}/library/functions.php";
 include_once "{$ROOT}/admin/library.php";
 // getVersion();
 // if (!file_exists("{$ROOT}/data/installed") || !isset($config) || $config['apiUsername'] == '#getUsername#' || $config['apiPassword'] == '#getPassword#') {
@@ -43,10 +42,5 @@ if (is_file($controller)) {
 
 include("{$ROOT}/admin/views/header.php");
 include("{$ROOT}/admin/views/navbar.php");
-
-if (file_exists("{$ROOT}/install.php")) {
-    require_once("{$ROOT}/admin/views/install_tips.php");
-}
-
-require_once $section_page;
+include($section_page);
 include("{$ROOT}/admin/views/footer.php");

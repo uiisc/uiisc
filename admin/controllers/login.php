@@ -20,7 +20,7 @@ if (isset($_POST["do_login"])) {
         if (!isset($_SESSION["admincaptchacode"]) || $captcha != strtolower($_SESSION["admincaptchacode"])) {
             $message = [0, "The captcha code is invalid."];
         } elseif ($username == $admin["username"] && $password == $admin["password"]) {
-            $_SESSION["isAdminLoggedIn"] = true;
+            $_SESSION["adminloggedin"] = true;
             $message = [1, "Login successfully. 2 seconds later redirect to the main page"];
             header("refresh:2;url=admin.php");
         } else {

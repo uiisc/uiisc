@@ -16,6 +16,7 @@ $description = "uiisc, freewebhost, webhost, Crogram, iFastNet";
 $google_site_verification = "5O6Wxt0gIyGb7btMuXiQqddZJ516n-xBOW_9RLMBeSY";
 
 $admin = [
+    "name" => "管理员",
     "username" => "admin",
     "password" => "admin",
 ];

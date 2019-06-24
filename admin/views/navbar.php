@@ -37,15 +37,26 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('admin', 'account_disable'); ?>">Account Suspend</a></li>
                             </ul>
                         </li>
+                        <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo I18N('Tickets'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo I18N('News'); ?></a></li>
                     <?php } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <?php if (isAdminLoggedIn()) { ?>
-                        <li><a href="<?php echo setRouter('admin', 'logout'); ?>">Logout</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello,&nbsp;<?php echo ($admin["name"]); ?>&nbsp;<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo setRouter('admin', 'details'); ?>">Account Details</a></li>
+                                <li><a href="<?php echo setRouter('admin', 'edit_details'); ?>">Edit Account Details</a></li>
+                                <li><a href="<?php echo setRouter('admin', 'change_password'); ?>">Change password</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo I18N('Logout'); ?></a></li>
+                            </ul>
+                        </li>
                     <?php } else { ?>
-                        <li><a href="<?php echo setRouter('admin', 'login'); ?>"><?php echo I18N('login'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo I18N('AdminArea'); ?></a></li>
+                        <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('ClientArea'); ?></a></li>
                     <?php } ?>
-                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('ClientArea'); ?></a></li>
                 </ul>
             </div>
         </div>
