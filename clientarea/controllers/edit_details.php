@@ -35,7 +35,7 @@ if (isset($_POST["edit"])) {
         $errors["username_err"] = "Username min limit is 5 & max is 15 characters";
     }
 
-    if (!isemail($email)) {
+    if (!is_email($email)) {
         $errors["email_err"] = "The email address is invalid.";
     }
 

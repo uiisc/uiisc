@@ -11,22 +11,22 @@ if (!defined('IN_SYS')) {
         <div class="col-md-6 col-sm-6 margin-auto">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Admin Login</h3>
+                    <h3 class="panel-title">Login</h3>
                 </div>
                 <div class="panel-body">
                     <?php if (!isAdminLoggedIn()) { ?>
                         <form action="" method="POST" class="form-horizontal">
                             <label>
                                 <span>Admin:</span>
-                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="Admin Username" autofocus required>
+                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="Username" autofocus required>
                             </label>
                             <label>
                                 <span>Password:</span>
-                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="Admin Password" required>
+                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="Password" required>
                             </label>
                             <label>
                                 <span>Captcha:</span>
-                                <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off">
+                                <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off" style="background-image: url(library/captcha.php);">
                             </label>
                             <button type="submit" name="do_login" class="btn btn-primary"><?php echo $LANG['login']; ?></button>
                         </form>

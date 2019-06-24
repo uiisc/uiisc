@@ -19,7 +19,7 @@ if (isset($_POST["reset_request"])) {
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
     if (empty($email)) {
         $errors["email_err"] = "The email address is empty.";
-    } elseif (!isemail($email)) {
+    } elseif (!is_email($email)) {
         $errors["email_err"] = "The email address is invalid.";
     } elseif (!checkUserByEmail($email)) {
         $errors["email_err"] = "The email address not found in system.";

@@ -12,7 +12,7 @@ $data = getMsg("form_data");
 if (isset($_POST["request-activate-account"])) {
     $errors = array();
     $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-    if (!isemail($email)) {
+    if (!is_email($email)) {
         $errors["email_err"] = "The email address is invalid.";
     } elseif (!checkUserByEmail($email)) {
         $errors["email_err"] = "The email address not found in system.";

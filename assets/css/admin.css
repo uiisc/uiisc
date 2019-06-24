@@ -24,7 +24,7 @@ label select {
 }
 
 input[name="captcha"] {
-    background: url(/include/captcha.php) no-repeat;
+    background-repeat: no-repeat;
     background-size: 160px 30px;
     background-position-x: right;
     background-position-y: center;

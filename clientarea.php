@@ -2,14 +2,9 @@
 
 session_start();
 define('IN_SYS', true);
+require_once("core.php");
 
-$ROOT = __DIR__;
-
-// include_once "{$ROOT}/lib/language.php";
-include_once "{$ROOT}/clientarea/data/config.php";
-include_once "{$ROOT}/clientarea/library/email.class.php";
-include_once "{$ROOT}/clientarea/library/functions.php";
-
+include_once "{$ROOT}/library/email.class.php";
 $section = empty($_GET["s"]) ? "main" : $_GET["s"];
 $section_page = "{$ROOT}/clientarea/views/{$section}.php";
 if (!is_file($section_page)) {

@@ -32,7 +32,7 @@ if (isset($_POST["register"])) {
         $errors["username_err"] = "Username already exists";
     }
 
-    if (!isemail($email)) {
+    if (!is_email($email)) {
         $errors["email_err"] = "The email address is invalid.";
     } elseif (checkUserByEmail($email)) {
         $errors["email_err"] = "The email address already exists in system.";
