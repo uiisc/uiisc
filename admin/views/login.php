@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
         <div class="col-md-6 col-sm-6 margin-auto">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Login</h3>
+                    <h3 class="panel-title"><?php echo I18N('login'); ?></h3>
                 </div>
                 <div class="panel-body">
                     <?php if (!isAdminLoggedIn()) { ?>
@@ -21,8 +21,8 @@ if (!defined('IN_SYS')) {
                                 <input type="text" name="username" class="form-control" maxlength="18" placeholder="Username" autofocus required>
                             </label>
                             <label>
-                                <span>Password:</span>
-                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="Password" required>
+                                <span><?php echo I18N('password'); ?>:</span>
+                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="<?php echo I18N('password'); ?>" required>
                             </label>
                             <label>
                                 <span>Captcha:</span>
