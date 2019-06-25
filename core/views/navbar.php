@@ -49,7 +49,7 @@ if (!defined('IN_SYS')) {
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="login.php"><?php echo $LANG['login']; ?></a></li>
                     <li><a href="register.php"><?php echo $LANG['register']; ?></a></li>
-                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('ClientArea'); ?></a></li>
+                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('clientarea'); ?></a></li>
                 </ul>
             </div>
         </div>

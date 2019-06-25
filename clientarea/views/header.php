@@ -24,6 +24,11 @@ if (!defined('IN_SYS')) {
     <script src="assets/html5shiv/html5shiv.min.js"></script>
     <script src="assets/respond/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        var domain = "<?php echo $lang->getDomain(); ?>";
+        var cur_lang = "<?php echo $current_lang; ?>";
+        var ifastnet_aff = <?php echo $iFastNetAff; ?>;
+    </script>
 </head>
 
 <body>

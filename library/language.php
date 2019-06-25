@@ -5,7 +5,9 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
-$languages = array(
+global $lang, $languages;
+
+$languages = [
     'en-US' => array('English', 'English'),
     'zh-CN' => array('简体中文', 'Chinese_simplified'),
     'zh-SG' => array('简体中文（新加坡）', 'Chinese_simplified'),
@@ -112,8 +114,8 @@ $languages = array(
     'xh' => array('Xhosa', 'Xhosa'),
     'yi' => array('Yiddish', 'Yiddish'),
     'yo' => array('Yorùbá', 'Yoruba'),
-    'zu' => array('Zulu', 'Zulu')
-);
+    'zu' => array('Zulu', 'Zulu'),
+];
 
 class Language
 {
@@ -252,19 +254,17 @@ class Language
 }
 
 $lang = new Language();
-// print_r($lang->language_area);
-$current_lang = getCurrentLanguage();
-// print_r($current_lang);
-function getCurrentLanguage()
-{
-    global $lang, $languages;
-    if (array_key_exists($lang->language_area, $languages)) {
-        return $lang->language_area;
-    } else if (array_key_exists($lang->language_country, $languages)) {
-        return $lang->language_country;
-    } else {
-        return 'en-US';
-    }
+$current_lang = 'en-US';
+if (array_key_exists($lang->language_area, $languages)) {
+    $current_lang = $lang->language_area;
+} else if (array_key_exists($lang->language_country, $languages)) {
+    $current_lang = $lang->language_country;
+}
+
+$language_tags = '';
+foreach ($languages as $k => $value) {
+    $actived = $k == $current_lang ? ' class="active"' : '';
+    $language_tags .= '<li' . $actived . '><a class="language-change-click" data-language="' . $k . '" href="javascript://">' . $languages[$k][0] . '</a></li>';
 }
 
 include $lang->getFileDir('language.php');

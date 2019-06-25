@@ -6,6 +6,11 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
+if (!isUserLoggedIn()) {
+    setMsg("msg_notify", "You need to login before accessing the Email History page.", "warning");
+    redirect("clientarea", "login");
+}
+
 $err = getMsg("errors");
 $data = getMsg("form_data");
 

@@ -12,7 +12,7 @@ if (!defined('IN_SYS')) {
             <?php echo getMsg("msg_notify"); ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Login</h3>
+                    <h3 class="panel-title"><?php echo I18N('login'); ?></h3>
                 </div>
                 <div class="panel-body">
                     <p>Please fill in credentials to log in.</p>

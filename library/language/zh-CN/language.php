@@ -1,5 +1,5 @@
 <?php
-$LANG = array(
+$LANG = [
     "home"              => "主页",
     "solution"          => "方案",
     "news"              => "新闻",
@@ -62,5 +62,6 @@ $LANG = array(
     'not-support'       => '不支持',
     'more'              => '更多',
     'about'             => '关于',
-    'aboutus'             => '关于我们',
-);
+    'aboutus'           => '关于我们',
+    'clientarea'        => '客户中心',
+];
