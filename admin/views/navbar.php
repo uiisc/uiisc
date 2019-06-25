@@ -38,7 +38,7 @@ if (!defined('IN_SYS')) {
                             </ul>
                         </li>
                         <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo I18N('Tickets'); ?></a></li>
-                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo I18N('News'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo I18N('news'); ?></a></li>
                     <?php } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

@@ -12,7 +12,7 @@ if (!defined('IN_SYS')) {
             <?php echo (getMsg("msg_notify")); ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span class="panel-title">News</span>
+                    <span class="panel-title"><?php echo I18N('news'); ?></span>
                     <div class="pull-right">
                         <a class="btn btn-default btn-xs" href="<?php echo setRouter('admin', 'news_add'); ?>">Add</a>
                     </div>
