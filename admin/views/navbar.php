@@ -50,7 +50,7 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('admin', 'edit_details'); ?>">Edit Account Details</a></li>
                                 <li><a href="<?php echo setRouter('admin', 'change_password'); ?>">Change password</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('ClientArea'); ?></a></li>
+                                <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo I18N('ClientArea'); ?></a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo I18N('Logout'); ?></a></li>
                             </ul>
