@@ -5,7 +5,6 @@ session_start();
 define("IN_SYS", true);
 require_once("core.php");
 
-include_once "{$ROOT}/library/common.php";
 include_once "{$ROOT}/library/api.php";
 include_once "{$ROOT}/admin/library.php";
 // getVersion();

@@ -207,11 +207,26 @@ function setURL($module, $section = "")
 }
 
 /** Determine if a variable is an email address
- * 
+ *
  * @param string $email
  * @return bool
  */
 function is_email($email = "")
 {
     return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/", $email);
+}
+
+/** check PHP version
+ * @return bool
+ */
+function getVersion()
+{
+    if ((float) phpversion() < 5.5) {
+        exit('requires the php version 5.5.+');
+    }
+}
+
+function setProtect($x)
+{
+    return htmlentities(htmlspecialchars($x));
 }
