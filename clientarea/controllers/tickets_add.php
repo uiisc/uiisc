@@ -15,5 +15,36 @@ $err = getMsg("errors");
 $data = getMsg("form_data");
 
 $ticket_types = [
-    "技术支持","销售财务","管理员信箱"
+    "技术支持", "销售财务", "管理员信箱"
 ];
+
+if (isset($_POST["do_add_tickets"])) {
+    $department = filter_input(INPUT_POST, "department", FILTER_SANITIZE_STRING);
+    $subject = filter_input(INPUT_POST, "subject", FILTER_SANITIZE_STRING);
+    $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_STRING);
+    $errors = array();
+
+    $data = [
+        "department" => $department,
+        "subject" => $subject,
+        "content" => $content
+    ];
+    if (!count($errors)) {
+        $data["date"] = time();
+        $data["lastupdated"] = "";
+        $data["user_id"] = $user->id;
+        $res = $dbpdo->add("tickets", $data);
+        print_r($res);
+        if ($res) {
+            setMsg("msg_notify", "Add Tickets successfully.", "success");
+            redirect("clientarea", "tickets_details", ["id" => $res]);
+        } else {
+            setMsg("msg_notify", "Add Tickets failed.", "warning");
+            redirect("clientarea", "tickets_add");
+        }
+    } else {
+        setMsg("form_data", $data);
+        setMsg("errors", $errors);
+        redirect("clientarea", "tickets");
+    }
+}

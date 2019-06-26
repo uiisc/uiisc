@@ -37,20 +37,21 @@ CREATE TABLE IF NOT EXISTS `tickets`(
     `date` VARCHAR(255) NOT NULL,
     `department` VARCHAR(255) NOT NULL,
     `subject` VARCHAR(255) NOT NULL,
+    `content` VARCHAR(5000) NOT NULL,
     `status` TINYINT(4) NOT NULL,
     `lastupdated` VARCHAR(255) NOT NULL,
     `user_id` INT(11) NOT NULL,
     PRIMARY KEY(`id`)
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 AUTO_INCREMENT = 100;
 
-CREATE TABLE IF NOT EXISTS `products`(
+CREATE TABLE IF NOT EXISTS `tickets_comment`(
     `id` INT(11) NOT NULL AUTO_INCREMENT,
     `date` VARCHAR(255) NOT NULL,
     `department` VARCHAR(255) NOT NULL,
-    `subject` VARCHAR(255) NOT NULL,
-    `status` TINYINT(4) NOT NULL,
+    `comment` VARCHAR(5000) NOT NULL,
+    `user_type` VARCHAR(255) NOT NULL,
     `lastupdated` VARCHAR(255) NOT NULL,
-    `user_id` INT(11) NOT NULL,
+    `tickets_id` INT(11) NOT NULL,
     PRIMARY KEY(`id`)
 ) ENGINE = MyISAM DEFAULT CHARSET = utf8 AUTO_INCREMENT = 100;
 

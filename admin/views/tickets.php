@@ -13,7 +13,6 @@ if (!defined('IN_SYS')) {
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span class="panel-title">Support Tickets</span>
-                    <!-- <a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'tickets'); ?>">New Ticket</a> -->
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">
@@ -25,22 +24,24 @@ if (!defined('IN_SYS')) {
                                     <th>Subject</th>
                                     <th>Status</th>
                                     <th>Last Updated</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if ($tickets["total"]) {
                                     foreach ($tickets["list"] as $key => $value) { ?>
                                         <tr>
-                                            <th><?php echo $value["date"]; ?></th>
+                                            <th><?php echo cTime($value["date"]); ?></th>
                                             <td><?php echo $value["department"]; ?></td>
                                             <td><?php echo $value["subject"]; ?></td>
                                             <td><?php echo $value["status"]; ?></td>
-                                            <td><?php echo $value["lastupdated"]; ?></td>
+                                            <td><?php echo cTime($value["lastupdated"]); ?></td>
+                                            <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'tickets_details', ['id' => $value['id']]); ?>">Details</a></td>
                                         </tr>
                                     <?php }
                             } else { ?>
                                     <tr>
-                                        <td colspan="5" class="text-center">No Records Found</td>
+                                        <td colspan="6" class="text-center">No Records Found</td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

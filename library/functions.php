@@ -35,9 +35,9 @@ function upload_image($image)
     }
 }
 
-function cTime($timestamp)
+function cTime($t = "")
 {
-    return date("Y-m-d H:i:s", $timestamp);
+    return isset($t) && $t != "" ? date("Y-m-d H:i:s", $t) : "";
 }
 
 function checkUserByEmail($email)
@@ -179,10 +179,7 @@ function send_mail($detail = array())
  */
 function redirect($module, $section = "", $param = [])
 {
-    $url = $param ? setRouter($module, $section) . "&" . http_build_query($param) : setRouter($module, $section);
-    // $param = $param ? http_build_query($param) : "";
-    // $url = $section ? setRouter($module, $section) . "&" . $param : setRouter($module) . "?" . $param;
-    header("Location: {$url}");
+    header("Location: " . setRouter($module, $section, $param));
     exit;
 }
 
@@ -191,9 +188,10 @@ function redirect($module, $section = "", $param = [])
  * @param mixed $section
  * @return string
  */
-function setRouter($module, $section = "")
+function setRouter($module, $section = "", $param = [])
 {
-    return empty($section) ? "{$module}.php" : "{$module}.php?s=$section";
+    if (!empty($section)) $param = array_merge(["s" => $section], $param);
+    return empty($param) ? "{$module}.php" : "{$module}.php?" . http_build_query($param);
 }
 
 /** make a full path http URL
@@ -221,7 +219,7 @@ function is_email($email = "")
  */
 function getVersion()
 {
-    if ((float) phpversion() < 5.5) {
+    if ((float)phpversion() < 5.5) {
         exit('requires the php version 5.5.+');
     }
 }

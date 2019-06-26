@@ -12,9 +12,7 @@ if (!is_file($section_page)) {
 }
 
 $objDB = objDB();
-
 $dbpdo = DBPDO::getInstance($dbconfig);
-
 $user = get_userinfo();
 
 $controller = "{$ROOT}/clientarea/controllers/{$section}.php";

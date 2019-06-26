@@ -1,5 +1,4 @@
 <?php
-// ini_set("display_errors", false);
 
 session_start();
 define("IN_SYS", true);
@@ -33,6 +32,8 @@ if (!is_file($section_page)) {
 }
 
 $message = [];
+
+$dbpdo = DBPDO::getInstance($dbconfig);
 
 $controller = "{$ROOT}/admin/controllers/{$section}.php";
 if (is_file($controller)) {

@@ -18,22 +18,22 @@ if (!defined('IN_SYS')) {
                 <div class="panel-body">
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="ticket-type">Type: <sup>*</sup></label>
-                            <select name="ticket-type" id="ticket-title" class="form-control <?php echo (isset($err['ticket_type_err'])) ? 'is-invalid' : ''; ?>">
-                                <?php foreach ($ticket_types as $key => $value) {?>
+                            <label for="department">Type: <sup>*</sup></label>
+                            <select name="department" id="department" class="form-control <?php echo (isset($err['department_err'])) ? 'is-invalid' : ''; ?>">
+                                <?php foreach ($ticket_types as $key => $value) { ?>
                                     <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                                <?php }?>
+                                <?php } ?>
                             </select>
                             <span class="text-warning"><?php echo isset($err["ticket_type_err"]) ? $err["ticket_type_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="ticket-title">Title: <sup>*</sup></label>
-                            <input type="text" name="title" id="ticket-title" value="<?php echo ($data['title']); ?>" class="form-control <?php echo (isset($err['content_err'])) ? 'is-invalid' : ''; ?>" placeholder="Title">
-                            <span class="text-warning"><?php echo isset($err["title_err"]) ? $err["title_err"] : ""; ?></span>
+                            <label for="subject">Subject: <sup>*</sup></label>
+                            <input type="text" name="subject" id="subject" value="<?php echo ($data['subject']); ?>" class="form-control <?php echo (isset($err['subject_err'])) ? 'is-invalid' : ''; ?>" placeholder="Subject">
+                            <span class="text-warning"><?php echo isset($err["subject_err"]) ? $err["subject_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="password">Content: <sup>*</sup></label>
-                            <textarea name="content" id="ticket-content" value="<?php echo ($data['content']); ?>" class="form-control <?php echo (isset($err['content_err'])) ? 'is-invalid' : ''; ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
+                            <label for="content">Content: <sup>*</sup></label>
+                            <textarea name="content" id="content" value="<?php echo ($data['content']); ?>" class="form-control <?php echo (isset($err['content_err'])) ? 'is-invalid' : ''; ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
                             <span class="text-warning"><?php echo isset($err["content_err"]) ? $err["content_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
