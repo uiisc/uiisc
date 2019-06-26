@@ -2,7 +2,7 @@
 
 session_start();
 define('IN_SYS', true);
-require_once("core.php");
+require_once "core.php";
 
 include_once "{$ROOT}/library/email.class.php";
 $section = empty($_GET["s"]) ? "main" : $_GET["s"];
@@ -12,6 +12,9 @@ if (!is_file($section_page)) {
 }
 
 $objDB = objDB();
+
+$dbpdo = DBPDO::getInstance($dbconfig);
+
 $user = get_userinfo();
 
 $controller = "{$ROOT}/clientarea/controllers/{$section}.php";

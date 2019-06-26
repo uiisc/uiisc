@@ -34,6 +34,15 @@ $admin = [
     "password" => "admin",
 ];
 
+$dbconfig = [
+    'host' => 'bv2g0ksp.hk1027lan.dnstoo.com',
+    'username' => 'gcop2h_f',
+    'password' => 'gdwst6ob',
+    'dbname' => 'gcop2h',
+    'charset' => 'utf8',
+    'port' => '3306',
+];
+
 $config = [
     "apiUsername" => "1",
     "apiPassword" => "1",
