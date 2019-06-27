@@ -19,11 +19,11 @@ if (!defined('IN_SYS')) {
                         <table class="table table-bordered table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Date</th>
+                                    <th style="width: 150px;">Date</th>
                                     <th>Department</th>
                                     <th>Subject</th>
                                     <th>Status</th>
-                                    <th>Last Updated</th>
+                                    <th style="width: 150px;">Last Updated</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -31,11 +31,11 @@ if (!defined('IN_SYS')) {
                                 <?php if ($tickets["total"]) {
                                     foreach ($tickets["list"] as $key => $value) { ?>
                                         <tr>
-                                            <td><?php echo cTime($value["date"]); ?></td>
+                                            <td style="width: 150px;"><?php echo cTime($value["date"]); ?></td>
                                             <td><?php echo $ticket_types[$value["department"]]; ?></td>
                                             <td><?php echo $value["subject"]; ?></td>
                                             <td><?php echo $status_types[$value["status"]]; ?></td>
-                                            <td><?php echo cTime($value["lastupdated"]); ?></td>
+                                            <td style="width: 150px;"><?php echo cTime($value["lastupdated"]); ?></td>
                                             <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'tickets_details', ['id' => $value['id']]); ?>">Details</a></td>
                                         </tr>
                                     <?php }

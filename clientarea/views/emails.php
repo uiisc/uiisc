@@ -20,8 +20,8 @@ if (!defined('IN_SYS')) {
                             <thead>
                                 <tr>
                                     <th style="width: 100px;">ID</th>
-                                    <th>Date Sent</th>
-                                    <th>Message Subject</th>
+                                    <th style="width: 150px;">Date Sent</th>
+                                    <th>Subject</th>
                                     <th style="width: 100px;">Operate</th>
                                 </tr>
                             </thead>
@@ -30,7 +30,7 @@ if (!defined('IN_SYS')) {
                                     foreach ($emails["list"] as $key => $value) { ?>
                                         <tr>
                                             <th style="width: 100px;"><?php echo $value["id"]; ?></th>
-                                            <td><?php echo $value["date"]; ?></td>
+                                            <td style="width: 150px;"><?php echo $value["date"]; ?></td>
                                             <td><?php echo $value["subject"]; ?></td>
                                             <td style="width: 100px;">
                                                 <button class="btn btn-info btn-xs" type="submit">View Message</button>

@@ -20,6 +20,7 @@ if (!defined('IN_SYS')) {
                 </div>
                 <div class="panel-body">
                     <p>Type: <?php echo $ticket_types[$data['department']]; ?></p>
+                    <p>Subject: <?php echo $status_types[$data['status']]; ?></p>
                     <p>Subject: <?php echo $data['subject']; ?></p>
                     <p>Content: <?php echo $data['content']; ?></p>
                     <form action="" method="POST">

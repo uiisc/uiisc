@@ -16,14 +16,13 @@ if (!defined('IN_SYS')) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="javascript:void(0);"><?php echo $title_s; ?></a>
+                <a class="navbar-brand" href="<?php echo setRouter('index');?>"><?php echo $brandName; ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php"><?php echo $LANG['home']; ?></a></li>
-                    <li><a href="solution.php"><?php echo $LANG['solution']; ?></a></li>
-                    <li><a href="support.php"><?php echo $LANG['support']; ?></a></li>
-
+                    <li><a href="<?php echo setRouter('index');?>"><?php echo $LANG['home']; ?></a></li>
+                    <li><a href="<?php echo setRouter('solution');?>"><?php echo $LANG['solution']; ?></a></li>
+                    <li><a href="<?php echo setRouter('support');?>"><?php echo $LANG['support']; ?></a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo $LANG['more']; ?>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -47,8 +46,8 @@ if (!defined('IN_SYS')) {
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.php"><?php echo $LANG['login']; ?></a></li>
-                    <li><a href="register.php"><?php echo $LANG['register']; ?></a></li>
+                    <li><a href="<?php echo setRouter('login');?>"><?php echo $LANG['login']; ?></a></li>
+                    <li><a href="<?php echo setRouter('register');?>"><?php echo $LANG['register']; ?></a></li>
                     <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('clientarea'); ?></a></li>
                 </ul>
             </div>

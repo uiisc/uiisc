@@ -22,7 +22,7 @@ if (!defined('IN_SYS')) {
                         <table class="table table-bordered table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Date</th>
+                                    <th style="width: 150px;">Date</th>
                                     <th>Title</th>
                                     <th>Status</th>
                                     <th></th>
@@ -32,7 +32,7 @@ if (!defined('IN_SYS')) {
                                 <?php if ($news["total"] && $news["list"]) {
                                     foreach ($news["list"] as $key => $value) { ?>
                                         <tr>
-                                            <td><?php echo cTime($value["date"]); ?></td>
+                                            <td style="width: 150px;"><?php echo cTime($value["date"]); ?></td>
                                             <td><?php echo $value["title"]; ?></td>
                                             <td><?php echo $status_types[$value['status']]; ?></td>
                                             <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'news_details', ['id' => $value['id']]); ?>">Details</a></td>

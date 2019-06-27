@@ -14,7 +14,7 @@ if (!defined('IN_SYS')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="<?php echo $author; ?>">
-    <title>Client Area</title>
+    <title><?php echo I18N('clientarea'); ?></title>
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="icon" />
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="shortcut icon" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">

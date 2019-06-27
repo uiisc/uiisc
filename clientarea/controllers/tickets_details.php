@@ -17,7 +17,10 @@ $data = getMsg("form_data");
 $ticket_types = [
     "技术支持", "销售财务", "管理员信箱"
 ];
-
+$status_types = [
+    "关闭",
+    "打开"
+];
 if (empty($_GET["id"])) {
     redirect("clientarea", "tickets");
 }

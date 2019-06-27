@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-center text-muted credit">
                 <li>
-                    <span class="co">&copy;&nbsp;<?php echo $CopyRightYear; ?>&nbsp;<a href="index.php">UIISC</a>&nbsp;</span>
+                    <span class="co">&copy;&nbsp;<?php echo $CopyRightYear; ?>&nbsp;<a href="<?php echo setRouter('index');?>"><?php echo $brandName; ?></a>&nbsp;</span>
                     <span class="co">&nbsp;Powered by <a href="https://crogram.com" target="blank">Crogram</a>&nbsp;</span>
                     <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="blank">iFastNet</a>&nbsp;</span>
                 </li>
