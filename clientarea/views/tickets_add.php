@@ -13,7 +13,9 @@ if (!defined('IN_SYS')) {
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span class="panel-title">Tickets Add</span>
-                    <a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('clientarea', 'tickets'); ?>">Tickets List</a>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets'); ?>"><?php echo I18N('add'); ?></a>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <form action="" method="POST">
@@ -37,7 +39,7 @@ if (!defined('IN_SYS')) {
                             <span class="text-warning"><?php echo isset($err["content_err"]) ? $err["content_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="do_add_tickets" class="btn btn-primary">Add</button>
+                            <button type="submit" name="do_add_tickets" class="btn btn-primary"><?php echo I18N('add'); ?></button>
                         </div>
                     </form>
                 </div>

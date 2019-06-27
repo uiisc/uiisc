@@ -1,7 +1,7 @@
 <?php
 if (!defined('IN_SYS')) {
     // exit('禁止访问');
-    header("Location: ../../clientarea.php");
+    header("Location: ../../admin.php");
     exit;
 }
 ?>
@@ -14,12 +14,12 @@ if (!defined('IN_SYS')) {
                 <div class="panel-heading">
                     <span class="panel-title">Tickets Details</span>
                     <div class="pull-right">
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets'); ?>"><?php echo I18N('list'); ?></a>
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo I18N('add'); ?></a>
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo I18N('list'); ?></a>
                     </div>
                 </div>
                 <div class="panel-body">
                     <p>Type: <?php echo $ticket_types[$data['department']]; ?></p>
+                    <p>Status: <?php echo $status_types[$data['status']]; ?></p>
                     <p>Subject: <?php echo $data['subject']; ?></p>
                     <p>Content: <?php echo $data['content']; ?></p>
                     <form action="" method="POST">

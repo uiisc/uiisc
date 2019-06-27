@@ -14,7 +14,7 @@ if (!defined('IN_SYS')) {
                 <div class="panel-heading">
                     <span class="panel-title"><?php echo I18N('news'); ?></span>
                     <div class="pull-right">
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('admin', 'news_add'); ?>">Add</a>
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('admin', 'news_add'); ?>"><?php echo I18N('add'); ?></a>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -23,21 +23,19 @@ if (!defined('IN_SYS')) {
                             <thead>
                                 <tr>
                                     <th>Date</th>
-                                    <th>Department</th>
-                                    <th>Subject</th>
+                                    <th>Title</th>
                                     <th>Status</th>
-                                    <th>Last Updated</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if ($tickets["total"]) {
-                                    foreach ($tickets["list"] as $key => $value) { ?>
+                                <?php if ($news["total"] && $news["list"]) {
+                                    foreach ($news["list"] as $key => $value) { ?>
                                         <tr>
-                                            <th><?php echo $value["date"]; ?></th>
-                                            <td><?php echo $value["department"]; ?></td>
-                                            <td><?php echo $value["subject"]; ?></td>
-                                            <td><?php echo $value["status"]; ?></td>
-                                            <td><?php echo $value["lastupdated"]; ?></td>
+                                            <td><?php echo cTime($value["date"]); ?></td>
+                                            <td><?php echo $value["title"]; ?></td>
+                                            <td><?php echo $status_types[$value['status']]; ?></td>
+                                            <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'news_details', ['id' => $value['id']]); ?>">Details</a></td>
                                         </tr>
                                     <?php }
                             } else { ?>
@@ -50,7 +48,7 @@ if (!defined('IN_SYS')) {
                     </div>
                 </div>
                 <div class="panel-footer">
-                    <span><?php echo $tickets["total"]; ?> Records Found, Page <?php echo $tickets["page"]; ?> of <?php echo $tickets["pages"]; ?></span>
+                    <span><?php echo $news["total"]; ?> Records Found, Page <?php echo $news["page"]; ?> of <?php echo $news["pages"]; ?></span>
                 </div>
             </div>
         </div>

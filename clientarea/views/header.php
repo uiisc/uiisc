@@ -6,7 +6,7 @@ if (!defined('IN_SYS')) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $current_lang; ?>">
 
 <head>
     <meta charset="utf-8" />

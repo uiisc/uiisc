@@ -64,4 +64,6 @@ $LANG = [
     'about'             => '关于',
     'aboutus'           => '关于我们',
     'clientarea'        => '客户中心',
+    'add'               => '新增',
+    'list'              => '列表'
 ];

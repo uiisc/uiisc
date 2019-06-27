@@ -13,7 +13,9 @@ if (!defined('IN_SYS')) {
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <span class="panel-title">Support Tickets</span>
-                    <a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>">Add Ticket</a>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo I18N('add'); ?></a>
+                    </div>
                 </div>
                 <div class="panel-body">
                     <div class="table-responsive">

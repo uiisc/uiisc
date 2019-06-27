@@ -31,10 +31,10 @@ if (!defined('IN_SYS')) {
                                 <?php if ($tickets["total"]) {
                                     foreach ($tickets["list"] as $key => $value) { ?>
                                         <tr>
-                                            <th><?php echo cTime($value["date"]); ?></th>
-                                            <td><?php echo $value["department"]; ?></td>
+                                            <td><?php echo cTime($value["date"]); ?></td>
+                                            <td><?php echo $ticket_types[$value["department"]]; ?></td>
                                             <td><?php echo $value["subject"]; ?></td>
-                                            <td><?php echo $value["status"]; ?></td>
+                                            <td><?php echo $status_types[$value["status"]]; ?></td>
                                             <td><?php echo cTime($value["lastupdated"]); ?></td>
                                             <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('admin', 'tickets_details', ['id' => $value['id']]); ?>">Details</a></td>
                                         </tr>
