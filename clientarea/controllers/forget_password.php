@@ -32,20 +32,29 @@ if (isset($_POST["reset_request"])) {
         setMsg("errors", $errors);
         redirect("clientarea", "forget_password");
     } else {
-        $code = md5(crypt(rand(), "aa"));
-        $stmt = $objDB->prepare(
-            "UPDATE users SET is_active = 0, reset_code=? WHERE email=?"
-        );
-        $stmt->bind_param("ss", $code, $email);
-        if ($stmt->execute()) {
+        $reset_code = md5(crypt(rand(), "aa"));
+        $data = [
+            "is_active" => 0,
+            "reset_code" => $reset_code,
+        ];
+        $res = $dbpdo->update("users", $data, "`email` = '$email'");
+        if ($res) {
+            $data = ["email" => $email];
             setMsg("msg_notify", "You made a password request, please check email to reset your password.", "success");
-            $message = "Hi! You requested password reset, . You need to click here to <a href='" . setURL('clientarea', 'reset_password') . "&reset_code=$code'>reset your password.</a>";
-            echo $message;
-            send_mail([
+            $message = "Hi! You requested password reset, . You need to click <a href='" . setURL('clientarea', 'reset_password', ['reset_code' => $reset_code]) . "'>here</a> to reset your password.";
+            $msg_email = [
                 "to" => $email,
                 "message" => $message,
                 "subject" => "Reset Password Requested"
-            ]);
+            ];
+            if (send_mail($msg_email)) {
+                $dbpdo->add("emails", [
+                    "date" => time(),
+                    "subject" => "Reset Password Requested",
+                    "body" => $message,
+                    "user_id" => 1,
+                ]);
+            };
         } else {
             setMsg("msg_notify", "reset password request, Please try again later.", "warning");
         }
