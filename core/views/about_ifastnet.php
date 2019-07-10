@@ -8,7 +8,7 @@ if (!defined('IN_SYS')) {
 ?>
 
 <div class="container">
-    <div class="bs-docs-header">
+    <div>
         <h1><?php echo I18N('about'); ?> iFastNet</h1>
     </div>
 </div>

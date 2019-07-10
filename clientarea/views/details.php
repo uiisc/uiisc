@@ -63,7 +63,7 @@ if (!defined('IN_SYS')) {
             <div class="modal-footer">
                 <form action="<?php echo setRouter('clientarea', 'account_deactivation'); ?>" method="POST">
                     <input type="submit" value="Yes" class="btn btn-danger" name="deactivate">
-                    <button type="button" class="btn btn-default" data-dismiss="modal"">Cancel</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </form>
             </div>
         </div>

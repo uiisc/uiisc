@@ -30,8 +30,8 @@ if (!defined('IN_SYS')) {
     </div>
 </footer>
 
-<script src="assets/jquery/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery.min.js?_=<?php echo $static_release; ?>"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/js/clientarea.js?_=<?php echo $static_release; ?>"></script>
 

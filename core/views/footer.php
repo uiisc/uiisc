@@ -31,12 +31,10 @@ if (!defined('IN_SYS')) {
         </div>
     </div>
 </footer>
-<script src="assets/jquery/jquery.min.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery/jquery.min.js?_=<?php echo $static_release; ?>"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>
-<?php
-// include("google_analytics.php");
-?>
+<?php if (!empty($google_site_verification)) { include("google_analytics.php");} ?>
 
 </body>
 

@@ -20,12 +20,7 @@ include_once "{$ROOT}/admin/library.php";
 //     }
 // }
 
-if (isAdminLoggedIn()) {
-    $section = (empty($_GET["s"]) ? "main" : $_GET["s"]);
-} else {
-    $section = "login";
-}
-
+$section = isAdminLoggedIn() ? (empty($_GET["s"]) ? "main" : $_GET["s"]) : "login";
 $section_page = "{$ROOT}/admin/views/{$section}.php";
 if (!is_file($section_page)) {
     exit('Page Not Found!');

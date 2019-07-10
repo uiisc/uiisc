@@ -21,8 +21,8 @@ if (!defined('IN_SYS')) {
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="icon" />
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="shortcut icon" />
     <!--[if lt IE 9]>
-    <script src="assets/html5shiv/html5shiv.min.js"></script>
-    <script src="assets/respond/respond.min.js"></script>
+    <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
+    <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>
     <![endif]-->
     <script type="text/javascript">
         var domain = "<?php echo $lang->getDomain(); ?>";

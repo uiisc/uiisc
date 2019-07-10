@@ -20,6 +20,9 @@ button {
     outline-width: 0 !important;
 }
 
+.page-header {
+    margin-top: 20px;
+}
 
 .section-wrap {
     padding: 10px 0;
@@ -42,91 +45,6 @@ button {
     background-image: url(../images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-body.fixed-header-on {
-    padding-top: 0;
-}
-
-.fixed-header-on .navbar-nav>li>a,
-.fixed-header-on .navbar-brand {
-    color: #fff;
-}
-
-.fixed-header-on .navbar-nav>li>a:hover,
-.fixed-header-on .navbar-brand:hover {
-    color: #ffc400;
-}
-
-.fixed-header-on .header {
-    background-color: rgba(0, 0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-}
-
-.fixed-header-on .footer {
-    border-color: transparent;
-    background-color: transparent;
-    background: transparent;
-}
-
-
-.home-banner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 20;
-    text-align: center;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.bs-docs-header {
-    position: relative;
-    padding: 30px 0;
-    color: #cdbfe3;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background-color: #6f5499;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
-    background-image: -webkit-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-    background-image: -o-linear-gradient(top, #563d7c 0%, #6f5499 100%);
-    background-image: linear-gradient(to bottom, #563d7c 0%, #6f5499 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-    background-repeat: repeat-x;
-}
-
-.bs-docs-header {
-    margin-bottom: 40px;
-    font-size: 20px;
-}
-
-.bs-docs-header h1 {
-    margin-top: 0;
-    color: #fff;
-}
-
-.bs-docs-header p {
-    margin-bottom: 0;
-    font-weight: 300;
-    line-height: 1.4;
-}
-
-.bs-docs-header .container {
-    position: relative;
-}
-
-@media (min-width: 768px) {
-    .bs-docs-header {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        font-size: 24px;
-    }
-
-    .bs-docs-header h1 {
-        font-size: 60px;
-        line-height: 1;
-    }
 }
 
 .form-account {

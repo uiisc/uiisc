@@ -25,7 +25,7 @@ $title = "UIISC";
 $title_s = "UIISC";
 $author = 'Crogram Inc.';
 $description = "uiisc, freewebhost, webhost, Crogram, iFastNet";
-$google_site_verification = "5O6Wxt0gIyGb7btMuXiQqddZJ516n-xBOW_9RLMBeSY";
+// $google_site_verification = "5O6Wxt0gIyGb7btMuXiQqddZJ516n-xBOW_9RLMBeSY";
 $siteURL = "http://crogroup.cn";
 
 $admin = [
