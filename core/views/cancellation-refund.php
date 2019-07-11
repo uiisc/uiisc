@@ -10,7 +10,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div class="page-header">
-        <h1 class="text-center"><?php echo $LANG['cancellation_refund']; ?></a></h1>
+        <h1 class="text-center"><?php echo I18N('cancellation_refund'); ?></a></h1>
         <p class="text-center">Cancelation &amp; refund information</p>
     </div>
 </div>

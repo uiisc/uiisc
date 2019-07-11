@@ -8,7 +8,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div class="page-header">
-        <h1><?php echo $LANG['contact_us']; ?></h1>
+        <h1><?php echo I18N('contact_us'); ?></h1>
     </div>
 </div>
 <div class="container">
@@ -21,7 +21,7 @@ if (!defined('IN_SYS')) {
             <p>For technical support please look at the <a href="http://byet.net" target="_blank">Knowledge Base</a></p>
         </div>
         <div class="col-sm-12 col-md-12">
-            <h2><?php echo $LANG['address']; ?></h2>
+            <h2><?php echo I18N('address'); ?></h2>
             <p>Shanghai China.</p>
         </div>
         <div class="col-sm-12 col-md-12">

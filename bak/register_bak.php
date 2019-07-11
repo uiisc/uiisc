@@ -7,7 +7,7 @@
 <html lang="<?php echo $current_lang; ?>">
 <head>
     <meta charset="utf-8">
-    <title><?php echo $title; ?> - <?php echo $LANG['register']; ?></title>
+    <title><?php echo $title; ?> - <?php echo I18N('register'); ?></title>
     <?php include ("headmate.php"); ?>
 </head>
 
@@ -18,37 +18,37 @@
     <div class="form-group form-horizontal form-account">
         <input type="hidden" name="plan_name" value="free webhosting">
         <div class="form-group">
-            <label for="inputUsername" class="control-label"><?php echo $LANG['username']; ?></label>
-            <input type="text" name="username" class="form-control" id="inputUsername" placeholder="<?php echo $LANG['input_username']; ?>" value="<?php if (isset($_GET['username'])) { echo $_GET['username']; }?>">
+            <label for="inputUsername" class="control-label"><?php echo I18N('username'); ?></label>
+            <input type="text" name="username" class="form-control" id="inputUsername" placeholder="<?php echo I18N('input_username'); ?>" value="<?php if (isset($_GET['username'])) { echo $_GET['username']; }?>">
         </div>
         <div class="form-group">
-            <label for="inputDomain" class="control-label"><?php echo $LANG['domain']; ?></label>
-            <input type="text" name="domain" class="form-control" id="inputDomain" placeholder="<?php echo $LANG['input-domain']; ?>" value="<?php if (isset($_GET['domain'])) { echo $_GET['domain']; }?>">
+            <label for="inputDomain" class="control-label"><?php echo I18N('domain'); ?></label>
+            <input type="text" name="domain" class="form-control" id="inputDomain" placeholder="<?php echo I18N('input-domain'); ?>" value="<?php if (isset($_GET['domain'])) { echo $_GET['domain']; }?>">
         </div>
         <div class="form-group">
-            <label for="inputPassword" class="control-label"><?php echo $LANG['password']; ?></label>
-            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="<?php echo $LANG['input_password']; ?>">
+            <label for="inputPassword" class="control-label"><?php echo I18N('password'); ?></label>
+            <input type="password" name="password" class="form-control" id="inputPassword" placeholder="<?php echo I18N('input_password'); ?>">
         </div>
         <div class="form-group">
-            <label for="inputEmail" class="control-label"><?php echo $LANG['email']; ?></label>
-            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="<?php echo $LANG['input_email']; ?>" value="<?php if (isset($_GET['email'])) { echo $_GET['email']; }?>">
+            <label for="inputEmail" class="control-label"><?php echo I18N('email'); ?></label>
+            <input type="email" name="email" class="form-control" id="inputEmail" placeholder="<?php echo I18N('input_email'); ?>" value="<?php if (isset($_GET['email'])) { echo $_GET['email']; }?>">
         </div>
         <div class="form-group">
-            <label for="inputCategory" class="control-label"><?php echo $LANG['site_category']; ?></label>
+            <label for="inputCategory" class="control-label"><?php echo I18N('site_category'); ?></label>
             <select class="form-control" name="website_category" id="inputCategory">
-                <option><?php echo $LANG['choose_from_below']; ?></option>
-                <option><?php echo $LANG['personal']; ?></option>
-                <option><?php echo $LANG['business']; ?></option>
-                <option><?php echo $LANG['hobby']; ?></option>
-                <option><?php echo $LANG['forum']; ?></option>
-                <option><?php echo $LANG['dating']; ?></option>
-                <option><?php echo $LANG['software_download']; ?></option>
+                <option><?php echo I18N('choose_from_below'); ?></option>
+                <option><?php echo I18N('personal'); ?></option>
+                <option><?php echo I18N('business'); ?></option>
+                <option><?php echo I18N('hobby'); ?></option>
+                <option><?php echo I18N('forum'); ?></option>
+                <option><?php echo I18N('dating'); ?></option>
+                <option><?php echo I18N('software_download'); ?></option>
             </select>
         </div>
         <div class="form-group">
-            <label for="inputLanguage" class="control-label"><?php echo $LANG['site_language']; ?></label>
+            <label for="inputLanguage" class="control-label"><?php echo I18N('site_language'); ?></label>
             <select class="form-control" name="website_language" id="inputLanguage">
-                <option><?php echo $LANG['choose_from_below']; ?></option>
+                <option><?php echo I18N('choose_from_below'); ?></option>
                 <!-- <option data-i18n="english">English</option> -->
                 <!-- <option data-i18n="non_english">Non-English</option> -->
                 <option selected="selected" value="English">Auto: English</option>
@@ -160,16 +160,16 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="inputID" class="control-label"><?php echo $LANG['security_code']; ?></label>
+            <label for="inputID" class="control-label"><?php echo I18N('security_code'); ?></label>
             <img width="90px" height="25px" src="./security_code.php?id=<?=$security_id?>">
             <input type="hidden" name="id" class="form-control" id="inputID" value="<?=$security_id?>">
         </div>
         <div class="form-group">
-            <label for="inputSecurityCode" class="control-label"><?php echo $LANG['input_security_code']; ?></label>
-            <input type="text" name="number" class="form-control" id="inputSecurityCode" placeholder="<?php echo $LANG['input_security_code_above']; ?>">
+            <label for="inputSecurityCode" class="control-label"><?php echo I18N('input_security_code'); ?></label>
+            <input type="text" name="number" class="form-control" id="inputSecurityCode" placeholder="<?php echo I18N('input_security_code_above'); ?>">
         </div>
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-primary"><?php echo $LANG['register']; ?></button>
+            <button type="submit" name="submit" class="btn btn-primary"><?php echo I18N('register'); ?></button>
         </div>
     </div>
 </div>

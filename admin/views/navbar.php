@@ -56,7 +56,7 @@ if (!defined('IN_SYS')) {
                             </ul>
                         </li>
                     <?php } else { ?>
-                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo I18N('ControlArea'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo I18N('managearea'); ?></a></li>
                         <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('clientarea'); ?></a></li>
                     <?php } ?>
                 </ul>

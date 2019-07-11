@@ -11,19 +11,19 @@ if (!defined('IN_SYS')) {
         <div class="col-md-6 col-sm-6 margin-auto">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo $LANG['please_login']; ?></h3>
+                    <h3 class="panel-title"><?php echo I18N('please_login'); ?></h3>
                 </div>
                 <div class="panel-body">
                     <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?= $domain ?>/login.php" method="post" name="login">
                         <div class="form-group">
-                            <input type="text" name="uname" class="form-control" placeholder="<?php echo $LANG['input_username']; ?>" required autofocus autocomplete="off">
+                            <input type="text" name="uname" class="form-control" placeholder="<?php echo I18N('input_username'); ?>" required autofocus autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <input type="password" name="passwd" class="form-control" placeholder="<?php echo $LANG['input_password']; ?>" required autocomplete="off">
+                            <input type="password" name="passwd" class="form-control" placeholder="<?php echo I18N('input_password'); ?>" required autocomplete="off">
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="language" id="inputLanguage">
-                                <option disabled><?php echo $LANG['choose_from_below']; ?></option>
+                                <option disabled><?php echo I18N('choose_from_below'); ?></option>
                                 <?php foreach ($languages as $key => $value) {
                                     $selected = $key == $current_lang ? 'selected="selected"' : '';
                                     echo '<option value="' . $languages[$key][1] . '" ' . $selected . '>' . $languages[$key][0] . '</option>';
@@ -33,13 +33,13 @@ if (!defined('IN_SYS')) {
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="remember-me"><span><?php echo $LANG['remember_me']; ?></span>
-                                    <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo $LANG['lost_password']; ?></a>
+                                    <input type="checkbox" value="remember-me"><span><?php echo I18N('remember_me'); ?></span>
+                                    <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo I18N('lost_password'); ?></a>
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo $LANG['login']; ?></button>
+                            <button type="submit" name="submit" class="btn btn-primary btn-block"><?php echo I18N('login'); ?></button>
                         </div>
                     </form>
                 </div>

@@ -28,7 +28,7 @@ if (!defined('IN_SYS')) {
                                 <span>Captcha:</span>
                                 <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off" style="background-image: url(library/captcha.php);">
                             </label>
-                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo $LANG['login']; ?></button>
+                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo I18N('login'); ?></button>
                         </form>
                     <?php } elseif (isAdminLoggedIn() && !isset($message[0])) { ?>
                         <div class="alert alert-success">You have logged in</div>
