@@ -15,8 +15,8 @@ $enable_section = [
 $section_page = "{$ROOT}/core/views/about_{$section}.php";
 
 if (is_file(($section_page))) {
-    $title = $title . ' - ' . I18N('about') . ' ' . $enable_section[$section]['title'];
+    $title = $title . ' - ' . $lang->I18N('about') . ' ' . $enable_section[$section]['title'];
 } else {
-    $title = $title . ' - ' . I18N('about');
+    $title = $title . ' - ' . $lang->I18N('about');
     $section_page = "{$ROOT}/core/views/about_uiisc.php";
 }

@@ -12,10 +12,10 @@ if (!defined('IN_SYS')) {
             <?php echo (getMsg("msg_notify")); ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span class="panel-title">Tickets Details</span>
+                    <span class="panel-title"><?php echo $lang->I18N('tickets-details'); ?></span>
                     <div class="pull-right">
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets'); ?>"><?php echo I18N('list'); ?></a>
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo I18N('add'); ?></a>
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets'); ?>"><?php echo $lang->I18N('list'); ?></a>
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo $lang->I18N('add'); ?></a>
                     </div>
                 </div>
                 <div class="panel-body">

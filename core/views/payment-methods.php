@@ -10,7 +10,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div class="page-header">
-        <h1 class="text-center"><?php echo I18N('payment_methods'); ?></a></h1>
+        <h1 class="text-center"><?php echo $lang->I18N('payment_methods'); ?></a></h1>
         <p class="text-center">Payment methods information</p>
     </div>
 </div>
@@ -18,7 +18,7 @@ if (!defined('IN_SYS')) {
     <div class="container">
         <div class="row">
             <div class="hidden-xs col-sm-12 col-md-12">
-                <h2><?php echo I18N('payment_methods'); ?></h2>
+                <h2><?php echo $lang->I18N('payment_methods'); ?></h2>
             </div>
             <div class="col-sm-12 col-md-12">
                 <p>We currently accept payments using 3 major payment gateways:</p>

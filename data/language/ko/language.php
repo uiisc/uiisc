@@ -67,4 +67,8 @@ $LANG = [
     'add' => '더하다',
     'list' => '명부',
     'managearea' => '관리센터',
+    'delete'            => '삭제',
+    'details'           => '세부 정보',
+    'tickets'           => '작업 지시서',
+    'tickets-details'   => '작업 지시 세부 정보',
 ];

@@ -6,4 +6,4 @@ if (!defined('IN_SYS')) {
 }
 
 
-$title = $title . ' - ' . I18N('login');
+$title = $title . ' - ' . $lang->I18N('login');

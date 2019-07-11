@@ -9,7 +9,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div>
-        <h1><?php echo I18N('about'); ?> UIISC</h1>
+        <h1><?php echo $lang->I18N('about'); ?> UIISC</h1>
     </div>
 </div>
 <div class="container">

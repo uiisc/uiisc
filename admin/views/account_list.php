@@ -39,7 +39,7 @@ if (!defined('IN_SYS')) {
                                 <td><?php echo $value["password"]; ?></td>
                                 <td><?php echo implode(",", $value["nameserver"]); ?></td>
                                 <td style="width: 206px;">
-                                    <a class="btn btn-default btn-xs" href="#" role="button"><?php echo I18N('login'); ?></a>
+                                    <a class="btn btn-default btn-xs" href="#" role="button"><?php echo $lang->I18N('login'); ?></a>
                                     <button class="btn btn-default btn-xs" type="submit">View</button>
                                     <button class="btn btn-default btn-xs" type="submit">Active</button>
                                     <button class="btn btn-default btn-xs" type="submit">Disable</button>

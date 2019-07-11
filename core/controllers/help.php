@@ -5,7 +5,7 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
-$title = $title . ' - ' . I18N('help');
+$title = $title . ' - ' . $lang->I18N('help');
 
 $questions = [
     [

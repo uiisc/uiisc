@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
         <div class="col-md-6 col-sm-6 margin-auto">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo I18N('login'); ?></h3>
+                    <h3 class="panel-title"><?php echo $lang->I18N('login'); ?></h3>
                 </div>
                 <div class="panel-body">
                     <?php if (!isAdminLoggedIn()) { ?>
@@ -21,14 +21,14 @@ if (!defined('IN_SYS')) {
                                 <input type="text" name="username" class="form-control" maxlength="18" placeholder="Username" autofocus required>
                             </label>
                             <label>
-                                <span><?php echo I18N('password'); ?>:</span>
-                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="<?php echo I18N('password'); ?>" required>
+                                <span><?php echo $lang->I18N('password'); ?>:</span>
+                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="<?php echo $lang->I18N('password'); ?>" required>
                             </label>
                             <label>
                                 <span>Captcha:</span>
                                 <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off" style="background-image: url(library/captcha.php);">
                             </label>
-                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo I18N('login'); ?></button>
+                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo $lang->I18N('login'); ?></button>
                         </form>
                     <?php } elseif (isAdminLoggedIn() && !isset($message[0])) { ?>
                         <div class="alert alert-success">You have logged in</div>

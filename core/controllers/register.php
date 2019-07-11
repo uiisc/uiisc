@@ -5,4 +5,4 @@ if (!defined('IN_SYS')) {
     exit;
 }
 $security_id = md5(rand(6000, getrandmax())); // $security_id = md5(rand(6000,PHP_INT_MAX));
-$title = $title . ' - ' . I18N('register');
+$title = $title . ' - ' . $lang->I18N('register');

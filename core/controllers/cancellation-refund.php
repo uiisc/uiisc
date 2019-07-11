@@ -5,4 +5,4 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
-$title = $title . ' - ' . I18N('cancellation_refund');
+$title = $title . ' - ' . $lang->I18N('cancellation_refund');

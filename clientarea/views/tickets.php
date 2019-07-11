@@ -12,9 +12,9 @@ if (!defined('IN_SYS')) {
             <?php echo (getMsg("msg_notify")); ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <span class="panel-title">Support Tickets</span>
+                    <span class="panel-title"><?php echo $lang->I18N('tickets'); ?></span>
                     <div class="pull-right">
-                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo I18N('add'); ?></a>
+                        <a class="btn btn-default btn-xs" href="<?php echo setRouter('clientarea', 'tickets_add'); ?>"><?php echo $lang->I18N('add'); ?></a>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -39,7 +39,7 @@ if (!defined('IN_SYS')) {
                                             <td><?php echo $value["subject"]; ?></td>
                                             <td><?php echo $status_types[$value["status"]]; ?></td>
                                             <td style="width: 150px;"><?php echo cTime($value["lastupdated"]); ?></td>
-                                            <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('clientarea', 'tickets_details', ['id' => $value['id']]); ?>">Details</a></td>
+                                            <td><a class="btn btn-default btn-xs pull-right" href="<?php echo setRouter('clientarea', 'tickets_details', ['id' => $value['id']]); ?>"><?php echo $lang->I18N('details'); ?></a></td>
                                         </tr>
                                     <?php }
                             } else { ?>

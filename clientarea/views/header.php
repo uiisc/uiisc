@@ -6,7 +6,7 @@ if (!defined('IN_SYS')) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $current_lang; ?>">
+<html lang="<?php echo $lang->get_lang(); ?>">
 
 <head>
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@ if (!defined('IN_SYS')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="<?php echo $author; ?>">
-    <title><?php echo I18N('clientarea'); ?></title>
+    <title><?php echo $lang->I18N('clientarea'); ?></title>
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="icon" />
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="shortcut icon" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>">
@@ -26,7 +26,7 @@ if (!defined('IN_SYS')) {
     <![endif]-->
     <script type="text/javascript">
         var domain = "<?php echo $lang->getDomain(); ?>";
-        var cur_lang = "<?php echo $current_lang; ?>";
+        var cur_lang = "<?php echo $lang->get_lang(); ?>";
         var ifastnet_aff = <?php echo $iFastNetAff; ?>;
     </script>
 </head>

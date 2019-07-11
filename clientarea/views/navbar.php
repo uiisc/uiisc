@@ -58,7 +58,7 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('clientarea', 'logout'); ?>">Logout</a></li>
                             </ul>
                         <?php } else { ?>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo I18N('clientarea'); ?>&nbsp;<span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang->I18N('clientarea'); ?>&nbsp;<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="<?php echo setRouter('clientarea', 'login'); ?>">Login</a></li>
                                 <li><a href="<?php echo setRouter('clientarea', 'register'); ?>">Register </a></li>

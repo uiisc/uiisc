@@ -20,7 +20,7 @@ if (!defined('IN_SYS')) {
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo setRouter('admin'); ?>"><?php echo I18N('home'); ?></a></li>
+                    <li><a href="<?php echo setRouter('admin'); ?>"><?php echo $lang->I18N('home'); ?></a></li>
                     <?php if (isAdminLoggedIn()) { ?>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Account&nbsp;<span class="caret"></span></a>
@@ -37,8 +37,8 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('admin', 'account_disable'); ?>">Account Suspend</a></li>
                             </ul>
                         </li>
-                        <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo I18N('Tickets'); ?></a></li>
-                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo I18N('news'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo $lang->I18N('tickets'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo $lang->I18N('news'); ?></a></li>
                     <?php } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -50,14 +50,14 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('admin', 'edit_details'); ?>">Edit Account Details</a></li>
                                 <li><a href="<?php echo setRouter('admin', 'change_password'); ?>">Change password</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo I18N('clientarea'); ?></a></li>
+                                <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo $lang->I18N('clientarea'); ?></a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo I18N('Logout'); ?></a></li>
+                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo $lang->I18N('Logout'); ?></a></li>
                             </ul>
                         </li>
                     <?php } else { ?>
-                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo I18N('managearea'); ?></a></li>
-                        <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('clientarea'); ?></a></li>
+                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo $lang->I18N('managearea'); ?></a></li>
+                        <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
                     <?php } ?>
                 </ul>
             </div>

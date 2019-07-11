@@ -20,35 +20,35 @@ if (!defined('IN_SYS')) {
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo setRouter('index');?>"><?php echo I18N('home'); ?></a></li>
-                    <li><a href="<?php echo setRouter('solution');?>"><?php echo I18N('solution'); ?></a></li>
-                    <li><a href="<?php echo setRouter('support');?>"><?php echo I18N('support'); ?></a></li>
+                    <li><a href="<?php echo setRouter('index');?>"><?php echo $lang->I18N('home'); ?></a></li>
+                    <li><a href="<?php echo setRouter('solution');?>"><?php echo $lang->I18N('solution'); ?></a></li>
+                    <li><a href="<?php echo setRouter('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo I18N('more'); ?>&nbsp;<span class="caret"></span></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang->I18N('more'); ?>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="contact.php"><?php echo I18N('contact'); ?></a></li>
-                            <li><a href="help.php"><?php echo I18N('help'); ?></a></li>
-                            <li><a href="support.php"><?php echo I18N('support'); ?></a></li>
-                            <li><a href="<?php echo setRouter('forum'); ?>"><?php echo I18N('forum'); ?></a></li>
+                            <li><a href="contact.php"><?php echo $lang->I18N('contact'); ?></a></li>
+                            <li><a href="help.php"><?php echo $lang->I18N('help'); ?></a></li>
+                            <li><a href="support.php"><?php echo $lang->I18N('support'); ?></a></li>
+                            <li><a href="<?php echo setRouter('forum'); ?>"><?php echo $lang->I18N('forum'); ?></a></li>
                             <li class="divider"></li>
-                            <li class="dropdown-header"><?php echo I18N('aboutus'); ?></li>
-                            <li><a href="about.php"><?php echo I18N('about'); ?> UIISC</a></li>
-                            <li><a href="about.php?s=crogram"><?php echo I18N('about'); ?> Crogram,Inc.</a></li>
-                            <li><a href="about.php?s=ifastnet"><?php echo I18N('about'); ?> iFastNet</a></li>
+                            <li class="dropdown-header"><?php echo $lang->I18N('aboutus'); ?></li>
+                            <li><a href="about.php"><?php echo $lang->I18N('about'); ?> UIISC</a></li>
+                            <li><a href="about.php?s=crogram"><?php echo $lang->I18N('about'); ?> Crogram,Inc.</a></li>
+                            <li><a href="about.php?s=ifastnet"><?php echo $lang->I18N('about'); ?> iFastNet</a></li>
                             <li class="divider"></li>
-                            <li><a href="cancellation-refund.php"><?php echo I18N('cancellation_refund'); ?></a></li>
-                            <li><a href="payment-methods.php"><?php echo I18N('payment_methods'); ?></a></li>
+                            <li><a href="cancellation-refund.php"><?php echo $lang->I18N('cancellation_refund'); ?></a></li>
+                            <li><a href="payment-methods.php"><?php echo $lang->I18N('payment_methods'); ?></a></li>
                             <li class="divider"></li>
-                            <li class="dropdown-header"><?php echo I18N('legal_information'); ?></li>
-                            <li><a href="legal.php?s=terms"><?php echo I18N('tos'); ?></a></li>
-                            <li><a href="legal.php?s=privacy"><?php echo I18N('privacy_policy'); ?></a></li>
+                            <li class="dropdown-header"><?php echo $lang->I18N('legal_information'); ?></li>
+                            <li><a href="legal.php?s=terms"><?php echo $lang->I18N('tos'); ?></a></li>
+                            <li><a href="legal.php?s=privacy"><?php echo $lang->I18N('privacy_policy'); ?></a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo setRouter('login');?>"><?php echo I18N('login'); ?></a></li>
-                    <li><a href="<?php echo setRouter('register');?>"><?php echo I18N('register'); ?></a></li>
-                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo I18N('clientarea'); ?></a></li>
+                    <li><a href="<?php echo setRouter('login');?>"><?php echo $lang->I18N('login'); ?></a></li>
+                    <li><a href="<?php echo setRouter('register');?>"><?php echo $lang->I18N('register'); ?></a></li>
+                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
                 </ul>
             </div>
         </div>

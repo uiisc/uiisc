@@ -11,7 +11,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div class="page-header">
-        <h1 class="text-center"><?php echo I18N('privacy_policy'); ?></a></h1>
+        <h1 class="text-center"><?php echo $lang->I18N('privacy_policy'); ?></a></h1>
         <p class="text-center">Privacy policy information</p>
     </div>
 </div>

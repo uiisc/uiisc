@@ -9,7 +9,7 @@ if (!defined('IN_SYS')) {
 
 <div class="container">
     <div class="page-header">
-        <h1><?php echo I18N('help'); ?></h1>
+        <h1><?php echo $lang->I18N('help'); ?></h1>
     </div>
 </div>
 

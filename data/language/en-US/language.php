@@ -63,8 +63,12 @@ $LANG = [
     'more' => 'More',
     'about' => 'About',
     'aboutus' => 'About',
-    'clientarea' => 'Client Area',
-    'add' => 'Add',
-    'list' => 'List',
-    'managearea'        => 'Manage Area'
+    'clientarea'        => 'Client Area',
+    'add'               => 'Add',
+    'list'              => 'List',
+    'managearea'        => 'Manage Area',
+    'delete'            => 'Delete',
+    'details'           => 'Details',
+    'tickets'           => 'Tickets',
+    'tickets-details'   => 'Tickets Details',
 ];

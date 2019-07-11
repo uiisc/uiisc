@@ -5,4 +5,4 @@ if (!defined('IN_SYS')) {
     exit;
 }
 
-$title = $title . ' - ' . I18N('contact_us');
+$title = $title . ' - ' . $lang->I18N('contact_us');

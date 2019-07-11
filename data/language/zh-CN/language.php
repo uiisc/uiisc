@@ -66,5 +66,9 @@ $LANG = [
     'clientarea'        => '客户中心',
     'add'               => '新增',
     'list'              => '列表',
-    'managearea'        => '管理中心'
+    'managearea'        => '管理中心',
+    'delete'            => '删除',
+    'details'           => '详情',
+    'tickets'           => '工单',
+    'tickets-details'   => '工单详情',
 ];
