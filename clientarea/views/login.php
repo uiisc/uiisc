@@ -15,20 +15,19 @@ if (!defined('IN_SYS')) {
                     <h3 class="panel-title"><?php echo $lang->I18N('login'); ?></h3>
                 </div>
                 <div class="panel-body">
-                    <p>Please fill in credentials to log in.</p>
                     <form action="" method="POST">
                         <div class="form-group">
-                            <label for="username">Username: <sup>*</sup></label>
-                            <input type="text" name="username" id="username" value="<?php echo ($data['username']); ?>" class="form-control <?php echo (isset($err['username_err'])) ? 'is-invalid' : ''; ?>">
+                            <label for="username"><?php echo $lang->I18N('username'); ?>: <sup>*</sup></label>
+                            <input type="text" name="username" id="username" placeholder="<?php echo $lang->I18N('input_username'); ?>" autofocus value="<?php echo ($data['username']); ?>" class="form-control <?php echo (isset($err['username_err'])) ? 'is-invalid' : ''; ?>">
                             <span class="text-warning"><?php echo isset($err["username_err"]) ? $err["username_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password: <sup>*</sup></label>
-                            <input type="password" name="password" id="password" value="<?php echo ($data['password']); ?>" class="form-control <?php echo (isset($err['password_err'])) ? 'is-invalid' : ''; ?>">
+                            <label for="password"><?php echo $lang->I18N('password'); ?>: <sup>*</sup></label>
+                            <input type="password" name="password" id="password" placeholder="<?php echo $lang->I18N('input_password'); ?>" value="<?php echo ($data['password']); ?>" class="form-control <?php echo (isset($err['password_err'])) ? 'is-invalid' : ''; ?>">
                             <span class="text-warning"><?php echo isset($err["password_err"]) ? $err["password_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="login" class="btn btn-default">Login</button>
+                            <button type="submit" name="login" class="btn btn-primary"><?php echo $lang->I18N('login'); ?></button>
                             <label class="form-check-label text-primary"><input type="checkbox" class="form-check-input" name="remember-me"> Remember Me</label>
                         </div>
                     </form>

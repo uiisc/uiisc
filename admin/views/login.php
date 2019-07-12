@@ -15,20 +15,22 @@ if (!defined('IN_SYS')) {
                 </div>
                 <div class="panel-body">
                     <?php if (!isAdminLoggedIn()) { ?>
-                        <form action="" method="POST" class="form-horizontal">
-                            <label>
-                                <span>Admin:</span>
-                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="Username" autofocus required>
-                            </label>
-                            <label>
-                                <span><?php echo $lang->I18N('password'); ?>:</span>
-                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="<?php echo $lang->I18N('password'); ?>" required>
-                            </label>
-                            <label>
-                                <span>Captcha:</span>
-                                <input type="text" name="captcha" class="form-control" maxlength="18" placeholder="CAPTCHA" required autocomplete="off" style="background-image: url(library/captcha.php);">
-                            </label>
-                            <button type="submit" name="do_login" class="btn btn-primary"><?php echo $lang->I18N('login'); ?></button>
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="username"><?php echo $lang->I18N('username'); ?>: <sup>*</sup></label>
+                                <input type="text" name="username" class="form-control" maxlength="18" placeholder="<?php echo $lang->I18N('input_username'); ?>" autofocus required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><?php echo $lang->I18N('password'); ?>: <sup>*</sup></label>
+                                <input type="password" name="password" class="form-control" maxlength="35" placeholder="<?php echo $lang->I18N('input_password'); ?>" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="captcha">Captcha: <sup>*</sup></label>
+                                <input type="text" name="captcha" class="form-control" maxlength="4" placeholder="CAPTCHA" required autocomplete="off" style="background-image: url(library/captcha.php);">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" name="do_login" class="btn btn-primary"><?php echo $lang->I18N('login'); ?></button>
+                            </div>
                         </form>
                     <?php } elseif (isAdminLoggedIn() && !isset($message[0])) { ?>
                         <div class="alert alert-success">You have logged in</div>

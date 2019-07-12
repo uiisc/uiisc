@@ -7,19 +7,43 @@ if (!defined('IN_SYS')) {
 ?>
 
 <div class="container">
+    <div class="page-header">
+        <h1><?php echo $lang->I18N('clientarea'); ?> (BATE Version)</h1>
+    </div>
+</div>
+
+<div class="container">
+    <?php echo getMsg("msg_notify"); ?>
     <div class="row">
-        <div class="col-md-12">
-            <?php echo getMsg("msg_notify"); ?>
+        <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo $lang->I18N('clientarea'); ?></h3>
+                    <h3 class="panel-title"><?php echo $lang->I18N('我的服务'); ?></h3>
                 </div>
                 <div class="panel-body">
-                    <p>Please fill in credentials to log in.</p>
+                    <p>产品/服务数量: <a href="" class="btn btn-link">1 (1) - 查看 »</a></p>
+                    <p>我的工单数量: <a href="" class="btn btn-link">处理中 1 个（总共：1000 个） - 查看 »</a></p>
+                    <p>推广注册数量: <a href="" class="btn btn-link">1 (1) - 查看 »</a></p>
+                    <p>付款方式: 使用默认（设置每张订单）</p>
+                    <p>工单：待处理 100 个（总共：1000 个）</p>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><?php echo $lang->I18N('账户信息'); ?></h3>
+                </div>
+                <div class="panel-body">
+                    <p>登录账号：<?php echo ($user->username); ?></p>
+                    <p>姓名：<?php echo ($user->name); ?></p>
+                    <p>我的站点：<?php echo ($user->website); ?></p>
+                    <p>邮箱地址：<?php echo ($user->email); ?></p>
                 </div>
                 <div class="panel-footer">
-                    <a href="<?php echo setRouter('clientarea', 'forget_password'); ?>" class="btn btn-link">Forget Passsword?</a>
-                    <a href="<?php echo setRouter('clientarea', 'register'); ?>" class="btn btn-link">No account? Register</a>
+                    <a href="<?php echo setRouter('clientarea', 'edit_details'); ?>">Edit Account Details</a>
+                    <a href="<?php echo setRouter('clientarea', 'change_password'); ?>">Change password</a>
                 </div>
             </div>
         </div>

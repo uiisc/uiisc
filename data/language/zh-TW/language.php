@@ -7,6 +7,7 @@ $LANG = [
     'contact_us' => '聯繫我們',
     'help' => '幫助',
     'login' => '登錄',
+    'logout' => '退出登錄',
     'register' => '註冊',
     'username' => '用戶名',
     'input_username' => '請輸入用戶名',

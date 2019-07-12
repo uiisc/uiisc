@@ -7,6 +7,7 @@ $LANG = [
     'contact_us' => 'Contact Us',
     'help' => 'Help',
     'login' => 'Login',
+    'logout' => 'Logout',
     'register' => 'Register',
     'username' => 'Username',
     'input_username' => 'Please Input Username',

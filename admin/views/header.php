@@ -14,12 +14,12 @@ if (!defined('IN_SYS')) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta name="description" content="<?php echo $description; ?>">
     <meta name="author" content="<?php echo $author; ?>">
-    <title><?php echo $title; ?> - Content Management System for Reseller of MyOwnFreeHost</title>
-    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
-    <link href="assets/css/style.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
-    <link href="assets/css/admin.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <title><?php echo $lang->I18N('managearea'); ?></title>
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="icon" />
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="shortcut icon" />
+    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/admin.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
     <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>

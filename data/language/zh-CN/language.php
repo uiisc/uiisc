@@ -7,6 +7,7 @@ $LANG = [
     "contact_us"        => "联系我们",
     "help"              => "帮助",
     "login"             => "登录",
+    'logout'            => '退出登录',
     "register"          => "注册",
     "username"          => "用户名",
     "input_username"    => "请输入用户名",

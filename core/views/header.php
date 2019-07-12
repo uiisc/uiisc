@@ -9,18 +9,18 @@ if (!defined('IN_SYS')) {
 <html lang="<?php echo $lang->get_lang(); ?>">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="<?php echo $description; ?>" />
+    <meta name="author" content="<?php echo $author; ?>" />
     <title><?php echo $title; ?></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <meta name="description" content="<?php echo $description; ?>">
-    <meta name="author" content="<?php echo $author; ?>">
 <?php if (!empty($google_site_verification)) { ?>
     <meta name="google-site-verification" content="<?php echo $google_site_verification; ?>" />
 <?php } ?>
-    <link href="favicon.ico?_=<?php echo $static_release; ?>" rel="icon">
-    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet">
-    <link href="assets/css/style.css?_=<?php echo $static_release; ?>" rel="stylesheet">
+    <link href="favicon.ico?_=<?php echo $static_release; ?>" rel="icon" />
+    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
     <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>

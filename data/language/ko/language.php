@@ -7,6 +7,7 @@ $LANG = [
     'contact_us' => '문의하기',
     'help' => '도움',
     'login' => '로그인',
+    'logout' => '로그 아웃',
     'register' => '레지스터',
     'username' => '사용자 이름',
     'input_username' => '사용자 이름을 입력하십시오.',

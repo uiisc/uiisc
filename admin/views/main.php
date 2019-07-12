@@ -12,7 +12,7 @@ if (file_exists("{$ROOT}/install.php")) {
 
 <div class="container">
     <div class="page-header">
-        <h1><?php echo $lang->I18N('managearea'); ?></h1>
+        <h1><?php echo $lang->I18N('managearea'); ?> (BATE Version)</h1>
     </div>
 </div>
 

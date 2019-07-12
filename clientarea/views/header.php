@@ -17,9 +17,9 @@ if (!defined('IN_SYS')) {
     <title><?php echo $lang->I18N('clientarea'); ?></title>
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="icon" />
     <link href="favicon.ico?_=<?php echo $static_release; ?>" type="image/x-icon" rel="shortcut icon" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>">
-    <link rel="stylesheet" href="assets/css/style.css?_=<?php echo $static_release; ?>">
-    <link rel="stylesheet" href="assets/css/clientarea.css?_=<?php echo $static_release; ?>">
+    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/clientarea.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
     <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>

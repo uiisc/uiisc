@@ -52,7 +52,7 @@ if (!defined('IN_SYS')) {
                                 <li role="separator" class="divider"></li>
                                 <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo $lang->I18N('clientarea'); ?></a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo $lang->I18N('Logout'); ?></a></li>
+                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo $lang->I18N('logout'); ?></a></li>
                             </ul>
                         </li>
                     <?php } else { ?>
