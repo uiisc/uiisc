@@ -21,11 +21,9 @@ if (!defined('IN_SYS')) {
                     <h3 class="panel-title"><?php echo $lang->I18N('我的服务'); ?></h3>
                 </div>
                 <div class="panel-body">
-                    <p>产品/服务数量: <a href="" class="btn btn-link">1 (1) - 查看 »</a></p>
-                    <p>我的工单数量: <a href="" class="btn btn-link">处理中 1 个（总共：1000 个） - 查看 »</a></p>
-                    <p>推广注册数量: <a href="" class="btn btn-link">1 (1) - 查看 »</a></p>
-                    <p>付款方式: 使用默认（设置每张订单）</p>
-                    <p>工单：待处理 100 个（总共：1000 个）</p>
+                    <p>产品/服务数量: <a href="">1 (1) - 查看 »</a></p>
+                    <p>我的工单数量: <a href="">处理中 1 个（总共：1000 个） - 查看 »</a></p>
+                    <p>推广注册数量: <a href="">1 (1) - 查看 »</a></p>
                 </div>
                 <div class="panel-footer"></div>
             </div>
