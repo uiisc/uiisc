@@ -2,164 +2,207 @@
 
 class Language
 {
-    public $language_area; // area
-    public $language_country; // country
-    public $language_dir;
-    public $languages; // languages enabled
-    public $dir;
 
-    public function __construct($language_root, $languages, $lang_default = "en-US")
-    {
-        $this->dir = $language_root;
-        $this->language_area = $lang_default;
-        $this->languages = $languages;
-        $this->initDefaultLanguage();
-        if (empty($this->language_country) && !empty($this->language_area)) {
-            $this->language_country = substr($this->language_area, 0, strpos($this->language_area, "-"));
-        }
-        $this->initLanguageDir();
-        echo $this->getFileDir('language.php');
-        echo $this->language_country;
-        include $this->getFileDir('language.php');
-        $this->LANG = $LANG;
-    }
+    public $language_current;
+    private $language_cached;
+    private $language_default;
+    private $language_root;
+    private $language_file;
+    private $languages = [
+        'en-US' => ['English', 'English'],
+        'zh-CN' => ['简体中文', 'Chinese_simplified'],
+        'zh-SG' => ['简体中文（新加坡）', 'Chinese_simplified'],
+        'zh-HK' => ['繁體中文（香港）', 'Chinese_traditional'],
+        'zh-TW' => ['繁體中文（台湾）', 'Chinese_traditional'],
+        'af' => ['Afrikaans', 'Afrikaans'],
+        'sq' => ['የአልባኒያ', 'Albanian'],
+        'am' => ['Amharic', 'Amharic'],
+        'ar' => ['Arabic', 'Arabic'],
+        'hy' => ['Armenian', 'Armenian'],
+        'az' => ['Azərbaycan', 'Azeerbaijani'],
+        'eu' => ['Basque', 'Basque'],
+        'be' => ['Belarusian', 'Belarusian'],
+        'bn' => ['Bengali', 'Bengali'],
+        'bs' => ['Bosnian', 'Bosnian'],
+        'bg' => ['Bulgarian', 'Bulgarian'],
+        'my' => ['Burmese', 'Burmese'],
+        'ca' => ['Catalan', 'Catalan'],
+        'ce' => ['Cebuano', 'Cebuano'], // 宿务语
+        'ch' => ['Chichewa', 'Chichewa'],
+        'co' => ['Corsican', 'Corsican'],
+        'hr' => ['Croatian', 'Croatian'],
+        'cs' => ['Czech', 'Czech'],
+        'da' => ['Danish', 'Danish'],
+        'nl' => ['Dutch', 'Dutch'],
+        'eo' => ['Esperanto', 'Esperanto'],
+        'et' => ['Estonian', 'Estonian'],
+        'fa' => ['Farsi', 'Farsi'],
+        'fil' => ['Filipino', 'Filipino'],
+        'fi' => ['Finnish', 'Finnish'],
+        'fr' => ['français', 'French'],
+        'fy' => ['Frisian', 'Frisian'],
+        'gl' => ['Galician', 'Galician'],
+        'ka' => ['Georgian', 'Georgian'],
+        'de' => ['Deutsch', 'German'],
+        'el' => ['Greek', 'Greek'],
+        'gu' => ['Gujarati', 'Gujarati'],
+        'ko' => ['Haitian Creole', 'Haitian Creole'],
+        'ha' => ['Hausa', 'Hausa'],
+        'haw' => ['Hawaiian', 'Hawaiian'],
+        'he' => ['Hebrew', 'Hebrew'],
+        'hi' => ['Hindi', 'Hindi'],
+        'hm' => ['Hmong', 'Hmong'],
+        'hu' => ['Hungarian', 'Hungarian'],
+        'is' => ['Icelandic', 'Icelandic'],
+        'ig' => ['Igbo', 'Igbo'],
+        'id' => ['Indonesian', 'Indonesian'],
+        'ga' => ['Irish', 'Irish'],
+        'it' => ['Italian', 'Italian'],
+        'jp' => ['日本語', 'Japanese'],
+        'jv' => ['Wong Jawa', 'Javanese'],
+        'kn' => ['Kannada', 'Kannada'],
+        'kk' => ['Kazakh', 'Kazakh'],
+        'kh' => ['Khmer', 'Khmer'],
+        'ko' => ['한국의', 'Korean'],
+        'ku' => ['Kurdish', 'Kurdish'],
+        'kz' => ['Kyrgyz', 'Kyrgyz'],
+        'lo' => ['ພາສາລາວ', 'Lao'],
+        'la' => ['Latinae', 'Latin'],
+        'lv' => ['Latvian', 'Latvian'],
+        'lt' => ['Lithuanian', 'Lithuanian'],
+        'lu' => ['Luxembourgish', 'Luxembourgish'],
+        'mk' => ['Macedonian', 'Macedonian'],
+        'ma' => ['Malagasy', 'Malagasy'],
+        'ms' => ['Malay', 'Malay'],
+        'ml' => ['Malayalam', 'Malayalam'],
+        'mt' => ['Maltese', 'Maltese'],
+        'ma' => ['Maori', 'Maori'],
+        'mr' => ['Marathi', 'Marathi'],
+        'mn' => ['Mongolian', 'Mongolian'],
+        'ne' => ['Nepali', 'Nepali'],
+        'no' => ['Norwegian', 'Norwegian'],
+        'pa' => ['Pashto', 'Pashto'],
+        'pe' => ['Persian', 'Persian'],
+        'po' => ['Polish', 'Polish'],
+        'pg' => ['Português', 'Portuguese'],
+        'pu' => ['Punjabi', 'Punjabi'],
+        'ro' => ['Romanian', 'Romanian'],
+        'ru' => ['Russian', 'Russian'],
+        'sa' => ['Samoan', 'Samoan'],
+        'gd' => ['Scots Gaelic', 'Scots Gaelic'],
+        'sr' => ['Serbian', 'Serbian'],
+        'se' => ['Sesotho', 'Sesotho'],
+        'sh' => ['Shona', 'Shona'],
+        'si' => ['Sindhi', 'Sindhi'],
+        'sin' => ['Sinhala', 'Sinhala'],
+        'sk' => ['Slovak', 'Slovak'],
+        'sl' => ['Slovenian', 'Slovenian'],
+        'so' => ['Somali', 'Somali'],
+        'es' => ['Spanish', 'Spanish'],
+        'su' => ['Sundanese', 'Sundanese'],
+        'sw' => ['Swahili', 'Swahili'],
+        'sv' => ['Swedish', 'Swedish'],
+        'tj' => ['Tajik', 'Tajik'],
+        'ta' => ['Tamil', 'Tamil'],
+        'te' => ['Telugu', 'Telugu'],
+        'ts' => ['Thai', 'Thai'],
+        'tu' => ['Turkish', 'Turkish'],
+        'uk' => ['Ukrainian', 'Ukrainian'],
+        'ur' => ['Urdu', 'Urdu'],
+        'uz' => ['Uzbek', 'Uzbek'],
+        'vi' => ['Vietnamese', 'Vietnamese'],
+        'we' => ['Welsh', 'Welsh'],
+        'xh' => ['Xhosa', 'Xhosa'],
+        'yi' => ['Yiddish', 'Yiddish'],
+        'yo' => ['Yorùbá', 'Yoruba'],
+        'zu' => ['Zulu', 'Zulu'],
+    ];
+    private $LANG;
+    private $domain;
 
-    function I18N($key = "")
-    {
-        // global $LANG;
-        return isset($key) ? isset($this->LANG[$key]) ? $this->LANG[$key] : $key : "";
-    }
-
-    /**
-     * get absolute path of language file
+    /** 构造函数
+     * @param string $language_root 翻译文件根目录
+     * @param array $languages 可用语言列表
+     * @param string $lang_default 默认语言
+     * @return void
      */
-    public function getFileDir($file)
+    public function __construct($language_root, $lang_default = '')
     {
-        if (file_exists($this->language_dir . $file)) {
-            return $this->language_dir . $file;
+        $this->language_root = $language_root;
+        if (!empty($lang_default) && array_key_exists($lang_default, $this->languages)) {
+            $this->language_default = $lang_default;
+            $this->language_current = $lang_default;
         } else {
-            echo '-----';
-            if (file_exists($this->dir . $this->language_area . "/" . $file)) {
-                return $this->dir . $this->language_area . "/" . $file;
-            } else {
-                if (file_exists($this->dir . $this->language_country . "/" . $file)) {
-                    return $this->dir . $this->language_country . "/" . $file;
-                } else {
-                    return $this->dir . "en-US/" . $file;
-                }
-            }
+            $this->language_default = 'en-US';
+            $this->language_current = 'en-US';
         }
+        $this->init_domain();
+        $this->init_language();
+        $this->init_language_file();
     }
 
-    /**
-     * get current language directory
-     */
-    private function initLanguageDir()
-    {
-        if (file_exists($this->dir . $this->language_area) && !empty($this->language_area)) {
-            $this->language_dir = $this->dir . $this->language_area . '/';
-        } else {
-            if (file_exists($this->dir . $this->language_country) && !empty($this->language_country)) {
-                $this->language_dir = $this->dir . $this->language_country . '/';
-            } else {
-                $this->language_dir = $this->dir . 'en-US/';
-            }
-        }
-    }
-
-    /**
-     * get the default language
-     */
-    public function initDefaultLanguage()
-    {
-        if ($this->get_cookie_lang()) {
-            return;
-        }
-        $language = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
-        preg_match_all("/[\\w-]+/", $language, $language);
-        $this->language_area = $language[0][0];
-        @($this->language_country = $language[0][1]);
-        $this->setCookieLanguage();
-    }
-    /**
-     * get lang form cookie
-     */
-    public function get_cookie_lang()
-    {
-        if (!@empty($_COOKIE['lang'])) {
-            $language = $_COOKIE['lang'];
-            if (strpos($language, "-")) {
-                $this->language_area = $language;
-            } else {
-                $this->language_country = $language;
-            }
-            return true;
-        }
-        return false;
-    }
-    /**
-     * set current language to cookie
-     */
-    public function setCookieLanguage($lang = "")
-    {
-        if (empty($lang)) {
-            $lang = $this->language_area;
-        }
-        if (empty($lang)) {
-            $lang = $this->language_country;
-        }
-        if (empty($lang)) {
-            return false;
-        }
-        setcookie("lang", $lang, time() + 365 * 24 * 3600, "/", $this->getDomain());
-        return true;
-    }
-
-    /**
-     * get current domain
-     */
-    public function getDomain()
+    private function init_domain()
     {
         if (empty($this->domain)) {
             $domain = $_SERVER['SERVER_NAME'];
-            if (strcasecmp($domain, "localhost") === 0) {
+            if (strcasecmp($domain, 'localhost') === 0) {
                 $this->domain = $domain;
-                return $this->domain;
-            }
-            if (preg_match("/^(\\d+\\.){3}\\d+\$/", $domain, $domain_temp)) {
+            } else if (preg_match("/^(\\d+\\.){3}\\d+\$/", $domain, $domain_temp)) {
                 $this->domain = $domain_temp[0];
-                return $this->domain;
+            } else {
+                preg_match_all("/\\w+\\.\\w+\$/", $domain, $domain);
+                $this->domain = $domain[0][0];
             }
-            preg_match_all("/\\w+\\.\\w+\$/", $domain, $domain);
-            $this->domain = $domain[0][0];
-            return $this->domain;
+        }
+    }
+
+    private function init_language()
+    {
+        if (!@empty(trim($_COOKIE['lang']))) {
+            // has cached lang
+            $this->language_cached = trim($_COOKIE['lang']);
+            if (array_key_exists($this->language_cached, $this->languages) && $this->has_language_file($this->language_cached)) {
+                $this->language_current = $this->language_cached;
+            } else {
+                $this->language_current = $this->language_default;
+            }
         } else {
-            return $this->domain;
+            // get browser lang
+            $lang_browser = $_SERVER['HTTP_ACCEPT_LANGUAGE']; // zh-CN,zh;q=0.9
+            preg_match_all("/[\\w-]+/", $lang_browser, $lang_browser); // [['zh-CN', 'zh']]
+            if (array_key_exists($lang_browser[0][0], $this->languages) && $this->has_language_file($lang_browser[0][0])) {
+                $this->language_current = $lang_browser[0][0];
+            } else if (array_key_exists($lang_browser[0][1], $this->languages) && $this->has_language_file($lang_browser[0][1])) {
+                $this->language_current = $lang_browser[0][1];
+            } else {
+                $this->language_current = $this->language_default;
+            }
+            $this->language_cached = $this->language_current;
+            setcookie("lang", $this->language_current, time() + 365 * 24 * 3600, "/", $this->domain);
         }
     }
 
-    /**
-     * return current language directory
-     */
-    public function get_language_dir()
+    private function has_language_file($lang)
     {
-        return $this->language_dir;
+        return !empty($lang) && file_exists($this->language_root . $lang . '/' . 'language.php');
     }
 
-    public function get_lang()
+    private function init_language_file()
     {
-        if (array_key_exists($this->language_area, $this->languages)) {
-            return $this->language_area;
-        } else if (array_key_exists($this->language_country, $this->languages)) {
-            return $this->language_country;
+        if ($this->has_language_file($this->language_current)) {
+            $this->language_file = $this->language_root . $this->language_current . '/' . 'language.php';
+        } else {
+            $this->language_file = $this->language_root . $this->language_default . '/' . 'language.php';
         }
+        include $this->language_file;
+        $this->LANG = $LANG;
     }
 
     public function get_languages_tags()
     {
         $tags = '';
-        foreach ($this->languages as $k => $value) {
-            $actived = $k == $this->get_lang() ? ' class="active"' : '';
+        foreach ($this->languages as $k => $v) {
+            $actived = $k == $this->language_current ? ' class="active"' : '';
             $tags .= '<li' . $actived . '><a class="language-change-click" data-language="' . $k . '" href="javascript://">' . $this->languages[$k][0] . '</a></li>';
         }
         return $tags;
@@ -167,16 +210,25 @@ class Language
 
     public function get_language_name()
     {
-        return $this->languages[$this->get_lang()][0];
+        return $this->languages[$this->language_current][0];
     }
 
+    /** 登录下拉框选项
+     * language select for login to control panel
+     * @return void
+     */
     public function get_languages_options()
     {
         $options = '';
-        foreach ($this->languages as $k => $value) {
-            $selected = $k == $this->get_lang() ? ' selected="selected"' : '';
-            $options .= '<option value="' . $value[1] . '"' . $selected . '>' . $value[0] . '</option>';
+        foreach ($this->languages as $k => $v) {
+            $selected = $k == $this->language_cached ? ' selected="selected"' : '';
+            $options .= '<option value="' . $v[1] . '"' . $selected . '>' . $v[0] . '</option>';
         }
         return $options;
+    }
+
+    public function I18N($key = '')
+    {
+        return isset($key) ? isset($this->LANG[$key]) ? $this->LANG[$key] : $key : '';
     }
 }

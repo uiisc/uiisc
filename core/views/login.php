@@ -46,8 +46,8 @@ if (!defined('IN_SYS')) {
 </div>
 
 <!-- <script type="text/javascript">
-        var domain = "<?php echo $lang->getDomain(); ?>";
-        var cur_language = "<?php echo $lang->get_lang(); ?>";
+        var domain = "<?php echo getDomain(); ?>";
+        var cur_language = "<?php echo $lang->language_current; ?>";
         function change_language(lan) {
             setCookie('lang', lan, 1, '/', domain, false);
             if (cur_language == lan) {

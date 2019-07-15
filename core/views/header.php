@@ -6,7 +6,7 @@ if (!defined('IN_SYS')) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="<?php echo $lang->get_lang(); ?>">
+<html lang="<?php echo $lang->language_current; ?>">
 
 <head>
     <meta charset="utf-8" />
@@ -26,8 +26,8 @@ if (!defined('IN_SYS')) {
     <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>
     <![endif]-->
     <script type="text/javascript">
-        var domain = "<?php echo $lang->getDomain(); ?>";
-        var cur_lang = "<?php echo $lang->get_lang(); ?>";
+        var domain = "<?php echo getDomain(); ?>";
+        var cur_lang = "<?php echo $lang->language_current; ?>";
         var ifastnet_aff = <?php echo $iFastNetAff; ?>;
     </script>
 </head>

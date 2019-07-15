@@ -219,7 +219,7 @@ function is_email($email = "")
  */
 function getVersion()
 {
-    if ((float)phpversion() < 5.5) {
+    if ((float) phpversion() < 5.5) {
         exit('requires the php version 5.5.+');
     }
 }
@@ -227,4 +227,21 @@ function getVersion()
 function setProtect($x)
 {
     return htmlentities(htmlspecialchars($x));
+}
+
+
+/**
+ * get current domain
+ */
+function getDomain()
+{
+    $domain = $_SERVER['SERVER_NAME'];
+    if (strcasecmp($domain, "localhost") === 0) {
+        return $domain;
+    }
+    if (preg_match("/^(\\d+\\.){3}\\d+\$/", $domain, $domain_temp)) {
+        return $domain_temp[0];
+    }
+    preg_match_all("/\\w+\\.\\w+\$/", $domain, $domain);
+    return  $domain[0][0];
 }
