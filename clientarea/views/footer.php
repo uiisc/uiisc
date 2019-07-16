@@ -45,6 +45,7 @@ if (!defined('IN_SYS')) {
         $('.summernote').summernote({
             minHeight: 200,
             lang: "<?php echo $lang->language_cached; ?>",
+            disableDragAndDrop: true,
             toolbar: [
                 ['style', ['style']],
                 ['font', ['bold', 'underline', 'clear']],

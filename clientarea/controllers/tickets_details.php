@@ -26,7 +26,39 @@ if (empty($_GET["id"])) {
 }
 $tickets_id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING);
 
-if (isset($_POST["do_comment_tickets"])) {
+$res = $dbpdo->find_and('tickets', ["id" => $tickets_id, "user_id" => $user->id]);
+if ($res) {
+    $data = $res;
+} else {
+    setMsg("msg_notify", "The Tickets Not Found.", "warning");
+    redirect("clientarea", "tickets");
+}
+
+if (isset($_POST["do_close_tickets"])) {
+    if ($dbpdo->find_and('tickets', ["id" => $tickets_id, "user_id" => $user->id])) {
+        if ($dbpdo->update('tickets', ["status" => 0, "lastupdated" => time()], "`id`={$tickets_id}")) {
+            setMsg("msg_notify", "The Tickets Closed Successfully.");
+        } else {
+            setMsg("msg_notify", "The Tickets Close Failed.", "warning");
+        }
+        redirect("clientarea", "tickets_details", ["id" => $tickets_id]);
+    } else {
+        setMsg("msg_notify", "The Tickets Not Found.", "warning");
+        redirect("clientarea", "tickets");
+    }
+} elseif (isset($_POST["do_open_tickets"])) {
+    if ($dbpdo->find_and('tickets', ["id" => $tickets_id, "user_id" => $user->id])) {
+        if ($dbpdo->update('tickets', ["status" => 1, "lastupdated" => time()], "`id`={$tickets_id}")) {
+            setMsg("msg_notify", "The Tickets Opened Successfully.");
+        } else {
+            setMsg("msg_notify", "The Tickets Open Failed.", "warning");
+        }
+        redirect("clientarea", "tickets_details", ["id" => $tickets_id]);
+    } else {
+        setMsg("msg_notify", "The Tickets Not Found.", "warning");
+        redirect("clientarea", "tickets");
+    }
+} elseif (isset($_POST["do_comment_tickets"])) {
     $comment = filter_input(INPUT_POST, "comment", FILTER_SANITIZE_SPECIAL_CHARS);
     $errors = array();
 
@@ -46,20 +78,12 @@ if (isset($_POST["do_comment_tickets"])) {
             }
             redirect("clientarea", "tickets_details", ["id" => $res]);
         } else {
-            setMsg("msg_notify", "The Tickets Not found.", "warning");
+            setMsg("msg_notify", "The Tickets Not Found.", "warning");
             redirect("clientarea", "tickets");
         }
     } else {
         setMsg("form_data", $data);
         setMsg("errors", $errors);
         redirect("clientarea", "tickets_details", ["id" => $res]);
-    }
-} else {
-    $res = $dbpdo->find_and('tickets', ["id" => $tickets_id, "user_id" => $user->id]);
-    if ($res) {
-        $data = $res;
-    } else {
-        setMsg("msg_notify", "The Tickets Not found.", "warning");
-        redirect("clientarea", "tickets");
     }
 }

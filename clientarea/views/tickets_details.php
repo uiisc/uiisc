@@ -33,7 +33,11 @@ if (!defined('IN_SYS')) {
                         </div>
                         <div class="form-group">
                             <button type="submit" name="do_comment_tickets" class="btn btn-primary">Add Comment</button>
+<?php if ($data['status'] == 1) { ?>
                             <button type="submit" name="do_close_tickets" class="btn btn-primary">Close Tickets</button>
+<?php } else { ?>
+                            <button type="submit" name="do_open_tickets" class="btn btn-primary">Open Tickets</button>
+<?php } ?>
                         </div>
                     </form>
                 </div>
