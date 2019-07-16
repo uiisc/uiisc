@@ -24,6 +24,9 @@ if (!defined('IN_SYS')) {
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
     <script src="assets/respond/respond.min.js?_=<?php echo $static_release; ?>"></script>
     <![endif]-->
+<?php if (!empty($load_editor)) { ?>
+    <link href="assets/summernote/summernote.css?_=<?php echo $static_release; ?>" rel="stylesheet">
+<?php } ?>
     <script type="text/javascript">
         var domain = "<?php echo getDomain(); ?>";
         var cur_lang = "<?php echo $lang->language_current; ?>";

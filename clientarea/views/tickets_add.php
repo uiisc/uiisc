@@ -35,7 +35,7 @@ if (!defined('IN_SYS')) {
                         </div>
                         <div class="form-group">
                             <label for="content">Content: <sup>*</sup></label>
-                            <textarea name="content" id="content" value="<?php echo ($data['content']); ?>" class="form-control <?php echo (isset($err['content_err'])) ? 'is-invalid' : ''; ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
+                            <textarea name="content" id="content" class="form-control summernote" value="<?php echo ($data['content']); ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
                             <span class="text-warning"><?php echo isset($err["content_err"]) ? $err["content_err"] : ""; ?></span>
                         </div>
                         <div class="form-group">

@@ -10,7 +10,7 @@ if (!isUserLoggedIn()) {
     setMsg("msg_notify", "You need to login before accessing the Tickets Add page.", "warning");
     redirect("clientarea", "login");
 }
-
+$load_editor = true;
 $err = getMsg("errors");
 $data = getMsg("form_data");
 
@@ -25,7 +25,7 @@ $status_types = [
 if (isset($_POST["do_add_tickets"])) {
     $department = filter_input(INPUT_POST, "department", FILTER_SANITIZE_STRING);
     $subject = filter_input(INPUT_POST, "subject", FILTER_SANITIZE_STRING);
-    $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_STRING);
+    $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_SPECIAL_CHARS);
     $errors = array();
 
     $data = [

@@ -21,44 +21,44 @@ if (!defined('IN_SYS')) {
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo setRouter('admin'); ?>"><?php echo $lang->I18N('home'); ?></a></li>
-                    <?php if (isAdminLoggedIn()) { ?>
-                        <li class="dropdown">
-                            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Account&nbsp;<span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown-header">Account Management</li>
-                                <li><a href="<?php echo setRouter('admin', 'check_domain'); ?>">Check Domain</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_list'); ?>">Account List</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_add'); ?>">Account Add</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_password'); ?>">Account Password</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_active'); ?>">Account Activate</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_status'); ?>">Account Status</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_domain'); ?>">Account Domains</a></li>
-                                <li class="divider"></li>
-                                <li><a href="<?php echo setRouter('admin', 'account_disable'); ?>">Account Suspend</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo $lang->I18N('tickets'); ?></a></li>
-                        <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo $lang->I18N('news'); ?></a></li>
-                    <?php } ?>
+<?php if (isAdminLoggedIn()) { ?>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">Account&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown-header">Account Management</li>
+                            <li><a href="<?php echo setRouter('admin', 'check_domain'); ?>">Check Domain</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_list'); ?>">Account List</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_add'); ?>">Account Add</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_password'); ?>">Account Password</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_active'); ?>">Account Activate</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_status'); ?>">Account Status</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_domain'); ?>">Account Domains</a></li>
+                            <li class="divider"></li>
+                            <li><a href="<?php echo setRouter('admin', 'account_disable'); ?>">Account Suspend</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo $lang->I18N('tickets'); ?></a></li>
+                    <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo $lang->I18N('news'); ?></a></li>
+<?php } ?>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <?php if (isAdminLoggedIn()) { ?>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello,&nbsp;<?php echo ($admin["name"]); ?>&nbsp;<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo setRouter('admin', 'details'); ?>">Account Details</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'edit_details'); ?>">Edit Account Details</a></li>
-                                <li><a href="<?php echo setRouter('admin', 'change_password'); ?>">Change password</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo $lang->I18N('clientarea'); ?></a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo $lang->I18N('logout'); ?></a></li>
-                            </ul>
-                        </li>
-                    <?php } else { ?>
-                        <li><a href="<?php echo setRouter('admin'); ?>"><?php echo $lang->I18N('managearea'); ?></a></li>
-                        <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
-                    <?php } ?>
+<?php if (isAdminLoggedIn()) { ?>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello,&nbsp;<?php echo ($admin["name"]); ?>&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo setRouter('admin', 'details'); ?>">Account Details</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'edit_details'); ?>">Edit Account Details</a></li>
+                            <li><a href="<?php echo setRouter('admin', 'change_password'); ?>">Change password</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="<?php echo setRouter('clientarea'); ?>" target="_blank"><?php echo $lang->I18N('clientarea'); ?></a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="<?php echo setRouter('admin', 'logout'); ?>"><?php echo $lang->I18N('logout'); ?></a></li>
+                        </ul>
+                    </li>
+<?php } else { ?>
+                    <li><a href="<?php echo setRouter('admin'); ?>"><?php echo $lang->I18N('managearea'); ?></a></li>
+                    <li><a href="<?php echo setRouter('clientarea'); ?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
+<?php } ?>
                 </ul>
             </div>
         </div>

@@ -14,10 +14,12 @@ $status_types = [
     "打开"
 ];
 
+$load_editor = true;
+
 if (isset($_POST["do_add_news"])) {
     $title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
     $status = filter_input(INPUT_POST, "status", FILTER_SANITIZE_STRING);
-    $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_STRING);
+    $content = filter_input(INPUT_POST, "content", FILTER_SANITIZE_SPECIAL_CHARS);
     $errors = array();
 
     $data = [

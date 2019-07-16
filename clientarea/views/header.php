@@ -29,6 +29,9 @@ if (!defined('IN_SYS')) {
         var cur_lang = "<?php echo $lang->language_current; ?>";
         var ifastnet_aff = <?php echo $iFastNetAff; ?>;
     </script>
+<?php if (!empty($load_editor)) { ?>
+    <link href="assets/summernote/summernote.css?_=<?php echo $static_release; ?>" rel="stylesheet">
+<?php } ?>
 </head>
 
 <body>

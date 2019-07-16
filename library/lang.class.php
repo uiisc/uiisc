@@ -4,10 +4,10 @@ class Language
 {
 
     public $language_current;
-    private $language_cached;
-    private $language_default;
-    private $language_root;
-    private $language_file;
+    public $language_cached;
+    public $language_default;
+    public $language_root;
+    public $language_file;
     private $languages = [
         'en-US' => ['English', 'English'],
         'zh-CN' => ['简体中文', 'Chinese_simplified'],
@@ -17,14 +17,14 @@ class Language
         'af' => ['Afrikaans', 'Afrikaans'],
         'sq' => ['የአልባኒያ', 'Albanian'],
         'am' => ['Amharic', 'Amharic'],
-        'ar' => ['Arabic', 'Arabic'],
+        'ar-AR' => ['Arabic', 'Arabic'],
         'hy' => ['Armenian', 'Armenian'],
         'az' => ['Azərbaycan', 'Azeerbaijani'],
         'eu' => ['Basque', 'Basque'],
         'be' => ['Belarusian', 'Belarusian'],
         'bn' => ['Bengali', 'Bengali'],
         'bs' => ['Bosnian', 'Bosnian'],
-        'bg' => ['Bulgarian', 'Bulgarian'],
+        'bg-BG' => ['Bulgarian', 'Bulgarian'],
         'my' => ['Burmese', 'Burmese'],
         'ca' => ['Catalan', 'Catalan'],
         'ce' => ['Cebuano', 'Cebuano'], // 宿务语
@@ -39,7 +39,7 @@ class Language
         'fa' => ['Farsi', 'Farsi'],
         'fil' => ['Filipino', 'Filipino'],
         'fi' => ['Finnish', 'Finnish'],
-        'fr' => ['français', 'French'],
+        'fr-FR' => ['français', 'French'], // 法语
         'fy' => ['Frisian', 'Frisian'],
         'gl' => ['Galician', 'Galician'],
         'ka' => ['Georgian', 'Georgian'],
@@ -57,13 +57,13 @@ class Language
         'ig' => ['Igbo', 'Igbo'],
         'id' => ['Indonesian', 'Indonesian'],
         'ga' => ['Irish', 'Irish'],
-        'it' => ['Italian', 'Italian'],
-        'jp' => ['日本語', 'Japanese'],
+        'it-IT' => ['Italian', 'Italian'],
+        'ja-JP' => ['日本語', 'Japanese'],
         'jv' => ['Wong Jawa', 'Javanese'],
         'kn' => ['Kannada', 'Kannada'],
         'kk' => ['Kazakh', 'Kazakh'],
         'kh' => ['Khmer', 'Khmer'],
-        'ko' => ['한국의', 'Korean'],
+        'ko-KR' => ['한국의', 'Korean'],
         'ku' => ['Kurdish', 'Kurdish'],
         'kz' => ['Kyrgyz', 'Kyrgyz'],
         'lo' => ['ພາສາລາວ', 'Lao'],
@@ -86,8 +86,8 @@ class Language
         'po' => ['Polish', 'Polish'],
         'pg' => ['Português', 'Portuguese'],
         'pu' => ['Punjabi', 'Punjabi'],
-        'ro' => ['Romanian', 'Romanian'],
-        'ru' => ['Russian', 'Russian'],
+        'ro-RO' => ['Romanian', 'Romanian'],
+        'ru-RU' => ['Russian', 'Russian'],
         'sa' => ['Samoan', 'Samoan'],
         'gd' => ['Scots Gaelic', 'Scots Gaelic'],
         'sr' => ['Serbian', 'Serbian'],
@@ -109,7 +109,7 @@ class Language
         'tu' => ['Turkish', 'Turkish'],
         'uk' => ['Ukrainian', 'Ukrainian'],
         'ur' => ['Urdu', 'Urdu'],
-        'uz' => ['Uzbek', 'Uzbek'],
+        'uz-UZ' => ['Uzbek', 'Uzbek'],
         'vi' => ['Vietnamese', 'Vietnamese'],
         'we' => ['Welsh', 'Welsh'],
         'xh' => ['Xhosa', 'Xhosa'],
@@ -139,6 +139,7 @@ class Language
         $this->init_domain();
         $this->init_language();
         $this->init_language_file();
+        // echo '<p>'.$this->language_cached.'</p>';
     }
 
     private function init_domain()

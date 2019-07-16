@@ -35,6 +35,21 @@ if (!defined('IN_SYS')) {
 <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/js/clientarea.js?_=<?php echo $static_release; ?>"></script>
 
+<?php if (!empty($load_editor)) { ?>
+<script src="assets/summernote/summernote.min.js?_=<?php echo $static_release; ?>"></script>
+    <?php if ($lang->language_cached != 'en-US' && is_file($ROOT . '/assets/summernote/lang/summernote-' . $lang->language_cached . '.js')) { ?>
+<script src="assets/summernote/lang/summernote-<?php echo $lang->language_cached; ?>.js?_=<?php echo $static_release; ?>"></script>
+    <?php } ?>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.summernote').summernote({
+            minHeight: 200,
+            lang: "<?php echo $lang->language_cached; ?>"
+        });
+    });
+</script>
+<?php } ?>
+
 </body>
 
 </html>

@@ -4,10 +4,13 @@ if (!defined('IN_SYS')) {
     header("Location: ../../admin.php");
     exit;
 }
+
 ?>
 
 <div class="container">
-    <?php echo (getMsg("msg_notify")); ?>
+<?php
+    echo (getMsg("msg_notify"));
+?>
     <div class="panel panel-default">
         <div class="panel-heading">
             <span class="panel-title">News Add</span>
@@ -24,15 +27,15 @@ if (!defined('IN_SYS')) {
                 </div>
                 <div class="form-group">
                     <label for="content">Content: <sup>*</sup></label>
-                    <textarea name="content" id="content" value="<?php echo ($data['content']); ?>" class="form-control <?php echo (isset($err['content_err'])) ? 'is-invalid' : ''; ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
+                    <textarea name="content" id="content" class="form-control summernote" value="<?php echo ($data['content']); ?>" rows="10" maxlength="5000" placeholder="Content"></textarea>
                     <span class="text-warning"><?php echo isset($err["content_err"]) ? $err["content_err"] : ""; ?></span>
                 </div>
                 <div class="form-group">
                     <label for="status">Status: <sup>*</sup></label>
                     <select name="status" id="status" class="form-control <?php echo (isset($err['status_err'])) ? 'is-invalid' : ''; ?>">
-                        <?php foreach ($status_types as $key => $value) { ?>
-                            <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
-                        <?php } ?>
+<?php foreach ($status_types as $key => $value) { ?>
+                        <option value="<?php echo $key; ?>"><?php echo $value; ?></option>
+<?php } ?>
                     </select>
                     <span class="text-warning"><?php echo isset($err["status_err"]) ? $err["status_err"] : ""; ?></span>
                 </div>

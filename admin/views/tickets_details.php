@@ -19,11 +19,13 @@ if (!defined('IN_SYS')) {
             <p>Type: <?php echo $ticket_types[$data['department']]; ?></p>
             <p>Status: <?php echo $status_types[$data['status']]; ?></p>
             <p>Subject: <?php echo $data['subject']; ?></p>
-            <p>Content: <?php echo $data['content']; ?></p>
+            <hr />
+            <?php echo htmlspecialchars_decode($data['content']); ?>
+            <hr />
             <form action="" method="POST">
                 <div class="form-group">
                     <label for="Comment">Comment: <sup>*</sup></label>
-                    <textarea name="comment" id="comment" value="<?php echo ($data['comment']); ?>" class="form-control <?php echo (isset($err['comment_err'])) ? 'is-invalid' : ''; ?>" rows="10" maxlength="5000" placeholder="Comment"></textarea>
+                    <textarea name="comment" id="comment" class="form-control summernote" value="<?php echo ($data['comment']); ?>" rows="10" maxlength="5000" placeholder="Comment"></textarea>
                     <span class="text-warning"><?php echo isset($err["comment_err"]) ? $err["comment_err"] : ""; ?></span>
                 </div>
                 <div class="form-group">

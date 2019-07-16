@@ -8,7 +8,7 @@ if (!defined('IN_SYS')) {
 
 $err = getMsg("errors");
 $data = getMsg("form_data");
-
+$load_editor = true;
 $ticket_types = [
     "技术支持", "销售财务", "管理员信箱"
 ];
@@ -22,7 +22,7 @@ if (empty($_GET["id"])) {
 $tickets_id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_STRING);
 
 if (isset($_POST["do_comment_tickets"])) {
-    $comment = filter_input(INPUT_POST, "comment", FILTER_SANITIZE_STRING);
+    $comment = filter_input(INPUT_POST, "comment", FILTER_SANITIZE_SPECIAL_CHARS);
     $errors = array();
 
     $data = [

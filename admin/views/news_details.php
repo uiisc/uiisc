@@ -17,11 +17,11 @@ if (!defined('IN_SYS')) {
             </div>
         </div>
         <div class="panel-body">
-            <p>Status: <?php echo $status_types[$data['status']]; ?></p>
-            <p>Date: <?php echo cTime($data['date']); ?></p>
             <p>Title: <?php echo $data['title']; ?></p>
-            <p>Content: <?php echo $data['content']; ?></p>
+            <p>Date: <?php echo cTime($data['date']); ?></p>
+            <p>Status: <?php echo $status_types[$data['status']]; ?></p>
+            <hr />
+            <?php echo htmlspecialchars_decode($data['content']); ?>
         </div>
-        <div class="panel-footer"></div>
     </div>
 </div>
