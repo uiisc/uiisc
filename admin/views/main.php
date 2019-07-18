@@ -41,6 +41,8 @@ if (file_exists("{$ROOT}/install.php")) {
                 <div class="panel-body">
                     <a class="btn btn-default" href="<?php echo setRouter('admin', 'news_add'); ?>">添加新闻</a>
                     <a class="btn btn-default" href="<?php echo setRouter('admin', 'account_add'); ?>">添加账号</a>
+                    <a class="btn btn-default" href="<?php echo setRouter('admin', 'member_add'); ?>">添加客户</a>
+                    <a class="btn btn-default" href="<?php echo setRouter('admin', 'product_add'); ?>">添加产品</a>
                 </div>
                 <div class="panel-footer"></div>
             </div>

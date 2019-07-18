@@ -37,6 +37,7 @@ if (!defined('IN_SYS')) {
                             <li><a href="<?php echo setRouter('admin', 'account_disable'); ?>">Account Suspend</a></li>
                         </ul>
                     </li>
+                    <li><a href="<?php echo setRouter('admin', 'member'); ?>"><?php echo $lang->I18N('member'); ?></a></li>
                     <li><a href="<?php echo setRouter('admin', 'tickets'); ?>"><?php echo $lang->I18N('tickets'); ?></a></li>
                     <li><a href="<?php echo setRouter('admin', 'news'); ?>"><?php echo $lang->I18N('news'); ?></a></li>
 <?php } ?>

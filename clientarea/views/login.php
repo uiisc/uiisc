@@ -33,7 +33,7 @@ if (!defined('IN_SYS')) {
                     </form>
                 </div>
                 <div class="panel-footer">
-                    <a href="<?php echo setRouter('clientarea', 'forget_password');?>" class="btn btn-link">Forget Passsword?</a>
+                    <a href="<?php echo setRouter('clientarea', 'forget_password');?>" class="btn btn-link"><?php echo $lang->I18N('password_lost'); ?></a>
                     <a href="<?php echo setRouter('clientarea', 'register');?>" class="btn btn-link">No account? Register</a>
                 </div>
             </div>

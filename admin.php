@@ -23,6 +23,7 @@ include_once "{$ROOT}/admin/library.php";
 $section = isAdminLoggedIn() ? (empty($_GET["s"]) ? "main" : $_GET["s"]) : "login";
 $section_page = "{$ROOT}/admin/views/{$section}.php";
 if (!is_file($section_page)) {
+    header("HTTP/1.1 404 Not Found");
     exit('Page Not Found!');
 }
 

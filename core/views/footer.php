@@ -24,9 +24,9 @@ if (!defined('IN_SYS')) {
                     </div>
                     <ul class="dropdown-menu language-change"><?php echo $lang->get_languages_tags(); ?></ul>
                 </li>
-                <li><a href="about.php"><?php echo $lang->I18N('about'); ?></a></li>
-                <li><a href="contact.php"><?php echo $lang->I18N('contact'); ?></a></li>
-                <li><a href="support.php"><?php echo $lang->I18N('support'); ?></a></li>
+                <li><a href="<?php echo setRouter('about');?>"><?php echo $lang->I18N('about'); ?></a></li>
+                <li><a href="<?php echo setRouter('contact');?>"><?php echo $lang->I18N('contact'); ?></a></li>
+                <li><a href="<?php echo setRouter('news');?>"><?php echo $lang->I18N('news'); ?></a></li>
             </ul>
         </div>
     </div>

@@ -31,7 +31,7 @@ if (!defined('IN_SYS')) {
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('remember_me'); ?></span>
-                                    <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo $lang->I18N('lost_password'); ?></a>
+                                    <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo $lang->I18N('password_lost'); ?></a>
                                 </label>
                             </div>
                         </div>

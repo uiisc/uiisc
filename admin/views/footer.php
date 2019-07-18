@@ -24,13 +24,14 @@ if (!defined('IN_SYS')) {
                     </div>
                     <ul class="dropdown-menu language-change"><?php echo $lang->get_languages_tags(); ?></ul>
                 </li>
-                <li><a href="about.php"><?php echo $lang->I18N('about'); ?></a></li>
-                <li><a href="contact.php"><?php echo $lang->I18N('contact'); ?></a></li>
-                <li><a href="support.php"><?php echo $lang->I18N('support'); ?></a></li>
+                <li><a href="<?php echo setRouter('about');?>"><?php echo $lang->I18N('about'); ?></a></li>
+                <li><a href="<?php echo setRouter('contact');?>"><?php echo $lang->I18N('contact'); ?></a></li>
+                <li><a href="<?php echo setRouter('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
             </ul>
         </div>
     </div>
 </footer>
+
 <script src="assets/jquery/jquery.min.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
 <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>

@@ -63,7 +63,7 @@ if (!defined('IN_SYS')) {
                                 <li><a href="<?php echo setRouter('clientarea', 'login'); ?>"><?php echo $lang->I18N('login'); ?></a></li>
                                 <li><a href="<?php echo setRouter('clientarea', 'register'); ?>"><?php echo $lang->I18N('register'); ?></a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="<?php echo setRouter('clientarea', 'forget_password'); ?>">Forget Passsword</a></li>
+                                <li><a href="<?php echo setRouter('clientarea', 'forget_password'); ?>"><?php echo $lang->I18N('password_lost'); ?></a></li>
                             </ul>
                         <?php } ?>
 

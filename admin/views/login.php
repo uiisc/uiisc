@@ -48,7 +48,7 @@ if (!defined('IN_SYS')) {
                     <?php } ?>
                 </div>
                 <div class="panel-footer text-right">
-                    <a href="<?php echo setRouter('admin', 'forget_password'); ?>">Forget Passsword?</a>
+                    <a href="<?php echo setRouter('admin', 'forget_password'); ?>"><?php echo $lang->I18N('password_lost'); ?></a>
                 </div>
             </div>
         </div>

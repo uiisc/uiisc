@@ -12,7 +12,7 @@ if (!defined('IN_SYS')) {
             <?php echo getMsg("msg_notify"); ?>
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Forget Password</h3>
+                    <h3 class="panel-title"><?php echo $lang->I18N('password_reset'); ?></h3>
                 </div>
                 <div class="panel-body">
                     <p>If you have forgotten your password, you can reset it here. When you fill in your registered email address, you will be sent instructions on how to reset your password.</p>

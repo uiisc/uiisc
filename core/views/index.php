@@ -37,6 +37,24 @@ if (!defined('IN_SYS')) {
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img src="assets/images/cluster.jpg" alt="rack">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Value for free</h4>
+                    <p>Our cluster-based GRID network features hundreds of server nodes using the right software for the right job powered by Linux and Unix operating systems.</p>
+                    <p><?= $title_s ?> hosting has the right services for you and at the right price... $0.00!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- <script type="text/javascript">
         $('.check-domain').click(function () {
             var domain = $('#domainInput').val()
