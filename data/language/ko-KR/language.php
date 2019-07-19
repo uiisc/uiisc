@@ -1,5 +1,5 @@
 <?php
-$LANG = [
+return [
     'home' => 'Home',
     'solution' => 'Solution',
     'news' => '뉴스',

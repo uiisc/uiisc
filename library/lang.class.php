@@ -195,8 +195,7 @@ class Language
         } else {
             $this->language_file = $this->language_root . $this->language_default . '/' . 'language.php';
         }
-        include $this->language_file;
-        $this->LANG = $LANG;
+        $this->LANG = require $this->language_file;
     }
 
     public function get_languages_tags()

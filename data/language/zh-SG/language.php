@@ -1,3 +1,3 @@
 <?php
 
-include dirname(__FILE__) . "/../zh-CN/language.php";
+return require dirname(__FILE__) . "/../zh-CN/language.php";
