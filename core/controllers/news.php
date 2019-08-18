@@ -8,7 +8,7 @@ if (!defined('IN_SYS')) {
 $title = $title . ' - ' . $lang->I18N('news');
 
 $news_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
-$section_page = empty($news_id) ? "{$ROOT}/core/views/news.php" : "{$ROOT}/core/views/news_details.php";
+$section_page = empty($news_id) ? "{$ROOT}/core/views/news/list.php" : "{$ROOT}/core/views/news/details.php";
 
 if (!is_file($section_page)) {
     header("HTTP/1.1 404 Not Found");
