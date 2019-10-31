@@ -50,15 +50,15 @@ A simple Content Management System for Reseller of MyOwnFreeHost
 ##### <u>Solution Page</u>
 
 >
-> ![Solution Page](assets/screenshot/solution.png)
+> ![Solution Page](screenshot/solution.png)
 
 ##### <u>Login Page</u>
 
 >
-> ![Login Page](assets/screenshot/login.png)
+> ![Login Page](screenshot/login.png)
 
 ##### <u>Register Page</u>
 
 >
-> ![Register Page](assets/screenshot/register.png)
+> ![Register Page](screenshot/register.png)
 
