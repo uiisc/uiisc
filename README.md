@@ -3,7 +3,7 @@
 A simple Content Management System for Reseller of MyOwnFreeHost
 
 * Official Site : [uiisc.com](http://uiisc.com "UIISC")
-* Author : [doudoudzj](https://github.com/doudoudzj "doudoudzj")
+* Author : [Jackson Dou](https://github.com/jksdou "jksdou")
 
 ## Functions
 
