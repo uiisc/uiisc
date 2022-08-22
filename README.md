@@ -1,9 +1,9 @@
-# uiisc.com
+# UIISC
 
-A simple Content Management System for Reseller of MyOwnFreeHost
+An Open Source Management System for MyOwnFreeHost
 
 * Official Site : [uiisc.com](http://uiisc.com "UIISC")
-* Author : [Jackson Dou](https://github.com/jksdou "jksdou")
+* Author : [Jackson Dou](https://github.com/jksdou "Jackson Dou")
 
 ## Functions
 
