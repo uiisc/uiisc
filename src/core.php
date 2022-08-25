@@ -2,7 +2,7 @@
 header("X-Powered-By: UIISC");
 header("Content-Type: text/html; charset=UTF-8");
 
-if (!defined('IN_SYS')) {
+if (!defined('IN_CRONLITE')) {
     // exit('禁止访问');
     header("Location: index.php");
     exit;

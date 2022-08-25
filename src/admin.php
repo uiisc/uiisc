@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-define("IN_SYS", true);
+define("IN_CRONLITE", true);
 require_once("core.php");
 
 include_once "{$ROOT}/library/api.php";

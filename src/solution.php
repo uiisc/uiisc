@@ -1,5 +1,5 @@
 <?php
-define('IN_SYS', true);
+define('IN_CRONLITE', true);
 require_once "core.php";
 
 include("core/controllers/solution.php");
