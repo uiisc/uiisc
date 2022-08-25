@@ -1,12 +1,12 @@
 <?php
+header("X-Powered-By: UIISC");
+header("Content-Type: text/html; charset=UTF-8");
+
 if (!defined('IN_SYS')) {
     // exit('禁止访问');
     header("Location: index.php");
     exit;
 }
-header("X-Powered-By: PHP");
-header("Content-Type: text/html; charset=UTF-8");
-
 $ROOT = __DIR__;
 include_once "{$ROOT}/data/config.php";
 include_once "{$ROOT}/library/lang.class.php";
