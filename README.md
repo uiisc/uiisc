@@ -22,9 +22,9 @@ An Open Source Management System for MyOwnFreeHost
 - [x] Login / Logout
 - [x] Profile modification
 - [x] Forget / Reset / Change password
-- [ ] Apply for a web hosting account
-- [ ] Hosting account deletion / deactivation
-- [ ] Login to hosting control panel
+- [x] Apply for a web hosting account
+- [x] Hosting account deletion / deactivation
+- [x] Login to hosting control panel
 
 ### admin module
 
@@ -34,10 +34,10 @@ An Open Source Management System for MyOwnFreeHost
 - [x] Deactivate or disable a hosting account
 - [x] Activate or enable hosting account
 - [x] Verify how many domain and state of the hosting account
-- [ ] Members management
-- [ ] Site configuration
+- [x] Members management
+- [x] Site configuration
 - [ ] API configuration
-- [ ] News management
+- [x] News management
 - [ ] Translation file management
 
 ### forum module
