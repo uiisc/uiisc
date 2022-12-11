@@ -51,13 +51,13 @@ if ($Result['status'] == 0 && !is_array($Result['message'])) {
     $sql = $DB->update('account', array('account_status' => '1'), array('account_id' => $account_id));
     if ($sql) {
         // 本地同步成功
-        $ClientInfo = $DB->find('clients', 'hosting_client_email, hosting_client_fname', array('hosting_client_id' => $AccountInfo['account_client_id']), null, 1);
+        $ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $AccountInfo['account_client_id']), null, 1);
         $EmailContent = 'Your account(# ' . $account_id . ') have been activated successfully.';
         $EmailDescription = '<p><a href="' . setURL('clientarea/login') . '" target="_blank">Login to Clientarea</a></p>';
-        $email_body = email_build_body('Hosting Account Activated', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+        $email_body = email_build_body('Hosting Account Activated', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
         send_mail(array(
-            "to" => $ClientInfo['hosting_client_email'],
+            "to" => $ClientInfo['client_email'],
             "message" => $email_body,
             "subject" => 'Activate Hosting Account',
         ));

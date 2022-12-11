@@ -20,7 +20,7 @@ if (isset($_POST['reset'])) {
 
     $ClientEmail = $TokenInfo[0]->email;
 
-    $ClientInfo = $DB->find('clients', 'hosting_client_id, hosting_client_key, hosting_client_fname', array('hosting_client_email' => $ClientEmail), null, 1);
+    $ClientInfo = $DB->find('clients', 'client_id, client_key, client_fname', array('client_email' => $ClientEmail), null, 1);
 
     if (!$ClientInfo) {
         setMessage('Invalid reset <b>token</b> !', 'danger');
@@ -29,14 +29,14 @@ if (isset($_POST['reset'])) {
 
     $Key = '$2y$10$' . $TokenInfo[0]->token;
 
-    if (password_verify($ClientInfo['hosting_client_key'], $Key)) {
+    if (password_verify($ClientInfo['client_key'], $Key)) {
         $hashed_password = hash('sha256', $new_password);
-        $result = $DB->update('clients', array('hosting_client_password' => $hashed_password), array('hosting_client_id' => $ClientInfo['hosting_client_id']));
+        $result = $DB->update('clients', array('client_password' => $hashed_password), array('client_id' => $ClientInfo['client_id']));
 
         if ($result) {
             $EmailContent = '<p>Your account password has been reset successfully. Please login to clientarea to use our services again.</p>';
             $EmailDescription = '<p>Click <a href="' . setURL('clientarea/login') . '">here</a> to login.</p>';
-            $email_body = email_build_body('Reset Password', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+            $email_body = email_build_body('Reset Password', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
             send_mail(array(
                 'to' => $ClientEmail,

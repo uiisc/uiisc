@@ -15,7 +15,7 @@ if ($resault) {
     $TicketUrl = setURL('clientarea/tickets', '', array('action' => 'view', 'ticket_id' => $ticket_id));
     $EmailContent = '<p>You have closed a ticket(' . $ticket_id . ') .</p>';
     $EmailDescription = '<p>Click <a href="' . $TicketUrl . '" target="_blank">here</a> for details.</p>';
-    $email_body = email_build_body('Ticket Closed', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+    $email_body = email_build_body('Ticket Closed', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
     send_mail(array(
         'to' => $TicketInfo['ticket_email'],

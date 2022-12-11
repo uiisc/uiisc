@@ -8,7 +8,7 @@ if (!$client_id) {
     exit('Access Denied');
 }
 
-$resault = $DB->update('clients', array('hosting_client_status' => 1), array('hosting_client_id' => $client_id));
+$resault = $DB->update('clients', array('client_status' => 1), array('client_id' => $client_id));
 
 if ($resault) {
     setMessage('Client activated successfully !');

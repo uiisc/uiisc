@@ -16,14 +16,14 @@ if (isset($_POST['submit'])) {
         'username' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'), 0, 8),
         'password' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'), 0, 16),
         'account_domain' => post('domain'),
-        'email' => $ClientInfo['hosting_client_email'],
+        'email' => $ClientInfo['client_email'],
         'plan' => post('package'),
     );
     if (empty($FormData['account_domain'])) {
         setMessage('Domain cannot be <b>empty</b> !', 'danger');
         redirect('clientarea/accounts', '', array('action' => 'add'));
     } else {
-        $AccountList = $DB->findAll('account', '*', array('account_client_id' => $ClientInfo['hosting_client_id']));
+        $AccountList = $DB->findAll('account', '*', array('account_client_id' => $ClientInfo['client_id']));
         if (count($AccountList) < 3) {
             $client = Client::create($HostingApiConfig);
             $request = $client->createAccount(array(
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
                     'account_domain' => $Result['account_domain'],
                     'account_status' => '1',
                     'account_date' => $Result['date'],
-                    'account_client_id' => $ClientInfo['hosting_client_id'],
+                    'account_client_id' => $ClientInfo['client_id'],
                     'account_sql' => 'NULL',
                 ));
                 if ($account_id) {
@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
 <p>Next, </p>
 <br />';
                     $EmailDescription .= '<p><a href="' . setURL('clientarea/login') . '" target="_blank">Login to Clientarea</a></p>';
-                    $email_body = email_build_body('New Hosting Account', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+                    $email_body = email_build_body('New Hosting Account', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
                     send_mail(array(
                         'to' => $EmailTo,

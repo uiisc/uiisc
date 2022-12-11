@@ -8,11 +8,11 @@ if (empty($client_id)) {
     redirect('admin/clients');
 }
 
-$ClientInfo = $DB->find('clients', '*', array('hosting_client_id' => $client_id), null, 1);
+$ClientInfo = $DB->find('clients', '*', array('client_id' => $client_id), null, 1);
 
 $key = rand(000000, 999999);
-$email = $ClientInfo['hosting_client_email'];
-$token = hash('sha256', json_encode([$email, $ClientInfo['hosting_client_key'], $key]));
+$email = $ClientInfo['client_email'];
+$token = hash('sha256', json_encode([$email, $ClientInfo['client_key'], $key]));
 $times = 1;
 
 setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode(array('email' => $email, 'token' => $token, 'key' => $key)))), time() + $times * 86400, '/');

@@ -12,21 +12,21 @@
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Your Name</label>
-                    <input type="text" id="name" value="<?php echo $ClientInfo['hosting_client_fname'] . ' ' . $ClientInfo['hosting_client_lname']; ?>" class="form-control disabled" required readonly>
+                    <input type="text" id="name" value="<?php echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname']; ?>" class="form-control disabled" required readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Email Address</label>
-                    <input type="text" id="email" value="<?php echo $ClientInfo['hosting_client_email']; ?>" class="form-control disabled" required readonly>
+                    <input type="text" id="email" value="<?php echo $ClientInfo['client_email']; ?>" class="form-control disabled" required readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Country Name</label>
                     <input type="text" id="country" value="<?php
-if ($ClientInfo['hosting_client_country'] != 'NULL') {
-echo $ClientInfo['hosting_client_country'];
+if ($ClientInfo['client_country'] != 'NULL') {
+echo $ClientInfo['client_country'];
 } else {
 echo 'NULL';
 }
@@ -36,19 +36,19 @@ echo 'NULL';
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">State Name</label>
-                    <input type="text" id="state" class="form-control disabled" value="<?php echo $ClientInfo['hosting_client_state']; ?>" required readonly>
+                    <input type="text" id="state" class="form-control disabled" value="<?php echo $ClientInfo['client_state']; ?>" required readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">City Name</label>
-                    <input type="text" id="city" value="<?php echo $ClientInfo['hosting_client_city']; ?>" class="form-control disabled"  required readonly>
+                    <input type="text" id="city" value="<?php echo $ClientInfo['client_city']; ?>" class="form-control disabled"  required readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Company Name</label>
-                    <input type="text" id="company" value="<?php echo $ClientInfo['hosting_client_company']; ?>" class="form-control disabled"  required readonly>
+                    <input type="text" id="company" value="<?php echo $ClientInfo['client_company']; ?>" class="form-control disabled"  required readonly>
                 </div>
             </div>
             <div class="col-md-6">

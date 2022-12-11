@@ -9,22 +9,22 @@ if ($SiteConfig['site_status'] != 1) {
     $token = $data['token'];
     $email = $data['email'];
     $key = $data['key'];
-    $ClientInfo = $DB->find('clients', '*', array('hosting_client_email' => $email), null, 1);
+    $ClientInfo = $DB->find('clients', '*', array('client_email' => $email), null, 1);
 
     if ($ClientInfo) {
-        if ($ClientInfo['hosting_client_status'] == '0') {
+        if ($ClientInfo['client_status'] == '0') {
             if (empty($current_route) || $current_route != 'clientarea/validate') {
                 // redirect to clientarea/validate
                 redirect('clientarea/validate');
             }
-        } elseif ($ClientInfo['hosting_client_status'] == '2') {
+        } elseif ($ClientInfo['client_status'] == '2') {
             if (empty($current_route) || $current_route != 'clientarea/suspended') {
                 // redirect to clientarea/suspended
                 redirect('clientarea/suspended');
             }
         }
 
-        $verify = hash('sha256', json_encode([$email, $ClientInfo['hosting_client_key'], $key]));
+        $verify = hash('sha256', json_encode([$email, $ClientInfo['client_key'], $key]));
         if (trim($token) !== trim($verify)) {
             setcookie('UIISC_MEMBER', '', -1, '/');
             setMessage('Login to <b>continue!</b>', 'danger');

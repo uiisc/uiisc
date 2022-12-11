@@ -9,7 +9,7 @@ if (empty($account_id)) {
     redirect('clientarea/accounts');
 }
 
-$AccountInfo = $DB->find('account', '*', array('account_id' => $account_id, 'account_client_id' => $ClientInfo['hosting_client_id']), null, 1);
+$AccountInfo = $DB->find('account', '*', array('account_id' => $account_id, 'account_client_id' => $ClientInfo['client_id']), null, 1);
 
 if (empty($AccountInfo)) {
     setMessage('Account not found', 'danger');

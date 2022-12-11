@@ -11,7 +11,7 @@ if (!$ticket_id) {
 
 $where = array(
     'ticket_id' => $ticket_id,
-    'ticket_for' => $ClientInfo['hosting_client_id'],
+    'ticket_for' => $ClientInfo['client_id'],
 );
 
 $TicketInfo = $DB->find('tickets', '*', $where, null, 1);

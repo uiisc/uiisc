@@ -12,10 +12,10 @@ if (isset($_POST['validate'])) {
     }
 
     $token = '$2y$10$' . post('validation_code');
-    $client_key = $ClientInfo['hosting_client_key'];
+    $client_key = $ClientInfo['client_key'];
 
     if (password_verify($client_key, $token)) {
-        $resault = $DB->update('clients', ['hosting_client_status' => '1'], ['hosting_client_key' => $client_key]);
+        $resault = $DB->update('clients', array('client_status' => '1'), array('client_key' => $client_key));
         if ($resault) {
             setMessage('validated <b>successfully</b> !', 'success');
             redirect('clientarea/index');
@@ -28,7 +28,7 @@ if (isset($_POST['validate'])) {
     redirect('clientarea/validate');
 }
 
-if ($ClientInfo['hosting_client_status'] == 1) {
+if ($ClientInfo['client_status'] == 1) {
     setMessage('Your account has been <b>verified</b> !');
     redirect('clientarea/index');
 }

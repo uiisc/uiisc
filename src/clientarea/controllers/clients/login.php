@@ -23,9 +23,9 @@ if (isset($_POST['login'])) {
 
     $password_hash = hash('sha256', $password);
 
-    $ClientInfo = $DB->find('clients', 'hosting_client_id, hosting_client_password, hosting_client_key', array(
-        'hosting_client_email' => $email,
-        'hosting_client_password' => $password_hash,
+    $ClientInfo = $DB->find('clients', 'client_id, client_password, client_key', array(
+        'client_email' => $email,
+        'client_password' => $password_hash,
     ), null, 1);
 
     if (!$ClientInfo || empty($ClientInfo)) {
@@ -33,9 +33,9 @@ if (isset($_POST['login'])) {
         redirect('clientarea/login');
     }
 
-    if ($password_hash == $ClientInfo['hosting_client_password']) {
+    if ($password_hash == $ClientInfo['client_password']) {
         $key = rand(000000, 999999);
-        $token = hash('sha256', json_encode([$email, $ClientInfo['hosting_client_key'], $key]));
+        $token = hash('sha256', json_encode([$email, $ClientInfo['client_key'], $key]));
         $times = isset($_POST['remember']) ? 30 : 1;
         $token2 = ['email' => $email, 'token' => $token, 'key' => $key];
         setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode($token2))), time() + $times * 86400, '/');

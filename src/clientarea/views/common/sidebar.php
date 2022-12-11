@@ -1,5 +1,5 @@
 <?php
-$avatar_path = $ClientInfo['hosting_client_email'] ? md5($ClientInfo['hosting_client_email']) : 'default';
+$avatar_path = $ClientInfo['client_email'] ? md5($ClientInfo['client_email']) : 'default';
 ?>
 
 <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
@@ -13,7 +13,7 @@ $avatar_path = $ClientInfo['hosting_client_email'] ? md5($ClientInfo['hosting_cl
                 <!-- <i class="fa fa-user-circle" aria-hidden="true"></i> -->
                 <img class="rounded-circle" src="https://dn-qiniu-avatar.qbox.me/avatar/<?php echo $avatar_path; ?>?s=30" height="30px" width="30px">
             </span>
-            <?php echo $ClientInfo['hosting_client_fname'] . " " . $ClientInfo['hosting_client_lname']; ?>
+            <?php echo $ClientInfo['client_fname'] . " " . $ClientInfo['client_lname']; ?>
 
         </a>
 
