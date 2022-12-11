@@ -12,7 +12,7 @@ if (!defined('IN_CRONLITE')) {
                     <h3 class="panel-title"><?php echo $lang->I18N('signup_free_hosting'); ?></h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method=post action="//order.<?php echo $domain; ?>/register.php">
+                    <form class="form-horizontal" role="form" method=post action="//order.<?php echo $site_domain; ?>/register.php">
                         <!--remote_reg.php-->
                         <input type="hidden" name="plan_name" value="free webhosting">
                         <div class="form-group">

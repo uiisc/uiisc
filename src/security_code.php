@@ -1,6 +1,5 @@
 <?php
-define('IN_CRONLITE', true);
-require_once ("core.php");
+require __DIR__ . '/core/application.php';
 // $security_id = md5(rand(6000,getrandmax())); // $security_id = md5(rand(6000,99999999999999991000));
 $security_id = $_GET["id"];
 

@@ -12,7 +12,7 @@ if (!defined('IN_CRONLITE')) {
                     <h3 class="panel-title"><?php echo $lang->I18N('please_login'); ?></h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?= $domain ?>/login.php" method="post" name="login">
+                    <form class="form-group form-horizontal form-account" role="form" action="//cpanel.<?php echo $site_domain; ?>/login.php" method="post" name="login">
                         <div class="form-group">
                             <input type="text" name="uname" class="form-control" placeholder="<?php echo $lang->I18N('input_username'); ?>" required autofocus autocomplete="off">
                         </div>
@@ -29,7 +29,7 @@ if (!defined('IN_CRONLITE')) {
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('Remember me'); ?></span>
-                                    <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo $lang->I18N('password_lost'); ?></a>
+                                    <a href="//cpanel.<?php echo $site_domain; ?>/lostpassword.php"><?php echo $lang->I18N('password_lost'); ?></a>
                                 </label>
                             </div>
                         </div>
