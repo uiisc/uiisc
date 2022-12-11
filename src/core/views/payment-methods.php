@@ -1,8 +1,6 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../payment-methods.php");
-    exit;
+    exit('Access Denied');
 }
 // $html = file_get_contents('https://ifastnet.com/payment-methods.php');
 // preg_match('/<footer[^>]*id="footer"[^>]*>(.*?) <//footer>/si', $html, $match);

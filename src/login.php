@@ -1,10 +1,8 @@
 <?php
-define('IN_CRONLITE', true);
-require_once("core.php");
+require __DIR__ . '/core/application.php';
+require __DIR__ . '/core/controllers/login.php';
 
-include("core/controllers/login.php");
-
-include("core/views/header.php");
-include("core/views/navbar.php");
-include("core/views/login.php");
-include("core/views/footer.php");
+require __DIR__ . '/core/views/common/header.php';
+require __DIR__ . '/core/views/common/navbar.php';
+require __DIR__ . '/core/views/login.php';
+require __DIR__ . '/core/views/common/footer.php';

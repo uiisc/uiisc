@@ -1,0 +1,191 @@
+body {
+    background-color: #f0f1f6;
+}
+.navbar {
+    background-color: #fafafa;
+}
+.sidebar {
+    background-color: #f5f5f5;
+}
+.nav-height {
+    height: auto;
+    margin-left: 10px;
+}
+
+.navbar-brand-image {
+    height: 3rem !important;
+}
+
+.m5x {
+    margin-right: 6px;
+}
+
+.m5x6 {
+    margin-right: 6px;
+}
+
+.g-recaptcha {
+    width: 100%;
+    overflow: hidden;
+}
+
+.m5t {
+    margin-top: 8px !important;
+}
+
+.bg-matrix-1 {
+    background-image: linear-gradient(-45deg, rgb(213 79 246), rgb(228 0 239)) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.bg-matrix-2 {
+    background-image: linear-gradient(-45deg, rgb(255 234 0), rgb(255 208 0)) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.bg-matrix-3 {
+    background-image: linear-gradient(-45deg, rgb(0, 255, 255), rgb(96, 217, 235)) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.bg-matrix-4 {
+    background-image: linear-gradient(-45deg, rgb(89 243 156), rgb(96 255 0)) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.tool-1 {
+    background-image: linear-gradient(-45deg, cyan, skyblue) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.tool-2 {
+    background-image: linear-gradient(-45deg, red, pink) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.tool-3 {
+    background-image: linear-gradient(-45deg, silver, grey) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.tool-4 {
+    background-image: linear-gradient(-45deg, maroon, brown) !important;
+    color: #fff;
+    border-color: transparent;
+}
+
+.badge,
+.badge-pill,
+.btn-rounded {
+    border-radius: 4px !important;
+    border: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#hidden-area {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 350px;
+    display: block;
+}
+
+.nolink:hover {
+    text-decoration: none;
+}
+
+.fw-bold {
+    font-weight: 600 !important;
+}
+
+.btn-primary,
+.bg-primary,
+.btn-success,
+.bg-success,
+.badge-succes,
+.bg-danger,
+.badge-danger {
+    color: #fff !important;
+}
+
+/* nav tabs */
+
+.tabs {
+    overflow: hidden;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.tab-item {
+    margin-right: 5px;
+}
+
+.tab-item:hover {
+    border-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn.tab-item.active {
+    border-color: #199de9;
+    box-shadow: none;
+    outline: none;
+}
+
+.tab-hover.active {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tab-content {
+    display: none;
+    padding: 0.5rem 0;
+    border-top: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+pre {
+    overflow-x: auto;
+}
+
+@media only screen and (min-width: 992px) {
+    .hidden-on-up {
+        display: none;
+    }
+    .m5x {
+        margin-right: 0px;
+    }
+}
+
+.language-change {
+    max-height: 450px;
+    overflow-y: auto;
+}

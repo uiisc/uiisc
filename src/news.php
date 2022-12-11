@@ -1,10 +1,17 @@
 <?php
-define('IN_CRONLITE', true);
-require_once("core.php");
 
-include("core/controllers/news.php");
+require __DIR__ . '/core/application.php';
 
-include("core/views/header.php");
-include("core/views/navbar.php");
-include($section_page);
-include("core/views/footer.php");
+$action = get('action', 'list');
+
+if (!in_array($action, array('list', 'view'))) {
+    $action = 'list';
+}
+
+$PageInfo['title'] = 'News ' . ucfirst($action);
+
+require __DIR__ . '/core/controllers/news/' . $action . '.php';
+require __DIR__ . '/core/views/common/header.php';
+require __DIR__ . '/core/views/common/navbar.php';
+require __DIR__ . '/core/views/news/' . $action . '.php';
+require __DIR__ . '/core/views/common/footer.php';

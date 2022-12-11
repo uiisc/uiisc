@@ -1,10 +1,10 @@
 <?php
-return [
+return array(
     'home' => 'Home',
     'solution' => 'Solution',
     'news' => '뉴스',
     'contact' => '접촉',
-    'contact_us' => '문의하기',
+    'Contact Us' => '문의하기',
     'help' => '도움',
     'login' => '로그인',
     'logout' => '로그 아웃',
@@ -38,7 +38,7 @@ return [
     'cancellation_refund' => 'Cancellation & Refund',
     'payment_methods' => 'Payment Methods & Information',
     'signup_free_hosting' => 'Sign Up For Free Hosting',
-    'remember_me' => 'Remember me',
+    'Remember me' => 'Remember me',
     'please_login' => '로그인 해주세요',
     'address' => 'Address',
     'host-plan' => 'Host Plan',
@@ -72,9 +72,9 @@ return [
     'managearea'          => '관리센터',
     'delete'              => '삭제',
     'details'             => '세부 정보',
-    'tickets'             => '작업 지시서',
-    'tickets-details'     => '작업 지시 세부 정보',
+    'Tickets'             => '작업 지시서',
+    'Tickets Details'     => '작업 지시 세부 정보',
     'member'              => '고객',
     'members'             => '고객',
     'reg_date'            => '등록 날짜'
-];
+);

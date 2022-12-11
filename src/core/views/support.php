@@ -1,8 +1,6 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../support.php");
-    exit;
+    exit('Access Denied');
 }
 ?>
 
@@ -20,7 +18,7 @@ if (!defined('IN_CRONLITE')) {
         <div class="col-md-4 text-center">
             <img src="assets/images/tickets.jpg" alt="Tickets">
             <h3><?php echo $lang->I18N('Tickets'); ?></h3>
-            <p>You can submit a support ticket from VistaPanel, we will reply you as soon as possible.</p>
+            <p>You can submit a support ticket from <a href="clientarea/tickets.php"><?php echo $lang->I18N('clientarea'); ?></a>, we will reply you as soon as possible.</p>
         </div>
         <div class="col-md-4 text-center">
             <img src="assets/images/emails.jpg" alt="Emails">

@@ -1,10 +1,10 @@
 <?php
-return [
+return array(
     'home' => 'Home',
     'solution' => 'Solution',
     'news' => 'News',
     'contact' => 'Contact',
-    'contact_us' => 'Contact Us',
+    'Contact Us' => 'Contact Us',
     'help' => 'Help',
     'login' => 'Login',
     'logout' => 'Logout',
@@ -38,7 +38,7 @@ return [
     'cancellation_refund' => 'Cancellation & Refund',
     'payment_methods' => 'Payment Methods & Information',
     'signup_free_hosting' => 'Sign Up For Free Hosting',
-    'remember_me' => 'Remember me',
+    'Remember me' => 'Remember me',
     'please_login' => 'Please sign in',
     'address' => 'Address',
     'host-plan' => 'Host Plan',
@@ -72,9 +72,9 @@ return [
     'managearea'          => 'Manage Area',
     'delete'              => 'Delete',
     'details'             => 'Details',
-    'tickets'             => 'Tickets',
-    'tickets-details'     => 'Tickets Details',
+    'Tickets'             => 'Tickets',
+    'Tickets Details'     => 'Tickets Details',
     'member'              => 'Member',
     'members'             => 'Members',
     'reg_date'            => 'Registration date'
-];
+);

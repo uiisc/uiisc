@@ -1,10 +1,11 @@
 <?php
-return [
+return array(
     'home'                => '主頁',
     'solution'            => '方案',
     'news'                => '新聞',
+    'News'                => '新聞',
     'contact'             => '聯繫',
-    'contact_us'          => '聯繫我們',
+    'Contact Us'          => '聯繫我們',
     'help'                => '幫助',
     'login'               => '登錄',
     'logout'              => '退出登錄',
@@ -38,7 +39,7 @@ return [
     'cancellation_refund' => '取消與退款',
     'payment_methods'     => '支付方式',
     'signup_free_hosting' => '註冊免費空間',
-    'remember_me'         => '記住我',
+    'Remember me'         => '記住我',
     'please_login'        => '請登錄',
     'address'             => '地址',
     'host-plan'           => '主機方案',
@@ -72,9 +73,9 @@ return [
     'managearea'          => '管理中心',
     'delete'              => '刪除',
     'details'             => '詳情',
-    'tickets'             => '工單',
-    'tickets-details'     => '工單詳情',
+    'Tickets'             => '工單',
+    'Tickets Details'     => '工單詳情',
     'member'              => '客戶',
     'members'             => '客戶',
     'reg_date'            => '註冊日期'
-];
+);

@@ -1,8 +1,6 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../index.php");
-    exit;
+    exit('Access Denied');
 }
 ?>
 
@@ -48,7 +46,7 @@ if (!defined('IN_CRONLITE')) {
                 <div class="media-body">
                     <h4 class="media-heading">Value for free</h4>
                     <p>Our cluster-based GRID network features hundreds of server nodes using the right software for the right job powered by Linux and Unix operating systems.</p>
-                    <p><?= $title_s ?> hosting has the right services for you and at the right price... $0.00!</p>
+                    <p><?php echo $page_title; ?> hosting has the right services for you and at the right price... $0.00!</p>
                 </div>
             </div>
         </div>

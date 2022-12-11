@@ -1,16 +1,14 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../legal.php");
-    exit;
+    exit('Access Denied');
 }
 
-$section = empty($_GET["s"]) ? "terms" : $_GET["s"];
+$section = get('s', 'terms');
 
 if ($section == "privacy") {
-    $title = $title . ' - ' . $lang->I18N('privacy_policy');
-    $section_page = "{$ROOT}/core/views/legal_privacy.php";
+    $page_title = $page_title . ' - ' . $lang->I18N('privacy_policy');
+    $section_page = ROOT . "/core/views/legal_privacy.php";
 } else {
-    $title = $title . ' - ' . $lang->I18N('tos');
-    $section_page = "{$ROOT}/core/views/legal_terms.php";
+    $page_title = $page_title . ' - ' . $lang->I18N('tos');
+    $section_page = ROOT . "/core/views/legal_terms.php";
 }

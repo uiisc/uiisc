@@ -1,8 +1,6 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../contact.php");
-    exit;
+    exit('Access Denied');
 }
 
-$title = $title . ' - ' . $lang->I18N('contact_us');
+$page_title = $page_title . ' - ' . $lang->I18N('Contact Us');

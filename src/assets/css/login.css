@@ -1,0 +1,32 @@
+body {
+    background-image: linear-gradient(45deg, orange, skyblue) !important;
+}
+
+.icon-text {
+    background-image: linear-gradient(-45deg, orange, skyblue) !important;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#login {
+    margin-top: 10%;
+}
+
+#signup {
+    margin-top: 8%;
+}
+
+.card {
+    opacity: 80% !important;
+    border-radius: 15px !important;
+}
+
+@media only screen and (max-width: 768px) {
+    #login {
+        margin-top: 19%;
+    }
+    #signup {
+        margin-top: 16%;
+    }
+}

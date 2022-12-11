@@ -1,8 +1,7 @@
 <?php
-define('IN_CRONLITE', true);
-require_once("core.php");
+require __DIR__ . '/core/application.php';
 
-include("core/views/header.php");
-include("core/views/navbar.php");
-include("core/views/index.php");
-include("core/views/footer.php");
+require __DIR__ . '/core/views/common/header.php';
+require __DIR__ . '/core/views/common/navbar.php';
+require __DIR__ . '/core/views/index.php';
+require __DIR__ . '/core/views/common/footer.php';

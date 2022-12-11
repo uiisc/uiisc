@@ -1,8 +1,6 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../login.php");
-    exit;
+    exit('Access Denied');
 }
 ?>
 
@@ -30,7 +28,7 @@ if (!defined('IN_CRONLITE')) {
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('remember_me'); ?></span>
+                                    <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('Remember me'); ?></span>
                                     <a href="//cpanel.<?= $domain ?>/lostpassword.php"><?php echo $lang->I18N('password_lost'); ?></a>
                                 </label>
                             </div>
@@ -46,7 +44,7 @@ if (!defined('IN_CRONLITE')) {
 </div>
 
 <!-- <script type="text/javascript">
-        var domain = "<?php echo getDomain(); ?>";
+        var site_domain = "<?php echo $site_domain; ?>";
         var cur_language = "<?php echo $lang->language_current; ?>";
         function change_language(lan) {
             setCookie('lang', lan, 1, '/', domain, false);

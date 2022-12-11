@@ -11,12 +11,12 @@ if (document.getElementsByName("jump-ifastnet").length) {
 }
 
 function change_language(lang) {
-    setCookie('lang', lang, 1, '/', domain, false);
-    if (cur_lang == lang) {
-        return;
+    setCookie('lang', lang, 10, '/', site_domain, false);
+    console.log(cur_lang, lang)
+    if (cur_lang != lang) {
+        // to reload after changed
+        window.location.href = window.location.href;
     }
-    // to reload after changed
-    window.location.href = window.location.href;
 }
 
 function jumpLink(action, params, target) {
@@ -37,6 +37,15 @@ function jumpLink(action, params, target) {
     document.body.removeChild(fm); // remove form after submit
 }
 
+/**
+ * 设置 Cookie
+ * @param {string} name 字段
+ * @param {string} value 值
+ * @param {string|number} expires 时长,单位天
+ * @param {string} path 路径
+ * @param {string} domain 域名
+ * @param {string} secure 
+ */
 function setCookie(name, value, expires, path, domain, secure) {
     var today = new Date();
     today.setTime(today.getTime());

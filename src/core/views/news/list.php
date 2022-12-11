@@ -1,34 +1,35 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../index.php");
-    exit;
+    exit('Access Denied');
 }
 ?>
 
 <div class="container">
-    <div class="page-header">
+    <ol class="breadcrumb">
+        <li><a href="/"><?php echo $lang->I18N('home'); ?></a></li>
+        <li class="active"><?php echo $lang->I18N('news'); ?></li>
+    </ol>
+    <!-- <div class="page-header">
         <h1><?php echo $lang->I18N('news'); ?></h1>
-    </div>
+    </div> -->
 </div>
 
 <div class="container">
-    <?php echo (getMsg("msg_notify")); ?>
     <div class="panel panel-default">
         <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
-                        <th>Title</th>
                         <th style="width: 150px;">Date</th>
+                        <th>Title</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php if ($news["total"] && $news["list"]) {
                         foreach ($news["list"] as $key => $value) { ?>
                             <tr>
-                                <td><a href="<?php echo setRouter('news', '', ['id' => $value['id']]); ?>"><?php echo $value["title"]; ?></a></td>
-                                <td style="width: 150px;"><?php echo cTime($value["date"]); ?></td>
+                                <td style="width: 150px;"><?php echo $value["news_date"]; ?></td>
+                                <td><a href="<?php echo setRouter('news', '', array('action' => 'view', 'id' => $value['news_id'])); ?>"><?php echo $value["news_subject"]; ?></a></td>
                             </tr>
                         <?php }
                     } else { ?>
