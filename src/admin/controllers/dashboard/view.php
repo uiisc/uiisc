@@ -1,6 +1,6 @@
 <?php
 
-$PageInfo['title'] = 'Home Page';
+$PageInfo['title'] = 'Dashboard';
 $count_clients = $DB->count('clients', null);
 $count_account = $DB->count('account', array('account_status' => 1));
 $count_ssl = $DB->count('ssl');

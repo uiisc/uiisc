@@ -14,7 +14,7 @@
     <meta name="author" content="UIISC" />
     <meta name="copyright" content="® CROGRAM" />
 
-    <title><?php echo $PageInfo['title']; ?> - <?php echo $SiteConfig['site_name']; ?></title>
+    <title><?php echo $PageInfo['title']; ?> - <?php echo $lang->I18N('ClientArea'); ?> - <?php echo $SiteConfig['site_name']; ?></title>
     <link rel="icon" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
     <link rel="shortcut" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
 

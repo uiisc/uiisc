@@ -2,7 +2,7 @@
 <div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="overlayed-sm-and-down">
     <nav class="navbar">
         <div class="container-fluid">
-            <a href="index.php" class="navbar-brand"><?php echo $SiteConfig['site_name']; ?></a>
+            <a href="index.php" class="navbar-brand"><?php echo $lang->I18N('Client Area'); ?></a>
             <ul class="navbar-nav ml-auto">
             <li class="nav-item nav-height">
                 <button class="btn btn-sm my-auto" role="button" onclick="halfmoon.toggleDarkMode()">
@@ -22,6 +22,8 @@
                     <i class="fa fa-user"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+                    <a href="<?php echo $site_url; ?>" class="dropdown-item" target="_blank"><?php echo $lang->I18N('Home'); ?></a>
+                    <div class="dropdown-divider"></div>
                     <a href="profile.php" class="dropdown-item"><?php echo $lang->I18N('Profile'); ?></a>
                     <a href="settings.php" class="dropdown-item"><?php echo $lang->I18N('Settings'); ?></a>
                     <a href="logout.php" class="dropdown-item"><?php echo $lang->I18N('logout'); ?></a>
