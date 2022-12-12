@@ -1,6 +1,6 @@
 # UIISC
 
-An Open Source Management System for MyOwnFreeHost
+An Open Source Web Hosting Account and Support Management System for MyOwnFreeHost
 
 * Official Site : [uiisc.com](http://uiisc.com "UIISC")
 * Author : [Jackson Dou](https://github.com/jksdou "Jackson Dou")
