@@ -29,5 +29,5 @@
         var ifastnet_aff = "<?php echo $ifastnet_aff; ?>";
     </script>
 </head>
-<body>
-<!-- <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true"> -->
+
+<body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">

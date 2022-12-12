@@ -6,18 +6,14 @@ if (!isset($_POST['submit'])) {
     redirect('clientarea/settings');
 }
 
-$form_data = array(
-    'old_password' => post('old_password'),
-    'new_password' => post('new_password'),
-    'hashed_password' => hash('sha256', post('new_password')),
-    'user_key' => $ClientInfo['hosting_client_key'],
-    'user_password' => $ClientInfo['hosting_client_password'],
-);
+$old_password = post('old_password');
+$old_password = hash('sha256', $old_password);
+$new_password = post('new_password');
+$new_password = hash('sha256', $new_password);
 
-if (hash('sha256', $form_data['old_password']) == $form_data['user_password']) {
-
-    $update_data = array('hosting_client_password' => $form_data['hashed_password']);
-    $where_data = array('hosting_client_key' => $form_data['user_key']);
+if ($old_password == $ClientInfo['client_password']) {
+    $update_data = array('client_password' => $new_password);
+    $where_data = array('client_id' => $ClientInfo['client_id']);
     $result = $DB->update('clients', $update_data, $where_data);
 
     if ($result) {

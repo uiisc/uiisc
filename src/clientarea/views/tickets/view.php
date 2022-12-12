@@ -39,7 +39,7 @@
 
     <div class="card py-10">
         <div class="d-flex justify-content-between align-items-center px-5">
-            <b class="py-5"><?php echo $ClientInfo['hosting_client_fname'] . ' ' . $ClientInfo['hosting_client_lname']; ?></b>
+            <b class="py-5"><?php echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname']; ?></b>
             <span><?php echo $TicketInfo['ticket_date']; ?></span>
         </div>
         <hr>
@@ -51,8 +51,8 @@
 <?php foreach ($ReplyInfo as $value): ?>
         <div class="card py-10">
             <div class="d-flex justify-content-between align-items-center px-5">
-                <b class="py-5"><?php if ($value['reply_from'] == $ClientInfo['hosting_client_id']) {
-    echo $ClientInfo['hosting_client_fname'] . ' ' . $ClientInfo['hosting_client_lname'];
+                <b class="py-5"><?php if ($value['reply_from'] == $ClientInfo['client_id']) {
+    echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname'];
 } else {
     echo 'Staff Member';
 }?></b>

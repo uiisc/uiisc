@@ -59,13 +59,13 @@ if ($Result['status'] == 0 && !is_array($Result['message'])) {
     $sql = $DB->update('account', array('account_status' => '0'), array('account_id' => $account_id));
     if ($sql) {
         // 本地同步成功
-        $ClientInfo = $DB->find('clients', 'hosting_client_email, hosting_client_fname', array('hosting_client_id' => $AccountInfo['account_client_id']), null, 1);
+        $ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $AccountInfo['account_client_id']), null, 1);
         $EmailContent = '<p>We had a good time with you while you were with us. </p>';
         $EmailDescription = 'Your account(# ' . $account_id . ') have been deactivate successfully and all files and database will be deleted within 30 days.';
-        $email_body = email_build_body('Hosting Account Deactivated', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+        $email_body = email_build_body('Hosting Account Deactivated', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
         send_mail(array(
-            'to' => $ClientInfo['hosting_client_email'],
+            'to' => $ClientInfo['client_email'],
             'message' => $email_body,
             'subject' => 'Hosting Account Deactivated'
         ));

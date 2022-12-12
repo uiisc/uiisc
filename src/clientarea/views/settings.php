@@ -12,37 +12,37 @@
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('First Name'); ?></label>
-                        <input type="text" name="fname" value="<?php echo $ClientInfo['hosting_client_fname']; ?>" class="form-control" required>
+                        <input type="text" name="fname" value="<?php echo $ClientInfo['client_fname']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Last Name'); ?></label>
-                        <input type="text" name="lname" value="<?php echo $ClientInfo['hosting_client_lname']; ?>" class="form-control" required>
+                        <input type="text" name="lname" value="<?php echo $ClientInfo['client_lname']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Email Address'); ?></label>
-                        <input type="text" name="email" value="<?php echo $ClientInfo['hosting_client_email']; ?>" class="form-control disabled" required readonly>
+                        <input type="text" name="email" value="<?php echo $ClientInfo['client_email']; ?>" class="form-control disabled" required readonly>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">Phone Number</label>
-                        <input type="text" name="phone" value="<?php echo $ClientInfo['hosting_client_phone']; ?>" class="form-control" required>
+                        <input type="text" name="phone" value="<?php echo $ClientInfo['client_phone']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">Company Name</label>
-                        <input type="text" name="company" value="<?php echo $ClientInfo['hosting_client_company']; ?>" class="form-control" required>
+                        <input type="text" name="company" value="<?php echo $ClientInfo['client_company']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">Billing Address</label>
-                        <input type="text" name="address" value="<?php echo $ClientInfo['hosting_client_address']; ?>" class="form-control" required>
+                        <input type="text" name="address" value="<?php echo $ClientInfo['client_address']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -51,7 +51,7 @@
                         <select class="form-control" id="area-of-specialization" name="country" required="required">
                           <?php
 foreach ($countries as $State) {
-    if ($State['code'] == $ClientInfo['hosting_client_country']) {
+    if ($State['code'] == $ClientInfo['client_country']) {
         echo '<option value="' . $State['code'] . '" selected>' . $State['name'] . '</option>';
     } elseif ($State['code'] == 'NULL') {
         echo '<option value="NULL" disabled="disabled" selected="selected">Select your country</option>';
@@ -66,19 +66,19 @@ foreach ($countries as $State) {
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">State Name</label>
-                        <input type="text" name="state" value="<?php echo $ClientInfo['hosting_client_state']; ?>" class="form-control" required>
+                        <input type="text" name="state" value="<?php echo $ClientInfo['client_state']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">City Name</label>
-                        <input type="text" name="city" value="<?php echo $ClientInfo['hosting_client_city']; ?>" class="form-control" required>
+                        <input type="text" name="city" value="<?php echo $ClientInfo['client_city']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required">Postal Code</label>
-                        <input type="text" name="postal" value="<?php echo $ClientInfo['hosting_client_pcode']; ?>" class="form-control" required>
+                        <input type="text" name="postal" value="<?php echo $ClientInfo['client_pcode']; ?>" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-12">

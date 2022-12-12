@@ -7,18 +7,18 @@ if (!isset($_POST['submit'])) {
 }
 
 $form_data = array(
-    'hosting_client_fname' => post('fname'),
-    'hosting_client_lname' => post('lname'),
-    'hosting_client_phone' => post('phone'),
-    'hosting_client_company' => post('company'),
-    'hosting_client_address' => post('address'),
-    'hosting_client_country' => post('country'),
-    'hosting_client_city' => post('city'),
-    'hosting_client_pcode' => post('postal'),
-    'hosting_client_state' => post('state')
+    'client_fname'   => post('fname'),
+    'client_lname'   => post('lname'),
+    'client_phone'   => post('phone'),
+    'client_company' => post('company'),
+    'client_address' => post('address'),
+    'client_country' => post('country'),
+    'client_city'    => post('city'),
+    'client_pcode'   => post('postal'),
+    'client_state'   => post('state')
 );
 
-$where_data = array('hosting_client_key' => $ClientInfo['hosting_client_key']);
+$where_data = array('client_id' => $ClientInfo['client_id']);
 
 $data = $DB->update('clients', $form_data, $where_data);
 

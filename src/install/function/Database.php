@@ -45,22 +45,22 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_builder_api` 
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_clients` (
-  `hosting_client_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `hosting_client_fname` VARCHAR(30) NOT NULL,
-  `hosting_client_lname` VARCHAR(30) NOT NULL,
-  `hosting_client_email` VARCHAR(70) NOT NULL,
-  `hosting_client_phone` VARCHAR(30) NOT NULL,
-  `hosting_client_address` VARCHAR(50) NOT NULL,
-  `hosting_client_country` VARCHAR(40) NOT NULL,
-  `hosting_client_city` VARCHAR(30) NOT NULL,
-  `hosting_client_pcode` VARCHAR(20) NOT NULL,
-  `hosting_client_key` VARCHAR(8) NOT NULL,
-  `hosting_client_state` VARCHAR(30) NOT NULL,
-  `hosting_client_date` VARCHAR(30) NOT NULL,
-  `hosting_client_status` INT(1) NOT NULL,
-  `hosting_client_company` VARCHAR(50) NOT NULL,
-  `hosting_client_password` VARCHAR(64) NOT NULL,
-  PRIMARY KEY (`hosting_client_id`)
+  `client_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `client_fname` VARCHAR(30) NOT NULL,
+  `client_lname` VARCHAR(30) NOT NULL,
+  `client_email` VARCHAR(70) NOT NULL,
+  `client_phone` VARCHAR(30) NOT NULL,
+  `client_address` VARCHAR(50) NOT NULL,
+  `client_country` VARCHAR(40) NOT NULL,
+  `client_city` VARCHAR(30) NOT NULL,
+  `client_pcode` VARCHAR(20) NOT NULL,
+  `client_key` VARCHAR(8) NOT NULL,
+  `client_state` VARCHAR(30) NOT NULL,
+  `client_date` VARCHAR(30) NOT NULL,
+  `client_status` INT(1) NOT NULL,
+  `client_company` VARCHAR(50) NOT NULL,
+  `client_password` VARCHAR(64) NOT NULL,
+  PRIMARY KEY (`client_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_domain_extensions` (

@@ -11,25 +11,25 @@
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Your Name</label>
-                    <input type="text" name="name" value="<?php echo $ClientInfo['hosting_client_fname'] . ' ' . $ClientInfo['hosting_client_lname']; ?>" class="form-control disabled" readonly>
+                    <input type="text" name="name" value="<?php echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname']; ?>" class="form-control disabled" readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Your Email</label>
-                    <input type="text" name="email" value="<?php echo $ClientInfo['hosting_client_email']; ?>" class="form-control disabled" readonly>
+                    <input type="text" name="email" value="<?php echo $ClientInfo['client_email']; ?>" class="form-control disabled" readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Phone Number</label>
-                    <input type="text" name="email" value="<?php echo $ClientInfo['hosting_client_phone']; ?>" class="form-control disabled" readonly>
+                    <input type="text" name="email" value="<?php echo $ClientInfo['client_phone']; ?>" class="form-control disabled" readonly>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mb-10 px-10">
                     <label class="form-label required">Billing Address</label>
-                    <input type="text" name="email" value="<?php echo $ClientInfo['hosting_client_address']; ?>" class="form-control disabled" readonly>
+                    <input type="text" name="email" value="<?php echo $ClientInfo['client_address']; ?>" class="form-control disabled" readonly>
                 </div>
             </div>
         </div>

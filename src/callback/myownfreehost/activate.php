@@ -19,11 +19,11 @@ if ($AccountInfo) {
     $res = $DB->update('account', array('account_sql' => $status, 'account_status' => '1'), array('account_id' => $AccountInfo['account_id']));
 
     // 查找客户信息
-    $ClientInfo = $DB->find('clients', 'hosting_client_email, hosting_client_fname', array('hosting_client_id' => $AccountInfo['account_client_id']));
+    $ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $AccountInfo['account_client_id']));
     if ($ClientInfo) {
-        $EmailTo = $ClientInfo['hosting_client_email'];
+        $EmailTo = $ClientInfo['client_email'];
         $EmailSubject = 'New Hosting Account';
-        $EmailToPeople = $ClientInfo['hosting_client_fname'];
+        $EmailToPeople = $ClientInfo['client_fname'];
     } else {
         $EmailTo = $SiteConfig['site_email'];
         $EmailToPeople = 'Administrator';

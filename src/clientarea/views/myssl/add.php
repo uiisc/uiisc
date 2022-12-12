@@ -16,25 +16,25 @@ if (!defined('IN_CRONLITE')) {
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Your Name'); ?></label>
-                        <input type="text" name="name" value="<?php echo $ClientInfo['hosting_client_fname'] . ' ' . $ClientInfo['hosting_client_lname']; ?>" class="form-control disabled" required readonly>
+                        <input type="text" name="name" value="<?php echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname']; ?>" class="form-control disabled" required readonly>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Email Address'); ?></label>
-                        <input type="text" name="email" value="<?php echo $ClientInfo['hosting_client_email']; ?>" class="form-control disabled" required readonly>
+                        <input type="text" name="email" value="<?php echo $ClientInfo['client_email']; ?>" class="form-control disabled" required readonly>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Company Name'); ?></label>
-                        <input type="text" name="company" value="<?php echo $ClientInfo['hosting_client_company']; ?>" class="form-control disabled"  required readonly>
+                        <input type="text" name="company" value="<?php echo $ClientInfo['client_company']; ?>" class="form-control disabled"  required readonly>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
                         <label class="form-label required"><?php echo $lang->I18N('Billing Address'); ?></label>
-                        <input type="text" name="address" value="<?php echo $ClientInfo['hosting_client_address']; ?>" class="form-control disabled"  required readonly>
+                        <input type="text" name="address" value="<?php echo $ClientInfo['client_address']; ?>" class="form-control disabled"  required readonly>
                     </div>
                 </div>
                 <div class="col-md-12">

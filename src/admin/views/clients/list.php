@@ -19,23 +19,27 @@
 <?php if ($count > 0): ?>
     <?php foreach ($rows as $value): ?>
                     <tr>
-                        <td># <?php echo $value['hosting_client_id']; ?></td>
-                        <td><?php echo $value['hosting_client_fname'] . " " . $value['hosting_client_lname']; ?></td>
-                        <td><?php echo $value['hosting_client_email']; ?></td>
-                        <td><?php echo $value['hosting_client_date']; ?></td>
+                        <td># <?php echo $value['client_id']; ?></td>
+                        <td><?php echo $value['client_fname'] . " " . $value['client_lname']; ?></td>
+                        <td><?php echo $value['client_email']; ?></td>
+                        <td><?php echo $value['client_date']; ?></td>
                         <td><?php
-if ($value['hosting_client_status'] == '0') {
+if ($value['client_status'] == '0') {
     $btn = ['secondary', 'cog'];
     echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
-} elseif ($value['hosting_client_status'] == '1') {
+} elseif ($value['client_status'] == '1') {
     $btn = ['success', 'globe'];
     echo '<span class="badge bg-success badge-pill">Active</span>';
-} elseif ($value['hosting_client_status'] == '2') {
+} elseif ($value['client_status'] == '2') {
     $btn = ['danger', 'lock'];
     echo '<span class="badge bg-danger badge-pill">Suspended</span>';
 }
 ?></td>
-                        <td><a href="clients.php?action=view&client_id=<?php echo $value['hosting_client_id']; ?>" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded"><i class="fa fa-<?php echo $btn[1]; ?>"></i> Manage</a></td>
+                        <td>
+                            <a href="clients.php?action=view&client_id=<?php echo $value['client_id']; ?>" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded">
+                                <i class="fa fa-<?php echo $btn[1]; ?>"></i> Manage
+                            </a>
+                        </td>
                     </tr>
     <?php endforeach;?>
 <?php else: ?>

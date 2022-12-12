@@ -31,10 +31,10 @@
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
                 </span>
                 <?php
-if ($ClientInfo['hosting_client_status'] == 1) {
+if ($ClientInfo['client_status'] == 1) {
     header("location: index.php");
 }
-echo $ClientInfo['hosting_client_fname'] . " " . $ClientInfo['hosting_client_lname'];
+echo $ClientInfo['client_fname'] . " " . $ClientInfo['client_lname'];
 ?>
 
             </a>

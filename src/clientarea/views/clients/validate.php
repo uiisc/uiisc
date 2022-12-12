@@ -31,7 +31,7 @@
                 <span class="sidebar-icon bg-secondary text-dark rounded-circle">
                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                 </span>
-                <?php echo $ClientInfo['hosting_client_fname'] . " " . $ClientInfo['hosting_client_lname']; ?>
+                <?php echo $ClientInfo['client_fname'] . " " . $ClientInfo['client_lname']; ?>
 
             </a>
             <h5 class="sidebar-title"><?php echo $lang->I18N('Main Menu'); ?></h5>
@@ -51,7 +51,7 @@
             <div class="card p-15">
                 <h5 class="mb-0 px-5"><?php echo $lang->I18N('Validate Account'); ?></h5><hr>
                 <div>
-                    <p><b>Note:</b> You need to verify this account in order to use our free hosting and ssl services. An email has been sent to your submitted email address(<samp><?php echo $ClientInfo['hosting_client_email']; ?></samp>) with validation code.</p>
+                    <p><b>Note:</b> You need to verify this account in order to use our free hosting and ssl services. An email has been sent to your submitted email address(<samp><?php echo $ClientInfo['client_email']; ?></samp>) with validation code.</p>
                     <form action="controllers/clients/validate.php" method="post">
                         <div class="form-group">
                             <label class="form-label"><?php echo $lang->I18N('Validation Code'); ?></label>

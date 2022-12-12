@@ -20,7 +20,7 @@ if (strlen($reason) < 8) {
     redirect('clientarea/accounts', '', array('action' => 'edit', 'account_id' => $account_id));
 }
 
-$AccountInfo = $DB->find('account', '*', array('account_id' => $account_id, 'account_client_id' => $ClientInfo['hosting_client_id']), null, 1);
+$AccountInfo = $DB->find('account', '*', array('account_id' => $account_id, 'account_client_id' => $ClientInfo['client_id']), null, 1);
 
 if (empty($AccountInfo)) {
     setMessage('Account not found', 'danger');
@@ -61,10 +61,10 @@ if ($Result['status'] == 0 && !is_array($Result['message'])) {
         // 本地同步成功
         $EmailContent = '<p>We had a good time with you while you were with us. </p>';
         $EmailDescription = 'Your account(# ' . $account_id . ') have been deactivate successfully and all files and database will be deleted within 30 days.';
-        $email_body = email_build_body('Hosting Account Deactivated', $ClientInfo['hosting_client_fname'], $EmailContent, $EmailDescription);
+        $email_body = email_build_body('Hosting Account Deactivated', $ClientInfo['client_fname'], $EmailContent, $EmailDescription);
 
         send_mail(array(
-            'to' => $ClientInfo['hosting_client_email'],
+            'to' => $ClientInfo['client_email'],
             'message' => $email_body,
             'subject' => 'Hosting Account Deactivated'
         ));

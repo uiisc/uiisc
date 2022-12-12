@@ -10,7 +10,7 @@ if (empty($account_id)) {
 
 $_where = array(
     'account_id' => $account_id,
-    'account_client_id' => $ClientInfo['hosting_client_id'],
+    'account_client_id' => $ClientInfo['client_id'],
 );
 $AccountInfo = $DB->find('account', '*', $_where, null, 1);
 

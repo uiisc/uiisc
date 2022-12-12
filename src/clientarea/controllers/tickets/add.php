@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
         'ticket_email' => post('email'),
         'ticket_content' => post('editor'),
         'ticket_department' => post('department'),
-        'ticket_for' => $ClientInfo['hosting_client_id'],
+        'ticket_for' => $ClientInfo['client_id'],
         'ticket_date' => date('Y-m-d H:i:s'),
         'ticket_status' => 0,
     );
@@ -20,9 +20,9 @@ if (isset($_POST['submit'])) {
         // to customer
         send_mail(array(
             'to' => $FormData['ticket_email'],
-            'subject' => 'New Ticket (#' . $ClientInfo['hosting_client_id'] . ')',
+            'subject' => 'New Ticket (#' . $ClientInfo['client_id'] . ')',
             'message' => email_build_body('New Ticket',
-                $ClientInfo['hosting_client_fname'],
+                $ClientInfo['client_fname'],
                 '<p>You have opened a support ticket which will be processed soon. It can take up to 2 hours.</p>',
                 '<p>Click <a href="' . $ticket_url . '" target="_blank">here</a> for details.</p>'
             ),
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
         // to Administrator
         send_mail(array(
             'to' => $SiteConfig['site_email'],
-            'subject' => 'New Ticket (#' . $ClientInfo['hosting_client_id'] . ')',
+            'subject' => 'New Ticket (#' . $ClientInfo['client_id'] . ')',
             'message' => email_build_body('New Ticket',
                 'Administrator',
                 '<p>We have received a new support ticket request, please handle it in time.</p>',

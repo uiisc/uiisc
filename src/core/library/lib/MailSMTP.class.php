@@ -30,7 +30,7 @@ class MailSMTP
      * @param bool   $debug     是否调试模式显示发送的调试信息
      * @return void
      */
-    public function __construct($smtp_host, $smtp_user, $smtp_pass, $smtp_port = 25, $auth = false, $debug = false)
+    public function __construct($smtp_host, $smtp_user, $smtp_pass, $smtp_port = 25, $auth = true, $debug = false)
     {
         $this->debug = $debug;
         $this->smtp_host = $smtp_host;

@@ -6,7 +6,7 @@ require_once ROOT . '/core/library/countries.php';
 $CountryName = 'Not Defined';
 
 foreach ($countries as $country) {
-    if ($ClientInfo['hosting_client_country'] == $country['code']) {
+    if ($ClientInfo['client_country'] == $country['code']) {
         $CountryName = $country['name'];
         break;
     }

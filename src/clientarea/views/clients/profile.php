@@ -7,31 +7,31 @@
         <hr>
         <div class="row">
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('First Name'); ?>:</b> <?php echo $ClientInfo['hosting_client_fname'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('First Name'); ?>:</b> <?php echo $ClientInfo['client_fname'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('Last Name'); ?>:</b> <?php echo $ClientInfo['hosting_client_lname'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('Last Name'); ?>:</b> <?php echo $ClientInfo['client_lname'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('Email Address'); ?>:</b> <?php echo $ClientInfo['hosting_client_email'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('Email Address'); ?>:</b> <?php echo $ClientInfo['client_email'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Phone Number:</b> <?php echo $ClientInfo['hosting_client_phone'];?></h6>
+                <h6 class="mb-0"><b>Phone Number:</b> <?php echo $ClientInfo['client_phone'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('Billing Address'); ?>:</b> <?php echo $ClientInfo['hosting_client_address'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('Billing Address'); ?>:</b> <?php echo $ClientInfo['client_address'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('Company'); ?>:</b> <?php echo $ClientInfo['hosting_client_company'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('Company'); ?>:</b> <?php echo $ClientInfo['client_company'];?></h6>
             </div>
             <div class="col-md-6">
                 <h6 class="mb-0"><b><?php echo $lang->I18N('Country'); ?>:</b> <?php echo $CountryName; ?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('City'); ?>:</b> <?php echo $ClientInfo['hosting_client_city'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('City'); ?>:</b> <?php echo $ClientInfo['client_city'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Postal Code:</b> <?php echo $ClientInfo['hosting_client_pcode'];?></h6>
+                <h6 class="mb-0"><b>Postal Code:</b> <?php echo $ClientInfo['client_pcode'];?></h6>
             </div>
             <div class="col-md-6">
                 <h6 class="mb-0"><b><?php echo $lang->I18N('IP Address'); ?>:</b> <?php echo UserInfo::get_ip();?></h6>
