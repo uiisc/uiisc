@@ -19,3 +19,5 @@ $status_types = array(
     '关闭',
     '打开'
 );
+
+$PageInfo['title'] = 'News List';

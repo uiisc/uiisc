@@ -19,3 +19,5 @@ if ($id > 0) {
 } else {
     $data = null;
 }
+
+$PageInfo['title'] = 'News Details';

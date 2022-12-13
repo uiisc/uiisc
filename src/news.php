@@ -8,8 +8,6 @@ if (!in_array($action, array('list', 'view'))) {
     $action = 'list';
 }
 
-$PageInfo['title'] = 'News ' . ucfirst($action);
-
 require __DIR__ . '/core/controllers/news/' . $action . '.php';
 require __DIR__ . '/core/views/common/header.php';
 require __DIR__ . '/core/views/common/navbar.php';
