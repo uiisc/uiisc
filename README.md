@@ -2,7 +2,7 @@
 
 An Open Source Web Hosting Account and Support Management System for MyOwnFreeHost
 
-- Official Site : [uiisc.com](http://uiisc.com "UIISC")
+- Official Site : [uiisc.org](http://uiisc.org "UIISC")
 - Author : [Jackson Dou](https://github.com/jksdou "Jackson Dou")
 
 ## Functions
