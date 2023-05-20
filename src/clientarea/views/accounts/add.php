@@ -6,7 +6,7 @@
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>
         </div>
-        <hr>
+        <hr />
         <div class="row mb-10">
             <div class="col-md-6">
                 <div class="mb-10 px-10">

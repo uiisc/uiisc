@@ -4,6 +4,7 @@ if (!defined('IN_CRONLITE')) {
 }
 ?>
 
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
@@ -51,4 +52,5 @@ if (!defined('IN_CRONLITE')) {
             </div>
         </form>
     </div>
+</div>
 </div>

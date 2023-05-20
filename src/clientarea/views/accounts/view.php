@@ -128,7 +128,7 @@
             <h5 class="m-0">Account Domains</h5>
         </div>
         <hr />
-        <div class="mb-10">
+        <div class="mb-10 px-10">
         <?php if (count($DomainList) > 0): ?>
         <?php foreach ($DomainList as $domain): ?>
             <div class='d-flex justify-content-between align-items-center m-5'>

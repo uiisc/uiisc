@@ -4,6 +4,7 @@ if (!$Knowledgebase) {
     exit();
 }
 ?>
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
@@ -35,4 +36,5 @@ if (!$Knowledgebase) {
             <div><?php echo htmlspecialchars_decode($Knowledgebase['knowledgebase_content']); ?></div>
         </div>
     </div>
+</div>
 </div>

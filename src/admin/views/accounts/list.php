@@ -1,21 +1,23 @@
+
+<div class="content-wrapper">
 <div class="container-fluid">
-    <div class="card py-0">
-        <div class="d-flex justify-content-between align-items-center pt-15">
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
             <h5 class="m-0"><?php echo $PageInfo['title']; ?></h5>
             <a href="index.php" class="btn text-white btn-danger btn-sm">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>
         </div>
         <hr />
-        <div class="table-responsive">
-            <table class="table table-stripped">
+        <div class="card-body table-responsive">
+            <table class="table table-stripped table-bordered table-hover">
                 <thead>
-                    <th width="5%">ID</th>
-                    <th width="40%">Username</th>
-                    <th width="30%">Domain</th>
-                    <th width="5%">Deploy Date</th>
-                    <th width="5%">Status</th>
-                    <th width="5%">Action</th>
+                    <th>ID</th>
+                    <th><?php echo $lang->I18N('Username'); ?></th>
+                    <th><?php echo $lang->I18N('Domain'); ?></th>
+                    <th><?php echo $lang->I18N('Deploy Date'); ?></th>
+                    <th><?php echo $lang->I18N('Status'); ?></th>
+                    <th><?php echo $lang->I18N('Action'); ?></th>
                 </thead>
                 <tbody>
 <?php if ($count > 0): ?>
@@ -52,6 +54,7 @@ if ($row['account_status'] == '0') {
                 </tbody>
             </table>
         </div>
-        <p class="pb-10"><?php echo $count; ?> Records Founds</p>
+        <div class="card-footer"><?php echo $count; ?> Records Founds</div>
     </div>
+</div>
 </div>

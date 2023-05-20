@@ -1,23 +1,24 @@
+<div class="content-wrapper">
 <div class="container-fluid">
-    <div class="card py-0">
-        <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0">My Clients</h5>
-            <a href="index.php" class="btn text-white btn-danger btn-sm"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?></a>
+    <div class="card m-20 p-20">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="m-0"><?php echo $lang->I18N('My Clients'); ?></h3>
+            <a href="index.php" class="btn btn-danger btn-sm pull-right"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?></a>
         </div>
-        <hr>
-        <div class="table-responsive">
-            <table class="table table-stripped">
+        <hr />
+        <div class="card-body table-responsive">
+            <table class="table table-stripped table-bordered table-hover">
                 <thead>
-                    <th width="5%">ID</th>
-                    <th width="10%">Name</th>
-                    <th width="40%">Email</th>
-                    <th width="10%">Date</th>
-                    <th width="10%">Status</th>
-                    <th width="10%">Action</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </thead>
                 <tbody>
 <?php if ($count > 0): ?>
-    <?php foreach ($rows as $value): ?>
+<?php foreach ($rows as $value): ?>
                     <tr>
                         <td># <?php echo $value['client_id']; ?></td>
                         <td><?php echo $value['client_fname'] . " " . $value['client_lname']; ?></td>
@@ -25,14 +26,14 @@
                         <td><?php echo $value['client_date']; ?></td>
                         <td><?php
 if ($value['client_status'] == '0') {
-    $btn = ['secondary', 'cog'];
-    echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
+$btn = ['secondary', 'cog'];
+echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
 } elseif ($value['client_status'] == '1') {
-    $btn = ['success', 'globe'];
-    echo '<span class="badge bg-success badge-pill">Active</span>';
+$btn = ['success', 'globe'];
+echo '<span class="badge bg-success badge-pill">Active</span>';
 } elseif ($value['client_status'] == '2') {
-    $btn = ['danger', 'lock'];
-    echo '<span class="badge bg-danger badge-pill">Suspended</span>';
+$btn = ['danger', 'lock'];
+echo '<span class="badge bg-danger badge-pill">Suspended</span>';
 }
 ?></td>
                         <td>
@@ -41,7 +42,7 @@ if ($value['client_status'] == '0') {
                             </a>
                         </td>
                     </tr>
-    <?php endforeach;?>
+<?php endforeach;?>
 <?php else: ?>
                     <tr>
                         <td colspan="6" class="text-center">Nothing found</td>
@@ -50,6 +51,8 @@ if ($value['client_status'] == '0') {
                 </tbody>
             </table>
         </div>
-        <p class="pb-10"><?php echo $count; ?> Records Founds</p>
+        <hr />
+        <div class="card-footer"><?php echo $count; ?> Records Founds.</div>
     </div>
+</div>
 </div>

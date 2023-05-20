@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <div class="card py-0">
+    <div class="card m-20 py-10">
         <div class="d-flex justify-content-between align-items-center pt-15">
             <h5 class="m-0"><?php echo $lang->I18N('Tickets Details'); ?> #<?php echo $ticket_id; ?></h5>
             <a href="tickets.php" class="btn btn-sm btn-danger">
@@ -37,20 +37,20 @@
         </div>
     </div>
 
-    <div class="card py-10">
-        <div class="d-flex justify-content-between align-items-center px-5">
+    <div class="card m-20 py-10">
+        <div class="d-flex justify-content-between align-items-center">
             <b class="py-5"><?php echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname']; ?></b>
             <span><?php echo $TicketInfo['ticket_date']; ?></span>
         </div>
         <hr>
-        <div class="px-10 m-5">
+        <div class="m-5">
             <?php echo $TicketInfo['ticket_content']; ?>
         </div>
     </div>
 <?php if ($ReplyCount > 0): ?>
 <?php foreach ($ReplyInfo as $value): ?>
-        <div class="card py-10">
-            <div class="d-flex justify-content-between align-items-center px-5">
+        <div class="card m-20 py-10">
+            <div class="d-flex justify-content-between align-items-center">
                 <b class="py-5"><?php if ($value['reply_from'] == $ClientInfo['client_id']) {
     echo $ClientInfo['client_fname'] . ' ' . $ClientInfo['client_lname'];
 } else {
@@ -59,7 +59,7 @@
                 <span><?php echo $value['reply_date']; ?></span>
             </div>
             <hr>
-            <div class="px-10 m-5">
+            <div class="m-5">
                 <?php echo $value['reply_content']; ?>
             </div>
         </div>
@@ -71,7 +71,7 @@
             </div>
         </div>
 <?php endif;?>
-    <div class="card p-10" id="reply">
+    <div class="card m-20 p-15" id="reply">
 <?php if ($TicketInfo['ticket_status'] == '3'): ?>
         <div class="text-center">
             <p>You can't reply to this ticket anymore open new ticket for any further questions.</p>

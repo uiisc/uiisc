@@ -18,3 +18,8 @@ if (is_file(($section_page))) {
     $page_title = $page_title . ' - ' . $lang->I18N('about');
     $section_page = ROOT . "/core/views/about/uiisc.php";
 }
+
+require ROOT . '/public/views/common/header.php';
+require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/about.php';
+require ROOT . '/public/views/common/footer.php';

@@ -1,6 +1,6 @@
 <?php
 
-$PageInfo['title'] = 'My Tickets';
+$PageInfo['title'] = $lang->I18N('My Tickets');
 
 require_once ROOT . '/core/library/userinfo.class.php';
 

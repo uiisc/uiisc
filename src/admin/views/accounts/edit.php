@@ -1,13 +1,14 @@
+<div class="content-wrapper">
 <div class="container-fluid">
-    <div class="card py-0">
-        <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0">Hosting Account Settings</h5>
+    <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="m-0"><?php echo $lang->I18N('Hosting Account Settings'); ?></h5>
             <a href="accounts.php?action=view&account_id=<?php echo $account_id; ?>" class="btn btn-danger btn-sm">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>
         </div>
-        <hr>
-        <div class="mb-15">
+        <hr />
+        <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
@@ -34,12 +35,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-12"><hr></div>
+            <div class="col-md-12"><hr /></div>
         <?php if ($AccountInfo['account_status'] == '1'): ?>
             <form class="row" action="controllers/accounts/password.php" method="post">
                 <input type="hidden" name="account_id" value="<?php echo $account_id; ?>">
                 <div class="col-md-6">
-                    <div class="mb-10 px-10">
+                    <div class="pb-10 px-10">
                         <label class="form-label required">New Password</label>
                         <input type="password" name="new_password" placeholder="New password here..." class="form-control">
                     </div>
@@ -91,4 +92,5 @@
         <?php endif;?>
         </div>
     </div>
+</div>
 </div>

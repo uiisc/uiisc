@@ -6,7 +6,7 @@
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>
         </div>
-        <hr>
+        <hr />
         <form action="controllers/settings/edit.php" method="post">
             <div class="row">
                 <div class="col-md-6">

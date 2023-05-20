@@ -1,3 +1,5 @@
+
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="px-10 m-20">
         <a href="<?php echo setRouter('settings');?>" class="btn<?php if ($section == 'settings') echo ' btn-primary'; ?>">

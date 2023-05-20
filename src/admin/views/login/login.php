@@ -1,7 +1,7 @@
 
 <div class="container-fluid" id="login">
     <div class="row">
-        <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <div class="m-auto" style="width: 400px;">
             <div class="card mx-30" style="opacity: 80%">
                 <form action="controllers/login/login.php" method="post">
                     <h5 class="m-0 text-center"><?php echo $lang->I18N('login'); ?></h5><hr>

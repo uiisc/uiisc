@@ -38,7 +38,7 @@ echo $ClientInfo['client_fname'] . " " . $ClientInfo['client_lname'];
 ?>
 
             </a>
-            <h5 class="sidebar-title">Main Menu</h5>
+            <h5 class="sidebar-title"><?php echo $lang->I18N('Main Menu'); ?></h5>
             <div class="sidebar-divider"></div>
             <a href="logout.php" class="sidebar-link sidebar-link-with-icon">
                 <span class="sidebar-icon bg-transparent">

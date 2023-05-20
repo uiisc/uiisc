@@ -51,6 +51,6 @@ if ($SSLInfo['status'] == 'processing') {
                 </tbody>
             </table>
         </div>
-        <p class="pb-10"><?php echo $count; ?> SSL Certificates</p>
+        <p class="pb-10"><?php echo $count; ?> <?php echo $lang->I18N('SSL Certificates'); ?></p>
     </div>
 </div>

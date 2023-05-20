@@ -1,4 +1,6 @@
 
+
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6 col-lg-3">
@@ -46,68 +48,79 @@
             </div>
         </div>
     </div>
+    <div class="card mx-20 my-10 p-15">
+        <div class="card-header d-flex justify-content-between align-items-center px-0 pt-0">
+            <h3 class="m-0">System information</h3>
+            <a href="settings.php" class="btn btn-danger">Settings</a>
+        </div>
+        <hr />
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Version:</b> <?php echo APP_VERSION; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Status:</b> <?php if ($SiteConfig['site_status'] == 1) {echo '<span class="badge badge-success">Live</span>';} elseif ($SiteConfig['site_status'] == 0) {echo '<span class="badge badge-secondary">Maintaince</span>';}?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Site Name:</b> <?php echo $SiteConfig['site_name']; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Brand Name:</b> <?php echo $SiteConfig['site_brand']; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Company Name:</b> <?php echo $SiteConfig['site_company']; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>URI:</b> <?php echo $SiteConfig['site_path']; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Contact Email:</b> <?php echo $SiteConfig['site_email']; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>PHP Version:</b> <?php echo PHP_VERSION; ?></p>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <p class="mb-0"><b>Server Protocol:</b> <?php echo HTTP_PROTOCOL; ?></p>
+                </div>
+                <!-- <div class="col-md-12"><hr></div> -->
+                <div class="col-md-12">
+                    <p class="mb-0"><b>Document Root:</b> <?php echo $_SERVER['DOCUMENT_ROOT'] ?></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-6">
-            <div class="card m-20">
-              <h2 class="card-title">Welcome to Dear Admin!</h2>
-              <p>
-                Here you can manage your free hosting clients and free ssl with free support system remember that any action in this system cannot be undo.
-              </p>
-              <div class="text-right">
-                <a href="accounts.php" class="btn btn-sm">Getting Started</a>
-              </div>
+            <div class="card mx-20 my-10 p-15">
+                <div class="card-header">
+                    <h4 class="m-0">Welcome to Dear Admin!</h4>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Here you can manage your free hosting clients and free ssl with free support system remember that any action in this system cannot be undo.
+                    </p>
+                    <div class="text-right">
+                        <a href="accounts.php" class="btn btn-default">Getting Started</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card m-20">
-              <h2 class="card-title">Free SSL Available!</h2>
-              <p>
-                Now generation of free ssl has been allowed in order to provide fast website access and increase the security and protection of your website.
-              </p>
-              <div class="text-right">
-                <a href="ssl.php" class="btn btn-sm">Check Now</a>
-              </div>
+            <div class="card mx-20 my-10 p-15">
+                <div class="card-header">
+                    <h4 class="m-0">Free SSL Available!</h4>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Now generation of free ssl has been allowed in order to provide fast website access and increase the security and protection of your website.
+                    </p>
+                    <div class="text-right">
+                        <a href="ssl.php" class="btn btn-default">Check Now</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="card m-20">
-        <div class="d-flex justify-content-between align-items-center">
-            <h5 class="m-0">System information</h5>
-            <a href="settings.php" class="btn btn-danger btn-sm">Settings</a>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Version:</b> <?php echo APP_VERSION; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Status:</b> <?php if ($SiteConfig['site_status'] == 1) {echo '<span class="badge badge-success">Live</span>';} elseif ($SiteConfig['site_status'] == 0) {echo '<span class="badge badge-secondary">Maintaince</span>';}?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Site Name:</b> <?php echo $SiteConfig['site_name']; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Brand Name:</b> <?php echo $SiteConfig['site_brand']; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Company Name:</b> <?php echo $SiteConfig['site_company']; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>URI:</b> <?php echo $SiteConfig['site_path']; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Contact Email:</b> <?php echo $SiteConfig['site_email']; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>PHP Version:</b> <?php echo PHP_VERSION; ?></p>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <p class="mb-0"><b>Server Protocol:</b> <?php echo HTTP_PROTOCOL; ?></p>
-            </div>
-            <!-- <div class="col-md-12"><hr></div> -->
-            <div class="col-md-12">
-                <p class="mb-0"><b>Document Root:</b> <?php echo $_SERVER['DOCUMENT_ROOT'] ?></p>
-            </div>
-        </div>
-    </div>
+</div>
 </div>

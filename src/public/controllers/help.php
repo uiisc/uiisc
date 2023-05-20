@@ -47,3 +47,8 @@ $questions = [
         "content" => "Don't post your account's password, including databases passwords! And just be specific."
     ]
 ];
+
+require ROOT . '/public/views/common/header.php';
+require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/help.php';
+require ROOT . '/public/views/common/footer.php';

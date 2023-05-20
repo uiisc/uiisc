@@ -1,7 +1,8 @@
 
+<div class="content-wrapper">
 <div class="container-fluid" id="login">
     <div class="row">
-        <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <div class="col-md-6 col-md-offset-2 col-lg-4 offset-lg-4">
             <div class="card mx-30" style="opacity: 80%">
                 <form action="controllers/profile/forgetpassword.php" method="post">
                     <h5 class="m-0 text-center">Forget Password</h5><hr>
@@ -19,4 +20,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>

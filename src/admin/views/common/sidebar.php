@@ -2,8 +2,8 @@
 $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'default';
 ?>
 
+<!-- Sidebar Start -->
 <div class="sidebar-overlay" onclick="halfmoon.toggleSidebar()"></div>
-
 <div class="sidebar">
     <div class="sidebar-menu">
         <h5 class="sidebar-title"><?php echo $lang->I18N('Logged in as'); ?>:</h5>
@@ -15,9 +15,9 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
             <?php echo $AdminInfo['admin_fname'] . " " . $AdminInfo['admin_lname']; ?>
 
         </a>
-        <h5 class="sidebar-title">Main Menu</h5>
+        <h5 class="sidebar-title"><?php echo $lang->I18N('Main Menu'); ?></h5>
         <div class="sidebar-divider"></div>
-        <a href="index.php" class="sidebar-link sidebar-link-with-icon">
+        <a href="./" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-home" aria-hidden="true"></i></span>
             <?php echo $lang->I18N('home'); ?>
         </a>
@@ -31,7 +31,7 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
         </a>
         <a href="sslcert.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-shield-alt" aria-hidden="true"></i></span>
-            SSL Certificates
+            <?php echo $lang->I18N('SSL Certificates'); ?>
         </a>
         <a href="accounts.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
@@ -54,6 +54,10 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
             <?php echo $lang->I18N('logout'); ?>
         </a>
     </div>
+    <div class="sidebar-footer">
+        <p class="copyright text-center">
+            &copy; <?php echo date("Y") ?> <a target="_blank" href="https://uiisc.org">UIISC</a> All rights reserved.
+        </p>
+    </div>
 </div>
-
-<div class="content-wrapper">
+<!-- Sidebar End -->

@@ -1,4 +1,4 @@
-
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
@@ -9,7 +9,7 @@
         </div>
         <hr>
         <div class="table-responsive">
-            <table class="table table-stripped">
+            <table class="table table-stripped table-bordered table-hover">
                 <thead>
                     <th width="5%">ID</th>
                     <th width="75%">Subject</th>
@@ -39,4 +39,5 @@
         </div>
         <p class="pb-10"><?php echo $count; ?> Records Found</p>
     </div>
+</div>
 </div>

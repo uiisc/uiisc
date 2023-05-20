@@ -73,6 +73,7 @@ return array(
     'delete'              => 'Delete',
     'details'             => 'Details',
     'Tickets'             => 'Tickets',
+    'My Tickets'          => 'My Tickets',
     'Tickets Details'     => 'Tickets Details',
     'member'              => 'Member',
     'members'             => 'Members',

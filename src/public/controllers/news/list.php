@@ -20,4 +20,9 @@ $status_types = array(
     '打开'
 );
 
-$PageInfo['title'] = 'News List';
+$page_title = $page_title . ' - ' . $lang->I18N('News List');
+
+require ROOT . '/public/views/common/header.php';
+require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/news/list.php';
+require ROOT . '/public/views/common/footer.php';

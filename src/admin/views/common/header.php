@@ -20,6 +20,10 @@
 
     <?php echo $PageInfo['rel']; ?>
 
+    <!-- <link href="<?php echo $site_url; ?>/assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" /> -->
+    <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- <link href="<?php echo $site_url; ?>/assets/ui/css/style.min.css" rel="stylesheet" /> -->
+
     <link href="<?php echo $site_url; ?>/assets/css/halfmoon.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/all.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/style.css" rel="stylesheet" />
@@ -31,3 +35,4 @@
 </head>
 
 <body class="with-custom-webkit-scrollbars with-custom-css-scrollbars" data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-set-preferred-theme-onload="true">
+    <div class="page-wrapper with-navbar with-sidebar" data-sidebar-type="overlayed-sm-and-down">

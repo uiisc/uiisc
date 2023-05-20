@@ -20,4 +20,9 @@ if ($id > 0) {
     $data = null;
 }
 
-$PageInfo['title'] = 'News Details';
+$page_title = $page_title . ' - ' . $lang->I18N('News Details');
+
+require ROOT . '/public/views/common/header.php';
+require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/news/view.php';
+require ROOT . '/public/views/common/footer.php';

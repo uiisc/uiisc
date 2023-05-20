@@ -4,6 +4,7 @@ if (!defined('IN_CRONLITE')) {
 }
 ?>
 
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
@@ -14,7 +15,7 @@ if (!defined('IN_CRONLITE')) {
         </div>
         <hr>
         <div class="table-responsive">
-            <table class="table table-stripped">
+            <table class="table table-stripped table-bordered table-hover">
                 <thead>
                     <th width="5%">ID</th>
                     <th><?php echo $lang->I18N('Title'); ?></th>
@@ -46,4 +47,5 @@ if (!defined('IN_CRONLITE')) {
         </div>
         <p class="pb-10"><?php echo $count; ?> Records Found, Page 1 of 1</p>
     </div>
+</div>
 </div>

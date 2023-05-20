@@ -4,7 +4,7 @@
             <h5 class="m-0"><?php echo $lang->I18N('My Profile'); ?></h5>
             <a href="index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return');?></a>
         </div>
-        <hr>
+        <hr />
         <div class="row">
             <div class="col-md-6">
                 <h6 class="mb-0"><b><?php echo $lang->I18N('First Name'); ?>:</b> <?php echo $ClientInfo['client_fname'];?></h6>

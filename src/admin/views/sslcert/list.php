@@ -1,3 +1,5 @@
+
+<div class="content-wrapper">
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
@@ -8,7 +10,7 @@
         </div>
         <hr>
         <div class="table-responsive">
-            <table class="table table-stripped">
+            <table class="table table-stripped table-bordered table-hover">
                 <thead>
                     <th width="5%">ID</th>
                     <th width="5%">Order ID</th>
@@ -59,4 +61,5 @@ if ($SSLInfo['status'] == 'processing') {
         </div>
         <p class="pb-10"><?php echo $count; ?> Records Founds</p>
     </div>
+</div>
 </div>

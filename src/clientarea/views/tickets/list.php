@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0">My Tickets</h5>
+            <h5 class="m-0"><?php echo $lang->I18N('My Tickets'); ?></h5>
             <a href="tickets.php?action=add" class="btn text-white btn-success btn-sm">New Ticket</a>
         </div>
         <hr>

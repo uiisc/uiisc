@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card m-20">
+            <div class="card m-20 p-15">
               <h2 class="card-title">
                 Welcome to Free Hosting!
               </h2>
@@ -58,7 +58,7 @@
             </div>
         </div>
         <div class="col-lg-6">
-            <div class="card m-20">
+            <div class="card m-20 p-15">
               <h2 class="card-title">
                 Free SSL Available!
               </h2>
