@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="mb-10 px-10">
-                        <label class="form-label required">Phone Number</label>
+                        <label class="form-label required"><?php echo $lang->I18N('Phone Number'); ?></label>
                         <input type="text" name="phone" value="<?php echo $ClientInfo['client_phone']; ?>" class="form-control" required>
                     </div>
                 </div>

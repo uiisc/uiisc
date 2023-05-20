@@ -29,7 +29,7 @@ $avatar_path = $ClientInfo['client_email'] ? md5($ClientInfo['client_email']) : 
         </a>
         <a href="myssl.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-lock" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('SSL Certificate'); ?>
+            <?php echo $lang->I18N('SSL Certificates'); ?>
         </a>
         <a href="knowledgebase.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-book" aria-hidden="true"></i></span>

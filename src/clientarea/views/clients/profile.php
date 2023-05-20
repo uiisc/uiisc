@@ -16,7 +16,7 @@
                 <h6 class="mb-0"><b><?php echo $lang->I18N('Email Address'); ?>:</b> <?php echo $ClientInfo['client_email'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Phone Number:</b> <?php echo $ClientInfo['client_phone'];?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('Phone Number'); ?>:</b> <?php echo $ClientInfo['client_phone'];?></h6>
             </div>
             <div class="col-md-6">
                 <h6 class="mb-0"><b><?php echo $lang->I18N('Billing Address'); ?>:</b> <?php echo $ClientInfo['client_address'];?></h6>

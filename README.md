@@ -10,8 +10,9 @@ An Open Source Web Hosting Account and Support Management System for MyOwnFreeHo
 
 ### multi-language module
 
-- [x] Load default language
+- [x] Load default language config (/core/language/)
 - [x] Change language
+- [x] Load custom language config (/data/language/)
 
 ### ClientArea module
 

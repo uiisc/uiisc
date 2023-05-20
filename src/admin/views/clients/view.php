@@ -21,7 +21,7 @@
                     <b><?php echo $lang->I18N('Email Address'); ?>:</b> <?php echo $ClientInfo['client_email']; ?>
                 </div>
                 <div class="col-md-6 mb-10">
-                    <b>Phone Number:</b> <?php echo $ClientInfo['client_phone']; ?>
+                    <b><?php echo $lang->I18N('Phone Number'); ?>:</b> <?php echo $ClientInfo['client_phone']; ?>
                 </div>
                 <div class="col-md-6 mb-10">
                     <b><?php echo $lang->I18N('Billing Address'); ?>:</b> <?php echo $ClientInfo['client_address']; ?>

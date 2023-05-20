@@ -7,7 +7,8 @@ class Language
     public $language_current;
     public $language_cached;
     public $language_default;
-    public $language_root;
+    public $root_default;
+    public $root_custom;
     public $language_file;
     private $languages = [
         'en-US' => ['English', 'English'],
@@ -118,18 +119,20 @@ class Language
         'yo' => ['Yorùbá', 'Yoruba'],
         'zu' => ['Zulu', 'Zulu'],
     ];
-    private $LANG;
+    private $LANG = [];
     private $domain;
 
     /** 构造函数
-     * @param string $language_root 翻译文件根目录
+     * @param string $root_default 翻译文件根目录
+     * @param string $root_custom 翻译文件自定义目录
      * @param array $languages 可用语言列表
      * @param string $lang_default 默认语言
      * @return void
      */
-    public function __construct($language_root, $lang_default = '')
+    public function __construct($root_default, $root_custom, $lang_default = '')
     {
-        $this->language_root = $language_root;
+        $this->root_default = $root_default;
+        $this->root_custom = $root_custom;
         if (!empty($lang_default) && array_key_exists($lang_default, $this->languages)) {
             $this->language_default = $lang_default;
             $this->language_current = $lang_default;
@@ -189,17 +192,23 @@ class Language
 
     private function has_language_file($lang)
     {
-        return !empty($lang) && file_exists($this->language_root . $lang . '/' . 'language.php');
+        return file_exists($this->root_default . $lang . '/language.php') || file_exists($this->root_custom . $lang . '/' . 'language.php');
     }
 
     private function init_language_file()
     {
-        if ($this->has_language_file($this->language_current)) {
-            $this->language_file = $this->language_root . $this->language_current . '/' . 'language.php';
-        } else {
-            $this->language_file = $this->language_root . $this->language_default . '/' . 'language.php';
+
+        $default = $this->root_default . $this->language_current . '/language.php';
+        $custom = $this->root_custom . $this->language_current . '/language.php';
+        if (!$this->has_language_file($this->language_current)) {
+            // change to default language
+            $default = $this->root_default . $this->language_default . '/language.php';
+            $custom = $this->root_custom . $this->language_default . '/language.php';
         }
-        $this->LANG = require $this->language_file;
+
+        $defaultConfig = file_exists($default) ? require $default : [];
+        $customConfig = file_exists($custom) ? require $custom : [];
+        $this->LANG = array_replace_recursive($defaultConfig, $customConfig);
     }
 
     public function get_languages_tags()

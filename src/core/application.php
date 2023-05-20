@@ -58,7 +58,7 @@ include_once __DIR__ . '/library/autoloader.php';
 
 Autoloader::register();
 
-$lang = new \lib\Language(ROOT . '/data/language/');
+$lang = new \lib\Language(ROOT . '/core/language/', ROOT . '/data/language/');
 
 define('DB_PREFIX', $dbconfig['prefix']);
 
