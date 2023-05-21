@@ -9,7 +9,7 @@ if (!$ticket_id) {
 }
 
 // 查找工单信息
-$TicketInfo = $DB->find('tickets', 'ticket_email, ticket_for', array('ticket_id' => $ticket_id), null, 1);
+$TicketInfo = $DB->find('tickets', 'ticket_email, ticket_client_id', array('ticket_id' => $ticket_id), null, 1);
 
 if (!$TicketInfo) {
     setMessage('Ticket Not Found !');
@@ -17,7 +17,7 @@ if (!$TicketInfo) {
 }
 
 // 查找客户信息
-$ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $TicketInfo['ticket_for']));
+$ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $TicketInfo['ticket_client_id']));
 
 if (!$ClientInfo) {
     setMessage('Client Not Found !');

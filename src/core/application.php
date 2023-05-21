@@ -18,9 +18,11 @@ date_default_timezone_set('Asia/Shanghai');
 session_start();
 
 define('IN_CRONLITE', true);
-define('APP_VERSION', '1.1.0');
-define('DB_VERSION', '2020');
+define('APP_MODE', 'prod'); // prod, demo
+define('APP_VERSION', '2.0.3');
+define('DB_VERSION', '2021');
 define('APP_BRAND', 'UIISC');
+define('APP_DEBUG', false);
 define('APP_ROOT', dirname(__FILE__) . '/');
 define('ROOT', dirname(APP_ROOT));
 
@@ -65,7 +67,8 @@ define('DB_PREFIX', $dbconfig['prefix']);
 // Detect installation status 1
 if (!$dbconfig['username'] || !$dbconfig['password'] || !$dbconfig['dbname']) {
     header('Content-type:text/html;charset=utf-8');
-    exit('The system is not installed !<a href="/install/">Click to Install</a>');
+    echo '<p>The system is not installed ! (error code: 1002)</p><p><a href="/install/">Click to Install</a></p>';
+    exit();
 }
 
 $DB = new \lib\PdoHelper($dbconfig);
@@ -73,7 +76,8 @@ $DB = new \lib\PdoHelper($dbconfig);
 // Detect installation status 2
 if ($DB->query("SELECT * FROM `pre_admin` WHERE 1") == false) {
     header('Content-type:text/html;charset=utf-8');
-    exit(`The system is not installed !<a href="/install/">Click to Install</a>`);
+    echo '<p>The system is not installed ! (error code: 1003)</p><p><a href="/install/">Click to Install</a></p>';
+    exit();
 }
 
 $PageInfo = array('title' => 'UIISC', 'rel' => '');
@@ -98,7 +102,8 @@ $PageInfo = array('title' => 'UIISC', 'rel' => '');
 // include_once APP_ROOT . 'member.php';
 
 if (!file_exists(ROOT . '/data/install.lock') && file_exists(ROOT . '/install/index.php')) {
-    exit('<h2>检测到无 /data/install.lock 文件</h2><ul><li><font size="4">如果您尚未安装本程序，请<a href="/install/">前往安装</a></font></li><li><font size="4">如果您已经安装本程序，请手动放置一个空的 install.lock 文件到 /data 文件夹下，<b>为了您站点安全，在您完成它之前我们不会工作。</b></font></li></ul><br/><h4>为什么必须建立 install.lock 文件？</h4>它是安装保护文件，如果检测不到它，就会认为站点还没安装，此时任何人都可以安装/重装你的网站。<br/><br/>');
+    echo '<h2>检测到无 /data/install.lock 文件</h2><ul><li><font size="4">如果您尚未安装本程序，请<a href="/install/">前往安装</a></font></li><li><font size="4">如果您已经安装本程序，请手动放置一个空的 install.lock 文件到 /data 文件夹下，<b>为了您站点安全，在您完成它之前我们不会工作。</b></font></li></ul><br/><h4>为什么必须建立 install.lock 文件？</h4>它是安装保护文件，如果检测不到它，就会认为站点还没安装，此时任何人都可以安装/重装你的网站。<br/><br/>';
+    exit();
 }
 
 // if ($conf['cdnpublic'] == 1) {

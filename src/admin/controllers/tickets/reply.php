@@ -12,7 +12,7 @@ if (!$ticket_id) {
     exit('Access Denied');
 }
 
-$TicketInfo = $DB->find('tickets', 'ticket_email, ticket_for', array('ticket_id' => $ticket_id));
+$TicketInfo = $DB->find('tickets', 'ticket_email, ticket_client_id', array('ticket_id' => $ticket_id));
 
 if (!$TicketInfo) {
     exit('Access Denied');
@@ -46,7 +46,7 @@ if ($resault) {
         //         'email_subject' => 'Ticket Reply #' . $ticket_id,
         //         'email_date' => date('Y-m-d H:i:s'),
         //         'email_body' => $email_body,
-        //         'email_for' => $TicketInfo['ticket_for'],
+        //         'email_client_id' => $TicketInfo['ticket_client_id'],
         //         'email_read' => 0
         //     );
         //     print_r($email_insert);

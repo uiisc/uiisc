@@ -1,12 +1,13 @@
 <?php
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_account` (
-  `account_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `account_client_id` INT(11) NOT NULL,
+  `account_id` INT(11) NOT NULL AUTO_INCREMENT COMMENT "主机账号ID",
+  `account_client_id` INT(11) NOT NULL COMMENT "所属客户ID",
+  `account_key` VARCHAR(8) NOT NULL,
+  `account_api_key` varchar(20) NOT NULL COMMENT "主机提供商标识",
   `account_username` VARCHAR(22) NOT NULL,
   `account_password` VARCHAR(16) NOT NULL,
   `account_domain` VARCHAR(70) NOT NULL,
   `account_sql` VARCHAR(8) NOT NULL,
-  `account_key` VARCHAR(8) NOT NULL,
   `account_status` INT(1) NOT NULL,
   `account_date` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`account_id`)
@@ -14,25 +15,35 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_account` (
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_account_api` (
   `api_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `api_key` varchar(30) NOT NULL,
   `api_username` VARCHAR(256) NOT NULL,
   `api_password` VARCHAR(256) NOT NULL,
   `api_cpanel_url` VARCHAR(100) NOT NULL,
   `api_server_ip` VARCHAR(15) NOT NULL,
   `api_ns_1` VARCHAR(30) NOT NULL,
   `api_ns_2` VARCHAR(30) NOT NULL,
+  `api_ns_3` varchar(30) NOT NULL,
   `api_package` VARCHAR(20) NOT NULL,
+  `api_callback_token` varchar(32) NOT NULL,
   PRIMARY KEY (`api_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_config` (
   `site_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `site_key` VARCHAR(10) NOT NULL,
-  `site_status` INT(2) NOT NULL,
-  `site_name` VARCHAR(30) NOT NULL,
-  `site_brand` VARCHAR(30) NOT NULL,
-  `site_company` VARCHAR(30) NOT NULL,
-  `site_path` VARCHAR(70) NOT NULL,
-  `site_email` VARCHAR(50) NOT NULL,
+  `site_key` varchar(20) NOT NULL,
+  `site_status` int(2) NOT NULL,
+  `site_name` varchar(30) NOT NULL,
+  `site_brand` varchar(30) NOT NULL,
+  `site_company` varchar(30) NOT NULL,
+  `site_path` varchar(70) NOT NULL,
+  `site_phone` varchar(30) NOT NULL,
+  `site_email` varchar(50) NOT NULL,
+  `page_title` varchar(80) NOT NULL,
+  `page_description` varchar(200) NOT NULL,
+  `page_keywords` varchar(100) NOT NULL,
+  `page_copyright` varchar(100) NOT NULL,
+  `page_author` varchar(30) NOT NULL,
+  `ifastnet_aff` int(11) DEFAULT NULL,
   PRIMARY KEY (`site_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;');
 
@@ -82,8 +93,8 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_smtp` (
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_ssl` (
   `ssl_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ssl_client_id` INT(11) NOT NULL COMMENT "所属客户ID",
   `ssl_key` INT(12) NOT NULL,
-  `ssl_for` INT(11) NOT NULL,
   PRIMARY KEY (`ssl_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
@@ -97,7 +108,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_ssl_api` (
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_tickets` (
   `ticket_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `ticket_for` INT(11) NOT NULL,
+  `ticket_client_id` INT(11) NOT NULL COMMENT "所属客户ID",
   `ticket_subject` VARCHAR(50) NOT NULL,
   `ticket_email` VARCHAR(100) NOT NULL,
   `ticket_department` VARCHAR(10) NOT NULL,
@@ -156,7 +167,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `hosting_news`(
 
 $sql = mysqli_query($connect, "CREATE TABLE IF NOT EXISTS `hosting_emails`(
   `email_id` INT(11) NOT NULL AUTO_INCREMENT,
-  `email_for` INT(11) NOT NULL,
+  `email_client_id` INT(11) NOT NULL COMMENT '所属客户ID',
   `email_date` VARCHAR(255) NOT NULL,
   `email_subject` VARCHAR(255) NOT NULL,
   `email_body` VARCHAR(5000) NOT NULL,

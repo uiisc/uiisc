@@ -34,6 +34,10 @@ require __DIR__ . '/header.php';
                         <label class="form-label">Database Port</label>
                         <input type="text" name="dbport" class="form-control" placeholder="Enter database port here(default:3306)">
                     </div>
+                    <div class="mb-5">
+                        <label class="form-label">Database prefix</label>
+                        <input type="text" name="prefix" class="form-control" placeholder="Enter database prefix here(default:hosting)">
+                    </div>
                     <div class="mt-15">
                         <input type="submit" name="submit" class="btn btn-primary" value="Validate">
                     </div>

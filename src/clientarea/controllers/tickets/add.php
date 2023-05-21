@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
         'ticket_email' => post('email'),
         'ticket_content' => post('editor'),
         'ticket_department' => post('department'),
-        'ticket_for' => $ClientInfo['client_id'],
+        'ticket_client_id' => $ClientInfo['client_id'],
         'ticket_date' => date('Y-m-d H:i:s'),
         'ticket_status' => 0,
     );

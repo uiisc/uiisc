@@ -11,7 +11,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $dbname = $_POST['dbname'];
 $dbport = !empty($_POST['dbport']) ? $_POST['dbport'] : 3306;
-$prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'uiisc';
+$prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'hosting';
 
 @file_put_contents(CONFIG_FILE, "<?php
 \$dbconfig = array(

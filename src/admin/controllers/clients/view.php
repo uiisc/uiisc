@@ -25,5 +25,5 @@ foreach ($countries as $country) {
 }
 
 $count_account = $DB->count('account', array('account_client_id' => $ClientInfo['client_id']));
-$count_ssl = $DB->count('ssl', array('ssl_for' => $ClientInfo['client_id']));
-$count_tickets = $DB->count('tickets', array('ticket_for' => $ClientInfo['client_id']));
+$count_ssl = $DB->count('ssl', array('ssl_client_id' => $ClientInfo['client_id']));
+$count_tickets = $DB->count('tickets', array('ticket_client_id' => $ClientInfo['client_id']));

@@ -78,7 +78,7 @@ $result = $apiClient->addSSLOrder($FormData);
 if (count($result) > 4) {
     $data = array(
         'ssl_key' => $result['order_id'],
-        'ssl_for' => $ClientInfo['client_id'],
+        'ssl_client_id' => $ClientInfo['client_id'],
     );
     $res = $DB->insert('ssl', $data);
 
