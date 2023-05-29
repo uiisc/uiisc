@@ -8,9 +8,9 @@ if (!$ticket_id) {
     exit('Access Denied');
 }
 
-$resault = $DB->update('tickets', array('ticket_status' => 3), array('ticket_id' => $ticket_id));
+$result = $DB->update('tickets', array('ticket_status' => 3), array('ticket_id' => $ticket_id));
 
-if ($resault) {
+if ($result) {
     $TicketInfo = $DB->find('tickets', 'ticket_email', $where, null, 1);
     $TicketUrl = setURL('clientarea/tickets', '', array('action' => 'view', 'ticket_id' => $ticket_id));
     $EmailContent = '<p>You have closed a ticket(' . $ticket_id . ') .</p>';

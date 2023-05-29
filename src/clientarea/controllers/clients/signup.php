@@ -8,17 +8,41 @@ if (isset($_COOKIE['UIISC_MEMBER']) && $_COOKIE['UIISC_MEMBER'] != 'NULL') {
 }
 
 if (isset($_POST['signup'])) {
+    if (!post('first')) {
+        setMessage('need field: ' . $lang->I18N('First Name'), 'danger');
+        redirect('clientarea/signup');
+    }
+    if (!post('last')) {
+        setMessage('need field: ' . $lang->I18N('Last Name'), 'danger');
+        redirect('clientarea/signup');
+    }
+    if (!post('email')) {
+        setMessage('need field: ' . $lang->I18N('Email Address'), 'danger');
+        redirect('clientarea/signup');
+    }
+    if (!post('password')) {
+        setMessage('need field: ' . $lang->I18N('Password'), 'danger');
+        redirect('clientarea/signup');
+    }
+    if (!post('cpassword')) {
+        setMessage('need field: ' . $lang->I18N('Confirm Password'), 'danger');
+        redirect('clientarea/signup');
+    }
+    if (post('password') != post('cpassword')) {
+        setMessage($lang->I18N('Password not match.'), 'danger');
+        redirect('clientarea/signup');
+    }
     $FormData = array(
         'client_fname' => post('first'),
         'client_lname' => post('last'),
         'client_email' => post('email'),
-        'client_company' => '',
-        'client_country' => '',
-        'client_city' => '',
-        'client_address' => '',
-        'client_pcode' => '',
-        'client_phone' => '',
-        'client_state' => '',
+        // 'client_company' => 'NULL',
+        // 'client_country' => 'null',
+        // 'client_city' => 'null',
+        // 'client_address' => 'null',
+        // 'client_pcode' => 'null',
+        // 'client_phone' => 'null',
+        // 'client_state' => 'null',
         'client_password' => hash('sha256', post('password')),
         'client_date' => date('Y-m-d H:i:s'),
         'client_key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'), 0, 8),

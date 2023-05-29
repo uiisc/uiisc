@@ -13,17 +13,17 @@ if (!$ticket_id) {
 }
 
 // update status
-$resault = $DB->update('tickets', array('ticket_status' => '2'), array('ticket_id' => $ticket_id));
+$result = $DB->update('tickets', array('ticket_status' => '2'), array('ticket_id' => $ticket_id));
 
-if ($resault) {
+if ($result) {
     $FormData = array(
         'reply_for' => $ticket_id,
         'reply_from' => $ClientInfo['client_id'],
         'reply_content' => post('editor'),
         'reply_date' => date('Y-m-d H:i:s'),
     );
-    $resault_insert = $DB->insert('ticket_replies', $FormData);
-    if ($resault_insert) {
+    $result_insert = $DB->insert('ticket_replies', $FormData);
+    if ($result_insert) {
         $ticket_url = setURL('clientarea/tickets', '', array('action' => 'view', 'ticket_id' => $ticket_id));
 
         $email_content = '<p>You have received a reply from ' . $ClientInfo['client_fname'] . '.</p>';

@@ -40,7 +40,7 @@
                     </div>
                 </form>
                 <div class="px-5 nav-links">
-                    <a href="login.php"><?php echo $lang->I18N('login'); ?></a> or <a href="forgetpassword.php">Recover Password</a>
+                    <a href="login.php"><?php echo $lang->I18N('login'); ?></a> or <a href="forgetpassword.php"><?php echo $lang->I18N('Reset Password'); ?></a>
                 </div>
             </div>
         </div>

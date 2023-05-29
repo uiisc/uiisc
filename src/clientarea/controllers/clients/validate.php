@@ -15,8 +15,8 @@ if (isset($_POST['validate'])) {
     $client_key = $ClientInfo['client_key'];
 
     if (password_verify($client_key, $token)) {
-        $resault = $DB->update('clients', array('client_status' => '1'), array('client_key' => $client_key));
-        if ($resault) {
+        $result = $DB->update('clients', array('client_status' => '1'), array('client_key' => $client_key));
+        if ($result) {
             setMessage('validated <b>successfully</b> !', 'success');
             redirect('clientarea/index');
         } else {
