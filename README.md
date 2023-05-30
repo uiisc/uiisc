@@ -37,6 +37,7 @@ An Open Source Web Hosting Account and Support Management System for MyOwnFreeHo
 - [x] Members management
 - [x] Site configuration
 - [x] API configuration
+- [x] multi hosting provider management
 - [x] News management
 - [ ] Translation file management
 
