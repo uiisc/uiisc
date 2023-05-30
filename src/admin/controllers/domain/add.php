@@ -9,7 +9,7 @@ if (!isset($_POST['submit'])) {
 $domain = post('domain');
 
 if (!$domain) {
-    redirect('admin/settings', 'domain');
+    redirect('admin/domain');
 }
 
 $domain = strtolower($domain);
@@ -26,12 +26,12 @@ $has = $DB->count('domain_extensions', $data);
 if ($has && $has > 0) {
     setMessage('Extension aleady <b>exsist!</b>', 'danger');
 } else {
-    $resault = $DB->insert('domain_extensions', $data);
-    if ($resault) {
+    $result = $DB->insert('domain_extensions', $data);
+    if ($result) {
         setMessage('Extension added <b>successfully!</b>');
     } else {
         setMessage('Something went' . "'" . 's <b>wrong!</b>', 'danger');
     }
 }
 
-redirect('admin/settings', 'domain');
+redirect('admin/domain');

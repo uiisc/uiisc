@@ -15,8 +15,8 @@ $FormData = array(
 );
 
 if (hash('sha256', $FormData['old_password']) == $FormData['user_password']) {
-    $resault = $DB->update('admin', array('admin_password' => $FormData['hashed_password']), array('admin_key' => $FormData['user_key']));
-    if ($resault) {
+    $result = $DB->update('admin', array('admin_password' => $FormData['hashed_password']), array('admin_key' => $FormData['user_key']));
+    if ($result) {
         setMessage('Password changed successfully !');
         unset($_SESSION['UIISC_ADMIN']);
         redirect('admin/login');

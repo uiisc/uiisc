@@ -17,9 +17,9 @@ $where = array(
     'smtp_key' => 'SMTP',
 );
 
-$resault = $DB->update('smtp', $data, $where);
+$result = $DB->update('smtp', $data, $where);
 
-if ($resault) {
+if ($result) {
     setMessage('SMTP updated <b>successfully!</b>');
 } else {
     setMessage("Something went's <b>wrong!</b>", 'danger');

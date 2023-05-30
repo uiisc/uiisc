@@ -9,8 +9,8 @@ if (isset($_POST['submit'])) {
         'knowledgebase_date' => date('Y-m-d H:i:s'),
     );
 
-    $resault = $DB->insert('knowledgebase', $data);
-    if ($resault) {
+    $result = $DB->insert('knowledgebase', $data);
+    if ($result) {
         setMessage('Knowledgebase added successfully !');
     } else {
         setMessage("Something went's wrong !", 'danger');

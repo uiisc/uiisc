@@ -9,7 +9,7 @@ if (!isset($_POST['submit'])) {
 $extension = post('extension');
 
 if (!$extension) {
-    redirect('admin/settings', 'domain');
+    redirect('admin/domain');
 }
 
 $extension = strtolower($extension);
@@ -35,4 +35,4 @@ if (!$count > 0) {
     }
 }
 
-redirect('admin/settings', 'domain');
+redirect('admin/domain');

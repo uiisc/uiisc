@@ -120,7 +120,7 @@ class Language
         'zu' => ['Zulu', 'Zulu'],
     ];
     private $LANG = [];
-    private $domain;
+    private $site_domain;
 
     /** 构造函数
      * @param string $root_default 翻译文件根目录
@@ -148,16 +148,17 @@ class Language
 
     private function init_domain()
     {
-        if (empty($this->domain)) {
-            $domain = $_SERVER['SERVER_NAME'];
-            if (strcasecmp($domain, 'localhost') === 0) {
-                $this->domain = $domain;
-            } else if (preg_match("/^(\\d+\\.){3}\\d+\$/", $domain, $domain_temp)) {
-                $this->domain = $domain_temp[0];
-            } else {
-                preg_match_all("/\\w+\\.\\w+\$/", $domain, $domain);
-                $this->domain = $domain[0][0];
-            }
+        if (empty($this->site_domain)) {
+            // $domain = $_SERVER['SERVER_NAME'];
+            $this->site_domain = $_SERVER['HTTP_HOST'];
+            // if (strcasecmp($domain, 'localhost') === 0) {
+            //     $this->site_domain = $domain;
+            // } else if (preg_match("/^(\\d+\\.){3}\\d+\$/", $domain, $domain_temp)) {
+            //     $this->site_domain = $domain_temp[0];
+            // } else {
+            //     preg_match_all("/\\w+\\.\\w+\$/", $domain, $domain);
+            //     $this->site_domain = $domain[0][0];
+            // }
         }
     }
 
@@ -183,10 +184,10 @@ class Language
                 $this->language_current = $this->language_default;
             }
             $this->language_cached = $this->language_current;
-            setcookie("lang", $this->language_current, time() + 365 * 24 * 3600, "/", $this->domain);
+            setcookie("lang", $this->language_current, time() + 365 * 24 * 3600, "/", $this->site_domain);
         } else {
             $this->language_cached = $this->language_current;
-            setcookie("lang", $this->language_current, time() + 365 * 24 * 3600, "/", $this->domain);
+            setcookie("lang", $this->language_current, time() + 365 * 24 * 3600, "/", $this->site_domain);
         }
     }
 

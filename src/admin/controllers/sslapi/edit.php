@@ -14,9 +14,9 @@ $where = array(
     'api_key' => 'FREESSL',
 );
 
-$resault = $DB->update('ssl_api', $data, $where);
+$result = $DB->update('ssl_api', $data, $where);
 
-if ($resault) {
+if ($result) {
     setMessage('SSL API updated <b>successfully!</b>');
 } else {
     setMessage("Something went's <b>wrong!</b>", 'danger');

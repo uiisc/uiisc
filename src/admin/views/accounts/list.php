@@ -1,9 +1,9 @@
 
 <div class="content-wrapper">
 <div class="container-fluid">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h5 class="m-0"><?php echo $PageInfo['title']; ?></h5>
+    <div class="card py-0">
+        <div class="d-flex justify-content-between align-items-center pt-15">
+            <h3 class="m-0"><?php echo $PageInfo['title']; ?></h3>
             <a href="index.php" class="btn text-white btn-danger btn-sm">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>
@@ -54,7 +54,9 @@ if ($row['account_status'] == '0') {
                 </tbody>
             </table>
         </div>
-        <div class="card-footer"><?php echo $count; ?> Records Founds</div>
+        <div class="card-footer">
+            <p class="py-10"><?php echo $count; ?> Records Founds</p>
+        </div>
     </div>
 </div>
 </div>

@@ -22,9 +22,9 @@ if (isset($_POST['submit'])) {
         'site_key' => 'UIISC',
     );
 
-    $resault = $DB->update('config', $data, $where);
+    $result = $DB->update('config', $data, $where);
 
-    if ($resault) {
+    if ($result) {
         setMessage('Clientarea updated <b>successfully!</b>');
     } else {
         setMessage("Something went's <b>wrong!</b>", 'danger');

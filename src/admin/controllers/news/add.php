@@ -10,9 +10,9 @@ if (isset($_POST['submit'])) {
         'news_date' => date('Y-m-d H:i:s'),
     );
 
-    $resault = $DB->insert('news', $data);
+    $result = $DB->insert('news', $data);
 
-    if ($resault) {
+    if ($result) {
         setMessage('News added <b>successfully!</b>');
     } else {
         setMessage("Something went's <b>wrong!</b>", 'danger');

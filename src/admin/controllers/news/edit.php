@@ -13,9 +13,9 @@ if (isset($_POST['submit'])) {
         'news_lastupdated' => date('Y-m-d H:i:s'),
     );
 
-    $resault = $DB->update('news', $data, array('news_id' => $id));
+    $result = $DB->update('news', $data, array('news_id' => $id));
 
-    if ($resault) {
+    if ($result) {
         setMessage('News update <b>successfully!</b>');
     } else {
         setMessage("Something went's <b>wrong!</b>", 'danger');

@@ -24,9 +24,9 @@ if (!$ClientInfo) {
     redirect('admin/tickets');
 }
 
-$resault = $DB->update('tickets', array('ticket_status' => 3), array('ticket_id' => $ticket_id));
+$result = $DB->update('tickets', array('ticket_status' => 3), array('ticket_id' => $ticket_id));
 
-if ($resault) {
+if ($result) {
     $ticket_url = setURL('admin/tickets', '', array('action' => 'view', 'ticket_id' => $ticket_id));
     $email_body = email_build_body('Ticket Closed',
         $ClientInfo['client_fname'],

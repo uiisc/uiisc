@@ -40,7 +40,7 @@
             <div class="card text-center bg-matrix-4 m-20 p-0 border-0">
                 <div class="mx-20 my-15 d-flex justify-content-between align-items-center">
                     <h3 class="my-0 pt-0 text-white"><?php echo $count_tickets; ?></h3>
-                    <i class="fa fa-bullhorn fa-3x pt-10 text-white"></i>
+                    <i class="fa fa-ticket-alt fa-3x pt-10 text-white"></i>
                 </div>
                 <div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
                     <a href="tickets.php" class="text-white">View Ticket <i class="fa fa-forward"></i></a>

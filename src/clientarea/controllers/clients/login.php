@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
         $token = hash('sha256', json_encode([$email, $ClientInfo['client_key'], $key]));
         $times = isset($_POST['remember']) ? 30 : 1;
         $token2 = ['email' => $email, 'token' => $token, 'key' => $key];
-        setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode($token2))), time() + $times * 86400, '/');
+        setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode($token2))), time() + $times * 86400, '/', $site_domain);
         setMessage('Logged in <b>successfully</b> !', 'success');
         redirect('clientarea/index');
     }

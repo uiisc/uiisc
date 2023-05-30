@@ -50,6 +50,8 @@ define('HTTP_PROTOCOL', is_https() ? 'https' : 'http');
 
 $site_domain = $_SERVER['HTTP_HOST'];
 
+define('SITE_DOMAIN', $site_domain);
+
 $site_url = HTTP_PROTOCOL . '://' . $site_domain;
 
 define('SITEURL', $site_url);

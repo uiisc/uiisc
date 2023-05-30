@@ -8,9 +8,9 @@ if (!$client_id) {
     exit('Access Denied');
 }
 
-$resault = $DB->update('clients', array('client_status' => 2), array('client_id' => $client_id));
+$result = $DB->update('clients', array('client_status' => 2), array('client_id' => $client_id));
 
-if ($resault) {
+if ($result) {
     setMessage('Client suspended successfully !');
 } else {
     setMessage("Something went's wrong !", 'danger');

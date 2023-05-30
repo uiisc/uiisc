@@ -26,7 +26,7 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
             <?php echo $lang->I18N('Clients'); ?>
         </a>
         <a href="tickets.php" class="sidebar-link sidebar-link-with-icon">
-            <span class="sidebar-icon bg-transparent"><i class="fa fa-bullhorn" aria-hidden="true"></i></span>
+            <span class="sidebar-icon bg-transparent"><i class="fa fa-ticket-alt" aria-hidden="true"></i></span>
             <?php echo $lang->I18N('Tickets'); ?>
         </a>
         <a href="sslcert.php" class="sidebar-link sidebar-link-with-icon">
@@ -44,6 +44,14 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
         <a href="news.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-newspaper" aria-hidden="true"></i></span>
             <?php echo $lang->I18N('News'); ?>
+        </a>
+        <a href="hosting.php" class="sidebar-link sidebar-link-with-icon">
+            <span class="sidebar-icon bg-transparent"><i class="fa fa-server" aria-hidden="true"></i></span>
+            <?php echo $lang->I18N('Hosting Provider'); ?>
+        </a>
+        <a href="domain.php" class="sidebar-link sidebar-link-with-icon">
+            <span class="sidebar-icon bg-transparent"><i class="fa fa-globe" aria-hidden="true"></i></span>
+            <?php echo $lang->I18N('Domain Provider'); ?>
         </a>
         <a href="settings.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-cog" aria-hidden="true"></i></span>

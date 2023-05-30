@@ -9,8 +9,8 @@ if (isset($_POST['submit'])) {
         'admin_key' => $AdminInfo['admin_key']
     );
 
-    $resault = $DB->update('admin', $data, $where);
-    if ($resault) {
+    $result = $DB->update('admin', $data, $where);
+    if ($result) {
         setMessage('Profile updated successfully !');
     } else {
         setMessage("Something went's wrong !", 'danger');

@@ -127,5 +127,7 @@ return array(
     'Page Keywords'       => '网页关键字',
     'Page Copyright'      => '网页版权标识',
     'Page Author'         => '网页著作人',
-    'Admin Area'          => '管理中心'
+    'Admin Area'          => '管理中心',
+    'Hosting Provider'    => '托管提供商',
+    'Domain Provider'     => '域名提供商'
 );

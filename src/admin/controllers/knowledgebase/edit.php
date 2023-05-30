@@ -23,9 +23,9 @@ if (isset($_POST['submit'])) {
         'knowledgebase_content' => $editor,
         'knowledgebase_date' => date('Y-m-d H:i:s'),
     );
-    $resault = $DB->update('knowledgebase', $FormData, array('knowledgebase_id' => $id));
+    $result = $DB->update('knowledgebase', $FormData, array('knowledgebase_id' => $id));
 
-    if ($resault) {
+    if ($result) {
         setMessage('Knowledgebase updated successfully !');
     } else {
         setMessage("Something went's wrong !", 'danger');

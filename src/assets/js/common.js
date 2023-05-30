@@ -44,7 +44,7 @@ function jumpLink(action, params, target) {
  * @param {string|number} expires 时长,单位天
  * @param {string} path 路径
  * @param {string} domain 域名
- * @param {string} secure 
+ * @param {string} secure
  */
 function setCookie(name, value, expires, path, domain, secure) {
     var today = new Date();

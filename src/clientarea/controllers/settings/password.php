@@ -18,7 +18,7 @@ if ($old_password == $ClientInfo['client_password']) {
 
     if ($result) {
         setMessage('Password changed <b>successfully!</b>', 'success');
-        setcookie('UIISC_MEMBER', 'NULL', -1, '/');
+        setcookie('UIISC_MEMBER', 'NULL', -1, '/', $site_domain);
         redirect('clientarea/login');
     } else {
         setMessage('Something went' . "'" . 's <b>wrong !</b>', 'danger');

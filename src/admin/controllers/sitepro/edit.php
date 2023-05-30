@@ -14,9 +14,9 @@ $where = array(
     'builder_id' => 'SITEPRO',
 );
 
-$resault = $DB->update('builder_api', $data, $where);
+$result = $DB->update('builder_api', $data, $where);
 
-if ($resault) {
+if ($result) {
     setMessage('SitePro API updated <b>successfully!</b>');
 } else {
     setMessage("Something went's <b>wrong!</b>", 'danger');

@@ -19,17 +19,17 @@ if (!$TicketInfo) {
 }
 
 // update status
-$resault = $DB->update('tickets', array('ticket_status' => '1'), array('ticket_id' => $ticket_id));
+$result = $DB->update('tickets', array('ticket_status' => '1'), array('ticket_id' => $ticket_id));
 
-if ($resault) {
+if ($result) {
     $FormData = array(
         'reply_for' => $ticket_id,
         'reply_from' => 999999,
         'reply_content' => post('content'),
         'reply_date' => date('Y-m-d H:i:s'),
     );
-    $resault_insert = $DB->insert('ticket_replies', $FormData);
-    if ($resault_insert) {
+    $result_insert = $DB->insert('ticket_replies', $FormData);
+    if ($result_insert) {
         $ticket_url = setURL('clientarea/tickets', array('action' => 'view', 'ticket_id' => $ticket_id));
 
         $EmailContent = '<p>You have received a reply from Support Staff.</p>';

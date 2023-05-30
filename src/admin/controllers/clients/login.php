@@ -15,7 +15,7 @@ $email = $ClientInfo['client_email'];
 $token = hash('sha256', json_encode([$email, $ClientInfo['client_key'], $key]));
 $times = 1;
 
-setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode(array('email' => $email, 'token' => $token, 'key' => $key)))), time() + $times * 86400, '/');
+setcookie('UIISC_MEMBER', base64_encode(gzcompress(json_encode(array('email' => $email, 'token' => $token, 'key' => $key)))), time() + $times * 86400, '/', $site_domain);
 
 setMessage('Logged in as ' . $email . ' <b>successfully!</b>', 'success');
 
