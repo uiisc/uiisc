@@ -4,7 +4,7 @@ require_once __DIR__ . '/application.php';
 
 $action = get('action', 'list');
 
-if (!in_array($action, array('list', 'add', 'edit', 'view', 'goftp', 'login'))) {
+if (!in_array($action, array('list', 'add', 'edit', 'view', 'goftp', 'login', 'sync'))) {
     $action = 'list';
 }
 

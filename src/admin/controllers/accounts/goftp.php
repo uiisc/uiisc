@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../application.php';
 
-$account_id = get('id');
+$account_id = get('account_id');
 
 if (empty($account_id)) {
     redirect('admin/accounts');

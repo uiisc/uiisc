@@ -10,6 +10,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account` (
   `account_sql` VARCHAR(8) NOT NULL,
   `account_status` INT(1) NOT NULL,
   `account_date` VARCHAR(20) NOT NULL,
+  `account_signup_ip` varchar(20) DEFAULT NULL COMMENT "注册IP",
   PRIMARY KEY (`account_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
@@ -42,6 +43,13 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_callbac
   `callback_raw` text NOT NULL COMMENT "接收的完整数据",
   PRIMARY KEY (`callback_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
+
+$sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_domain` (
+  `domain_id` int(11) NOT NULL AUTO_INCREMENT COMMENT "主机账号ID",
+  `domain_name` varchar(255) NOT NULL COMMENT "域名",
+  `domain_account_id` int(11) NOT NULL COMMENT "托管账号ID",
+  PRIMARY KEY (`domain_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1071 DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_config` (
   `site_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -86,6 +94,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_clients` (
   `client_status` INT(1) NOT NULL,
   `client_company` VARCHAR(50) NOT NULL,
   `client_password` VARCHAR(64) NOT NULL,
+  `client_signup_ip` varchar(20) DEFAULT NULL COMMENT "注册IP",
   PRIMARY KEY (`client_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 

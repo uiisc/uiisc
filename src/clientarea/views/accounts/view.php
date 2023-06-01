@@ -129,11 +129,11 @@
         </div>
         <hr />
         <div class="mb-10 px-10">
-        <?php if (count($DomainList) > 0): ?>
-        <?php foreach ($DomainList as $domain): ?>
+        <?php if (count($AccountDomainList) > 0): ?>
+        <?php foreach ($AccountDomainList as $domain): ?>
             <div class='d-flex justify-content-between align-items-center m-5'>
-                <span><a href="http://<?php echo $domain; ?>" target="_blank" ref="noreferrer noopener"><?php echo $domain; ?></a></span>
-                <span><a href="accounts.php?action=goftp&account_id=<?php echo $account_id; ?>&domain=<?php echo $domain; ?>" class='btn btn-sm btn-square btn-secondary' target='_blank'><i class='fa fa-file-import'></i></a></span>
+                <span><a href="http://<?php echo $domain['domain_name']; ?>" target="_blank" ref="noreferrer noopener"><?php echo $domain['domain_name']; ?></a></span>
+                <span><a href="accounts.php?action=goftp&account_id=<?php echo $account_id; ?>&domain=<?php echo $domain['domain_name']; ?>" class='btn btn-sm btn-square btn-secondary' target='_blank'><i class='fa fa-file-import'></i></a></span>
             </div>
         <?php endforeach;?>
         <?php else: ?>

@@ -19,11 +19,6 @@ if (empty($AccountInfo)) {
     redirect('clientarea/accounts');
 }
 
-// TODO: Change to an asynchronous request
-require_once ROOT . '/modules/autoload.php';
-
-use \InfinityFree\MofhClient\Client;
-
 $PageInfo['title'] = 'View Account (#' . $account_id . ')';
 
 $AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
@@ -42,14 +37,10 @@ if ($AccountInfo['account_status'] == 1) {
         'mysql_host' => $AccountApi['api_server_sql_domain'],
         'mysql_port' => 3306,
     ));
-
-    $client = Client::create($AccountApiConfig);
-    $request = $client->getUserDomains(array('username' => $AccountInfo['account_username']));
-    $response = $request->send();
-    $DomainList = $response->getDomains();
+    $AccountDomainList = $DB->findAll('account_domain', '*', array('domain_account_id' => $account_id));
 } else {
     // inactive
-    $DomainList = array();
+    $AccountDomainList = array();
     $data = array_merge(array(), $AccountApi, $AccountInfo, array(
         'user_ip' => get_client_ip(),
         'account_username' => '-',

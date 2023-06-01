@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 <div class="container-fluid">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
+    <div class="card pt-0">
+        <div class="card-header d-flex justify-content-between align-items-center pt-15 px-5">
             <h5 class="m-0">Viewing Account (# <?php echo $account_id; ?>)</h5>
             <a href="accounts.php" class="btn btn-sm btn-danger">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
@@ -139,6 +139,28 @@
             <?php endif;?>
                 <a href="accounts.php?action=edit&account_id=<?php echo $account_id; ?>" class="btn btn-secondary m-5 btn-rounded">Edit Settings</a>
             </div>
+        </div>
+    </div>
+
+    <div class="card py-0">
+        <div class="d-flex justify-content-between align-items-center pt-15">
+            <h5 class="m-0">Account Domains</h5>
+            <a href="accounts.php?action=sync&type=domain&account_id=<?php echo $account_id; ?>" class="btn btn-sm btn-danger">
+                <i class="fa fa-sync"></i> <?php echo $lang->I18N('Sync'); ?>
+            </a>
+        </div>
+        <hr />
+        <div class="mb-10 px-10">
+        <?php if (count($AccountDomainList) > 0): ?>
+        <?php foreach ($AccountDomainList as $domain): ?>
+            <div class='d-flex justify-content-between align-items-center m-5'>
+                <span><a href="http://<?php echo $domain['domain_name']; ?>" target="_blank" ref="noreferrer noopener"><?php echo $domain['domain_name']; ?></a></span>
+                <span><a href="accounts.php?action=goftp&account_id=<?php echo $account_id; ?>&domain=<?php echo $domain['domain_name']; ?>" class='btn btn-sm btn-square btn-secondary' target='_blank'><i class='fa fa-file-import'></i></a></span>
+            </div>
+        <?php endforeach;?>
+        <?php else: ?>
+            <p class='text-center'>No Domain Found</p>
+        <?php endif;?>
         </div>
     </div>
 </div>
