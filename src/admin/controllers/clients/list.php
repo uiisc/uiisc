@@ -1,6 +1,6 @@
 <?php
 
-$PageInfo['title'] = $lang->I18N('My Clients');
+$PageInfo['title'] = $lang->I18N('Clients List');
 
 $count = $DB->count('clients');
 

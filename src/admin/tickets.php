@@ -1,7 +1,6 @@
 <?php
 
 require_once __DIR__ . '/application.php';
-require_once ROOT . '/core/library/userinfo.class.php';
 require_once ROOT . '/core/library/tickets.php';
 
 $action = get('action', 'list');

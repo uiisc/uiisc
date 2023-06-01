@@ -44,8 +44,8 @@
                     <div class="alert alert-secondary my-5">
                         <p>You need to set these nameservers in order to host your domain with us</p>
                         <ul class="mb-0">
-                            <li class="mb-0"><?php echo $HostingApi['api_ns_1'] ?></li>
-                            <li class="mb-0"><?php echo $HostingApi['api_ns_2'] ?></li>
+                            <li class="mb-0"><?php echo $AccountApi['api_ns_1'] ?></li>
+                            <li class="mb-0"><?php echo $AccountApi['api_ns_2'] ?></li>
                         </ul>
                     </div>
                     <label class="form-label required">Custom Domain Name</label>
@@ -76,39 +76,39 @@
         </div>
         <hr>
         <div class="col-md-12 mb-15">
-            <form action="controllers/accounts/add.php" method="post">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="mb-10 px-10">
-                            <label class="form-label required">Hosting Package</label>
-                            <input type="text" name="package" value="<?php echo $HostingApi['api_package']; ?>" class="form-control disabled" readonly>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-10 px-10">
-                            <label class="form-label required">Domain Name</label>
-                            <input type="text" name="domain" id="validomain" placeholder="Domain will show here..." class="form-control disabled" readonly required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-10 px-10">
-                            <label class="form-label required">Username</label>
-                            <input type="text" name="username" placeholder="(generated automatically)" class="form-control disabled" readonly>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-10 px-10">
-                            <label class="form-label">Password</label>
-                            <input type="password" name="password" placeholder="Something unique, leave empty to generate random" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-10 px-10">
-                            <button class="btn btn-primary" name="submit">Request Account</button>
-                        </div>
+            <!-- <form action="controllers/accounts/add.php" method="post"> -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-10 px-10">
+                        <label class="form-label required">Hosting Package</label>
+                        <input type="text" name="package" value="<?php echo $AccountApi['api_package']; ?>" class="form-control disabled" readonly>
                     </div>
                 </div>
-            </form>
+                <div class="col-md-6">
+                    <div class="mb-10 px-10">
+                        <label class="form-label required">Domain Name</label>
+                        <input type="text" name="domain" id="validomain" placeholder="Domain will show here..." class="form-control disabled" readonly required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-10 px-10">
+                        <label class="form-label required">Username</label>
+                        <input type="text" name="username" placeholder="(generated automatically)" class="form-control disabled" readonly>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-10 px-10">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" placeholder="Something unique, leave empty to generate random" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-10 px-10">
+                        <button class="btn btn-primary" onclick="create_account()">Request Account</button>
+                    </div>
+                </div>
+            </div>
+            <!-- </form> -->
         </div>
     </div>
 </div>
@@ -156,6 +156,24 @@
         var domain = $('#customdomain').val();
         $.post('controllers/accounts/validate_domain.php', {domain : domain, submit: ""}, function(data){
             if (domain != data) {
+                $('#hidden-area').html('<div class="alert alert-danger" role="alert"><button class="close" data-dismiss="alert" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+data+'</div>');
+            } else {
+                $('#hidden-area').html('<div class="alert alert-success" role="alert"><button class="close" data-dismiss="alert" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>Domain is available and selected  <b>successfully!</b></div>');
+                $('#validomain').val(data);
+            }
+        });
+    };
+    function create_account() {
+        $('#hidden-area').html('');
+        var domain = $('#sudomain').val();
+        var extensions = $('#extension').val();
+        var validomain = domain + extensions;
+        $.post('controllers/accounts/add.php', {
+            domain: validomain,
+            api_key: 'ttkl.cf',
+            submit: ""
+        }, function(data) {
+            if (validomain != data) {
                 $('#hidden-area').html('<div class="alert alert-danger" role="alert"><button class="close" data-dismiss="alert" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+data+'</div>');
             } else {
                 $('#hidden-area').html('<div class="alert alert-success" role="alert"><button class="close" data-dismiss="alert" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>Domain is available and selected  <b>successfully!</b></div>');

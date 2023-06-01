@@ -1,6 +1,5 @@
 <?php
 
-require_once ROOT . '/core/library/userinfo.class.php';
 require_once ROOT . '/core/library/countries.php';
 
 $CountryName = 'Not Defined';

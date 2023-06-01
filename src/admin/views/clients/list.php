@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <div class="card m-20 p-20">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h3 class="m-0"><?php echo $lang->I18N('My Clients'); ?></h3>
+            <h3 class="m-0"><?php echo $lang->I18N('Clients List'); ?></h3>
             <a href="index.php" class="btn btn-danger btn-sm pull-right"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?></a>
         </div>
         <hr />
@@ -10,19 +10,21 @@
             <table class="table table-stripped table-bordered table-hover">
                 <thead>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th><?php echo $lang->I18N('Name'); ?></th>
+                    <th><?php echo $lang->I18N('Email'); ?></th>
+                    <th><?php echo $lang->I18N('Phone'); ?></th>
+                    <th><?php echo $lang->I18N('Date'); ?></th>
+                    <th><?php echo $lang->I18N('Status'); ?></th>
+                    <th><?php echo $lang->I18N('Action'); ?></th>
                 </thead>
                 <tbody>
 <?php if ($count > 0): ?>
 <?php foreach ($rows as $value): ?>
                     <tr>
-                        <td># <?php echo $value['client_id']; ?></td>
+                        <td><?php echo $value['client_id']; ?></td>
                         <td><?php echo $value['client_fname'] . " " . $value['client_lname']; ?></td>
                         <td><?php echo $value['client_email']; ?></td>
+                        <td><?php echo $value['client_phone']; ?></td>
                         <td><?php echo $value['client_date']; ?></td>
                         <td><?php
 if ($value['client_status'] == '0') {

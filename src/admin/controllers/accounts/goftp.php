@@ -8,13 +8,13 @@ if (empty($account_id)) {
     redirect('admin/accounts');
 }
 
-$data = $DB->find('account', '*', array('account_id' => $account_id), null, 1);
+$AccountInfo = $DB->find('account', '*', array('account_id' => $account_id), null, 1);
 
-if (empty($data)) {
+if (empty($AccountInfo)) {
     redirect('admin/accounts');
 }
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
 
-$filemanager_url = get_filemanager_url($HostingApi['api_cpanel_url'], $data['account_username'], $data['account_password']);
+$filemanager_url = get_filemanager_url($AccountApi['api_server_ftp_domain'], $AccountInfo['account_username'], $AccountInfo['account_password']);
 header("Location: " . $filemanager_url);

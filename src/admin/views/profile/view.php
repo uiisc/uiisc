@@ -19,19 +19,19 @@
                     <h6 class="mb-0"><b><?php echo $lang->I18N('Email Address'); ?>:</b> <?php echo $AdminInfo['admin_email']; ?></h6>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="mb-0"><b><?php echo $lang->I18N('IP Address'); ?>:</b> <?php echo UserInfo::get_ip(); ?></h6>
+                    <h6 class="mb-0"><b><?php echo $lang->I18N('IP Address'); ?>:</b> <?php echo get_client_ip(); ?></h6>
                 </div>
                 <div class="col-md-6">
                     <h6 class="mb-0"><b>Shared IP:</b> <?php echo gethostbyname($_SERVER['HTTP_HOST']); ?></h6>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="mb-0"><b>Device Type:</b> <?php echo UserInfo::get_device(); ?></h6>
+                    <h6 class="mb-0"><b>Device Type:</b> <?php echo get_client_device(); ?></h6>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="mb-0"><b>Device OS:</b> <?php echo UserInfo::get_os(); ?></h6>
+                    <h6 class="mb-0"><b>Device OS:</b> <?php echo get_client_os(); ?></h6>
                 </div>
                 <div class="col-md-6">
-                    <h6 class="mb-0"><b>Web Browser:</b> <?php echo UserInfo::get_browser(); ?></h6>
+                    <h6 class="mb-0"><b>Web Browser:</b> <?php echo get_client_browser(); ?></h6>
                 </div>
                 <div class="col-md-12"><hr></div>
                 <div class="col-md-6">

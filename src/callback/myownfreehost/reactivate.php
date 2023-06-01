@@ -33,11 +33,12 @@ if ($AccountInfo) {
         $callback_log['callback_client_id'] = $AccountInfo['account_client_id'];
         $EmailTo = $ClientInfo['client_email'];
         $EmailToNickname = $ClientInfo['client_fname'];
+        $EmailContent = '<p>Your hosting account has been reactivated, and you can continue to use it now.</p>';
     } else {
         $EmailTo = $SiteConfig['site_email'];
         $EmailToNickname = 'Administrator';
+        $EmailContent = '<p>An Unassigned hosting account has been reactivated. The details are given bellow.</p>';
     }
-    $EmailContent = '<p>You have successfully created a new hosting account the details are given bellow.</p>';
 } else {
     // 账号不存在，入库
     $AccountInfo = array(
@@ -55,33 +56,15 @@ if ($AccountInfo) {
 
     $EmailTo = $SiteConfig['site_email'];
     $EmailToNickname = 'Administrator';
-    $EmailContent = '<p>Congratulations !</p><p>You have successfully received a new hosting account, the details are given bellow.</p>';
+    $EmailContent = '<p>An Unassigned hosting account has been reactivated. The details are given bellow.</p>';
 }
 
 // 记录日志
 $DB->insert('account_callback', $callback_log);
 
-$EmailDescription = '
-<p>Account domain    : ' . $AccountInfo['account_domain'] . '<br />
-Account date   : ' . $AccountInfo['account_date'] . '<br />
-Server IP      : ' . $AccountApi['api_server_ip'] . '<br />
-Hosting package: ' . $AccountApi['api_package'] . '<br /></p>
-<p>Control Panel username : ' . $AccountInfo['account_username'] . '<br />
-Control Panel password : ' . $AccountInfo['account_password'] . '<br />
-Control Panel URL      : ' . $AccountApi['api_cpanel_url'] . '<br /></p>
+$EmailDescription = '<p>Hosting Account : ' . $AccountInfo['account_username'] . '</p>';
 
-<p>SQL hostname : ***.' . $AccountApi['api_server_sql_domain'] . '<br />
-SQL username : ' . $AccountInfo['account_username'] . '<br />
-SQL password : ' . $AccountInfo['account_password'] . '<br />
-SQL port : 3306</p>
-<p>FTP username   : ' . $AccountInfo['account_username'] . '<br />
-FTP password   : ' . $AccountInfo['account_password'] . '<br />
-FTP hostname   : ' . $AccountApi['api_server_ftp_domain'] . '<br />
-FTP port       : 21<br /></p>
-<p>Nameserver 1   : ' . $AccountApi['api_ns_1'] . '<br />
-Nameserver 2   : ' . $AccountApi['api_ns_2'] . '</p>';
-
-$email_body = email_build_body('New Hosting Account', $EmailToNickname, $EmailContent, $EmailDescription);
+$email_body = email_build_body('Hosting Account Status Changed', $EmailToNickname, $EmailContent, $EmailDescription);
 
 // print($email_body);
 
@@ -89,7 +72,7 @@ $emails_log = array(
     'email_client_id' => $AccountInfo['account_client_id'],
     'email_date' => date('Y-m-d H:i:s'),
     'email_to' => $EmailTo,
-    'email_subject' => 'New Hosting Account',
+    'email_subject' => 'Hosting Account Status Changed',
     'email_body' => $email_body,
     'email_read' => 0
 );
@@ -99,5 +82,5 @@ $DB->insert('emails', $emails_log);
 send_mail(array(
     'to' => $EmailTo,
     'message' => $email_body,
-    'subject' => 'New Hosting Account'
+    'subject' => 'Hosting Account Status Changed'
 ));

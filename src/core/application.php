@@ -12,6 +12,7 @@ $start_time = explode(' ', microtime());
 $static_release = '1559728996134';
 
 header("X-Powered-By: UIISC");
+header("Server: UIISC");
 header("Content-Type: text/html; charset=UTF-8");
 
 date_default_timezone_set('Asia/Shanghai');
@@ -47,13 +48,20 @@ if (!function_exists('is_https')) {
 }
 
 define('HTTP_PROTOCOL', is_https() ? 'https' : 'http');
-
 $site_domain = $_SERVER['HTTP_HOST'];
-
-define('SITE_DOMAIN', $site_domain);
-
+$scriptpath = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
+$site_path = substr($scriptpath, 0, strrpos($scriptpath, '/'));
 $site_url = HTTP_PROTOCOL . '://' . $site_domain;
 
+if (isset($_SERVER['PATH_INFO'])) {
+    $path_info = strtolower(trim(str_replace($_SERVER['SCRIPT_NAME'], '', $_SERVER['PATH_INFO']), '/'));
+} else if ($_SERVER['REQUEST_URI']) {
+    $request_uri = strtolower(trim($_SERVER['REQUEST_URI']));
+    $path_info = explode('?', $request_uri)[0];
+    $path_info = strtolower(trim(str_replace($site_path, '', $path_info)));
+}
+
+define('SITE_DOMAIN', $site_domain);
 define('SITEURL', $site_url);
 
 include_once ROOT . '/data/config.php';

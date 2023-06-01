@@ -35,13 +35,13 @@
                 <hr />
                 <div class="col-md-4 col-sm-6">
                     <div class="m-5">
-                        <b>Cpanel Username:</b>
+                        <b>Control Panel Username:</b>
                         <span><?php echo $AccountInfo['account_username']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
-                        <b>Cpanel Password:</b>
+                        <b>Control Panel Password:</b>
                         <span><kbd><?php echo $AccountInfo['account_password']; ?></kbd></span>
                     </div>
                 </div>
@@ -53,8 +53,8 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
-                        <b>Cpanel Domain:</b>
-                        <span><?php echo $HostingApi['api_cpanel_url']; ?></span>
+                        <b>Control Panel Domain:</b>
+                        <span><?php echo $AccountApi['api_cpanel_url']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 col-md-6">
@@ -80,19 +80,19 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>Server IP:</b>
-                        <span><?php echo $HostingApi['api_server_ip']; ?></span>
+                        <span><?php echo $AccountApi['api_server_ip']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>Your IP:</b>
-                        <span><?php echo UserInfo::get_ip() ?></span>
+                        <span><?php echo get_client_ip(); ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>FTP Hostname:</b>
-                        <span><?php echo str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url']) ?></span>
+                        <span><?php echo $AccountApi['api_server_ftp_domain']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -104,7 +104,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>MySQL Hostname:</b>
-                        <span><?php echo str_replace('cpanel', 'sqlxxx', $HostingApi['api_cpanel_url']) ?></span>
+                        <span><?php echo $AccountInfo['account_sql'] . '.' . $AccountApi['api_server_sql_domain']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -116,13 +116,13 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>Nameserver 1:</b>
-                        <span><?php echo $HostingApi['api_ns_1']; ?></span>
+                        <span><?php echo $AccountApi['api_ns_1']; ?></span>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center m-5">
                         <b>Nameserver 2:</b>
-                        <span><?php echo $HostingApi['api_ns_2']; ?></span>
+                        <span><?php echo $AccountApi['api_ns_2']; ?></span>
                     </div>
                 </div>
             </div>

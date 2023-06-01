@@ -20,3 +20,5 @@ $data = null;
 if ($id > 0) {
     $data = $DB->find('news', '*', array('news_id' => $id), null, 1);
 }
+
+$PageInfo['title'] = $lang->I18N('News Details');

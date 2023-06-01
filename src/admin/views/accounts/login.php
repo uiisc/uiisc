@@ -7,7 +7,7 @@
             <hr />
             <div class="card-body">
                 <p>Now you are going to be redirected to the control panel. It can take upto 5 seconds based on your internet connecion speed.</p>
-                <form name="login" action="https://<?php echo $HostingApi['api_cpanel_url'] ?>/login.php" id="account_ogin" method="post">
+                <form name="login" action="https://<?php echo $AccountApi['api_cpanel_url'] ?>/login.php" id="account_ogin" method="post">
                     <input type="hidden" name="uname" value="<?php echo $AccountInfo['account_username']; ?>">
                     <input type="hidden" name="passwd" value="<?php echo $AccountInfo['account_password']; ?>">
                     <input type="hidden" name="language" value="<?php echo $lang->get_language_value(); ?>">

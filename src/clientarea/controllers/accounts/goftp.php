@@ -21,7 +21,7 @@ if ($AccountInfo['account_status'] != 1) {
     redirect('clientarea/accounts', '', array('action' => 'view', 'account_id' => $account_id));
 }
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
 
-$filemanager_url = get_filemanager_url($HostingApi['api_cpanel_url'], $AccountInfo['account_username'], $AccountInfo['account_password'], $domain);
+$filemanager_url = get_filemanager_url($AccountApi['api_server_ftp_domain'], $AccountInfo['account_username'], $AccountInfo['account_password'], $domain);
 header("Location: " . $filemanager_url);

@@ -1,15 +1,23 @@
 <?php
 
 require_once __DIR__ . '/../../application.php';
-
-require_once ROOT . '/core/handler/HostingHandler.php';
 require_once ROOT . '/modules/autoload.php';
 
 use \InfinityFree\MofhClient\Client;
 
 if (isset($_POST['submit'])) {
     $domain = post('domain');
-    $client = Client::create($HostingApiConfig);
+
+    $AccountApi = $DB->find('account_api', '*', array('api_key' => 'ttkl.cf'), null, 1);
+
+    $AccountApiConfig = array(
+        'apiUsername' => $AccountApi['api_username'],
+        'apiPassword' => $AccountApi['api_password'],
+        // 'apiUrl' => 'https://panel.myownfreehost.net/xml-api/',
+        'plan' => $AccountApi['api_package'],
+    );
+
+    $client = Client::create($AccountApiConfig);
     $request = $client->availability(array('domain' => $domain));
     $response = $request->send();
     if ($response->isSuccessful() == 0 && strlen($response->getMessage()) > 1) {

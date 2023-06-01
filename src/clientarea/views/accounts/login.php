@@ -10,7 +10,7 @@
         <hr>
         <div class="mb-15">
             <p>You will now be redirected to the control panel. It can take up to 5 seconds based on your internet connecion speed.</p>
-            <form id="Login" action="https://<?php echo $HostingApi['api_cpanel_url']; ?>/login.php" method="post" name="login">
+            <form id="Login" action="https://<?php echo $AccountApi['api_cpanel_url']; ?>/login.php" method="post" name="login">
             <input type="hidden" name="uname" value="<?php echo $AccountInfo['account_username']; ?>">
             <input type="hidden" name="passwd" value="<?php echo $AccountInfo['account_password']; ?>">
             <input type="hidden" name="language" value="<?php echo $lang->get_language_value(); ?>">

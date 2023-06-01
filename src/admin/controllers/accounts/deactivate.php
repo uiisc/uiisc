@@ -32,12 +32,20 @@ if (empty($AccountInfo)) {
 //     redirect('admin/accounts', '', array('action' => 'view', 'account_id' => $account_id));
 // }
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
+
+$AccountApiConfig = array(
+    'apiUsername' => $AccountApi['api_username'],
+    'apiPassword' => $AccountApi['api_password'],
+    // 'apiUrl' => 'https://panel.myownfreehost.net/xml-api/',
+    'plan' => $AccountApi['api_package'],
+);
+
 require_once ROOT . '/modules/autoload.php';
 
 use \InfinityFree\MofhClient\Client;
 
-$client = Client::create($HostingApiConfig);
+$client = Client::create($AccountApiConfig);
 $request = $client->suspend(array(
     'username' => $AccountInfo['account_key'],
     'reason' => $reason,

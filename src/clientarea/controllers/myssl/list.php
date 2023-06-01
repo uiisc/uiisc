@@ -1,7 +1,5 @@
 <?php
 
-require ROOT . '/core/library/userinfo.class.php';
-
 $count = $DB->count('ssl', array('ssl_client_id' => $ClientInfo['client_id']));
 
 if ($count > 0) {

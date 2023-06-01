@@ -8,7 +8,7 @@ if (!defined('IN_CRONLITE')) {
 <div class="container-fluid">
     <div class="card py-0">
         <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0"><?php echo $lang->I18N('news'); ?></h5>
+            <h5 class="m-0"><?php echo $PageInfo['title']; ?></h5>
             <a href="news.php?action=add" class="btn text-white btn-success btn-sm">
                 <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
             </a>

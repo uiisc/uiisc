@@ -13,7 +13,7 @@
                 <thead>
                     <th>Key</th>
                     <th>Type</th>
-                    <th>Cpanel URL</th>
+                    <th>Panel URL</th>
                     <th>Package</th>
                     <th>Action</th>
                 </thead>

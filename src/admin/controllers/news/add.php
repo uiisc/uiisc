@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     }
     redirect('admin/news');
 } else {
-    $PageInfo['title'] = 'Add News';
+    $PageInfo['title'] = $lang->I18N('News Add');
     $status_types = array(
         "关闭",
         "打开",

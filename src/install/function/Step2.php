@@ -14,7 +14,7 @@ $FormData = array(
     'key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'), 0, 8),
 );
 
-$sql = mysqli_query($connect, "INSERT INTO `hosting_admin` (`admin_fname`, `admin_lname`, `admin_email`, `admin_key`, `admin_password`) VALUES
+$sql = mysqli_query($connect, "INSERT INTO `uiisc_admin` (`admin_fname`, `admin_lname`, `admin_email`, `admin_key`, `admin_password`) VALUES
 ('" . $FormData['fname'] . "', '" . $FormData['lname'] . "', '" . $FormData['email'] . "','" . $FormData['key'] . "', '" . $FormData['password'] . "')");
 
 if ($sql) {

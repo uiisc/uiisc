@@ -37,7 +37,7 @@ $avatar_path = $ClientInfo['client_email'] ? md5($ClientInfo['client_email']) : 
         </a>
         <a href="tickets.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-ticket-alt" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('Tickets'); ?>
+            <?php echo $lang->I18N('Tickets List'); ?>
         </a>
         <a href="tools.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-tools" aria-hidden="true"></i></span>

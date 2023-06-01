@@ -1,34 +1,36 @@
 <?php
 
-header("X-Powered-By: UIISC");
-header("Server: UIISC");
-header("Content-Type: text/html; charset=UTF-8");
-
-if (!isset($_GET['token']) || empty($_GET['token'])) {
-    header("status: 401");
-    exit('401 Unauthorized');
-}
-
-if (!isset($_GET['key']) || empty($_GET['key'])) {
-    header("status: 401");
-    exit('401 Unauthorized');
-}
-
 require_once __DIR__ . '/../core/application.php';
+$path_array = explode('/', trim($path_info, '/'));
 
-$token = get('token');
-$key = get('key');
-
-$HostingApi = $DB->find('account_api', '*', array('api_key' => $key), null, 1);
-
-if (!$HostingApi) {
-    header("status: 404");
-    exit('404 Not Found');
+if (!$path_array || count($path_array) < 2) {
+    exit('401 Unauthorized');
 }
 
-if ($token != $HostingApi['api_callback_token']) {
-    header("status: 404");
-    exit('404 Not Found');
+if (!isset($path_array[0]) || empty($path_array[0])) {
+    header("status: 401");
+    exit('401 Unauthorized');
 }
 
-require_once __DIR__ . '/' . $key . '/app.php';
+if (!isset($path_array[1]) || empty($path_array[1])) {
+    header("status: 401");
+    exit('401 Unauthorized');
+}
+
+$api_key = $path_array[0];
+$token = $path_array[1];
+
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $api_key), null, 1);
+
+if (!$AccountApi) {
+    exit('Not Found');
+}
+
+if ($token != $AccountApi['api_callback_token']) {
+    exit('Unauthorized');
+}
+
+file_put_contents('./log.txt', json_encode($_POST), FILE_APPEND);
+file_put_contents('./log.txt', "\n", FILE_APPEND);
+
+require_once __DIR__ . '/' . $AccountApi['api_type'] . '/app.php';

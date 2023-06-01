@@ -13,6 +13,8 @@
             <table class="table table-stripped table-bordered table-hover">
                 <thead>
                     <th>ID</th>
+                    <th><?php echo $lang->I18N('Clients'); ?></th>
+                    <th><?php echo $lang->I18N('Provider'); ?></th>
                     <th><?php echo $lang->I18N('Username'); ?></th>
                     <th><?php echo $lang->I18N('Domain'); ?></th>
                     <th><?php echo $lang->I18N('Deploy Date'); ?></th>
@@ -23,7 +25,13 @@
 <?php if ($count > 0): ?>
     <?php foreach ($rows as $row): ?>
                     <tr>
-                        <td># <?php $row['account_id'];?></td>
+                        <td><?php echo $row['account_id'];?></td>
+                        <td><?php echo $row['account_client_id']; ?></td>
+                        <td>
+                            <a href="hosting.php?action=view&api_key=<?php echo $row['account_api_key']; ?>">
+                                <?php echo $row['account_api_key']; ?>
+                            </a>
+                        </td>
                         <td><?php echo $row['account_username']; ?></td>
                         <td><?php echo $row['account_domain']; ?></td>
                         <td><?php echo $row['account_date']; ?></td>

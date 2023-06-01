@@ -21,6 +21,6 @@ if ($AccountInfo['account_status'] != 1) {
     redirect('clientarea/accounts', '', array('action' => 'view', 'account_id' => $account_id));
 }
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', 'api_cpanel_url', array('api_key' => $AccountInfo['account_api_key']), null, 1);
 
 $PageInfo['title'] = 'Login to Control Panel';

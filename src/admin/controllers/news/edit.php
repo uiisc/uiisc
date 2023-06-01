@@ -45,3 +45,5 @@ if ($id > 0) {
     $news = $DB->find('news', '*', array('news_id' => $id), null, 1);
 }
 $load_editor = 1;
+
+$PageInfo['title'] = $lang->I18N('News Edit');

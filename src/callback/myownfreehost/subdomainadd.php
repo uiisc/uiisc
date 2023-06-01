@@ -1,7 +1,5 @@
 <?php
 
-// require_once __DIR__ . '/../../core/application.php';
-
 if (!defined('IN_CRONLITE')) {
     exit('Access Denied');
 }
@@ -24,8 +22,8 @@ $callback_log = array(
 // 账号信息
 $AccountInfo = $DB->find('account', '*', array('account_username' => $username));
 if ($AccountInfo) {
-    // 更新账号信息
-    $res = $DB->update('account', array('account_status' => '1'), array('account_id' => $AccountInfo['account_id']));
+    // 禁用账号
+    // $res = $DB->update('account', array('account_status' => '2'), array('account_id' => $AccountInfo['account_id']));
 
     // 查找客户信息
     $ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $AccountInfo['account_client_id']));
@@ -33,11 +31,12 @@ if ($AccountInfo) {
         $callback_log['callback_client_id'] = $AccountInfo['account_client_id'];
         $EmailTo = $ClientInfo['client_email'];
         $EmailToNickname = $ClientInfo['client_fname'];
+        $EmailContent = '<p>Your hosting account has successfully added a new sub domain. The details are given bellow.</p>';
     } else {
         $EmailTo = $SiteConfig['site_email'];
         $EmailToNickname = 'Administrator';
+        $EmailContent = '<p>An unassigned hosting account has successfully added a new sub domain. The details are given bellow.</p>';
     }
-    $EmailContent = '<p>You have successfully created a new hosting account the details are given bellow.</p>';
 } else {
     // 账号不存在，入库
     $AccountInfo = array(
@@ -55,41 +54,23 @@ if ($AccountInfo) {
 
     $EmailTo = $SiteConfig['site_email'];
     $EmailToNickname = 'Administrator';
-    $EmailContent = '<p>Congratulations !</p><p>You have successfully received a new hosting account, the details are given bellow.</p>';
+    $EmailContent = '<p>An unassigned hosting account has successfully added a new sub domain. The details are given bellow.</p>';
 }
+$EmailDescription = '<p><pre>' . $callback_log['callback_comments'] . '</pre></p>
+<p>The new sub domain is now available for use.</p>';
 
 // 记录日志
 $DB->insert('account_callback', $callback_log);
 
-$EmailDescription = '
-<p>Account domain    : ' . $AccountInfo['account_domain'] . '<br />
-Account date   : ' . $AccountInfo['account_date'] . '<br />
-Server IP      : ' . $AccountApi['api_server_ip'] . '<br />
-Hosting package: ' . $AccountApi['api_package'] . '<br /></p>
-<p>Control Panel username : ' . $AccountInfo['account_username'] . '<br />
-Control Panel password : ' . $AccountInfo['account_password'] . '<br />
-Control Panel URL      : ' . $AccountApi['api_cpanel_url'] . '<br /></p>
+$email_body = email_build_body('Hosting Account Domain Changed', $EmailToNickname, $EmailContent, $EmailDescription);
 
-<p>SQL hostname : ***.' . $AccountApi['api_server_sql_domain'] . '<br />
-SQL username : ' . $AccountInfo['account_username'] . '<br />
-SQL password : ' . $AccountInfo['account_password'] . '<br />
-SQL port : 3306</p>
-<p>FTP username   : ' . $AccountInfo['account_username'] . '<br />
-FTP password   : ' . $AccountInfo['account_password'] . '<br />
-FTP hostname   : ' . $AccountApi['api_server_ftp_domain'] . '<br />
-FTP port       : 21<br /></p>
-<p>Nameserver 1   : ' . $AccountApi['api_ns_1'] . '<br />
-Nameserver 2   : ' . $AccountApi['api_ns_2'] . '</p>';
-
-$email_body = email_build_body('New Hosting Account', $EmailToNickname, $EmailContent, $EmailDescription);
-
-// print($email_body);
+// print_r($email_body);
 
 $emails_log = array(
     'email_client_id' => $AccountInfo['account_client_id'],
     'email_date' => date('Y-m-d H:i:s'),
     'email_to' => $EmailTo,
-    'email_subject' => 'New Hosting Account',
+    'email_subject' => 'Hosting Account Domain Changed',
     'email_body' => $email_body,
     'email_read' => 0
 );
@@ -99,5 +80,5 @@ $DB->insert('emails', $emails_log);
 send_mail(array(
     'to' => $EmailTo,
     'message' => $email_body,
-    'subject' => 'New Hosting Account'
+    'subject' => 'Hosting Account Domain Changed'
 ));

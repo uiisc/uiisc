@@ -34,16 +34,16 @@
                 <h6 class="mb-0"><b>Postal Code:</b> <?php echo $ClientInfo['client_pcode'];?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b><?php echo $lang->I18N('IP Address'); ?>:</b> <?php echo UserInfo::get_ip();?></h6>
+                <h6 class="mb-0"><b><?php echo $lang->I18N('IP Address'); ?>:</b> <?php echo get_client_ip();?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Device Type:</b> <?php echo UserInfo::get_device();?></h6>
+                <h6 class="mb-0"><b>Device Type:</b> <?php echo get_client_device();?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Device OS:</b> <?php echo UserInfo::get_os();?></h6>
+                <h6 class="mb-0"><b>Device OS:</b> <?php echo get_client_os();?></h6>
             </div>
             <div class="col-md-6">
-                <h6 class="mb-0"><b>Web Browser:</b> <?php echo UserInfo::get_browser();?></h6>
+                <h6 class="mb-0"><b>Web Browser:</b> <?php echo get_client_browser();?></h6>
             </div>
             <div class="col-md-12 pb-5">
                 <a href="settings.php" class="btn m5t btn-sm btn-primary">Update Profile</a>

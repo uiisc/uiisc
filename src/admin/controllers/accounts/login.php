@@ -14,4 +14,4 @@ if (empty($AccountInfo)) {
     redirect('admin/accounts');
 }
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);

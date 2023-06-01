@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <h3 class="m-0"><?php echo $lang->I18N('My Tickets'); ?></h3>
+            <h3 class="m-0"><?php echo $lang->I18N('Tickets List'); ?></h3>
             <a href="index.php" class="btn text-white btn-danger btn-sm">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>

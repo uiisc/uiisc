@@ -32,13 +32,21 @@ $FormData = array(
     'account_username' => $AccountInfo['account_username']
 );
 
-require_once ROOT . '/core/handler/HostingHandler.php';
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
+
+$AccountApiConfig = array(
+    'apiUsername' => $AccountApi['api_username'],
+    'apiPassword' => $AccountApi['api_password'],
+    // 'apiUrl' => 'https://panel.myownfreehost.net/xml-api/',
+    'plan' => $AccountApi['api_package'],
+);
+
 require_once ROOT . '/modules/autoload.php';
 
 use \InfinityFree\MofhClient\Client;
 
 if ($FormData['old_password'] == $AccountInfo['account_password']) {
-    $client = Client::create($HostingApiConfig);
+    $client = Client::create($AccountApiConfig);
     $request = $client->password([
         'username' => $AccountInfo['account_key'],
         'password' => $FormData['new_password'],

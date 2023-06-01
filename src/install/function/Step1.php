@@ -14,7 +14,7 @@ $FormData = array(
     'site_email' => $_POST['site_email'],
 );
 
-$sql = mysqli_query($connect, "INSERT INTO `hosting_config` (`site_key`,`site_name`,`site_brand`,`site_company`,`site_path`,`site_email`,`site_status`)
+$sql = mysqli_query($connect, "INSERT INTO `uiisc_config` (`site_key`,`site_name`,`site_brand`,`site_company`,`site_path`,`site_email`,`site_status`)
 VALUES
 ('UIISC','" . $FormData['site_name'] . "','" . $FormData['site_brand'] . "','" . $FormData['site_company'] . "','" . $FormData['site_path'] . "','" . $FormData['site_email'] . "','1')"
 );

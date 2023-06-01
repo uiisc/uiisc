@@ -12,3 +12,5 @@ $status_types = array(
     "关闭",
     "打开",
 );
+
+$PageInfo['title'] = $lang->I18N('News List');

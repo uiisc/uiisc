@@ -19,33 +19,39 @@ if (empty($AccountInfo)) {
     redirect('clientarea/accounts');
 }
 
-// require_once ROOT . '/core/library/userinfo.class.php';
 // TODO: Change to an asynchronous request
-require_once ROOT . '/core/handler/HostingHandler.php';
 require_once ROOT . '/modules/autoload.php';
 
 use \InfinityFree\MofhClient\Client;
 
 $PageInfo['title'] = 'View Account (#' . $account_id . ')';
 
+$AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
+$AccountApiConfig = array(
+    'apiUsername' => $AccountApi['api_username'],
+    'apiPassword' => $AccountApi['api_password'],
+    // 'apiUrl' => 'https://panel.myownfreehost.net/xml-api/',
+    'plan' => $AccountApi['api_package'],
+);
+
 if ($AccountInfo['account_status'] == 1) {
-    $data = array_merge(array(), $HostingApi, $AccountInfo, array(
-        'user_ip' => UserInfo::get_ip(),
-        'ftp_host' => str_replace('cpanel', 'ftp', $HostingApi['api_cpanel_url']),
+    $data = array_merge(array(), $AccountApi, $AccountInfo, array(
+        'user_ip' => get_client_ip(),
+        'ftp_host' => $AccountApi['api_server_ftp_domain'],
         'ftp_port' => 21,
-        'mysql_host' => str_replace('cpanel', 'sqlxxx', $HostingApi['api_cpanel_url']),
+        'mysql_host' => $AccountApi['api_server_sql_domain'],
         'mysql_port' => 3306,
     ));
 
-    $client = Client::create($HostingApiConfig);
+    $client = Client::create($AccountApiConfig);
     $request = $client->getUserDomains(array('username' => $AccountInfo['account_username']));
     $response = $request->send();
     $DomainList = $response->getDomains();
 } else {
     // inactive
     $DomainList = array();
-    $data = array_merge(array(), $HostingApi, $AccountInfo, array(
-        'user_ip' => UserInfo::get_ip(),
+    $data = array_merge(array(), $AccountApi, $AccountInfo, array(
+        'user_ip' => get_client_ip(),
         'account_username' => '-',
         'account_password' => '-',
         'account_domain' => '-',

@@ -23,11 +23,11 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
         </a>
         <a href="clients.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-users" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('Clients'); ?>
+            <?php echo $lang->I18N('Clients List'); ?>
         </a>
         <a href="tickets.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-ticket-alt" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('Tickets'); ?>
+            <?php echo $lang->I18N('Tickets List'); ?>
         </a>
         <a href="sslcert.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-shield-alt" aria-hidden="true"></i></span>
@@ -43,7 +43,7 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
         </a>
         <a href="news.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-newspaper" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('News'); ?>
+            <?php echo $lang->I18N('News List'); ?>
         </a>
         <a href="hosting.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-server" aria-hidden="true"></i></span>
