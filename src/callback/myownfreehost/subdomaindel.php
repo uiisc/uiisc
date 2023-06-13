@@ -22,8 +22,13 @@ $callback_log = array(
 // 账号信息
 $AccountInfo = $DB->find('account', '*', array('account_username' => $username));
 if ($AccountInfo) {
-    // 禁用账号
-    // $res = $DB->update('account', array('account_status' => '2'), array('account_id' => $AccountInfo['account_id']));
+    $account_id = $AccountInfo['account_id'];
+
+    // 同步到本地
+    $DB->delete('account_domain', array(
+        'domain_account_id' => $account_id,
+        'domain_name' => $callback_log['callback_comments']
+    ));
 
     // 查找客户信息
     $ClientInfo = $DB->find('clients', 'client_email, client_fname', array('client_id' => $AccountInfo['account_client_id']));
@@ -50,12 +55,19 @@ if ($AccountInfo) {
         'account_client_id' => 0,
         'account_sql' => 'sql***'
     );
-    $DB->insert('account', $AccountInfo);
+    $account_id = $DB->insert('account', $AccountInfo);
+
+    // 同步到本地
+    $DB->delete('account_domain', array(
+        // 'domain_account_id' => $account_id,
+        'domain_name' => $callback_log['callback_comments']
+    ));
 
     $EmailTo = $SiteConfig['site_email'];
     $EmailToNickname = 'Administrator';
     $EmailContent = '<p>An unassigned hosting account has successfully deleted a sub domain. The details are given bellow.</p>';
 }
+
 $EmailDescription = '<p><pre>' . $callback_log['callback_comments'] . '</pre></p>
 <p>The sub domain is no longer usable.</p>';
 

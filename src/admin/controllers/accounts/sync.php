@@ -38,6 +38,7 @@ if ($AccountInfo['account_status'] == 1) {
 }
 if (count($DomainList) > 0) {
     foreach($DomainList as &$item) {
+        // 格式 ("abc.com",1234)
         $item = '("' . $item . '",' .$account_id . ')';
     }
     // 清理

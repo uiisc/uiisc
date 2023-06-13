@@ -45,6 +45,9 @@ if ($row['account_status'] == '0') {
 } elseif ($row['account_status'] == '2') {
     $btn = ['danger', 'lock'];
     echo '<span class="badge bg-danger text-white border-0">Suspended</span>';
+} elseif ($row['account_status'] == '3') {
+    $btn = ['danger', 'lock'];
+    echo '<span class="badge bg-danger text-white border-0">Deleted</span>';
 }
 ?></td>
                         <td>

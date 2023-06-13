@@ -13,6 +13,8 @@
             <div class="alert alert-secondary col-md-12">This account is inactive.</div>
         <?php elseif ($AccountInfo['account_status'] == '2'): ?>
             <div class="alert alert-secondary col-md-12">This account has been suspended.</div>
+        <?php elseif ($AccountInfo['account_status'] == '3'): ?>
+            <div class="alert alert-secondary col-md-12">This account has been deleted.</div>
         <?php endif;?>
             <div class="row pb-10">
                 <div class="col-md-12 pb-10 mb-10">
@@ -67,7 +69,9 @@
     echo '<span class="badge bg-success">Active</span>';
 } elseif ($AccountInfo['account_status'] == '2') {
     echo '<span class="badge bg-danger">Suspend</span>';
-}?>
+} elseif ($AccountInfo['account_status'] == '3') {
+    echo '<span class="badge bg-danger">Deleted</span>';
+} ?>
                         </span>
                     </div>
                 </div>
