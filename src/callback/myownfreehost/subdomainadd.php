@@ -67,7 +67,7 @@ $EmailDescription = '<p><pre>' . $callback_log['callback_comments'] . '</pre></p
 // 记录日志
 $DB->insert('account_callback', $callback_log);
 
-$email_body = email_build_body('Hosting Account Domain Changed', $EmailToNickname, $EmailContent, $EmailDescription);
+$email_body = email_build_body('Hosting Account Subdomain Added', $EmailToNickname, $EmailContent, $EmailDescription);
 
 // print_r($email_body);
 
@@ -75,7 +75,7 @@ $emails_log = array(
     'email_client_id' => $AccountInfo['account_client_id'],
     'email_date' => date('Y-m-d H:i:s'),
     'email_to' => $EmailTo,
-    'email_subject' => 'Hosting Account Domain Changed',
+    'email_subject' => 'Hosting Account Subdomain Added',
     'email_body' => $email_body,
     'email_read' => 0
 );
@@ -86,5 +86,5 @@ $DB->insert('emails', $emails_log);
 send_mail(array(
     'to' => $EmailTo,
     'message' => $email_body,
-    'subject' => 'Hosting Account Domain Changed'
+    'subject' => 'Hosting Account Subdomain Added'
 ));

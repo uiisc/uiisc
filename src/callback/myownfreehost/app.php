@@ -27,6 +27,12 @@ if ($status == 'ACTIVATED') {
 } else if ($status == 'CLIENTSUBDEL') {
     // 删除子域名
     require_once __DIR__ . '/subdomaindel.php';
+} else if ($status == 'CLIENTPARKADD') {
+    // 添加停放域名
+    require_once __DIR__ . '/parkdomainadd.php';
+} else if ($status == 'CLIENTPARKDEL') {
+    // 删除停放域名
+    require_once __DIR__ . '/parkdomaindel.php';
 } else if ($status == 'DELETE') {
     // 帐户已删除
     require_once __DIR__ . '/delete.php';

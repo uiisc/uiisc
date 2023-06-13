@@ -36,11 +36,11 @@ if ($AccountInfo) {
         $callback_log['callback_client_id'] = $AccountInfo['account_client_id'];
         $EmailTo = $ClientInfo['client_email'];
         $EmailToNickname = $ClientInfo['client_fname'];
-        $EmailContent = '<p>Your hosting account has successfully deleted a sub domain. The details are given bellow.</p>';
+        $EmailContent = '<p>Your hosting account has successfully deleted a parked domain. The details are given bellow.</p>';
     } else {
         $EmailTo = $SiteConfig['site_email'];
         $EmailToNickname = 'Administrator';
-        $EmailContent = '<p>An unassigned hosting account has successfully deleted a sub domain. The details are given bellow.</p>';
+        $EmailContent = '<p>An unassigned hosting account has successfully deleted a parked domain. The details are given bellow.</p>';
     }
 } else {
     // 账号不存在，入库
@@ -65,16 +65,16 @@ if ($AccountInfo) {
 
     $EmailTo = $SiteConfig['site_email'];
     $EmailToNickname = 'Administrator';
-    $EmailContent = '<p>An unassigned hosting account has successfully deleted a sub domain. The details are given bellow.</p>';
+    $EmailContent = '<p>An unassigned hosting account has successfully deleted a parked domain. The details are given bellow.</p>';
 }
 
 $EmailDescription = '<p><pre>' . $callback_log['callback_comments'] . '</pre></p>
-<p>The sub domain is no longer usable.</p>';
+<p>The parked domain is no longer usable.</p>';
 
 // 记录日志
 $DB->insert('account_callback', $callback_log);
 
-$email_body = email_build_body('Hosting Account Subdomain Deleted', $EmailToNickname, $EmailContent, $EmailDescription);
+$email_body = email_build_body('Hosting Account Parked Domain Deleted', $EmailToNickname, $EmailContent, $EmailDescription);
 
 // print_r($email_body);
 
@@ -82,7 +82,7 @@ $emails_log = array(
     'email_client_id' => $AccountInfo['account_client_id'],
     'email_date' => date('Y-m-d H:i:s'),
     'email_to' => $EmailTo,
-    'email_subject' => 'Hosting Account Subdomain Deleted',
+    'email_subject' => 'Hosting Account Parked Domain Deleted',
     'email_body' => $email_body,
     'email_read' => 0
 );
@@ -92,5 +92,5 @@ $DB->insert('emails', $emails_log);
 send_mail(array(
     'to' => $EmailTo,
     'message' => $email_body,
-    'subject' => 'Hosting Account Subdomain Deleted'
+    'subject' => 'Hosting Account Parked Domain Deleted'
 ));
