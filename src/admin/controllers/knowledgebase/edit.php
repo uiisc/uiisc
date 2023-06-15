@@ -35,10 +35,8 @@ if (isset($_POST['submit'])) {
     $id = get('id');
     $load_editor = 1;
     if ($id > 0) {
-        $PageInfo = ['title' => 'Edit Knowledgebase #' . $id, 'rel' => ''];
         $Knowledgebase = $DB->getRow("SELECT * FROM pre_knowledgebase WHERE knowledgebase_id='{$id}' limit 1");
     } else {
-        $PageInfo = ['title' => 'Unathorized Access', 'rel' => ''];
         $Knowledgebase = null;
     }
 }

@@ -8,6 +8,8 @@ if (isset($_SESSION['UIISC_ADMIN'])) {
         setMessage('Login to <b>continue !</b>', 'danger');
         redirect('admin/login');
     }
+    $AdminInfo['avatar'] = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'default';
+    $AdminInfo['avatar'] = 'https://dn-qiniu-avatar.qbox.me/avatar/' . $AdminInfo['avatar'] . '?s=30';
 } else {
     setMessage('Login to <b>continue !</b>', 'danger');
     redirect('admin/login');

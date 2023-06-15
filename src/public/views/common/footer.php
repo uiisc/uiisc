@@ -18,7 +18,7 @@ if (!defined('IN_CRONLITE')) {
             <ul class="legal navbar-right list-inline text-center">
                 <li class="dropup">
                     <div class="dropdown-toggle" id="changelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-globe"></span>
+                        <span class="fa fa-language"></span>
                         <a href="#"><?php echo $lang->get_language_name(); ?></a>
                     </div>
                     <ul class="dropdown-menu language-change"><?php echo $lang->get_languages_tags(); ?></ul>

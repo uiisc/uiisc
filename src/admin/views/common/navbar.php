@@ -1,37 +1,101 @@
-<nav class="navbar">
-    <div class="container-fluid">
-        <a href="index.php" class="navbar-brand"><?php echo $lang->I18N('Admin Area'); ?></a>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item nav-height">
-            <button class="btn btn-sm my-auto" role="button" onclick="halfmoon.toggleDarkMode()">
-                <i class="fas fa-sun"></i>
+<nav class="navbar navbar-fixed-top navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">navbar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-        </li>
-        <!-- 语言 -->
-        <div class="nav-item nav-height dropdown with-arrow">
-            <button class="btn" data-toggle="dropdown" type="button" id="language-change-toggle" aria-haspopup="true" aria-expanded="false">
-                <?php echo $lang->get_language_name(); ?> <i class="fa fa-angle-up ml-5" aria-hidden="true"></i>
-            </button>
-            <div class="dropdown-menu language-change" aria-labelledby="language-change-toggle">
-                <?php echo $lang->get_languages_tags(); ?>
-            </div>
+            <a class="navbar-brand" href="./"><?php echo $lang->I18N('Admin Area'); ?></a>
         </div>
-        <li class="nav-item nav-height dropdown with-arrow">
-            <a class="btn btn-sm m5x" data-toggle="dropdown" id="nav-link-dropdown-toggle">
-                <i class="fa fa-user"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
-                <a href="<?php echo $site_url; ?>" class="dropdown-item" target="_blank"><?php echo $lang->I18N('Home'); ?></a>
-                <div class="dropdown-divider"></div>
-                <a href="profile.php" class="dropdown-item"><?php echo $lang->I18N('Profile'); ?></a>
-                <a href="settings.php" class="dropdown-item"><?php echo $lang->I18N('Settings'); ?></a>
-                <div class="dropdown-divider"></div>
-                <a href="logout.php" class="dropdown-item"><?php echo $lang->I18N('logout'); ?></a>
-            </div>
-        </li>
-        <li class="nav-item nav-height hidden-on-up">
-            <button class="btn btn-sm my-auto" onclick="halfmoon.toggleSidebar()"><i class="fa fa-bars"></i></button>
-        </li>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="<?php echo checkIfActive('index,') ?>">
+                    <a href="./"><i class="fa fa-home" aria-hidden="true"></i> <?php echo $lang->I18N('home'); ?></a>
+                </li>
+                <li class="<?php echo checkIfActive('clients') ?>">
+                    <a href="clients.php"><i class="fa fa-users fa-fw"></i> <?php echo $lang->I18N('Clients List'); ?></a>
+                </li>
+                <li class="<?php echo checkIfActive('accounts') ?>">
+                    <a href="accounts.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Accounts'); ?></a>
+                </li>
+                <li class="<?php echo checkIfActive('tickets') ?>">
+                    <a href="tickets.php"><i class="fa fa-ticket-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Tickets List'); ?></a>
+                </li>
+                <li class="<?php echo checkIfActive('sslcert') ?>">
+                    <a href="sslcert.php"><i class="fa fa-shield-alt" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
+                </li>
+                <li class="<?php echo checkIfActive('settings'); ?>">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-cog fa-fw"></i> <?php echo $lang->I18N('System Settings'); ?> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="knowledgebase.php"><i class="fa fa-book fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Knowledgebase'); ?></a></li>
+                        <li><a href="news.php"><i class="fa fa-newspaper fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('News List'); ?></a></li>
+                        <li><a href="hosting.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Provider'); ?></a></li>
+                        <li><a href="domain.php"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Domain Provider'); ?></a></li>
+                        <li><a href="settings.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Settings'); ?></a></li>
+                    </ul>
+                </li>
+                <li class="<?php echo checkIfActive('profile'); ?>">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user-cog fa-fw"></i>
+                        <i class="caret"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="disabled">
+                            <a href="#" class="text-center">
+                                <p><img class="img-rounded" src="<?php echo $AdminInfo['avatar']; ?>" height="80px" width="80px"></p>
+                                <!-- <i class="fa fa-user-circle fa-5x"></i> -->
+                                <div><?php echo $AdminInfo['admin_fname'] . " " . $AdminInfo['admin_lname']; ?></div>
+                            </a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="profile.php"><i class="fa fa-user-alt fa-fw"></i> <?php echo $lang->I18N('Profile'); ?></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="<?php echo $site_url; ?>" target="_blank"><i class="fa fa-external-link-alt fa-fw"></i> <?php echo $lang->I18N('home'); ?></a></li>
+                        <li><a href="<?php echo $site_url; ?>/clientarea/" target="_blank"><i class="fa fa-house-user fa-fw"></i> <?php echo $lang->I18N('Client Area'); ?></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#" onclick="return logout();"><i class="fa fa-sign-out-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('logout'); ?></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
-
+<script>
+    function logout() {
+        layer.confirm('确定退出登录 ？', {
+            icon: 3,
+            btn: ['确定', '取消']
+        }, function() {
+            window.location.href = 'logout.php';
+            // var ii = layer.load(2);
+            // $.ajax({
+            //     type: 'GET',
+            //     url: 'ajax.php?act=logout',
+            //     dataType: 'json',
+            //     success: function(data) {
+            //         layer.close(ii);
+            //         if (data.code == 0) {
+            //             layer.alert(data.msg, {
+            //                 icon: 1,
+            //                 closeBtn: false
+            //             }, function() {
+            //                 window.location.href = 'login.php';
+            //             });
+            //         } else {
+            //             layer.alert(data.msg, {
+            //                 icon: 2
+            //             });
+            //         }
+            //     },
+            //     error: function(data) {
+            //         layer.close(ii);
+            //         layer.msg('服务器错误');
+            //     }
+            // });
+        });
+    }
+</script>

@@ -1,23 +1,30 @@
 <div class="content-wrapper">
-<div class="container-fluid">
-    <div class="card m-20 p-20">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h3 class="m-0"><?php echo $lang->I18N('Clients List'); ?></h3>
-            <a href="index.php" class="btn btn-danger btn-sm pull-right"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?></a>
-        </div>
-        <hr />
-        <div class="card-body table-responsive">
-            <table class="table table-stripped table-bordered table-hover">
-                <thead>
-                    <th>ID</th>
-                    <th><?php echo $lang->I18N('Name'); ?></th>
-                    <th><?php echo $lang->I18N('Email'); ?></th>
-                    <th><?php echo $lang->I18N('Phone'); ?></th>
-                    <th><?php echo $lang->I18N('Date'); ?></th>
-                    <th><?php echo $lang->I18N('Status'); ?></th>
-                    <th><?php echo $lang->I18N('Action'); ?></th>
-                </thead>
-                <tbody>
+    <div class="container">
+        <ol class="breadcrumb page-breadcrumb">
+            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li class="active"><?php echo $lang->I18N('Clients List'); ?></li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="pull-right">
+                    <a href="<?php echo setURL('admin/clients', '', array('action' => 'add')); ?>" class="btn btn-primary btn-xs">
+                        <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
+                    </a>
+                </div>
+                <span class="panel-title"><?php echo $PageInfo['title']; ?></span>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-stripped table-bordered table-hover">
+                    <thead>
+                        <th>ID</th>
+                        <th><?php echo $lang->I18N('Name'); ?></th>
+                        <th><?php echo $lang->I18N('Email'); ?></th>
+                        <th><?php echo $lang->I18N('Phone'); ?></th>
+                        <th><?php echo $lang->I18N('Date'); ?></th>
+                        <th><?php echo $lang->I18N('Status'); ?></th>
+                        <th><?php echo $lang->I18N('Action'); ?></th>
+                    </thead>
+                    <tbody>
 <?php if ($count > 0): ?>
 <?php foreach ($rows as $value): ?>
                     <tr>
@@ -26,21 +33,20 @@
                         <td><?php echo $value['client_email']; ?></td>
                         <td><?php echo $value['client_phone']; ?></td>
                         <td><?php echo $value['client_date']; ?></td>
-                        <td><?php
-if ($value['client_status'] == '0') {
-$btn = ['secondary', 'cog'];
-echo '<span class="badge bg-secondary badge-pill">Inactive</span>';
-} elseif ($value['client_status'] == '1') {
-$btn = ['success', 'globe'];
-echo '<span class="badge bg-success badge-pill">Active</span>';
-} elseif ($value['client_status'] == '2') {
-$btn = ['danger', 'lock'];
-echo '<span class="badge bg-danger badge-pill">Suspended</span>';
-}
-?></td>
+                        <td><?php if ($value['client_status'] == '0'): ?>
+                            <span class="label label-warning">Inactive</span>
+                        <?php elseif ($value['client_status'] == '1'): ?>
+                            <span class="label label-success">Active</span>
+                        <?php elseif ($value['client_status'] == '2'): ?>
+                            <span class="label label-danger">Suspended</span>
+                        <?php endif; ?>
+                        </td>
                         <td>
-                            <a href="clients.php?action=view&client_id=<?php echo $value['client_id']; ?>" class="btn btn-sm btn-<?php echo $btn[0] ?> btn-rounded">
-                                <i class="fa fa-<?php echo $btn[1]; ?>"></i> Manage
+                            <a href="<?php echo setURL('admin/clients', '', array('action' => 'edit', 'id' => $value['client_id'])); ?>" class="btn btn-success btn-xs">
+                                <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
+                            </a>
+                            <a href="<?php echo setURL('admin/clients', '', array('action' => 'details', 'id' => $value['client_id'])); ?>" class="btn btn-primary btn-xs">
+                                <i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?>
                             </a>
                         </td>
                     </tr>
@@ -50,11 +56,10 @@ echo '<span class="badge bg-danger badge-pill">Suspended</span>';
                         <td colspan="6" class="text-center">Nothing found</td>
                     </tr>
 <?php endif;?>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer"><?php echo $count; ?> Records Founds.</div>
         </div>
-        <hr />
-        <div class="card-footer"><?php echo $count; ?> Records Founds.</div>
     </div>
-</div>
 </div>

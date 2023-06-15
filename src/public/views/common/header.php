@@ -25,6 +25,7 @@ if (!defined('IN_CRONLITE')) {
 <?php endif; ?>
     <link href="assets/image/favicon.ico?_=<?php echo $static_release; ?>" rel="icon" />
     <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>

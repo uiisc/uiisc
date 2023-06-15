@@ -12,7 +12,7 @@ if (!$ticket_id) {
     exit('Access Denied');
 }
 
-$TicketInfo = $DB->find('tickets', 'ticket_email, ticket_client_id', array('ticket_id' => $ticket_id));
+$TicketInfo = $DB->find('tickets', '*', array('ticket_id' => $ticket_id));
 
 if (!$TicketInfo) {
     exit('Access Denied');

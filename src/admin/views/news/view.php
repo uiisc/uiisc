@@ -1,51 +1,42 @@
 <?php
 if (!defined('IN_CRONLITE')) {
-    // exit('禁止访问');
-    header("Location: ../../admin.php");
     exit;
 }
 ?>
 
-<div class="content-wrapper">
-<div class="container-fluid">
-    <div class="card py-0">
-        <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0"><?php echo $PageInfo['title']; ?> #<?php echo $id; ?></h5>
-            <div>
-                <a href="news.php" class="btn btn-sm btn-danger">
-                    <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
-                </a>
-                <a href="<?php echo setURL('admin/news', '', array('action' => 'edit', 'id' => $id)); ?>" class="btn btn-sm btn-success">
-                    <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
-                </a>
-                <a href="news.php?action=add" class="btn btn-sm btn-success">
-                    <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
-                </a>
-            </div>
-        </div>
-        <hr />
 
-        <div class="mb-20">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-between align-items-center mx-10 my-5">
-                        <b>Subject:</b>
-                        <span><?php echo $data['news_subject']; ?></span>
-                    </div>
+<div class="content-wrapper">
+    <div class="container">
+        <ol class="breadcrumb page-breadcrumb">
+            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="news.php"><?php echo $lang->I18N('News List'); ?></a></li>
+            <li class="active"><?php echo $lang->I18N('details'); ?></li>
+        </ol>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="pull-right">
+                    <a href="<?php echo setURL('admin/news', '', array('action' => 'edit', 'id' => $id)); ?>" class="btn btn-success btn-xs">
+                        <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
+                    </a>
+                    <a href="news.php?action=add" class="btn btn-primary btn-xs">
+                        <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
+                    </a>
+                    <a href="news.php?action=list" class="btn btn-primary btn-xs">
+                        <i class="fa fa-list"></i> <?php echo $lang->I18N('list'); ?>
+                    </a>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-between align-items-center mx-10 my-5">
-                        <b>Date:</b>
-                        <span><?php echo $data['news_date']; ?></span>
-                    </div>
+                <span class="panel-title"><?php echo $PageInfo['title']; ?> ID:<?php echo $id; ?></span>
+            </div>
+            <div class="panel-body">
+                <div class="page-header text-center">
+                    <h2><?php echo $data['news_subject']; ?></h2>
+                    <p><?php echo $data['news_date']; ?></p>
+                </div>
+                <div class="news-content">
+                    <?php echo htmlspecialchars_decode($data['news_content']); ?>
                 </div>
             </div>
         </div>
     </div>
-    <div class="card py-0">
-        <div class="mx-10 py-15">
-            <?php echo htmlspecialchars_decode($data['news_content']); ?>
-        </div>
-    </div>
-</div>
 </div>

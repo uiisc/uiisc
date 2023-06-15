@@ -2,7 +2,7 @@
 
 require_once ROOT . '/core/library/countries.php';
 
-$client_id = get('client_id');
+$client_id = get('id');
 
 if (empty($client_id)) {
     redirect('admin/clients');
@@ -20,7 +20,7 @@ foreach ($countries as $country) {
     }
 }
 
-$PageInfo['title'] = 'View client (' . $client_id . ')';
+$PageInfo['title'] = 'Client Edit';
 $count_account = $DB->count('account', array('account_client_id' => $ClientInfo['client_id']));
 $count_ssl = $DB->count('ssl', array('ssl_client_id' => $ClientInfo['client_id']));
 $count_tickets = $DB->count('tickets', array('ticket_client_id' => $ClientInfo['client_id']));

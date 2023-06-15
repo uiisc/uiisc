@@ -17,6 +17,5 @@ if (isset($_POST['submit'])) {
     }
     redirect('admin/knowledgebase');
 } else {
-    $PageInfo = ['title' => 'New Knowledgebase', 'rel' => ''];
     $load_editor = 1;
 }

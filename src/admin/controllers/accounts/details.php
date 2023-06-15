@@ -17,7 +17,7 @@ if (empty($AccountInfo)) {
     redirect('admin/accounts');
 }
 
-$PageInfo['title'] = 'View Account (#' . $account_id . ')';
+$PageInfo['title'] = 'Account Details';
 $AccountApi = $DB->find('account_api', '*', array('api_key' => $AccountInfo['account_api_key']), null, 1);
 
 $AccountDomainList = $DB->findAll('account_domain', '*', array('domain_account_id' => $account_id));

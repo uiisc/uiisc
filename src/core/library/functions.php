@@ -445,3 +445,24 @@ function email_build_body($title, $nickname, $content, $description = '')
     </div>
 </div>';
 }
+
+function checkRefererHost()
+{
+    if (!$_SERVER['HTTP_REFERER']) return false;
+    $url_arr = parse_url($_SERVER['HTTP_REFERER']);
+    $http_host = $_SERVER['HTTP_HOST'];
+    if (strpos($http_host, ':')) $http_host = substr($http_host, 0, strpos($http_host, ':'));
+    return $url_arr['host'] === $http_host;
+}
+
+function checkIfActive($string)
+{
+    $array = explode(',', $string);
+    $php_self = substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], '/') + 1, strrpos($_SERVER['REQUEST_URI'], '.') - strrpos($_SERVER['REQUEST_URI'], '/') - 1);
+    if (in_array($php_self, $array)) {
+        return 'active';
+    } elseif (isset($_GET['m']) && in_array($_GET['m'], $array)) {
+        return 'active';
+    }
+    return null;
+}

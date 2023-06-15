@@ -21,7 +21,7 @@
     <link href="<?php echo $site_url; ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
-    <link href="<?php echo $site_url; ?>/assets/css/admin.css" rel="stylesheet" />
+    <!-- <link href="<?php echo $site_url; ?>/assets/css/admin.css" rel="stylesheet" /> -->
     <script type="text/javascript">
         var site_domain = "<?php echo $site_domain; ?>";
         var cur_lang = "<?php echo $lang->language_current; ?>";
@@ -31,3 +31,4 @@
 </head>
 
 <body>
+

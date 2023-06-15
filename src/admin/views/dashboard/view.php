@@ -1,126 +1,180 @@
 
 
 <div class="content-wrapper">
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-6 col-lg-3">
-            <div class="card text-center bg-matrix-1 m-20 p-0 border-0">
-                <div class="mx-20 my-15 d-flex justify-content-between align-items-center">
-                    <h3 class="my-0 pt-0 text-white"><?php echo $count_clients; ?></h3>
-                    <i class="fa fa-users fa-3x pt-10 text-white"></i>
-                </div>
-                <div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
-                    <a href="clients.php" class="text-white">View Client <i class="fa fa-forward"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card text-center bg-matrix-2 m-20 p-0 border-0">
-                <div class="mx-20 my-15 d-flex justify-content-between align-items-center">
-                    <h3 class="my-0 pt-0 text-white"><?php echo $count_account; ?></h3>
-                    <i class="fa fa-shopping-cart fa-3x pt-10 text-white"></i>
-                </div>
-                <div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
-                    <a href="accounts.php" class="text-white">View Account <i class="fa fa-forward"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card text-center bg-matrix-3 m-20 p-0 border-0">
-                <div class="mx-20 my-15 d-flex justify-content-between align-items-center">
-                    <h3 class="my-0 pt-0 text-white"><?php echo $count_ssl; ?></h3>
-                    <i class="fa fa-shield-alt fa-3x pt-10 text-white"></i>
-                </div>
-                <div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
-                    <a href="myssl.php" class="text-white">View SSL <i class="fa fa-forward"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-            <div class="card text-center bg-matrix-4 m-20 p-0 border-0">
-                <div class="mx-20 my-15 d-flex justify-content-between align-items-center">
-                    <h3 class="my-0 pt-0 text-white"><?php echo $count_tickets; ?></h3>
-                    <i class="fa fa-ticket-alt fa-3x pt-10 text-white"></i>
-                </div>
-                <div class="py-5" style="background: rgba(0,0,0,0.05); border-radius: 0px 0px 10px 10px;">
-                    <a href="tickets.php" class="text-white">View Ticket <i class="fa fa-forward"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="card mx-20 my-10 p-15">
-        <div class="card-header d-flex justify-content-between align-items-center px-0 pt-0">
-            <h3 class="m-0">System information</h3>
-            <a href="settings.php" class="btn btn-danger">Settings</a>
-        </div>
-        <hr />
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Version:</b> <?php echo APP_VERSION; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Status:</b> <?php if ($SiteConfig['site_status'] == 1) {echo '<span class="badge badge-success">Live</span>';} elseif ($SiteConfig['site_status'] == 0) {echo '<span class="badge badge-secondary">Maintaince</span>';}?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Site Name:</b> <?php echo $SiteConfig['site_name']; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Brand Name:</b> <?php echo $SiteConfig['site_brand']; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Company Name:</b> <?php echo $SiteConfig['site_company']; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>URI:</b> <?php echo $SiteConfig['site_path']; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Contact Email:</b> <?php echo $SiteConfig['site_email']; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>PHP Version:</b> <?php echo PHP_VERSION; ?></p>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <p class="mb-0"><b>Server Protocol:</b> <?php echo HTTP_PROTOCOL; ?></p>
-                </div>
-                <!-- <div class="col-md-12"><hr></div> -->
-                <div class="col-md-12">
-                    <p class="mb-0"><b>Document Root:</b> <?php echo $_SERVER['DOCUMENT_ROOT'] ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="card mx-20 my-10 p-15">
-                <div class="card-header">
-                    <h4 class="m-0">Welcome to Dear Admin!</h4>
-                </div>
-                <div class="card-body">
-                    <p>
-                        Here you can manage your free hosting clients and free ssl with free support system remember that any action in this system cannot be undo.
-                    </p>
-                    <div class="text-right">
-                        <a href="accounts.php" class="btn btn-default">Getting Started</a>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-users fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">
+                                    <span id="count_client"><?php echo $count_client; ?></span>/<span class="count-all" id="count_clients"><?php echo $count_clients; ?></span>
+                                </div>
+                                <div>客户数量</div>
+                            </div>
+                        </div>
                     </div>
+                    <a href="clients.php">
+                        <div class="panel-footer">
+                            <span class="pull-left"><?php echo $lang->I18N('View details'); ?></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-server fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">
+                                    <span id="count_account"><?php echo $count_account; ?></span>/<span class="count-all" id="count_accounts"><?php echo $count_accounts; ?></span>
+                                </div>
+                                <div>账户数量</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="accounts.php">
+                        <div class="panel-footer">
+                            <span class="pull-left"><?php echo $lang->I18N('View details'); ?></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-ticket-alt fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">
+                                    <span id="count_ticket"><?php echo $count_ticket; ?></span>/<span class="count-all" id="count_tickets"><?php echo $count_tickets; ?></span>
+                                </div>
+                                <div>工单数量</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tickets.php">
+                        <div class="panel-footer">
+                            <span class="pull-left"><?php echo $lang->I18N('View details'); ?></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-shield-alt fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">
+                                    <span id="count_ssl"><?php echo $count_ssl; ?></span>/<span class="count-all" id="count_ssls"><?php echo $count_ssls; ?></span>
+                                </div>
+                                <div>证书数量</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="myssl.php">
+                        <div class="panel-footer">
+                            <span class="pull-left"><?php echo $lang->I18N('View details'); ?></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
-            <div class="card mx-20 my-10 p-15">
-                <div class="card-header">
-                    <h4 class="m-0">Free SSL Available!</h4>
+        <div class="panel panel-danger">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <span class="fa fa-paper-plane fa-fw"></span> <b>快捷操作：</b>
+                    <a href="settings.php" class="btn btn-danger">Settings</a>&nbsp;&nbsp;
+                    <a href="javascript:cleanRecord(1)" class="btn btn-sm btn-danger">删除1天前的记录</a>&nbsp;&nbsp;
+                    <a href="javascript:cleanRecord(30)" class="btn btn-sm btn-danger">删除30天前的发送记录</a>&nbsp;&nbsp;
                 </div>
-                <div class="card-body">
-                    <p>
-                        Now generation of free ssl has been allowed in order to provide fast website access and increase the security and protection of your website.
-                    </p>
-                    <div class="text-right">
-                        <a href="ssl.php" class="btn btn-default">Check Now</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">服务器信息</h3>
                     </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <b>服务器时间：</b><?php echo $date; ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>PHP 版本：</b><?php echo PHP_VERSION; ?>-<?php echo ini_get('safe_mode') ? '线程安全' : '非线程安全'; ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>MySQL 版本：</b><?php echo $mysqlversion ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>WEB软件：</b><?php echo $_SERVER['SERVER_SOFTWARE'] ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>操作系统：</b><?php echo php_uname(); ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>POST许可：</b><?php echo ini_get('post_max_size'); ?>
+                        </li>
+                        <li class="list-group-item">
+                            <b>文件上传许可：</b><?php echo ini_get('upload_max_filesize'); ?>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">版本信息</h3>
+                    </div>
+                    <ul class="list-group text-dark">
+                        <li class="list-group-item">当前版本：V<?php echo APP_VERSION; ?> (Build <?php echo APP_BUILD; ?>, DB <?php echo DB_VERSION; ?>）</li>
+                        <li class="list-group-item">官网网站：<a href="https://uiisc.org/" target="_blank">https://uiisc.org</a></li>
+                        <li class="list-group-item">Github：<a href="https://github.com/uiisc/uiisc/" target="_blank">https://github.com/uiisc/uiisc</a></li>
+                        <li class="list-group-item"><span class="fa fa-copyright fa-fw"></span> Powered by <a href="https://crogram.com/" target="_blank" rel="noopener noreferrer">CROGRAM</a></li>
+                    </ul>
+                    <ul class="list-group text-dark" id="checkupdate"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">配置信息</h3>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Site Status'); ?></b>&nbsp;:&nbsp;<?php if ($SiteConfig['site_status'] == 1) {echo '<span class="label label-success">Live</span>';} elseif ($SiteConfig['site_status'] == 0) {echo '<span class="label label-danger">Maintaince</span>';}?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Site Name'); ?></b>&nbsp;:&nbsp;<?php echo $SiteConfig['site_name']; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Brand Name'); ?></b>&nbsp;:&nbsp;<?php echo $SiteConfig['site_brand']; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Company Name'); ?></b>&nbsp;:&nbsp;<?php echo $SiteConfig['site_company']; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Contact Email'); ?></b>&nbsp;:&nbsp;<?php echo $SiteConfig['site_email']; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Server Protocol'); ?></b>&nbsp;:&nbsp;<?php echo strtoupper(HTTP_PROTOCOL); ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Site URL'); ?></b>&nbsp;:&nbsp;<?php echo $site_url; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Site Path'); ?></b>&nbsp;:&nbsp;<?php echo $SiteConfig['site_path']; ?></li>
+                        <li class="list-group-item"><b><?php echo $lang->I18N('Site Root'); ?></b>&nbsp;:&nbsp;<?php echo $_SERVER['DOCUMENT_ROOT'] ?></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>

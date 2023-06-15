@@ -105,7 +105,6 @@ if (isset($_POST['submit'])) {
     $id = get('id');
     if ($id > 0) {
         $data = $DB->find('account_api', '*', array('api_id' => $id), null, 1);
-        $PageInfo = ['title' => 'Edit Hosting Provider #' . $id, 'rel' => ''];
     } else {
         setMessage('need field: id', 'danger');
         redirect('admin/hosting');

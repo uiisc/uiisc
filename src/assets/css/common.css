@@ -11,6 +11,11 @@ body {
     overflow-y: auto;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+body, html, input, button, textarea, span, p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 input {
     border: 0;
     outline-width: 0 !important;
@@ -22,6 +27,18 @@ button {
 
 .page-header {
     margin-top: 20px;
+}
+
+.breadcrumb {
+    border: 1px solid #ddd;
+}
+
+.page-breadcrumb {
+    margin-top: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
 }
 
 .section-wrap {

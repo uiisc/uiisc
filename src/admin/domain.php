@@ -13,6 +13,6 @@ $PageInfo['title'] = 'Domain Provider ' . ucfirst($action);
 require __DIR__ . '/controllers/domain/' . $action . '.php';
 require __DIR__ . '/views/common/header.php';
 require __DIR__ . '/views/common/navbar.php';
-require __DIR__ . '/views/common/sidebar.php';
+// require __DIR__ . '/views/common/sidebar.php';
 require __DIR__ . '/views/domain/' . $action . '.php';
 require __DIR__ . '/views/common/footer.php';
