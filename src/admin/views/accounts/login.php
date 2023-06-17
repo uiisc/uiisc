@@ -13,7 +13,7 @@
                     <input type="hidden" name="language" value="<?php echo $lang->get_language_value(); ?>">
                     <div class="text-center">
                         <a class="btn btn-danger btn-sm" href="accounts.php?action=view&account_id=<?php echo $account_id; ?>">
-                            <i class="fa fa-backward"></i> <?php echo $lang->I18N('cancel'); ?>
+                            <i class="fa fa-backward"></i> <?php echo $lang->I18N('Cancel'); ?>
                         </a>
                         <input type="submit" name="Submit" value="Click here to Redirect" class="btn btn-primary btn-sm text-white">
                     </div>

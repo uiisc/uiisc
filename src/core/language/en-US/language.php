@@ -78,7 +78,7 @@ return array(
     'Tickets'             => 'Tickets',
     'Tickets List'        => 'Tickets',
     'My Tickets'          => 'My Tickets',
-    'Tickets Details'     => 'Tickets Details',
+    'Ticket Details'     => 'Ticket Details',
     'member'              => 'Member',
     'members'             => 'Members',
     'reg_date'            => 'Registration date'

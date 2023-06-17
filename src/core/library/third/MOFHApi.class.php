@@ -1,10 +1,10 @@
 <?php
-namespace lib;
+namespace third;
 
 /**
  * mofh-whm-api-client
  */
-class MOFHAPI
+class MOFHApi
 {
 
     public $message = [];

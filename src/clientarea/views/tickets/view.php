@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="card m-20 py-10">
         <div class="d-flex justify-content-between align-items-center pt-15">
-            <h5 class="m-0"><?php echo $lang->I18N('Tickets Details'); ?> #<?php echo $ticket_id; ?></h5>
+            <h5 class="m-0"><?php echo $lang->I18N('Ticket Details'); ?> #<?php echo $ticket_id; ?></h5>
             <a href="tickets.php" class="btn btn-sm btn-danger">
                 <i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?>
             </a>

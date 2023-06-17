@@ -22,7 +22,7 @@ $status_types = array(
 
 $page_title = $page_title . ' - ' . $lang->I18N('News List');
 
-require ROOT . '/public/views/common/header.php';
-require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/header.php';
+require ROOT . '/public/views/navbar.php';
 require ROOT . '/public/views/news/list.php';
-require ROOT . '/public/views/common/footer.php';
+require ROOT . '/public/views/footer.php';

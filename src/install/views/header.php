@@ -16,8 +16,7 @@ if (!defined('IN_CRONLITE')) {
 
     <link rel="icon" href="../assets/image/favicon.ico">
     <title><?php echo $PageInfo['title']; ?> - UIISC Installation</title>
-    <link href="../assets/css/halfmoon.min.css" rel="stylesheet" />
-    <link href="../assets/css/all.min.css" rel="stylesheet" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/login.css" rel="stylesheet" />
 </head>

@@ -2,8 +2,8 @@
 
 $PageInfo['title'] = 'Domain Extensions';
 
-$count = $DB->count('domain_extensions');
+$count = $DB->count('account_domaintld');
 
 if ($count > 0) {
-    $rows = $DB->findAll('domain_extensions', '*', array(), '`extension_id` ASC');
+    $rows = $DB->findAll('account_domaintld', '*', array(), '`extension_id` ASC');
 }

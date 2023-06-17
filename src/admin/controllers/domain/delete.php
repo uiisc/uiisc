@@ -22,12 +22,12 @@ $data = array(
     'extension_value' => $extension,
 );
 
-$count = $DB->count('domain_extensions', $data);
+$count = $DB->count('account_domaintld', $data);
 
 if (!$count > 0) {
     setMessage('Extension won' . "'" . 't <b>exsist!</b>', 'danger');
 } else {
-    $result = $DB->delete('domain_extensions', $data);
+    $result = $DB->delete('account_domaintld', $data);
     if ($result) {
         setMessage('Extension deleted <b>successfully!</b>');
     } else {

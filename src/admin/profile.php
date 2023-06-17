@@ -9,8 +9,8 @@ if (!in_array($action, array('edit', 'view'))) {
 }
 
 require __DIR__ . '/controllers/profile/' . $action . '.php';
-require __DIR__ . '/views/common/header.php';
-require __DIR__ . '/views/common/navbar.php';
+require __DIR__ . '/views/header.php';
+require __DIR__ . '/views/navbar.php';
 // require __DIR__ . '/views/common/sidebar.php';
 require __DIR__ . '/views/profile/' . $action . '.php';
-require __DIR__ . '/views/common/footer.php';
+require __DIR__ . '/views/footer.php';

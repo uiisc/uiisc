@@ -23,19 +23,20 @@
                 <li class="<?php echo checkIfActive('tickets') ?>">
                     <a href="tickets.php"><i class="fa fa-ticket-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Tickets List'); ?></a>
                 </li>
-                <li class="<?php echo checkIfActive('sslcert') ?>">
-                    <a href="sslcert.php"><i class="fa fa-shield-alt" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
+                <li class="<?php echo checkIfActive('ssl') ?>">
+                    <a href="ssl.php"><i class="fa fa-shield-alt" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
                 </li>
                 <li class="<?php echo checkIfActive('settings'); ?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-cog fa-fw"></i> <?php echo $lang->I18N('System Settings'); ?> <b class="caret"></b>
+                        <i class="fa fa-cog fa-fw"></i> <?php echo $lang->I18N('Settings'); ?> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="knowledgebase.php"><i class="fa fa-book fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Knowledgebase'); ?></a></li>
                         <li><a href="news.php"><i class="fa fa-newspaper fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('News List'); ?></a></li>
-                        <li><a href="hosting.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Provider'); ?></a></li>
+                        <li><a href="hosting-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Provider'); ?></a></li>
+                        <li><a href="ssl-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Provider'); ?></a></li>
                         <li><a href="domain.php"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Domain Provider'); ?></a></li>
-                        <li><a href="settings.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Settings'); ?></a></li>
+                        <li><a href="settings.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('System Settings'); ?></a></li>
                     </ul>
                 </li>
                 <li class="<?php echo checkIfActive('profile'); ?>">

@@ -29,8 +29,7 @@
 
     <script src="<?php echo $site_url; ?>/assets/jquery/jquery.min.js"></script>
     <script src="<?php echo $site_url; ?>/assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
-    <script src="//cdn.staticfile.org/layer/3.1.1/layer.js"></script>
-
+    <script src="<?php echo $site_url; ?>/assets/layer/layer.js"></script>
     <script src="<?php echo $site_url; ?>/assets/js/common.js"></script>
 
     <?php if (!empty($load_editor)): ?>

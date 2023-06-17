@@ -22,7 +22,7 @@ if ($id > 0) {
 
 $page_title = $page_title . ' - ' . $lang->I18N('News Details');
 
-require ROOT . '/public/views/common/header.php';
-require ROOT . '/public/views/common/navbar.php';
+require ROOT . '/public/views/header.php';
+require ROOT . '/public/views/navbar.php';
 require ROOT . '/public/views/news/view.php';
-require ROOT . '/public/views/common/footer.php';
+require ROOT . '/public/views/footer.php';

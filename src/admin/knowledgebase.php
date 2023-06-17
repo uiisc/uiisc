@@ -11,8 +11,8 @@ if (!in_array($action, array('list', 'add', 'edit', 'details'))) {
 $PageInfo['title'] = 'Knowledgebase ' . ucfirst($action);
 
 require __DIR__ . '/controllers/knowledgebase/' . $action . '.php';
-require __DIR__ . '/views/common/header.php';
-require __DIR__ . '/views/common/navbar.php';
+require __DIR__ . '/views/header.php';
+require __DIR__ . '/views/navbar.php';
 // require __DIR__ . '/views/common/sidebar.php';
 require __DIR__ . '/views/knowledgebase/' . $action . '.php';
-require __DIR__ . '/views/common/footer.php';
+require __DIR__ . '/views/footer.php';

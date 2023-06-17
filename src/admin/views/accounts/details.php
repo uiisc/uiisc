@@ -65,13 +65,13 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <b>Status:</b>
                             <span><?php if ($AccountInfo['account_status'] == '0'): ?>
-                                <span class="label label-info">Inactive</span>
+                                <span class="label label-info"><?php echo $lang->I18N('Inactive'); ?></span>
                             <?php elseif ($AccountInfo['account_status'] == '1'): ?>
-                                <span class="label label-success">Active</span>
+                                <span class="label label-success"><?php echo $lang->I18N('Active'); ?></span>
                             <?php elseif ($AccountInfo['account_status'] == '2'): ?>
-                                <span class="label label-warning">Suspended</span>
+                                <span class="label label-warning"><?php echo $lang->I18N('Suspended'); ?></span>
                             <?php elseif ($AccountInfo['account_status'] == '3'): ?>
-                                <span class="label label-danger">Deleted</span>
+                                <span class="label label-default"><?php echo $lang->I18N('Deleted'); ?></span>
                             <?php endif; ?></span>
                         </div>
                     </div>

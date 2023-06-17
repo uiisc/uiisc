@@ -35,7 +35,7 @@
                         <td><?php echo $row['account_id'];?></td>
                         <td><?php echo $row['account_client_id']; ?></td>
                         <td>
-                            <a href="hosting.php?action=details&api_key=<?php echo $row['account_api_key']; ?>">
+                            <a href="hosting-provider.php?action=details&api_key=<?php echo $row['account_api_key']; ?>">
                                 <?php echo $row['account_api_key']; ?>
                             </a>
                         </td>
@@ -43,13 +43,13 @@
                         <td><?php echo $row['account_domain']; ?></td>
                         <td><?php echo $row['account_date']; ?></td>
                         <td><?php if ($row['account_status'] == '0'): ?>
-                            <span class="label label-info">Inactive</span>
+                            <span class="label label-info"><?php echo $lang->I18N('Inactive'); ?></span>
                         <?php elseif ($row['account_status'] == '1'): ?>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-success"><?php echo $lang->I18N('Active'); ?></span>
                         <?php elseif ($row['account_status'] == '2'): ?>
-                            <span class="label label-warning">Suspended</span>
+                            <span class="label label-warning"><?php echo $lang->I18N('Suspended'); ?></span>
                         <?php elseif ($row['account_status'] == '3'): ?>
-                            <span class="label label-danger">Deleted</span>
+                            <span class="label label-default"><?php echo $lang->I18N('Deleted'); ?></span>
                         <?php endif; ?></td>
                         <td>
                             <a href="accounts.php?action=edit&account_id=<?php echo $row['account_id']; ?>" class="btn btn-success btn-xs">

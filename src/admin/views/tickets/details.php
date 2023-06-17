@@ -8,7 +8,7 @@ if (!defined('IN_CRONLITE')) {
         <ol class="breadcrumb page-breadcrumb">
             <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
             <li><a href="tickets.php"><?php echo $lang->I18N('Tickets List'); ?></a></li>
-            <li class="active"><?php echo $lang->I18N('Tickets Details'); ?></li>
+            <li class="active"><?php echo $lang->I18N('Ticket Details'); ?></li>
         </ol>
         <div class="panel panel-info">
             <div class="panel-heading">

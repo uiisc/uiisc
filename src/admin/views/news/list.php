@@ -14,7 +14,7 @@ if (!defined('IN_CRONLITE')) {
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                <a href="news.php?action=add" class="btn btn-success btn-xs">
+                <a href="news.php?action=add" class="btn btn-primary btn-xs">
                     <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
                 </a>
                 </div>
@@ -26,7 +26,7 @@ if (!defined('IN_CRONLITE')) {
                         <th width="100">ID</th>
                         <th><?php echo $lang->I18N('Title'); ?></th>
                         <th><?php echo $lang->I18N('Status'); ?></th>
-                        <th style="width: 150px;"><?php echo $lang->I18N('Date'); ?></th>
+                        <th style="width: 160px;"><?php echo $lang->I18N('Date'); ?></th>
                         <th><?php echo $lang->I18N('Action'); ?></th>
                     </thead>
                     <tbody>

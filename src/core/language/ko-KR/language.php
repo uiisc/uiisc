@@ -73,7 +73,7 @@ return array(
     'delete'              => '삭제',
     'details'             => '세부 정보',
     'Tickets'             => '작업 지시서',
-    'Tickets Details'     => '작업 지시 세부 정보',
+    'Ticket Details'     => '작업 지시 세부 정보',
     'member'              => '고객',
     'members'             => '고객',
     'reg_date'            => '등록 날짜'

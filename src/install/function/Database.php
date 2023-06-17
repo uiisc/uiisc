@@ -17,7 +17,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account` (
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_api` (
   `api_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `api_type` varchar(30) NOT NULL,
-  `api_key` varchar(30) NOT NULL,
+  `api_key` varchar(20) NOT NULL,
   `api_username` varchar(256) NOT NULL,
   `api_password` varchar(256) NOT NULL,
   `api_cpanel_url` varchar(100) NOT NULL,
@@ -98,7 +98,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_clients` (
   PRIMARY KEY (`client_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
-$sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_domain_extensions` (
+$sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_domaintld` (
   `extension_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
   `extension_value` VARCHAR(70) NOT NULL,
   PRIMARY KEY (`extension_id`)
@@ -117,14 +117,29 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_smtp` (
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_ssl` (
   `ssl_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ssl_api_id` INT(11) NOT NULL COMMENT "所属客户ID",
   `ssl_client_id` INT(11) NOT NULL COMMENT "所属客户ID",
-  `ssl_key` INT(12) NOT NULL,
-  PRIMARY KEY (`ssl_id`)
+  `ssl_third_id` INT(12) NOT NULL COMMENT "第三方标识ID",
+  `ssl_status` VARCHAR(20) DEFAULT NULL COMMENT "状态",
+  `ssl_domain` VARCHAR(255) DEFAULT NULL COMMENT "主域名",
+  `ssl_dcv_method` VARCHAR(20) DEFAULT NULL COMMENT "验证方式",
+  `ssl_admin_email` VARCHAR(255) DEFAULT NULL COMMENT "管理员邮箱",
+  `ssl_begin_date` VARCHAR(30) DEFAULT NULL COMMENT "有效期开始日期",
+  `ssl_end_date` VARCHAR(30) DEFAULT NULL COMMENT "有效期结束日期",
+  `ssl_ca_code` VARCHAR(5000) DEFAULT NULL COMMENT "CA证书",
+  `ssl_crt_code` VARCHAR(5000) DEFAULT NULL COMMENT "证书内容",
+  `ssl_csr_code` VARCHAR(5000) DEFAULT NULL COMMENT "证书请求信息",
+  `ssl_raw` TEXT COMMENT "第三方完整数据",
+  PRIMARY KEY (`ssl_id`),
+  KEY `ssl_api_id` (`ssl_api_id`),
+  KEY `ssl_client_id` (`ssl_client_id`),
+  KEY `ssl_third_id` (`ssl_third_id`),
+  KEY `ssl_status` (`ssl_status`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_ssl_api` (
   `id` INT(10) unsigned NOT NULL AUTO_INCREMENT,
-  `api_key` VARCHAR(7) NOT NULL,
+  `api_key` VARCHAR(20) NOT NULL,
   `api_username` VARCHAR(256) NOT NULL,
   `api_password` VARCHAR(256) NOT NULL,
   PRIMARY KEY (`id`)
@@ -173,11 +188,11 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_knowledgebase` 
   PRIMARY KEY (`knowledgebase_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
-$sql = mysqli_query($connect, "INSERT INTO `uiisc_ssl_api`(`api_key`, `api_username`, `api_password`) VALUES ('FREESSL','example@gmail.com','SSL API Password')");
+$sql = mysqli_query($connect, "INSERT INTO `uiisc_ssl_api`(`api_key`, `api_username`, `api_password`) VALUES ('GOGETSSL','example@gmail.com','SSL API Password')");
 
 $sql = mysqli_query($connect, "INSERT INTO `uiisc_builder_api`(`builder_id`, `builder_username`, `builder_password`) VALUES ('SITEPRO','apikey0','API Password')");
 
-$sql = mysqli_query($connect, "INSERT INTO `uiisc_domain_extensions`(`extension_value`) VALUES ('.example.com')");
+$sql = mysqli_query($connect, "INSERT INTO `uiisc_account_domaintld`(`extension_value`) VALUES ('.example.com')");
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_news`(
   `news_id` INT(11) NOT NULL AUTO_INCREMENT,

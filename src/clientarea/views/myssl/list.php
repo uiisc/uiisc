@@ -18,7 +18,7 @@
                 <tbody>
 <?php if ($count > 0): ?>
 <?php foreach ($rows as $row):
-    $SSLInfo = $apiClient->getOrderStatus($row['ssl_key']);
+    $SSLInfo = $apiClient->getOrderStatus($row['ssl_third_id']);
 ?>
                     <tr>
                         <td># <?php echo $row['ssl_id']; ?></td>

@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $FormData = array(
         'csr' => post('csr'),
     );
-    $SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'FREESSL'), null, 1);
+    $SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'GOGETSSL'), null, 1);
 
     require ROOT . '/modules/GoGetSSL/GoGetSSLApi.php';
 

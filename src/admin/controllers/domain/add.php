@@ -22,11 +22,11 @@ $data = array(
     'extension_value' => $domain,
 );
 
-$has = $DB->count('domain_extensions', $data);
+$has = $DB->count('account_domaintld', $data);
 if ($has && $has > 0) {
     setMessage('Extension aleady <b>exsist!</b>', 'danger');
 } else {
-    $result = $DB->insert('domain_extensions', $data);
+    $result = $DB->insert('account_domaintld', $data);
     if ($result) {
         setMessage('Extension added <b>successfully!</b>');
     } else {

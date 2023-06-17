@@ -76,7 +76,8 @@ return array(
     'details'             => '詳情',
     'Tickets'             => '工單',
     'Tickets List'        => '工單管理',
-    'Tickets Details'     => '工單詳情',
+    'Ticket List'         => '工單列表',
+    'Ticket Details'      => '工單詳情',
     'member'              => '客戶',
     'members'             => '客戶',
     'reg_date'            => '註冊日期'

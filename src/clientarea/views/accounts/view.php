@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-6">
                 <div class="d-flex justify-content-between align-items-center m-5">
-                    <b>Status:</b>
+                    <b><?php echo $lang->I18N('Status'); ?>:</b>
                     <span>
                         <?php if ($data['account_status'] == '0') {
                             echo '<span class="badge bg-secondary">Inactive</span>';

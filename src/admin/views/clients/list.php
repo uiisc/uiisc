@@ -34,11 +34,11 @@
                         <td><?php echo $value['client_phone']; ?></td>
                         <td><?php echo $value['client_date']; ?></td>
                         <td><?php if ($value['client_status'] == '0'): ?>
-                            <span class="label label-warning">Inactive</span>
+                            <span class="label label-warning"><?php echo $lang->I18N('Inactive'); ?></span>
                         <?php elseif ($value['client_status'] == '1'): ?>
-                            <span class="label label-success">Active</span>
+                            <span class="label label-success"><?php echo $lang->I18N('Active'); ?></span>
                         <?php elseif ($value['client_status'] == '2'): ?>
-                            <span class="label label-danger">Suspended</span>
+                            <span class="label label-default"><?php echo $lang->I18N('Suspended'); ?></span>
                         <?php endif; ?>
                         </td>
                         <td>

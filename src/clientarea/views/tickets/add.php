@@ -33,11 +33,12 @@
                         <label class="form-label required">Ticket Department</label>
                         <select name="department" class="form-control" required>
                           <option value="" selected="selected" disabled="disabled">Select Department</option>
-                          <option value="hosting">Hosting Issue</option>
-                          <option value="domain">Domain Issue</option>
-                          <option value="ssl">SSL Issue</option>
-                          <option value="tech">Technical Issue</option>
-                          <option value="client">Customer Issue</option>
+                          <option value="order"><?php echo $lang->I18N('Order Issue'); ?></option>
+                          <option value="hosting"><?php echo $lang->I18N('Hosting Issue'); ?></option>
+                          <option value="domain"><?php echo $lang->I18N('Domain Issue'); ?></option>
+                          <option value="ssl"><?php echo $lang->I18N('SSL Issue'); ?></option>
+                          <option value="tech"><?php echo $lang->I18N('Technical Issue'); ?></option>
+                          <option value="client"><?php echo $lang->I18N('Customer Issue'); ?></option>
                         </select>
                     </div>
                 </div>

@@ -67,7 +67,7 @@ $FormData = array(
 echo '<pre>';
 print_r($FormData);
 
-$SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'FREESSL'), null, 1);
+$SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'GOGETSSL'), null, 1);
 
 require_once ROOT . '/modules/GoGetSSL/GoGetSSLApi.php';
 
@@ -77,7 +77,7 @@ $result = $apiClient->addSSLOrder($FormData);
 
 if (count($result) > 4) {
     $data = array(
-        'ssl_key' => $result['order_id'],
+        'ssl_third_id' => $result['order_id'],
         'ssl_client_id' => $ClientInfo['client_id'],
     );
     $res = $DB->insert('ssl', $data);

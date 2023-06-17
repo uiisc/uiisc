@@ -7,13 +7,13 @@ if (!defined('IN_CRONLITE')) {
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
             <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
-            <li><a href="hosting.php"><?php echo $lang->I18N('Hosting Provider'); ?></a></li>
+            <li><a href="hosting-provider.php"><?php echo $lang->I18N('Hosting Provider'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('add'); ?></li>
         </ol>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <a href="hosting.php" class="btn btn-primary btn-xs">
+                    <a href="hosting-provider.php" class="btn btn-primary btn-xs">
                         <i class="fa fa-list"></i> <?php echo $lang->I18N('Hosting Provider'); ?>
                     </a>
                 </div>
@@ -38,13 +38,13 @@ if (!defined('IN_CRONLITE')) {
                         </div>
                         <div class="col-md-12">
                             <div class="mb-10 px-10">
-                                <label class="form-label required">MOFH API Username</label>
+                                <label class="form-label required">API Username</label>
                                 <input type="text" name="api_username" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="mb-10 px-10">
-                                <label class="form-label required">MOFH API Password</label>
+                                <label class="form-label required">API Password</label>
                                 <input type="text" name="api_password" class="form-control" required>
                             </div>
                         </div>

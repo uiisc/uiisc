@@ -5,7 +5,7 @@ require __DIR__ . '/../../application.php';
 $PageInfo = ['title' => 'New CSR', 'rel' => ''];
 
 if (isset($_POST['submit'])) {
-    $SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'FREESSL'), null, 1);
+    $SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'GOGETSSL'), null, 1);
     $FormData = array(
         'csr_commonname' => strtolower(post('domain')),
         'csr_organization' => post('company'),
