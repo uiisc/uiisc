@@ -7,7 +7,7 @@ if (!defined('IN_CRONLITE')) {
 <div class="content-wrapper">
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li><a href="news.php"><?php echo $lang->I18N('News List'); ?></a></li>
             <li><a href="<?php echo setURL('admin/news', '', array('action' => 'view', 'id' => $id)); ?>"><?php echo $lang->I18N('details'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('edit'); ?></li>

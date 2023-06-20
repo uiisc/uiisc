@@ -11,6 +11,14 @@
                 <ul class="legal navbar-right list-inline text-center">
                     <li><a href="<?php echo $site_url; ?>" target="_blank"><?php echo $lang->I18N('home'); ?></a></li>
                     <li><a href="<?php echo $site_url; ?>/about.php" target="_blank"><?php echo $lang->I18N('about'); ?></a></li>
+                    <li>
+                        <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
+                        <script type="text/javascript">
+                            var sel = document.getElementById('theme-selector');
+                            sel.className = getThemeClasses(getTheme());
+                            sel.onclick = themeSelectorClicked;
+                        </script>
+                    </li>
                     <li class="dropup">
                         <div class="dropdown-toggle" id="changelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="fa fa-language"></span>

@@ -20,6 +20,7 @@
 
     <link href="<?php echo $site_url; ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_url; ?>/assets/theme.switcher/css/auto.css" id="theme" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="<?php echo $site_url; ?>/assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/admin.css" rel="stylesheet" />
     <script type="text/javascript">
@@ -28,6 +29,8 @@
         var ifastnet_aff = "<?php echo $ifastnet_aff; ?>";
     </script>
     <?php echo $PageInfo['rel']; ?>
+
+    <script src="<?php echo $site_url; ?>/assets/theme.switcher/theme.switcher.js" type="text/javascript"></script>
 </head>
 
 <body>

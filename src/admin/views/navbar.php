@@ -12,7 +12,7 @@
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="<?php echo checkIfActive('index,') ?>">
-                    <a href="./"><i class="fa fa-home" aria-hidden="true"></i> <?php echo $lang->I18N('home'); ?></a>
+                    <a href="./"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Dashboard'); ?></a>
                 </li>
                 <li class="<?php echo checkIfActive('clients') ?>">
                     <a href="clients.php"><i class="fa fa-users fa-fw"></i> <?php echo $lang->I18N('Clients List'); ?></a>
@@ -60,6 +60,14 @@
                         <li role="separator" class="divider"></li>
                         <li><a href="#" onclick="return logout();"><i class="fa fa-sign-out-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('logout'); ?></a></li>
                     </ul>
+                </li>
+                <li>
+                    <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
+                    <script type="text/javascript">
+                        var sel = document.getElementById('theme-selector');
+                        sel.className = getThemeClasses(getTheme());
+                        sel.onclick = themeSelectorClicked;
+                    </script>
                 </li>
             </ul>
         </div>

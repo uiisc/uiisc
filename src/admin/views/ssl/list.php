@@ -6,7 +6,7 @@ if (!defined('IN_CRONLITE')) {
 <div class="content-wrapper">
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('SSL Certificates'); ?></li>
         </ol>
         <div class="panel panel-default">
@@ -52,7 +52,7 @@ if ($row['ssl_status'] == 'processing') {
 }
 ?></td>
                             <td>
-                                <a href="<?php echo setRouter('ssl', '', array('action' => 'details', 'ssl_id' => $row['ssl_id'])); ?>" class="btn btn-primary btn-xs">
+                                <a href="<?php echo setRouter('ssl', '', array('action' => 'details', 'id' => $row['ssl_id'])); ?>" class="btn btn-primary btn-xs">
                                     <i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?>
                                 </a>
                             </td>

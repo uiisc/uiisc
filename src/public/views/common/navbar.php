@@ -43,6 +43,14 @@ if (!defined('IN_CRONLITE')) {
                     <li><a href="<?php echo setRouter('login');?>"><?php echo $lang->I18N('login'); ?></a></li>
                     <li><a href="<?php echo setRouter('register');?>"><?php echo $lang->I18N('register'); ?></a></li>
                     <li><a href="clientarea/index.php"><?php echo $lang->I18N('clientarea'); ?></a></li>
+                    <li>
+                        <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
+                        <script type="text/javascript">
+                            var sel = document.getElementById('theme-selector');
+                            sel.className = getThemeClasses(getTheme());
+                            sel.onclick = themeSelectorClicked;
+                        </script>
+                    </li>
                 </ul>
             </div>
         </div>

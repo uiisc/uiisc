@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('Hosting Accounts'); ?></li>
         </ol>
         <div class="panel panel-default">

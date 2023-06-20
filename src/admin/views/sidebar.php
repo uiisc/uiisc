@@ -19,7 +19,7 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
         <div class="sidebar-divider"></div>
         <a href="./" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-home" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('home'); ?>
+            <?php echo $lang->I18N('Dashboard'); ?>
         </a>
         <a href="clients.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-users" aria-hidden="true"></i></span>

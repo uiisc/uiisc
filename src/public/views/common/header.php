@@ -26,6 +26,7 @@ if (!defined('IN_CRONLITE')) {
     <link href="assets/image/favicon.ico?_=<?php echo $static_release; ?>" rel="icon" />
     <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_url; ?>/assets/theme.switcher/css/auto.css" id="theme" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>
     <script src="assets/html5shiv/html5shiv.min.js?_=<?php echo $static_release; ?>"></script>
@@ -36,6 +37,7 @@ if (!defined('IN_CRONLITE')) {
         var cur_lang = "<?php echo $lang->language_current; ?>";
         var ifastnet_aff = <?php echo $ifastnet_aff; ?>;
     </script>
+    <script src="<?php echo $site_url; ?>/assets/theme.switcher/theme.switcher.js" type="text/javascript"></script>
 </head>
 
 <body>

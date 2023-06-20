@@ -100,7 +100,7 @@ if (count($result) > 4) {
             'message' => email_build_body('New SSL',
                 'Administrator',
                 '<p>You have successfully created a new ssl and you need to verify your domain using dns record in order to issue an ssl certificate.</p>',
-                '<a href="' . setURL('admin/sslcert', '', array('action' => 'view', 'ssl_id' => $result['order_id'])) . '" target="_blank">View SSL</a>'
+                '<a href="' . setURL('admin/ssl', '', array('action' => 'view', 'ssl_id' => $result['order_id'])) . '" target="_blank">View SSL</a>'
             ),
             'subject' => 'New SSL #' . $FormData['order_id'],
         ));

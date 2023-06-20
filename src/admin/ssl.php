@@ -8,6 +8,8 @@ if (!in_array($action, array('list', 'add', 'edit', 'details'))) {
     $action = 'list';
 }
 
+$PageInfo['title'] = 'SSL ' . $lang->I18N($action);
+
 require __DIR__ . '/controllers/ssl/' . $action . '.php';
 require __DIR__ . '/views/header.php';
 require __DIR__ . '/views/navbar.php';

@@ -83,6 +83,7 @@ return array(
     'list'                => '列表',
     'close'               => '关闭',
     'open'                => '打开',
+    'Dashboard'           => '仪表盘',
     'managearea'          => '管理中心',
     'delete'              => '删除',
     'Deleted'             => '已删除',

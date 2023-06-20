@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li><a href="clients.php"><?php echo $lang->I18N('Client List'); ?></a></li>
             <li><a href="<?php echo setURL('admin/clients', '', array('action' => 'details', 'id' => $ClientInfo['client_id'])); ?>"><?php echo $lang->I18N('details'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('edit'); ?></li>

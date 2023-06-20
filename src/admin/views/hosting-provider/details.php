@@ -6,14 +6,14 @@ if (!defined('IN_CRONLITE')) {
 <div class="content-wrapper">
     <div class="container">
         <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('home'); ?></a></li>
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li><a href="hosting-provider.php"><?php echo $lang->I18N('Hosting Provider'); ?></a></li>
             <li class="active"><?php echo $lang->I18N('details'); ?></li>
         </ol>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <a href="<?php echo setURL('admin/hosting', '', array('action' => 'edit', 'id' => $data['api_id'])); ?>" class="btn btn-success btn-xs">
+                    <a href="<?php echo setURL('admin/hosting-provider', '', array('action' => 'edit', 'id' => $data['api_id'])); ?>" class="btn btn-success btn-xs">
                         <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
                     </a>
                     <a href="hosting-provider.php?action=add" class="btn btn-primary btn-xs">
@@ -117,7 +117,7 @@ if (!defined('IN_CRONLITE')) {
                 <div class="row">
                     <div class="col-md-12">
                         <div class="mb-20 px-10">
-                            <a href="<?php echo setURL('admin/hosting', '', array('action' => 'edit', 'id' => $data['api_id'])); ?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?></a>
+                            <a href="<?php echo setURL('admin/hosting-provider', '', array('action' => 'edit', 'id' => $data['api_id'])); ?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?></a>
                         </div>
                     </div>
                 </div>

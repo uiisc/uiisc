@@ -21,7 +21,7 @@ $avatar_path = $ClientInfo['client_email'] ? md5($ClientInfo['client_email']) : 
         <div class="sidebar-divider"></div>
         <a href="index.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-home" aria-hidden="true"></i></span>
-            <?php echo $lang->I18N('home'); ?>
+            <?php echo $lang->I18N('Dashboard'); ?>
         </a>
         <a href="accounts.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-server" aria-hidden="true"></i></span>

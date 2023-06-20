@@ -6,8 +6,8 @@
                     <li>
                         <span class="co">&copy;&nbsp;2013-<?php echo date("Y"); ?>&nbsp;<a href="<?php echo $site_url; ?>" target="_blank"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
                         <span class="co">&nbsp;Powered by <a href="https://crogram.org" target="_blank">Crogram</a>&nbsp;</span>
-                        <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="_blank">iFastNet</a>&nbsp;</span>
-                        <span>time: <?php echo get_execution_time();?>s</span>
+                        <span class="co hidden-xs">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="_blank">iFastNet</a>&nbsp;</span>
+                        <span class="hidden-xs">time: <?php echo get_execution_time();?>s</span>
                     </li>
                 </ul>
                 <ul class="legal navbar-right list-inline text-center">
@@ -18,9 +18,9 @@
                         </div>
                         <ul class="dropdown-menu language-change"><?php echo $lang->get_languages_tags(); ?></ul>
                     </li>
-                    <li><a href="<?php echo $site_url; ?>/about.php" target="_blank"><?php echo $lang->I18N('about'); ?></a></li>
-                    <li><a href="<?php echo $site_url; ?>/contact.php" target="_blank"><?php echo $lang->I18N('contact'); ?></a></li>
-                    <li><a href="<?php echo $site_url; ?>/news.php" target="_blank"><?php echo $lang->I18N('News'); ?></a></li>
+                    <li><a href="<?php echo $site_url; ?>" target="_blank"><?php echo $lang->I18N('home'); ?></a></li>
+                    <li class="hidden-xs"><a href="<?php echo $site_url; ?>/contact.php" target="_blank"><?php echo $lang->I18N('contact'); ?></a></li>
+                    <li class="hidden-xs"><a href="<?php echo $site_url; ?>/news.php" target="_blank"><?php echo $lang->I18N('News'); ?></a></li>
                 </ul>
             </div>
         </div>
