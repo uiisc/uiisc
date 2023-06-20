@@ -1,11 +1,30 @@
-
-<div class="container-fluid">
-    <div class="card">
-        <div class="card-header d-flex justify-content-between align-items-center">
-            <h3 class="m-0"><?php echo $lang->I18N('System Settings'); ?></h3>
-            <a href="index.php" class="btn btn-danger btn-sm"><i class="fa fa-backward"></i> <?php echo $lang->I18N('Return'); ?></a>
+<?php
+if (!defined('IN_CRONLITE')) {
+    exit('Access Denied');
+}
+?>
+<div class="content-wrapper">
+    <div class="container">
+        <ol class="breadcrumb page-breadcrumb">
+            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
+            <li class="active"><?php echo $lang->I18N('System Settings'); ?></li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <?php require __DIR__ . '/menu.php'; ?>
+            </div>
         </div>
-        <hr />
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="pull-right">
+                    <a href="./" class="btn btn-primary btn-xs">
+                        <i class="fa fa-home"></i> <?php echo $lang->I18N('Return'); ?>
+                    </a>
+                </div>
+                <span class="panel-title"><?php echo $PageInfo['title']; ?> ID: <?php echo $lang->I18N('System Settings'); ?></span>
+            </div>
+            <div class="panel-body">
+
         <form action="controllers/settings/edit.php" method="post">
             <div class="card-body">
                 <div class="row">

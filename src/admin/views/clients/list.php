@@ -48,6 +48,7 @@
                             <a href="<?php echo setURL('admin/clients', '', array('action' => 'details', 'id' => $value['client_id'])); ?>" class="btn btn-primary btn-xs">
                                 <i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?>
                             </a>
+                            <a href="clients.php?action=login&id=<?php echo $value['client_id'] ?>" target="_blank" class="btn btn-primary btn-xs"><?php echo $lang->I18N('login'); ?></a>
                         </td>
                     </tr>
 <?php endforeach;?>

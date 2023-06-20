@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/../../application.php';
 
-$client_id = get('client_id');
+$client_id = get('id');
 
 if (empty($client_id)) {
     redirect('admin/clients');
