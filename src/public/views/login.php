@@ -28,8 +28,8 @@ if (!defined('IN_CRONLITE')) {
                         <div class="form-group">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('Remember me'); ?></span>
-                                    <a href="//cpanel.<?php echo $site_domain; ?>/lostpassword.php"><?php echo $lang->I18N('password_lost'); ?></a>
+                                    <input type="checkbox" value="remember-me"><span><?php echo $lang->I18N('Remember Me'); ?></span>
+                                    <a href="//cpanel.<?php echo $site_domain; ?>/lostpassword.php"><?php echo $lang->I18N('Forgot Password ?'); ?></a>
                                 </label>
                             </div>
                         </div>

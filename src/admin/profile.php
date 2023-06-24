@@ -4,7 +4,7 @@ require_once __DIR__ . '/application.php';
 
 $action = get('action', 'view');
 
-if (!in_array($action, array('edit', 'view'))) {
+if (!in_array($action, array('edit', 'view', 'password'))) {
     $action = 'view';
 }
 

@@ -5,7 +5,7 @@
                 <ul class="navbar-left list-inline text-center text-muted credit">
                     <li>
                         <span class="co">&copy;&nbsp;2013-<?php echo date("Y"); ?>&nbsp;<a href="<?php echo $site_url; ?>" target="_blank"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
-                        <span class="co">&nbsp;Powered by <a href="https://crogram.org" target="_blank">Crogram</a>&nbsp;</span>
+                        <span class="co">&nbsp;Powered by <a href="https://uiisc.org" target="_blank">UIISC</a>&nbsp;</span>
                     </li>
                 </ul>
                 <ul class="legal navbar-right list-inline text-center">

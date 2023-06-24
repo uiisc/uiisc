@@ -66,7 +66,9 @@
                 </table>
             </div>
             <div class="panel-footer">
-                <a href="clients.php?action=login&client_id=<?php echo $ClientInfo['client_id'] ?>" target="_blank" class="btn btn-primary btn-sm">Login as <?php echo $ClientInfo['client_fname'] ?></a>
+                <a href="clients.php?action=login&client_id=<?php echo $ClientInfo['client_id'] ?>" target="_blank" class="btn btn-primary btn-sm">
+                    <i class="fa fa-sign-in-alt"></i> Login as <?php echo $ClientInfo['client_fname'] ?>
+                </a>
                 <?php if ($ClientInfo['client_status'] !== '1'): ?>
                 <a href="controllers/clients/activate.php?client_id=<?php echo $ClientInfo['client_id']; ?>" class="btn btn-success btn-sm">Mark as Active</a>
                 <?php else: ?>

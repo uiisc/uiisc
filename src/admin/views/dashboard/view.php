@@ -103,10 +103,10 @@
         <div class="panel panel-danger">
             <div class="list-group">
                 <div class="list-group-item">
-                    <span class="fa fa-paper-plane fa-fw"></span> <b>快捷操作：</b>
-                    <a href="settings.php" class="btn btn-danger">Settings</a>&nbsp;&nbsp;
-                    <a href="javascript:cleanRecord(1)" class="btn btn-sm btn-danger">删除1天前的记录</a>&nbsp;&nbsp;
-                    <a href="javascript:cleanRecord(30)" class="btn btn-sm btn-danger">删除30天前的发送记录</a>&nbsp;&nbsp;
+                    <span class="fa fa-paper-plane fa-fw"></span> <b><?php echo $lang->I18N('Quick Link'); ?></b>&nbsp;
+                    <a href="settings.php" class="btn btn-danger btn-xs">Settings</a>&nbsp;&nbsp;
+                    <a href="javascript:cleanRecord(1)" class="btn btn-xs btn-danger">删除1天前的记录</a>&nbsp;&nbsp;
+                    <a href="javascript:cleanRecord(30)" class="btn btn-xs btn-danger">删除30天前的发送记录</a>&nbsp;&nbsp;
                 </div>
             </div>
         </div>
@@ -150,7 +150,7 @@
                         <li class="list-group-item">当前版本：V<?php echo APP_VERSION; ?> (Build <?php echo APP_BUILD; ?>, DB <?php echo DB_VERSION; ?>）</li>
                         <li class="list-group-item">官网网站：<a href="https://uiisc.org/" target="_blank">https://uiisc.org</a></li>
                         <li class="list-group-item">Github：<a href="https://github.com/uiisc/uiisc/" target="_blank">https://github.com/uiisc/uiisc</a></li>
-                        <li class="list-group-item"><span class="fa fa-copyright fa-fw"></span> Powered by <a href="https://crogram.com/" target="_blank" rel="noopener noreferrer">CROGRAM</a></li>
+                        <li class="list-group-item"><span class="fa fa-copyright fa-fw"></span> Powered by <a href="https://uiisc.org/" target="_blank">UIISC</a></li>
                     </ul>
                     <ul class="list-group text-dark" id="checkupdate"></ul>
                 </div>

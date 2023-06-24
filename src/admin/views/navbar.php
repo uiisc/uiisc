@@ -54,6 +54,7 @@
                         </li>
                         <li role="separator" class="divider"></li>
                         <li><a href="profile.php"><i class="fa fa-user-alt fa-fw"></i> <?php echo $lang->I18N('Profile'); ?></a></li>
+                        <li><a href="profile.php?action=password"><i class="fa fa-user-shield fa-fw"></i> <?php echo $lang->I18N('Change Password'); ?></a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="<?php echo $site_url; ?>" target="_blank"><i class="fa fa-external-link-alt fa-fw"></i> <?php echo $lang->I18N('home'); ?></a></li>
                         <li><a href="<?php echo $site_url; ?>/clientarea/" target="_blank"><i class="fa fa-house-user fa-fw"></i> <?php echo $lang->I18N('Client Area'); ?></a></li>
