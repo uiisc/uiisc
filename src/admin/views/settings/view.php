@@ -21,7 +21,7 @@ if (!defined('IN_CRONLITE')) {
                         <i class="fa fa-home"></i> <?php echo $lang->I18N('Return'); ?>
                     </a>
                 </div>
-                <span class="panel-title"><?php echo $PageInfo['title']; ?> ID: <?php echo $lang->I18N('System Settings'); ?></span>
+                <span class="panel-title"><?php echo $lang->I18N('System Settings'); ?></span>
             </div>
             <div class="panel-body">
 

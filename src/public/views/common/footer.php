@@ -9,7 +9,7 @@ if (!defined('IN_CRONLITE')) {
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-center text-muted credit">
                 <li>
-                    <span class="co">&copy;&nbsp;2013 - <?php echo date("Y"); ?>&nbsp;<a href="<?php echo setRouter('index');?>"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
+                    <span class="co">&copy;&nbsp;<?php echo $SiteConfig['site_build_year']; ?>-<?php echo date("Y"); ?>&nbsp;<a href="<?php echo SITEURL;?>"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
                     <span class="co">&nbsp;Powered by <a href="https://uiisc.org" target="_blank">UIISC</a>&nbsp;</span>
                     <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="_blank">iFastNet</a>&nbsp;</span>
                     <span>time: <?php echo get_execution_time();?>s</span>

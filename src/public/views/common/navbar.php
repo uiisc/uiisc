@@ -14,35 +14,35 @@ if (!defined('IN_CRONLITE')) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo setRouter('index');?>"><?php echo $SiteConfig['site_brand']; ?></a>
+                <a class="navbar-brand" href="<?php echo SITEURL;?>"><?php echo $SiteConfig['site_brand']; ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo setRouter('index');?>"><?php echo $lang->I18N('home'); ?></a></li>
-                    <li><a href="<?php echo setRouter('solution');?>"><?php echo $lang->I18N('solution'); ?></a></li>
-                    <li><a href="<?php echo setRouter('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
+                    <li><a href="<?php echo SITEURL;?>"><?php echo $lang->I18N('home'); ?></a></li>
+                    <li><a href="<?php echo setURL('solution');?>"><?php echo $lang->I18N('solution'); ?></a></li>
+                    <li><a href="<?php echo setURL('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang->I18N('more'); ?>&nbsp;<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="about.php"><?php echo $lang->I18N('aboutus'); ?></a></li>
-                            <li><a href="contact.php"><?php echo $lang->I18N('contact'); ?></a></li>
-                            <li><a href="help.php"><?php echo $lang->I18N('help'); ?></a></li>
-                            <li><a href="support.php"><?php echo $lang->I18N('support'); ?></a></li>
-                            <li><a href="<?php echo setRouter('forum'); ?>"><?php echo $lang->I18N('forum'); ?></a></li>
+                            <li><a href="<?php echo setURL('about');?>"><?php echo $lang->I18N('aboutus'); ?></a></li>
+                            <li><a href="<?php echo setURL('contact');?>"><?php echo $lang->I18N('contact'); ?></a></li>
+                            <li><a href="<?php echo setURL('help');?>"><?php echo $lang->I18N('help'); ?></a></li>
+                            <li><a href="<?php echo setURL('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
+                            <li><a href="<?php echo setURL('forum'); ?>"><?php echo $lang->I18N('forum'); ?></a></li>
                             <li class="divider"></li>
-                            <li><a href="cancellation-refund.php"><?php echo $lang->I18N('cancellation_refund'); ?></a></li>
-                            <li><a href="payment-methods.php"><?php echo $lang->I18N('payment_methods'); ?></a></li>
+                            <li><a href="<?php echo setURL('cancellation-refund');?>"><?php echo $lang->I18N('cancellation_refund'); ?></a></li>
+                            <li><a href="<?php echo setURL('payment-methods');?>"><?php echo $lang->I18N('payment_methods'); ?></a></li>
                             <li class="divider"></li>
                             <li class="dropdown-header"><?php echo $lang->I18N('legal_information'); ?></li>
-                            <li><a href="legal.php?s=terms"><?php echo $lang->I18N('tos'); ?></a></li>
-                            <li><a href="legal.php?s=privacy"><?php echo $lang->I18N('privacy_policy'); ?></a></li>
+                            <li><a href="<?php echo setURL('legal', 'terms');?>"><?php echo $lang->I18N('tos'); ?></a></li>
+                            <li><a href="<?php echo setURL('legal', 'privacy');?>"><?php echo $lang->I18N('privacy_policy'); ?></a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo setRouter('login');?>"><?php echo $lang->I18N('login'); ?></a></li>
-                    <li><a href="<?php echo setRouter('register');?>"><?php echo $lang->I18N('register'); ?></a></li>
-                    <li><a href="clientarea/index.php"><?php echo $lang->I18N('clientarea'); ?></a></li>
+                    <li><a href="<?php echo setURL('login');?>"><?php echo $lang->I18N('login'); ?></a></li>
+                    <li><a href="<?php echo setURL('register');?>"><?php echo $lang->I18N('register'); ?></a></li>
+                    <li><a href="<?php echo setURL('clientarea/index');?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
                     <li>
                         <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
                         <script type="text/javascript">

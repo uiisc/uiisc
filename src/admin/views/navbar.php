@@ -45,8 +45,8 @@
                         <i class="caret"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="disabled">
-                            <a href="#" class="text-center">
+                        <li>
+                            <a href="profile.php" class="text-center">
                                 <p><img class="img-rounded" src="<?php echo $AdminInfo['avatar']; ?>" height="80px" width="80px"></p>
                                 <!-- <i class="fa fa-user-circle fa-5x"></i> -->
                                 <div><?php echo $AdminInfo['admin_fname'] . " " . $AdminInfo['admin_lname']; ?></div>

@@ -117,6 +117,7 @@ return array(
     'Settings'            => '设置',
     'Return'              => '返回',
     'Save'                => '保存',
+    'Save Changes'        => '保存更改',
     'Closed'              => '已关闭',
     'Opened'              => '已打开',
     'Subject'             => '主题',

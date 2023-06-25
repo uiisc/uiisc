@@ -61,6 +61,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_config` (
   `site_path` varchar(70) NOT NULL,
   `site_phone` varchar(30) NOT NULL,
   `site_email` varchar(50) NOT NULL,
+  `site_build_year` int(4) NOT NULL,
   `page_title` varchar(80) NOT NULL,
   `page_description` varchar(200) NOT NULL,
   `page_keywords` varchar(100) NOT NULL,
