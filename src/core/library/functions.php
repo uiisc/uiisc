@@ -448,7 +448,7 @@ function email_build_body($title, $nickname, $content, $description = '')
 
 function checkRefererHost()
 {
-    if (!$_SERVER['HTTP_REFERER']) return false;
+    if (!isset($_SERVER['HTTP_REFERER']) || !$_SERVER['HTTP_REFERER']) return false;
     $url_arr = parse_url($_SERVER['HTTP_REFERER']);
     $http_host = $_SERVER['HTTP_HOST'];
     if (strpos($http_host, ':')) $http_host = substr($http_host, 0, strpos($http_host, ':'));
