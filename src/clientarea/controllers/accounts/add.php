@@ -110,16 +110,16 @@ if (isset($_POST['submit'])) {
         setMessage('api_key cannot be <b>empty</b> !', 'danger');
         redirect('clientarea/accounts');
     }
-    $ExtensionInfo = $DB->findAll('account_domaintld', '*', array(), 'extension_id');
+    $HostnameInfo = $DB->findAll('account_hostname', '*', array(), 'host_id');
     $AccountApi = $DB->find('account_api', '*', array('api_key' => get('api_key')), null, 1);
     $AccountApiConfig = array(
         'apiUsername' => $AccountApi['api_username'],
         'apiPassword' => $AccountApi['api_password'],
         'plan' => $AccountApi['api_package'],
     );
-    if (empty($ExtensionInfo)) {
-        $ExtensionInfo = array(
-            'extension_value' => '.html-5.me',
+    if (empty($HostnameInfo)) {
+        $HostnameInfo = array(
+            'host_name' => '.html-5.me',
         );
     }
 }

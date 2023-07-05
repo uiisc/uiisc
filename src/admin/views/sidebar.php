@@ -49,7 +49,7 @@ $avatar_path = $AdminInfo['admin_email'] ? md5($AdminInfo['admin_email']) : 'def
             <span class="sidebar-icon bg-transparent"><i class="fa fa-server" aria-hidden="true"></i></span>
             <?php echo $lang->I18N('Hosting Provider'); ?>
         </a>
-        <a href="domain.php" class="sidebar-link sidebar-link-with-icon">
+        <a href="hosting-provider.php" class="sidebar-link sidebar-link-with-icon">
             <span class="sidebar-icon bg-transparent"><i class="fa fa-globe" aria-hidden="true"></i></span>
             <?php echo $lang->I18N('Domain Provider'); ?>
         </a>

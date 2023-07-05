@@ -177,5 +177,7 @@ return array(
     'Page Author'         => '网页著作人',
     'Admin Area'          => '管理中心',
     'Hosting Provider'    => '托管提供商',
-    'Domain Provider'     => '域名提供商'
+    'Domain Provider'     => '域名提供商',
+    'Hosting Hostname'    => '托管主机名',
+    'Hostname'            => '主机名',
 );

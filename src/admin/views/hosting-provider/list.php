@@ -22,10 +22,10 @@ if (!defined('IN_CRONLITE')) {
                 <table class="table table-stripped table-bordered table-hover">
                     <thead>
                         <th>Key</th>
-                        <th>Type</th>
+                        <th><?php echo $lang->I18N('Type'); ?></th>
                         <th>Panel URL</th>
-                        <th>Package</th>
-                        <th width="160">Action</th>
+                        <th><?php echo $lang->I18N('Package'); ?></th>
+                        <th><?php echo $lang->I18N('Action'); ?></th>
                     </thead>
                     <tbody>
                     <?php if ($count > 0): ?>
@@ -38,6 +38,7 @@ if (!defined('IN_CRONLITE')) {
                             <td>
                                 <a href="hosting-provider.php?action=edit&id=<?php echo $value['api_id']; ?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?></a>
                                 <a href="hosting-provider.php?action=details&id=<?php echo $value['api_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?></a>
+                                <a href="hosting-hostname.php?id=<?php echo $value['api_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('Hostname'); ?></a>
                             </td>
                         </tr>
                     <?php endforeach;?>

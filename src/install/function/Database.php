@@ -99,10 +99,11 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_clients` (
   PRIMARY KEY (`client_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 
-$sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_domaintld` (
-  `extension_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
-  `extension_value` VARCHAR(70) NOT NULL,
-  PRIMARY KEY (`extension_id`)
+$sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account_hostname` (
+  `host_id` INT(11) unsigned NOT NULL AUTO_INCREMENT,
+  `api_id` INT(11) NOT NULL,
+  `host_name` VARCHAR(70) NOT NULL,
+  PRIMARY KEY (`host_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;');
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_smtp` (
@@ -193,7 +194,7 @@ $sql = mysqli_query($connect, "INSERT INTO `uiisc_ssl_api`(`api_key`, `api_usern
 
 $sql = mysqli_query($connect, "INSERT INTO `uiisc_builder_api`(`builder_id`, `builder_username`, `builder_password`) VALUES ('SITEPRO','apikey0','API Password')");
 
-$sql = mysqli_query($connect, "INSERT INTO `uiisc_account_domaintld`(`extension_value`) VALUES ('.example.com')");
+$sql = mysqli_query($connect, "INSERT INTO `uiisc_account_hostname`(`host_name`) VALUES ('.example.com')");
 
 $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_news`(
   `news_id` INT(11) NOT NULL AUTO_INCREMENT,

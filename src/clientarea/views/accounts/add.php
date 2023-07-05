@@ -61,9 +61,9 @@
                     <div class="input-group">
                         <input type="text" id="sudomain" class="form-control" placeholder="Search domain name here...">
                         <div class="input-group-append">
-                            <select class="form-control" style="border-radius: 0" id="extension" name="extension">
-                            <?php foreach ($ExtensionInfo as $value): ?>
-                                <option><?php echo $value['extension_value']; ?></option>
+                            <select class="form-control" style="border-radius: 0" id="host_name" name="host_name">
+                            <?php foreach ($HostnameInfo as $value): ?>
+                                <option><?php echo $value['host_name']; ?></option>
                             <?php endforeach; ?>
                             </select>
                         </div>
@@ -140,8 +140,8 @@
     function check_sub_domain() {
         $('#hidden-area').html('');
         var domain = $('#sudomain').val();
-        var extensions = $('#extension').val();
-        var validomain = domain + extensions;
+        var host_names = $('#host_name').val();
+        var validomain = domain + host_names;
         $.post('controllers/accounts/validate_domain.php', {domain : validomain, submit: ""}, function(data){
             if (validomain != data) {
                 $('#hidden-area').html('<div class="alert alert-danger" role="alert"><button class="close" data-dismiss="alert" type="button" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+data+'</div>');
@@ -166,8 +166,8 @@
     function create_account() {
         $('#hidden-area').html('');
         var domain = $('#sudomain').val();
-        var extensions = $('#extension').val();
-        var validomain = domain + extensions;
+        var host_names = $('#host_name').val();
+        var validomain = domain + host_names;
         $.post('controllers/accounts/add.php', {
             domain: validomain,
             api_key: 'ttkl.cf',
