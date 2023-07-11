@@ -27,6 +27,7 @@
             </div>
             <div class="panel-body">
                 <form id="form-client-edit" class="row" onsubmit="return saveSubmit();" method="post">
+                    <input type="hidden" name="client_id" value="<?php echo $ClientInfo['client_id']; ?>" />
                     <div class="col-md-6 mb-10">
                         <label class="form-label"><?php echo $lang->I18N('Status'); ?></label>
                         <select class="form-control" name="client_status" default="<?php echo $ClientInfo['client_status']; ?>">
