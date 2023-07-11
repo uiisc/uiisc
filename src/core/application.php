@@ -20,7 +20,7 @@ session_start();
 
 define('IN_CRONLITE', true);
 define('APP_MODE', 'prod'); // prod, demo
-define('APP_VERSION', '2.0.3');
+define('APP_VERSION', '2.0.4');
 define('APP_BUILD', '1000');
 define('DB_VERSION', '2021');
 define('APP_BRAND', 'UIISC');
