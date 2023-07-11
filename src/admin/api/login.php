@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/application.php';
+require_once __DIR__ . '/../../core/application.php';
 
 @header('Content-Type: application/json; charset=UTF-8');
 

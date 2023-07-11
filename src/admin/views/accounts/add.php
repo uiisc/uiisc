@@ -3,25 +3,17 @@
         <ol class="breadcrumb page-breadcrumb">
             <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
             <li><a href="accounts.php"><?php echo $lang->I18N('Account List'); ?></a></li>
-            <li><a href="accounts.php?action=details&account_id=<?php echo $account_id; ?>"><?php echo $lang->I18N('Account Details'); ?></a></li>
-            <li class="active"><?php echo $lang->I18N('Account Settings'); ?></li>
+            <li class="active"><?php echo $lang->I18N('add'); ?></li>
         </ol>
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <a href="<?php echo setURL('admin/accounts', '', array('action' => 'details', 'account_id' => $account_id)); ?>" class="btn btn-success btn-xs">
-                        <i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?>
-                    </a>
-                    <a href="<?php echo setURL('admin/accounts', '', array('action' => 'add')); ?>" class="btn btn-primary btn-xs">
-                        <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
-                    </a>
                     <a href="<?php echo setURL('admin/accounts', '', array('action' => 'list')); ?>" class="btn btn-info btn-xs">
                         <i class="fa fa-list"></i> <?php echo $lang->I18N('list'); ?>
                     </a>
                 </div>
                 <div class="panel-title">
                     <?php echo $PageInfo['title']; ?>
-                    <span class="label label-default"> ID <?php echo $account_id; ?></span>
                 </div>
             </div>
             <div class="panel-body">

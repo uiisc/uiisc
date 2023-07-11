@@ -9,7 +9,7 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_account` (
   `account_domain` VARCHAR(70) NOT NULL,
   `account_sql` VARCHAR(8) NOT NULL,
   `account_status` INT(1) NOT NULL COMMENT "0未激活1已激活2禁用3删除",
-  `account_date` VARCHAR(20) NOT NULL,
+  `account_addtime` DATETIME NOT NULL,
   `account_signup_ip` varchar(20) DEFAULT NULL COMMENT "注册IP",
   PRIMARY KEY (`account_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
@@ -91,11 +91,12 @@ $sql = mysqli_query($connect, 'CREATE TABLE IF NOT EXISTS `uiisc_clients` (
   `client_pcode` VARCHAR(20) NOT NULL,
   `client_key` VARCHAR(8) NOT NULL,
   `client_state` VARCHAR(30) NOT NULL,
-  `client_date` VARCHAR(30) NOT NULL,
   `client_status` INT(1) NOT NULL,
   `client_company` VARCHAR(50) NOT NULL,
   `client_password` VARCHAR(64) NOT NULL,
   `client_signup_ip` varchar(20) DEFAULT NULL COMMENT "注册IP",
+  `client_addtime` DATETIME NOT NULL,
+  `client_updatetime` DATETIME DEFAULT NULL,
   PRIMARY KEY (`client_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8mb4;');
 

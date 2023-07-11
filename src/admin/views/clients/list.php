@@ -32,7 +32,7 @@
                         <td><?php echo $value['client_fname'] . " " . $value['client_lname']; ?></td>
                         <td><?php echo $value['client_email']; ?></td>
                         <td><?php echo $value['client_phone']; ?></td>
-                        <td><?php echo $value['client_date']; ?></td>
+                        <td><?php echo $value['client_addtime']; ?></td>
                         <td><?php if ($value['client_status'] == '0'): ?>
                             <span class="label label-warning"><?php echo $lang->I18N('Inactive'); ?></span>
                         <?php elseif ($value['client_status'] == '1'): ?>
@@ -45,11 +45,11 @@
                             <a href="<?php echo setURL('admin/clients', '', array('action' => 'edit', 'id' => $value['client_id'])); ?>" class="btn btn-success btn-xs">
                                 <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
                             </a>
-                            <a href="clients.php?action=login&id=<?php echo $value['client_id'] ?>" target="_blank" class="btn btn-info btn-xs">
-                                <i class="fa fa-sign-in-alt"></i> <?php echo $lang->I18N('login'); ?>
-                            </a>
                             <a href="<?php echo setURL('admin/clients', '', array('action' => 'details', 'id' => $value['client_id'])); ?>" class="btn btn-primary btn-xs">
                                 <i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?>
+                            </a>
+                            <a href="clients.php?action=login&id=<?php echo $value['client_id'] ?>" target="_blank" class="btn btn-info btn-xs">
+                                <i class="fa fa-sign-in-alt"></i> <?php echo $lang->I18N('login'); ?>
                             </a>
                         </td>
                     </tr>

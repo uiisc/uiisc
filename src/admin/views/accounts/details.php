@@ -78,7 +78,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="d-flex justify-content-between align-items-center">
                             <b>Creation Date:</b>
-                            <span><?php echo $AccountInfo['account_date']; ?></span>
+                            <span><?php echo $AccountInfo['account_addtime']; ?></span>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-6">

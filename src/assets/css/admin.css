@@ -2,12 +2,6 @@ body {
     padding-top: 51px;
     padding-bottom: 60px;
 }
-.badge,
-.badge-pill,
-.btn-rounded {
-    border-radius: 4px !important;
-    border: none;
-}
 
 #hidden-area {
     position: fixed;

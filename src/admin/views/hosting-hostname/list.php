@@ -51,7 +51,7 @@ if (!defined('IN_CRONLITE')) {
                 </table>
             </div>
             <div class="panel-footer">
-                <p class="pb-10"><?php echo $count; ?> Records Found</p>
+                <div><?php echo $count; ?> Records Found</div>
             </div>
         </div>
     </div>

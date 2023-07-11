@@ -237,7 +237,7 @@ function post($field = '', $default = '')
 /**
  * API Response
  */
-function send_response($code = 200, $data = NULL, $msg = 'Error')
+function send_response($code = 200, $data = NULL, $msg = '')
 {
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS");

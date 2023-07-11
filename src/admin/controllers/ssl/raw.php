@@ -25,15 +25,15 @@ if ($SSLApi['api_token'] && strtotime($SSLApi['api_token_expiretime']) - 180 >= 
 $SSLInfo = $apiClient->getOrderStatus($SSLApi['ssl_key']);
 
 if ($SSLInfo['status'] == 'processing') {
-    $Status = '<span class="badge bg-primary">Processing</span>';
+    $Status = '<span class="label label-primary">Processing</span>';
 } elseif ($SSLInfo['status'] == 'active') {
-    $Status = '<span class="badge bg-success">Active</span>';
+    $Status = '<span class="label label-success">Active</span>';
 } elseif ($SSLInfo['status'] == 'incomplete') {
-    $Status = '<span class="badge bg-danger">Incomplete</span>';
+    $Status = '<span class="label label-info">Incomplete</span>';
 } elseif ($SSLInfo['status'] == 'cancelled') {
-    $Status = '<span class="badge bg-">Cancelled</span>';
+    $Status = '<span class="label label-warning">Cancelled</span>';
 } elseif ($SSLInfo['status'] == 'expired') {
-    $Status = '<span class="badge bg-danger">Expired</span>';
+    $Status = '<span class="label label-danger">Expired</span>';
 } else {
     $Status = '';
 }

@@ -69,7 +69,7 @@
             <div class="col-md-6">
                 <div class="d-flex justify-content-between align-items-center m-5">
                     <b>Creation Date:</b>
-                    <span><?php echo $data['account_date']; ?></span>
+                    <span><?php echo $data['account_addtime']; ?></span>
                 </div>
             </div>
             <div class="col-md-6">

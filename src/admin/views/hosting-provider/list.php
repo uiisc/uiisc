@@ -21,6 +21,7 @@ if (!defined('IN_CRONLITE')) {
             <div class="table-responsive">
                 <table class="table table-stripped table-bordered table-hover">
                     <thead>
+                        <th>ID</th>
                         <th>Key</th>
                         <th><?php echo $lang->I18N('Type'); ?></th>
                         <th>Panel URL</th>
@@ -31,6 +32,7 @@ if (!defined('IN_CRONLITE')) {
                     <?php if ($count > 0): ?>
                     <?php foreach ($rows as $value): ?>
                         <tr>
+                            <td><?php echo $value['api_id']; ?></td>
                             <td><?php echo $value['api_key']; ?></td>
                             <td><?php echo $value['api_type']; ?></td>
                             <td><?php echo $value['api_cpanel_url']; ?></td>
@@ -38,7 +40,7 @@ if (!defined('IN_CRONLITE')) {
                             <td>
                                 <a href="hosting-provider.php?action=edit&id=<?php echo $value['api_id']; ?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?></a>
                                 <a href="hosting-provider.php?action=details&id=<?php echo $value['api_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?></a>
-                                <a href="hosting-hostname.php?id=<?php echo $value['api_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('Hostname'); ?></a>
+                                <a href="hosting-hostname.php?id=<?php echo $value['api_id']; ?>" class="btn btn-info btn-xs"><i class="fa fa-ethernet"></i> <?php echo $lang->I18N('Hostname'); ?></a>
                             </td>
                         </tr>
                     <?php endforeach;?>

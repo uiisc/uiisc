@@ -31,7 +31,7 @@ if (!defined('IN_CRONLITE')) {
                         <td># <?php echo $value['account_id']; ?></td>
                         <td><?php echo $value['account_username']; ?></td>
                         <td><?php echo $value['account_domain']; ?></td>
-                        <td><?php echo $value['account_date']; ?></td>
+                        <td><?php echo $value['account_addtime']; ?></td>
                         <td><?php
 if ($value['account_status'] == '0') {
     $btn = ['danger', 'lock'];

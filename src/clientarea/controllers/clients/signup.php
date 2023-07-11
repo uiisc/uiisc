@@ -44,7 +44,7 @@ if (isset($_POST['signup'])) {
         // 'client_phone' => 'null',
         // 'client_state' => 'null',
         'client_password' => hash('sha256', post('password')),
-        'client_date' => date('Y-m-d H:i:s'),
+        'client_addtime' => date('Y-m-d H:i:s'),
         'client_key' => substr(str_shuffle('qwertyuioplkjhgfdsazxcvbnm012345789QWERTYUIOPLKJHGFDSAZXCVBNM'), 0, 8),
         'client_status' => 0,
     );

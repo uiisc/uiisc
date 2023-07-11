@@ -13,7 +13,9 @@ if (!defined('IN_CRONLITE')) {
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="pull-right">
-                    <a href="hosting-hostname.php?id=<?php echo $data['api_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('Hostname'); ?></a>
+                    <a href="hosting-hostname.php?id=<?php echo $data['api_id']; ?>" class="btn btn-info btn-xs">
+                        <i class="fa fa-ethernet"></i> <?php echo $lang->I18N('Hostname'); ?>
+                    </a>
                     <a href="<?php echo setURL('admin/hosting-provider', '', array('action' => 'edit', 'id' => $data['api_id'])); ?>" class="btn btn-success btn-xs">
                         <i class="fa fa-edit"></i> <?php echo $lang->I18N('edit'); ?>
                     </a>

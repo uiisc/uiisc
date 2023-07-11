@@ -41,7 +41,7 @@
                         </td>
                         <td><?php echo $row['account_username']; ?></td>
                         <td><?php echo $row['account_domain']; ?></td>
-                        <td><?php echo $row['account_date']; ?></td>
+                        <td><?php echo $row['account_addtime']; ?></td>
                         <td><?php if ($row['account_status'] == '0'): ?>
                             <span class="label label-info"><?php echo $lang->I18N('Inactive'); ?></span>
                         <?php elseif ($row['account_status'] == '1'): ?>

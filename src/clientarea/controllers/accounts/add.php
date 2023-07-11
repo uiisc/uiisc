@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
                     'account_api_key' => post('api_key'),
                     'account_domain' => $Result['account_domain'],
                     'account_status' => '1',
-                    'account_date' => $Result['date'],
+                    'account_addtime' => $Result['date'],
                     'account_client_id' => $ClientInfo['client_id'],
                     'account_sql' => 'NULL',
                 ));
