@@ -47,7 +47,7 @@
                     <?php endforeach;?>
                     <?php else: ?>
                         <tr>
-                            <td colspan="5" class="text-center">Nothing found</td>
+                            <td colspan="7" class="text-center">Nothing found</td>
                         </tr>
                     <?php endif;?>
 

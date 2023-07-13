@@ -4,15 +4,19 @@ if (!defined('IN_CRONLITE')) {
     exit();
 }
 
-require __DIR__ . '/header.php';
+require APP_ROOT . '/views/header.php';
 
 ?>
 
-<div class="container-fluid" id="login">
+<div class="container" id="login">
     <div class="row">
-        <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3">
-            <div class="card mx-30" style="opacity: 80%">
-                <div class="text-center">
+        <div class="col-xs-12 col-sm-10 col-md-8 center-block" style="float: none;">
+            <h1 class="page-header">UIISC</h1>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <span class="panel-title"><?php echo $PageInfo['title']; ?></span>
+                </div>
+                <div class="panel-body text-center">
                     <i class="fa fa-info-circle fa-5x icon-text"></i>
                     <h3 class="my-10">Congratulations</h3>
                     <p class="my-5">You have successfully installed UIISC.</p>
@@ -25,8 +29,4 @@ require __DIR__ . '/header.php';
     </div>
 </div>
 
-<?php
-
-require __DIR__ . '/footer.php';
-
-?>
+<?php require APP_ROOT . '/views/footer.php'; ?>

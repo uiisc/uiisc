@@ -45,7 +45,7 @@ if (count($DomainList) > 0) {
     $result = $DB->delete('account_domain', array('domain_account_id' => $account_id));
     // 同步到本地
     // $result = $DB->insert('account_domain', $DomainList);
-    $sql = "INSERT INTO `hosting_account_domain` (domain_name,domain_account_id) VALUES " . implode(',', $DomainList);
+    $sql = "INSERT INTO `pre_account_domain` (domain_name,domain_account_id) VALUES " . implode(',', $DomainList);
     $result = $DB->query($sql);
 }
 redirect('admin/accounts', '', array('action' => 'view', 'account_id' => $account_id));

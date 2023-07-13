@@ -11,6 +11,7 @@ define('APP_ROOT', dirname(__FILE__) . '/');
 define('ROOT', dirname(APP_ROOT));
 define('CONFIG_FILE', ROOT . '/data/config.php');
 define('LOCK_FILE', ROOT . '/data/install.lock');
+define('DB_FILE', APP_ROOT . '/data/install.sql');
 
 $PageInfo = array('title' => 'UIISC', 'rel' => '');
 
@@ -19,7 +20,7 @@ session_start();
 
 if (file_exists(LOCK_FILE)) {
     $PageInfo['title'] = 'Done';
-    include __DIR__ . '/views/done.php';
+    include APP_ROOT . '/views/install/done.php';
     exit();
 }
 

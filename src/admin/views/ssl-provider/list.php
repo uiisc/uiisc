@@ -51,7 +51,7 @@ if (!defined('IN_CRONLITE')) {
 <?php endforeach;?>
 <?php else: ?>
                         <tr>
-                            <td colspan="6" class="text-center">Nothing found</td>
+                            <td colspan="7" class="text-center">Nothing found</td>
                         </tr>
 <?php endif;?>
                     </tbody>

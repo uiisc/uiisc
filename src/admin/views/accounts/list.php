@@ -63,7 +63,7 @@
     <?php endforeach;?>
 <?php else: ?>
                     <tr>
-                        <td colspan="6" class="text-center">Nothing found</td>
+                        <td colspan="8" class="text-center">Nothing found</td>
                     </tr>
 <?php endif;?>
                     </tbody>
