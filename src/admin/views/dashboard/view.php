@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="myssl.php">
+                    <a href="ssl.php">
                         <div class="panel-footer">
                             <span class="pull-left"><?php echo $lang->I18N('View details'); ?></span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

@@ -51,7 +51,7 @@ if ($AccountInfo) {
         'account_api_key' => $api_key,
         'account_domain' => '***.' . $AccountApi['api_server_domain'],
         'account_status' => '2',
-        'account_date' => $callback_log['callback_date'],
+        'account_addtime' => $callback_log['callback_date'],
         'account_client_id' => 0,
         'account_sql' => 'sql***'
     );

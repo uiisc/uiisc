@@ -47,7 +47,7 @@ if ($AccountInfo) {
         'account_api_key' => $api_key,
         'account_domain' => '***.' . $AccountApi['api_server_domain'],
         'account_status' => '1',
-        'account_date' => $callback_log['callback_date'],
+        'account_addtime' => $callback_log['callback_date'],
         'account_client_id' => 0,
         'account_sql' => 'sql***'
     );
@@ -63,7 +63,7 @@ $DB->insert('account_callback', $callback_log);
 
 $EmailDescription = '
 <p>Account domain    : ' . $AccountInfo['account_domain'] . '<br />
-Account date   : ' . $AccountInfo['account_date'] . '<br />
+Account date   : ' . $AccountInfo['account_addtime'] . '<br />
 Server IP      : ' . $AccountApi['api_server_ip'] . '<br />
 Hosting package: ' . $AccountApi['api_package'] . '<br /></p>
 <p>Control Panel username : ' . $AccountInfo['account_username'] . '<br />
