@@ -23,13 +23,16 @@ fieldset[disabled] .form-control {
 .panel-footer,
 .table,
 .list-group-item {
-    background-color: #2b2b2b !important;
+    background-color: #2b2b2b;
 }
 
 .table-hover > tbody > tr:hover {
     background-color: #585858 !important;
 }
 
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover,
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -55,7 +58,9 @@ span,
 .breadcrumb > .active,
 .dropdown-menu > li > a,
 .panel-title,
-.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav > li > a,
+a.list-group-item,
+button.list-group-item,
 .panel-footer {
     color: #fff;
 }

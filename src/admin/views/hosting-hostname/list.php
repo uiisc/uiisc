@@ -5,54 +5,52 @@ if (!defined('IN_CRONLITE')) {
 }
 ?>
 <div class="content-wrapper">
-    <div class="container">
-        <input type="hidden" value="<?php echo $api_id; ?>" name="api_id" />
-        <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
-            <li><a href="hosting-provider.php"><?php echo $lang->I18N('Hosting Provider'); ?></a></li>
-            <li><a href="<?php echo setURL('admin/hosting-provider', '', array('action' => 'details', 'id' => $api_id)); ?>"><?php echo $lang->I18N('details'); ?></a></li>
-            <li class="active"><?php echo $lang->I18N('Hostname'); ?></li>
-        </ol>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="pull-right">
-                    <a class="btn btn-primary btn-xs" onclick="add_hostname();">
-                        <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
-                    </a>
-                </div>
-                <span class="panel-title"><?php echo $PageInfo['title']; ?></span>
+    <input type="hidden" value="<?php echo $api_id; ?>" name="api_id" />
+    <ol class="breadcrumb page-breadcrumb">
+        <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
+        <li><a href="hosting-provider.php"><?php echo $lang->I18N('Hosting Provider'); ?></a></li>
+        <li><a href="<?php echo setURL('admin/hosting-provider', '', array('action' => 'details', 'id' => $api_id)); ?>"><?php echo $lang->I18N('details'); ?></a></li>
+        <li class="active"><?php echo $lang->I18N('Hostname'); ?></li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <a class="btn btn-primary btn-xs" onclick="add_hostname();">
+                    <i class="fa fa-plus"></i> <?php echo $lang->I18N('add'); ?>
+                </a>
             </div>
-            <div class="table-responsive">
-                <table class="table table-stripped table-bordered table-hover">
-                    <thead>
-                        <th>ID</th>
-                        <th><?php echo $lang->I18N('Hosting Provider'); ?></th>
-                        <th><?php echo $lang->I18N('Hostname'); ?></th>
-                        <th><?php echo $lang->I18N('Action'); ?></th>
-                    </thead>
-                    <tbody>
-                    <?php if ($count > 0): ?>
-                    <?php foreach ($rows as $value): ?>
-                        <tr>
-                            <td><?php echo $value['host_id']; ?></td>
-                            <td><?php echo $value['api_id']; ?></td>
-                            <td><?php echo $value['host_name']; ?></td>
-                            <td>
-                                <button class="btn btn-danger btn-xs" onclick="delete_hostname('<?php echo $value['host_id']; ?>');"><i class="fa fa-trash"></i></button>
-                            </td>
-                        </tr>
-                    <?php endforeach;?>
-                    <?php else: ?>
-                        <tr>
-                            <td colspan="4" class="text-center">No Data Found</td>
-                        </tr>
-                    <?php endif;?>
-                    </tbody>
-                </table>
-            </div>
-            <div class="panel-footer">
-                <div><?php echo $count; ?> Records Found</div>
-            </div>
+            <span class="panel-title"><?php echo $PageInfo['title']; ?></span>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-stripped table-bordered table-hover">
+                <thead>
+                    <th>ID</th>
+                    <th><?php echo $lang->I18N('Hosting Provider'); ?></th>
+                    <th><?php echo $lang->I18N('Hostname'); ?></th>
+                    <th><?php echo $lang->I18N('Action'); ?></th>
+                </thead>
+                <tbody>
+                <?php if ($count > 0): ?>
+                <?php foreach ($rows as $value): ?>
+                    <tr>
+                        <td><?php echo $value['host_id']; ?></td>
+                        <td><?php echo $value['api_id']; ?></td>
+                        <td><?php echo $value['host_name']; ?></td>
+                        <td>
+                            <button class="btn btn-danger btn-xs" onclick="delete_hostname('<?php echo $value['host_id']; ?>');"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
+                <?php endforeach;?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="4" class="text-center">No Data Found</td>
+                    </tr>
+                <?php endif;?>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <div><?php echo $count; ?> Records Found</div>
         </div>
     </div>
 </div>

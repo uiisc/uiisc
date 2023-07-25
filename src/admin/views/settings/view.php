@@ -4,26 +4,25 @@ if (!defined('IN_CRONLITE')) {
 }
 ?>
 <div class="content-wrapper">
-    <div class="container">
-        <ol class="breadcrumb page-breadcrumb">
-            <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
-            <li class="active"><?php echo $lang->I18N('System Settings'); ?></li>
-        </ol>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <?php require __DIR__ . '/menu.php'; ?>
-            </div>
+    <ol class="breadcrumb page-breadcrumb">
+        <li><a href="index.php"><?php echo $lang->I18N('Dashboard'); ?></a></li>
+        <li class="active"><?php echo $lang->I18N('System Settings'); ?></li>
+    </ol>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <?php require __DIR__ . '/menu.php'; ?>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="pull-right">
-                    <a href="./" class="btn btn-primary btn-xs">
-                        <i class="fa fa-home"></i> <?php echo $lang->I18N('Return'); ?>
-                    </a>
-                </div>
-                <span class="panel-title"><?php echo $lang->I18N('System Settings'); ?></span>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="pull-right">
+                <a href="./" class="btn btn-primary btn-xs">
+                    <i class="fa fa-home"></i> <?php echo $lang->I18N('Return'); ?>
+                </a>
             </div>
-            <div class="panel-body">
+            <span class="panel-title"><?php echo $lang->I18N('System Settings'); ?></span>
+        </div>
+        <div class="panel-body">
 
         <form action="controllers/settings/edit.php" method="post">
             <div class="card-body">
@@ -127,5 +126,4 @@ foreach ($Statuses as $Status) {
             </div>
         </form>
     </div>
-</div>
 </div>

@@ -11,6 +11,6 @@ if (!in_array($action, array('list', 'add', 'edit', 'details', 'login'))) {
 require __DIR__ . '/controllers/clients/' . $action . '.php';
 require __DIR__ . '/views/header.php';
 require __DIR__ . '/views/navbar.php';
-// require __DIR__ . '/views/sidebar.php';
+require __DIR__ . '/views/sidebar.php';
 require __DIR__ . '/views/clients/' . $action . '.php';
 require __DIR__ . '/views/footer.php';

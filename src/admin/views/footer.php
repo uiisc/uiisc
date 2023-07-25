@@ -1,3 +1,6 @@
+</div><!-- col-sm-9 col-md-9 col-lg-10 end -->
+</div><!-- row page-wrapper end -->
+</div><!-- container-fluid end -->
 
     <footer class="footer navbar navbar-default navbar-fixed-bottom">
         <div class="container">

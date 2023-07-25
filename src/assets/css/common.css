@@ -33,8 +33,15 @@ button {
     border: 1px solid #ddd;
 }
 
-.page-breadcrumb {
+.page-wrapper {
     margin-top: 20px;
+}
+
+.sidebar {
+    max-width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .mb-10 {
@@ -141,7 +148,7 @@ button {
 .footer .co {
     display: inline-block;
 }
-
+/* 
 pre,
 .badge,
 .breadcrumb,
@@ -156,4 +163,4 @@ pre,
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-}
+} */

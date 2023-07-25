@@ -14,6 +14,6 @@ $PageInfo['title'] = 'Ticket ' . ucfirst($action);
 require __DIR__ . '/controllers/tickets/' . $action . '.php';
 require __DIR__ . '/views/header.php';
 require __DIR__ . '/views/navbar.php';
-// require __DIR__ . '/views/sidebar.php';
+require __DIR__ . '/views/sidebar.php';
 require __DIR__ . '/views/tickets/' . $action . '.php';
 require __DIR__ . '/views/footer.php';
