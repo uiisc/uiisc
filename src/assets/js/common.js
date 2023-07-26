@@ -1,4 +1,5 @@
 $(".language-change-click").click(function (x) {
+    // console.log('language-change-click');
     change_language(x.target.dataset.language);
 })
 
@@ -12,9 +13,9 @@ if (document.getElementsByName("jump-ifastnet").length) {
 
 function change_language(lang) {
     setCookie('lang', lang, 10, '/', site_domain, false);
-    console.log(cur_lang, lang)
+    // console.log(cur_lang, lang);
     if (cur_lang != lang) {
-        // to reload after changed
+        // console.log('to reload after changed');
         window.location.href = window.location.href;
     }
 }

@@ -17,7 +17,7 @@ if (!defined('IN_CRONLITE')) {
         <div class="panel-heading">
             <div class="pull-right">
                 <a href="./" class="btn btn-primary btn-xs">
-                    <i class="fa fa-home"></i> <?php echo $lang->I18N('Return'); ?>
+                    <i class="fa fa-tachometer-alt"></i> <?php echo $lang->I18N('Return'); ?>
                 </a>
             </div>
             <span class="panel-title"><?php echo $lang->I18N('System Settings'); ?></span>

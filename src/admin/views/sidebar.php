@@ -7,9 +7,9 @@
             <?php echo $AdminInfo['admin_fname'] . " " . $AdminInfo['admin_lname']; ?>
         </a>
     </div> -->
-    <div class="sidebar">
+    <div class="sidebar hidden-sm hidden-xs">
         <div class="panel panel-default">
-            <div class="panel-heading"><span class="panel-title">菜单</span></div>
+            <!-- <div class="panel-heading"><span class="panel-title">菜单</span></div> -->
             <div class="list-group">
                 <a class="list-group-item <?php echo checkIfActive('index,') ?>" href="index.php"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Dashboard'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('clients') ?>" href="clients.php"><i class="fa fa-users fa-fw"></i> <?php echo $lang->I18N('Clients List'); ?></a>
@@ -22,15 +22,18 @@
                 <a class="list-group-item <?php echo checkIfActive('ssl-provider') ?>" href="ssl-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Provider'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('domain-provider') ?>" href="domain-provider.php"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Domain Provider'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('settings') ?>" href="settings.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('System Settings'); ?></a>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="list-group">
                 <a class="list-group-item" href="#" onclick="return logout();"><i class="fa fa-sign-out-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('logout'); ?></a>
             </div>
         </div>
-    </div>
-
-    <div class="sidebar-footer">
-        <p class="copyright text-center">
-            &copy; <?php echo date("Y") ?> <a target="_blank" href="https://uiisc.org">UIISC</a> All rights reserved.
-        </p>
+        <div class="panel panel-default sidebar-footer">
+            <div class="list-group">
+                <div class="list-group-item copyright text-center">&copy; <?php echo date("Y") ?> <a target="_blank" href="https://uiisc.org">UIISC</a></div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="col-sm-9 col-md-9 col-lg-10">

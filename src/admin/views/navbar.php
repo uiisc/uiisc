@@ -24,21 +24,11 @@
                     <li class="<?php echo checkIfActive('tickets') ?>">
                         <a href="tickets.php"><i class="fa fa-ticket-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Tickets List'); ?></a>
                     </li>
-                    <li class="<?php echo checkIfActive('ssl') ?>">
-                        <a href="ssl.php"><i class="fa fa-shield-alt" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
-                    </li>
-                    <li class="<?php echo checkIfActive('settings'); ?>">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-cog fa-fw"></i> <?php echo $lang->I18N('Settings'); ?> <b class="caret"></b>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="changelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="fa fa-language"></span> <?php echo $lang->get_language_name(); ?> <b class="caret"></b>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="knowledgebase.php"><i class="fa fa-book fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Knowledgebase'); ?></a></li>
-                            <li><a href="news.php"><i class="fa fa-newspaper fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('News List'); ?></a></li>
-                            <li><a href="hosting-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Provider'); ?></a></li>
-                            <li><a href="ssl-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Provider'); ?></a></li>
-                            <li><a href="domain-provider.php"><i class="fa fa-globe fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Domain Provider'); ?></a></li>
-                            <li><a href="settings.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('System Settings'); ?></a></li>
-                        </ul>
+                        <ul class="dropdown-menu language-change"><?php echo $lang->get_languages_tags(); ?></ul>
                     </li>
                     <li class="<?php echo checkIfActive('profile'); ?>">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
