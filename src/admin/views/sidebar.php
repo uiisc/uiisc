@@ -11,11 +11,12 @@
         <div class="panel panel-default">
             <!-- <div class="panel-heading"><span class="panel-title">菜单</span></div> -->
             <div class="list-group">
-                <a class="list-group-item <?php echo checkIfActive('index,') ?>" href="index.php"><i class="fa fa-tachometer-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Dashboard'); ?></a>
+                <a class="list-group-item <?php echo checkIfActive('index,') ?>" href="index.php"><i class="fa fa-tachometer-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Dashboard'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('clients') ?>" href="clients.php"><i class="fa fa-users fa-fw"></i> <?php echo $lang->I18N('Clients List'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('accounts') ?>" href="accounts.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Accounts'); ?></a>
-                <a class="list-group-item <?php echo checkIfActive('tickets') ?>" href="tickets.php"><i class="fa fa-ticket-alt" aria-hidden="true"></i> <?php echo $lang->I18N('Tickets List'); ?></a>
-                <a class="list-group-item <?php echo checkIfActive('ssl') ?>" href="ssl.php"><i class="fa fa-shield-alt" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
+                <a class="list-group-item <?php echo checkIfActive('tickets') ?>" href="tickets.php"><i class="fa fa-ticket-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Tickets List'); ?></a>
+                <a class="list-group-item <?php echo checkIfActive('ssl') ?>" href="ssl.php"><i class="fa fa-shield-alt fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('SSL Certificates'); ?></a>
+                <a class="list-group-item <?php echo checkIfActive('emails') ?>" href="emails.php"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Emails List'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('knowledgebase') ?>" href="knowledgebase.php"><i class="fa fa-book fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Knowledgebase'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('news') ?>" href="news.php"><i class="fa fa-newspaper fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('News List'); ?></a>
                 <a class="list-group-item <?php echo checkIfActive('hosting-provider') ?>" href="hosting-provider.php"><i class="fa fa-server fa-fw" aria-hidden="true"></i> <?php echo $lang->I18N('Hosting Provider'); ?></a>
