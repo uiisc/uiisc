@@ -101,7 +101,7 @@
     <div class="panel panel-danger">
         <div class="list-group">
             <div class="list-group-item">
-                <span class="fa fa-paper-plane fa-fw"></span> <b><?php echo $lang->I18N('Quick Link'); ?></b>&nbsp;
+                <span class="fa fa-paper-plane fa-fw"></span> <b><?php echo $lang->I18N('Shortcuts'); ?></b>&nbsp;
                 <a href="settings.php" class="btn btn-info btn-xs">Settings</a>&nbsp;&nbsp;
                 <a href="<?php echo $site_url; ?>" class="btn btn-xs btn-info" target="_blank"><?php echo $lang->I18N('home'); ?></a>&nbsp;&nbsp;
                 <a href="<?php echo setURL('contact'); ?>" class="btn btn-xs btn-info" target="_blank"><?php echo $lang->I18N('contact'); ?></a>&nbsp;&nbsp;
