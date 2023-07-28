@@ -217,7 +217,6 @@ DROP TABLE IF EXISTS `pre_tickets`;
 CREATE TABLE `pre_tickets` (
   `ticket_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `ticket_client_id` int(11) NOT NULL,
-  `ticket_unique_id` int(6) NOT NULL,
   `ticket_subject` varchar(50) NOT NULL,
   `ticket_email` varchar(100) NOT NULL,
   `ticket_department` varchar(10) NOT NULL,

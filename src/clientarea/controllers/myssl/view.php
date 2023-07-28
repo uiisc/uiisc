@@ -2,7 +2,7 @@
 
 $ssl_id = get('ssl_id');
 
-require_once ROOT . '/core/handler/SSLHandler.php';
+$SSLApi = $DB->find('ssl_api', '*', array('api_key' => 'GOGETSSL'), null, 1);
 require_once ROOT . '/modules/GoGetSSL/GoGetSSLApi.php';
 
 $apiClient = new GoGetSSLApi();
