@@ -21,5 +21,5 @@
     </div>
 </div>
 <script type="text/javascript">
-    // document.getElementById('account_ogin').submit(); // SUBMIT FORM
+    document.getElementById('account_ogin').submit(); // SUBMIT FORM
 </script>

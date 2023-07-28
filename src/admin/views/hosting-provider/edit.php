@@ -25,7 +25,7 @@ if (!defined('IN_CRONLITE')) {
             </div>
             <span class="panel-title"><?php echo $PageInfo['title']; ?> ID: <?php echo $data['api_id']; ?></span>
         </div>
-        <form action="controllers/hosting/edit.php" method="post">
+        <form action="controllers/hosting-provider/edit.php" method="post">
             <input type="hidden" name="api_id" value="<?php echo $data['api_id']; ?>" style="display:none;">
             <div class="panel-body">
                 <div class="row">

@@ -18,7 +18,7 @@ if (!defined('IN_CRONLITE')) {
             </div>
             <span class="panel-title"><?php echo $PageInfo['title']; ?></span>
         </div>
-        <form action="controllers/hosting/add.php" method="post">
+        <form action="controllers/hosting-provider/add.php" method="post">
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-6">
@@ -104,7 +104,7 @@ if (!defined('IN_CRONLITE')) {
                     <div class="col-md-12">
                         <div class="mb-10 px-10">
                             <label class="form-label">API Callback URL</label>
-                            <input type="text" class="form-control" value="<?php echo $site_url ?>/callback/[Hosting Key]/[API Callback Token]" readonly>
+                            <input type="text" class="form-control" value="<?php echo $site_url ?>/callback/[Provider Type][Hosting Key]/[API Callback Token]" readonly>
                         </div>
                     </div>
                 </div>

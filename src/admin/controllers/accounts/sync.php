@@ -48,4 +48,4 @@ if (count($DomainList) > 0) {
     $sql = "INSERT INTO `pre_account_domain` (domain_name,domain_account_id) VALUES " . implode(',', $DomainList);
     $result = $DB->query($sql);
 }
-redirect('admin/accounts', '', array('action' => 'view', 'account_id' => $account_id));
+redirect('admin/accounts', '', array('action' => 'details', 'account_id' => $account_id));
