@@ -9,8 +9,8 @@ if ($count > 0) {
 }
 
 $status_types = array(
-    "关闭",
-    "打开",
+    "未查看",
+    "已查看",
 );
 
 $PageInfo['title'] = $lang->I18N('Emails List');

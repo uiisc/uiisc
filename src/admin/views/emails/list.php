@@ -35,7 +35,7 @@ if (!defined('IN_CRONLITE')) {
                         <td><?php echo $value['email_id']; ?></td>
                         <td><?php echo $value['email_client_id']; ?></td>
                         <td><?php echo $value["email_subject"]; ?></td>
-                        <td><?php echo $status_types[$value['email_status']]; ?></td>
+                        <td><?php echo $status_types[$value['email_read']]; ?></td>
                         <td><?php echo $value["email_date"]; ?></td>
                         <td>
                             <a href="emails.php?action=view&id=<?php echo $value['email_id']; ?>" class="btn btn-primary btn-xs"><i class="fa fa-info-circle"></i> <?php echo $lang->I18N('details'); ?></a>
