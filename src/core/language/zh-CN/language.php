@@ -138,6 +138,8 @@ return array(
     'Account Settings'    => '账户配置',
     'System Settings'     => '系统配置',
     'Control Panel'       => '控制面板',
+    'Primary Domain'        => '主域名',
+    'Set As Primary Domain' => '设为主域名',
     'File Manager'        => '文件管理',
     'Company Name'        => '公司名称',
     'Company'             => '公司',

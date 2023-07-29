@@ -37,6 +37,7 @@ if ($AccountInfo['account_status'] == 1) {
     $DomainList = array();
 }
 if (count($DomainList) > 0) {
+    // import all domains
     foreach($DomainList as &$item) {
         // 格式 ("abc.com",1234)
         $item = '("' . $item . '",' .$account_id . ')';

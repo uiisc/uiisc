@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="d-flex justify-content-between align-items-center">
-                        <b>Main Domain:</b>
+                        <b><?php echo $lang->I18N('Primary Domain'); ?>: </b>
                         <span><?php echo $AccountInfo['account_domain']; ?></span>
                     </div>
                 </div>
@@ -152,7 +152,10 @@
             <ul class="list-group">
             <?php foreach ($AccountDomainList as $domain): ?>
                 <li class="list-group-item">
-                    <span class="pull-right"><a href="accounts.php?action=goftp&account_id=<?php echo $account_id; ?>&domain=<?php echo $domain['domain_name']; ?>" target="_blank"><i class="fa fa-file-import"></i></a></span>
+                    <span class="pull-right">
+                        <button class="btn btn-info btn-xs" onclick="setPrimaryDomain(<?php echo $account_id; ?>, '<?php echo $domain['domain_name']; ?>');"><i class="fa fa-globe"></i> <?php echo $lang->I18N('Set As Primary Domain'); ?></button>
+                        <a class="btn btn-primary btn-xs" href="accounts.php?action=goftp&account_id=<?php echo $account_id; ?>&domain=<?php echo $domain['domain_name']; ?>" target="_blank"><i class="fa fa-file-import"></i> <?php echo $lang->I18N('File Manager'); ?></a>
+                    </span>
                     <a href="http://<?php echo $domain['domain_name']; ?>" target="_blank" ref="noreferrer noopener"><?php echo $domain['domain_name']; ?></a>
                 </li>
                 <?php endforeach; ?>
@@ -164,3 +167,40 @@
         <?php endif; ?>
     </div>
 </div>
+
+<script>
+    function setPrimaryDomain(account_id, domain) {
+        layer.confirm('将 ' + domain + ' 设置为主域名 ?', {
+            icon: 3,
+            btn: ['确定', '取消']
+        }, function() {
+            var ii = layer.load(2);
+            $.ajax({
+                type: 'POST',
+                url: 'api/accounts.php?act=primary-domain',
+                dataType: 'json',
+                data: {
+                    account_id: account_id,
+                    domain: domain
+                },
+                success: function(data) {
+                    layer.close(ii);
+                    if (data.code == 200) {
+                        layer.msg('主域设置成功');
+                        setTimeout(function() {
+                            window.location.href = window.location.href;
+                        }, 500);
+                    } else {
+                        layer.alert(data.msg, {
+                            icon: 1
+                        });
+                    }
+                },
+                error: function(data) {
+                    layer.close(ii);
+                    layer.msg('服务器错误');
+                }
+            });
+        });
+    }
+</script>

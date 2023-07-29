@@ -7,7 +7,7 @@
             <?php echo $AdminInfo['admin_fname'] . " " . $AdminInfo['admin_lname']; ?>
         </a>
     </div> -->
-    <div class="sidebar hidden-sm hidden-xs">
+    <div class="sidebar hidden-xs">
         <div class="panel panel-default">
             <!-- <div class="panel-heading"><span class="panel-title">菜单</span></div> -->
             <div class="list-group">

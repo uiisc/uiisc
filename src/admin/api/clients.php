@@ -35,6 +35,7 @@ switch ($act) {
         } else {
             send_response(-1, $msg = 'error');
         }
+        break;
     case 'edit':
         $client_id = post('client_id');
         $client_password = post('client_password', '');
@@ -65,6 +66,7 @@ switch ($act) {
         } else {
             send_response(-1, $msg = 'error');
         }
+        break;
     default:
         send_response(-4, $msg = 'No Act');
         break;
