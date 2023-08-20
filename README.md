@@ -1,5 +1,7 @@
 # UIISC
 
+English | [简体中文](README-zh.md)
+
 An Open Source Web Hosting Account and Support Management System for MyOwnFreeHost
 
 - Demo : [demo.uiisc.com](http://demo.uiisc.com)
