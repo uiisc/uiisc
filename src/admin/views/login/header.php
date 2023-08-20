@@ -18,8 +18,8 @@
     <link rel="icon" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
     <link rel="shortcut" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
 
-    <link href="<?php echo $site_url; ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_cdnpublic; ?>/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_cdnpublic; ?>/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/theme.switcher/css/auto.css" id="theme" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="<?php echo $site_url; ?>/assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!-- <link href="<?php echo $site_url; ?>/assets/css/admin.css" rel="stylesheet" /> -->

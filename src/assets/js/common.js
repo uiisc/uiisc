@@ -1,3 +1,5 @@
+themeSelectorInit('theme-selector');
+
 $(".language-change-click").click(function (x) {
     // console.log('language-change-click');
     change_language(x.target.dataset.language);

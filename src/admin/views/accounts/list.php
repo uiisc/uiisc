@@ -31,8 +31,16 @@
 <?php if ($count > 0): ?>
 <?php foreach ($rows as $row): ?>
                 <tr>
-                    <td><?php echo $row['account_id'];?></td>
-                    <td><?php echo $row['account_client_id']; ?></td>
+                    <td>
+                        <a href="accounts.php?action=details&account_id=<?php echo $row['account_id']; ?>">
+                            <?php echo $row['account_id']; ?>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="clients.php?action=details&id=<?php echo $row['account_client_id']; ?>">
+                            <?php echo $row['account_client_id']; ?>
+                        </a>
+                    </td>
                     <td>
                         <a href="hosting-provider.php?action=details&api_key=<?php echo $row['account_api_key']; ?>">
                             <?php echo $row['account_api_key']; ?>

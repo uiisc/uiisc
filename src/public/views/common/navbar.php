@@ -14,11 +14,11 @@ if (!defined('IN_CRONLITE')) {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo SITEURL;?>"><?php echo $SiteConfig['site_brand']; ?></a>
+                <a class="navbar-brand" href="<?php echo SITE_URL;?>"><?php echo $SiteConfig['site_brand']; ?></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?php echo SITEURL;?>"><?php echo $lang->I18N('home'); ?></a></li>
+                    <li><a href="<?php echo SITE_URL;?>"><?php echo $lang->I18N('home'); ?></a></li>
                     <li><a href="<?php echo setURL('solution');?>"><?php echo $lang->I18N('solution'); ?></a></li>
                     <li><a href="<?php echo setURL('support');?>"><?php echo $lang->I18N('support'); ?></a></li>
                     <li class="dropdown">
@@ -45,11 +45,6 @@ if (!defined('IN_CRONLITE')) {
                     <li><a href="<?php echo setURL('clientarea/index');?>"><?php echo $lang->I18N('clientarea'); ?></a></li>
                     <li>
                         <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
-                        <script type="text/javascript">
-                            var sel = document.getElementById('theme-selector');
-                            sel.className = getThemeClasses(getTheme());
-                            sel.onclick = themeSelectorClicked;
-                        </script>
                     </li>
                 </ul>
             </div>

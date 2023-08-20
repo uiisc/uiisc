@@ -1,8 +1,8 @@
 <?php
 
-// ini_set('display_errors', 'On');
-// error_reporting(E_ALL);
-// error_reporting(-1);
+ini_set('display_errors', 'On');
+error_reporting(E_ALL);
+error_reporting(-1);
 
 if (defined('IN_CRONLITE')) {
     exit('Access Denied');
@@ -63,7 +63,7 @@ if (isset($_SERVER['PATH_INFO'])) {
 }
 
 define('SITE_DOMAIN', $site_domain);
-define('SITEURL', $site_url);
+define('SITE_URL', $site_url);
 
 include_once ROOT . '/data/config.php';
 include_once __DIR__ . '/library/functions.php';
@@ -91,7 +91,11 @@ if ($DB->query("SELECT * FROM `pre_admin` WHERE 1") == false) {
     exit();
 }
 
-$PageInfo = array('title' => 'UIISC', 'rel' => '');
+$PageInfo = array(
+    'title' => 'UIISC',
+    'rel' => '',
+    'body_before' => ''
+);
 
 // $CACHE = new \lib\Cache();
 // $conf = $CACHE->pre_fetch();
@@ -118,14 +122,16 @@ if (!file_exists(ROOT . '/data/install.lock') && file_exists(ROOT . '/install/in
 }
 
 // if ($conf['cdnpublic'] == 1) {
-//     $cdnpublic = '//lib.baomitu.com/';
+//     $site_cdnpublic = '//lib.baomitu.com/';
 // } elseif ($conf['cdnpublic'] == 2) {
-//     $cdnpublic = 'https://cdn.bootcdn.net/ajax/libs/';
+//     $site_cdnpublic = 'https://cdn.bootcdn.net/ajax/libs/';
 // } elseif ($conf['cdnpublic'] == 4) {
-//     $cdnpublic = '//s1.pstatp.com/cdn/expire-1-M/';
+//     $site_cdnpublic = '//s1.pstatp.com/cdn/expire-1-M/';
 // } else {
-//     $cdnpublic = '//cdn.staticfile.org/';
+//     $site_cdnpublic = '//cdn.staticfile.org/';
 // }
+
+$site_cdnpublic = $site_url . '/assets/';
 
 $SiteConfig = $DB->find('config', '*', array('site_key' => 'UIISC'));
 

@@ -1,6 +1,12 @@
 // theme Selector Switcher
 linkLoader(getTheme());
 
+function themeSelectorInit(eleId) {
+    var sel = document.getElementById(eleId);
+    sel.className = getThemeClasses(getTheme());
+    sel.onclick = themeSelectorClicked;
+}
+
 function themeSelectorClicked() {
     var next = nextTheme(getTheme());
     linkLoader(next);

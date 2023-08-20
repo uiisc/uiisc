@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<script src="<?php echo $site_url; ?>/assets/jquery/jquery.min.js"></script>
+<script src="<?php echo $site_cdnpublic; ?>jquery/1.12.4/jquery.min.js"></script>
 <script src="<?php echo $site_url; ?>/assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
 <script src="<?php echo $site_url; ?>/assets/js/common.js"></script>
 

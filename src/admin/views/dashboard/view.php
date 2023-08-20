@@ -1,4 +1,13 @@
+<?php
+if (!defined('IN_CRONLITE')) {
+    exit;
+}
 
+require ROOT_ADMIN . '/views/header.php';
+require ROOT_ADMIN . '/views/navbar.php';
+require ROOT_ADMIN . '/views/sidebar.php';
+
+?>
 <div class="content-wrapper">
     <div class="row">
         <div class="col-lg-3 col-md-6">
@@ -10,7 +19,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">
-                                <span id="count_client"><?php echo $count_client; ?></span>/<span class="count-all" id="count_clients"><?php echo $count_clients; ?></span>
+                                <span id="count_client"></span>/<span class="count-all" id="count_clients"></span>
                             </div>
                             <div>客户数量</div>
                         </div>
@@ -34,7 +43,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">
-                                <span id="count_account"><?php echo $count_account; ?></span>/<span class="count-all" id="count_accounts"><?php echo $count_accounts; ?></span>
+                                <span id="count_account"></span>/<span class="count-all" id="count_accounts"></span>
                             </div>
                             <div>账户数量</div>
                         </div>
@@ -58,7 +67,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">
-                                <span id="count_ticket"><?php echo $count_ticket; ?></span>/<span class="count-all" id="count_tickets"><?php echo $count_tickets; ?></span>
+                                <span id="count_ticket"></span>/<span class="count-all" id="count_tickets"></span>
                             </div>
                             <div>工单数量</div>
                         </div>
@@ -82,7 +91,7 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge">
-                                <span id="count_ssl"><?php echo $count_ssl; ?></span>/<span class="count-all" id="count_ssls"><?php echo $count_ssls; ?></span>
+                                <span id="count_ssl"></span>/<span class="count-all" id="count_ssls"></span>
                             </div>
                             <div>证书数量</div>
                         </div>
@@ -144,3 +153,41 @@
         </div>
     </div>
 </div>
+
+<?php
+require ROOT_ADMIN . '/views/footer.php';
+?>
+
+<script>
+    $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "api/dashboard.php?act=stat",
+            dataType: 'json',
+            async: true,
+            success: function(res) {
+                var data = res.data;
+                $('#count_client').html(data.count_client);
+                $('#count_clients').html(data.count_clients);
+                $('#count_account').html(data.count_account);
+                $('#count_accounts').html(data.count_accounts);
+                $('#count_ssl').html(data.count_ssl);
+                $('#count_ssls').html(data.count_ssls);
+                $('#count_ticket').html(data.count_ticket);
+                $('#count_tickets').html(data.count_tickets);
+            }
+        });
+        // check update
+        // $.ajax({
+        //     url: '<?php // echo $checkupdate ?>',
+        //     type: 'get',
+        //     dataType: 'jsonp',
+        //     jsonpCallback: 'callback'
+        // }).done(function(data){
+        //     $("#checkupdate").html(data.msg);
+        // });
+    });
+</script>
+
+</body>
+</html>

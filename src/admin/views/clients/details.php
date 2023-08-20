@@ -30,37 +30,40 @@
                     <td><?php echo $ClientInfo['client_fname']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Last Name'); ?></b></td><td><?php echo $ClientInfo['client_lname']; ?></td>
+                    <td><?php echo $lang->I18N('Last Name'); ?></td><td><?php echo $ClientInfo['client_lname']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Email Address'); ?></b></td><td><?php echo $ClientInfo['client_email']; ?></td>
+                    <td><?php echo $lang->I18N('Email Address'); ?></td><td><?php echo $ClientInfo['client_email']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Phone Number'); ?></b></td><td><?php echo $ClientInfo['client_phone']; ?></td>
+                    <td><?php echo $lang->I18N('Phone Number'); ?></td><td><?php echo $ClientInfo['client_phone']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Billing Address'); ?></b></td><td><?php echo $ClientInfo['client_address']; ?></td>
+                    <td><?php echo $lang->I18N('Billing Address'); ?></td><td><?php echo $ClientInfo['client_address']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Company'); ?></b></td><td><?php echo $ClientInfo['client_company']; ?></td>
+                    <td><?php echo $lang->I18N('Company'); ?></td><td><?php echo $ClientInfo['client_company']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Country'); ?></b></td><td><?php echo $CountryName; ?></td>
+                    <td><?php echo $lang->I18N('Country'); ?></td><td><?php echo $CountryName; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('City'); ?></b></td><td><?php echo $ClientInfo['client_city']; ?></td>
+                    <td><?php echo $lang->I18N('City'); ?></td><td><?php echo $ClientInfo['client_city']; ?></td>
                 </tr>
                 <tr>
-                    <td><b>Postal Code</b></td><td><?php echo $ClientInfo['client_pcode']; ?></td>
+                    <td>Postal Code</td><td><?php echo $ClientInfo['client_pcode']; ?></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('Hosting Accounts'); ?></b></td><td><?php echo $count_account; ?></td>
+                    <td><?php echo $lang->I18N('Hosting Accounts'); ?></td>
+                    <td><a href="<?php echo setURL('admin/accounts', '', array('action' => 'list', 'client_id' => $ClientInfo['client_id'])); ?>"><?php echo $count_account; ?></a></td>
                 </tr>
                 <tr>
-                    <td><b><?php echo $lang->I18N('SSL Certificates'); ?></b></td><td><?php echo $count_ssl; ?></td>
+                    <td><?php echo $lang->I18N('SSL Certificates'); ?></td>
+                    <td><a href="<?php echo setURL('admin/ssl', '', array('action' => 'list', 'client_id' => $ClientInfo['client_id'])); ?>"><?php echo $count_ssl; ?></a></td>
                 </tr>
                 <tr>
-                    <td><b>Support Tickets</b></td><td><?php echo $count_tickets; ?></td>
+                    <td>Support Tickets</td>
+                    <td><a href="<?php echo setURL('admin/tickets', '', array('action' => 'list', 'client_id' => $ClientInfo['client_id'])); ?>"><?php echo $count_tickets; ?></a></td>
                 </tr>
             </table>
         </div>

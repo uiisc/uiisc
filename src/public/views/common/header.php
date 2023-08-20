@@ -30,8 +30,9 @@ if (!defined('IN_CRONLITE')) {
     <meta name="google-site-verification" content="<?php echo $google_site_verification; ?>" />
 <?php endif; ?>
     <link href="assets/image/favicon.ico?_=<?php echo $static_release; ?>" rel="icon" />
-    <link href="assets/bootstrap/css/bootstrap.min.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_cdnpublic; ?>font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/theme.switcher/css/auto.css" id="theme" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
     <!--[if lt IE 9]>

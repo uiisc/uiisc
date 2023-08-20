@@ -52,23 +52,3 @@ if (!defined('IN_CRONLITE')) {
         </div>
     </div>
 </div>
-
-<!-- <script type="text/javascript">
-        $('.check-domain').click(function () {
-            var domain = $('#domainInput').val()
-            if (domain) {
-                $.ajax({
-                    method: 'post',
-                    url: 'https://api.croidc.cn/mofh/DomainCheck',
-                    dataType: 'json',
-                    contentType : "application/json",
-                    data: JSON.stringify({
-                    domain: domain
-                    }),
-                    success: function (x) {
-                    console.log(x);
-                    }
-                })
-            }
-        })
-    </script> -->

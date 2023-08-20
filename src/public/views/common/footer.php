@@ -9,7 +9,7 @@ if (!defined('IN_CRONLITE')) {
         <div class="navbar-inner navbar-content-center" style="padding-top:15px;">
             <ul class="navbar-left list-inline text-center text-muted credit">
                 <li>
-                    <span class="co">&copy;&nbsp;<?php echo $SiteConfig['site_build_year']; ?>-<?php echo date("Y"); ?>&nbsp;<a href="<?php echo SITEURL;?>"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
+                    <span class="co">&copy;&nbsp;<?php echo $SiteConfig['site_build_year']; ?>-<?php echo date("Y"); ?>&nbsp;<a href="<?php echo SITE_URL;?>"><?php echo $SiteConfig['site_brand']; ?></a>&nbsp;</span>
                     <span class="co">&nbsp;Powered by <a href="https://uiisc.org" target="_blank">UIISC</a>&nbsp;</span>
                     <span class="co">&nbsp;Partnered with <a href="https://ifastnet.com/" name="jump-ifastnet" target="_blank">iFastNet</a>&nbsp;</span>
                     <span>time: <?php echo get_execution_time();?>s</span>
@@ -30,8 +30,8 @@ if (!defined('IN_CRONLITE')) {
         </div>
     </div>
 </footer>
-<script src="assets/jquery/jquery.min.js?_=<?php echo $static_release; ?>"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
+<script src="<?php echo $site_cdnpublic; ?>jquery/1.12.4/jquery.min.js"></script>
+<script src="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 <?php if (!empty($google_site_verification)) { include("google_analytics.php");} ?>
 

@@ -21,7 +21,7 @@
     <?php echo $PageInfo['rel']; ?>
 
     <link href="<?php echo $site_url; ?>/assets/css/halfmoon.min.css" rel="stylesheet" />
-    <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_cdnpublic; ?>font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/css/style.css" rel="stylesheet" />
     <script type="text/javascript">
         var site_domain = "<?php echo $site_domain; ?>";

@@ -27,7 +27,9 @@
 <?php if ($count > 0): ?>
 <?php foreach ($rows as $value): ?>
                 <tr>
-                    <td><?php echo $value['client_id']; ?></td>
+                    <td>
+                        <a href="clients.php?action=details&id=<?php echo $value['client_id']; ?>"><?php echo $value['client_id']; ?></a>
+                    </td>
                     <td><?php echo $value['client_fname'] . " " . $value['client_lname']; ?></td>
                     <td><?php echo $value['client_email']; ?></td>
                     <td><?php echo $value['client_phone']; ?></td>

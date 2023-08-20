@@ -13,11 +13,6 @@
                     <li><a href="<?php echo setURL('about');?>" target="_blank"><?php echo $lang->I18N('about'); ?></a></li>
                     <li>
                         <a href="#" aria-hidden="true"><i id="theme-selector"></i></a>
-                        <script type="text/javascript">
-                            var sel = document.getElementById('theme-selector');
-                            sel.className = getThemeClasses(getTheme());
-                            sel.onclick = themeSelectorClicked;
-                        </script>
                     </li>
                     <li class="dropup">
                         <div class="dropdown-toggle" id="changelanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -32,9 +27,9 @@
     </footer>
     <div id="hidden-area"><?php getMessage(); ?></div>
 
-    <script src="<?php echo $site_url; ?>/assets/jquery/jquery.min.js"></script>
-    <script src="<?php echo $site_url; ?>/assets/bootstrap/js/bootstrap.min.js?_=<?php echo $static_release; ?>"></script>
+    <script src="<?php echo $site_cdnpublic; ?>/jquery/1.12.4/jquery.min.js"></script>
+    <script src="<?php echo $site_cdnpublic; ?>/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="<?php echo $site_url; ?>/assets/layer/layer.js"></script>
-    <script src="<?php echo $site_url; ?>/assets/js/common.js"></script>
+    <script src="<?php echo $site_url; ?>/assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 </body>
 </html>

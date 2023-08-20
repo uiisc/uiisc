@@ -13,24 +13,26 @@
     <meta name="keywords" content="<?php echo $page_keywords; ?>" />
     <meta name="author" content="UIISC" />
     <meta name="copyright" content="® CROGRAM" />
-
+    <!-- Site info -->
     <title><?php echo $PageInfo['title']; ?> - <?php echo $lang->I18N('AdminArea'); ?> - <?php echo $SiteConfig['site_name']; ?></title>
     <link rel="icon" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
     <link rel="shortcut" type="image/x-icon" href="<?php echo $site_url; ?>/assets/image/favicon.ico">
-
-    <link href="<?php echo $site_url; ?>/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="<?php echo $site_url; ?>/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Style -->
+    <link href="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="<?php echo $site_cdnpublic; ?>font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url; ?>/assets/theme.switcher/css/auto.css" id="theme" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="<?php echo $site_url; ?>/assets/css/common.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
-    <link href="<?php echo $site_url; ?>/assets/css/admin.css" rel="stylesheet" />
+    <link href="<?php echo $site_url; ?>/assets/css/admin.css?_=<?php echo $static_release; ?>" rel="stylesheet" />
+    <!-- Common JS -->
     <script type="text/javascript">
         var site_domain = "<?php echo $site_domain; ?>";
         var cur_lang = "<?php echo $lang->language_current; ?>";
         var ifastnet_aff = "<?php echo $ifastnet_aff; ?>";
     </script>
+    <script src="<?php echo $site_url; ?>/assets/theme.switcher/theme.switcher.js" type="text/javascript"></script>
+    <!-- Custom JS -->
     <?php echo $PageInfo['rel']; ?>
 
-    <script src="<?php echo $site_url; ?>/assets/theme.switcher/theme.switcher.js" type="text/javascript"></script>
 </head>
 
 <body>

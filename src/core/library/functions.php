@@ -384,7 +384,7 @@ function setRouter($module, $section = '', $param = array(), $anchor = '')
  */
 function setURL($module, $section = '', $param = array(), $anchor = '')
 {
-    return SITEURL . '/' . setRouter($module, $section, $param, $anchor);
+    return SITE_URL . '/' . setRouter($module, $section, $param, $anchor);
 }
 
 /** Determine if a variable is an email address
@@ -427,7 +427,7 @@ function logout()
 
 function email_build_body($title, $nickname, $content, $description = '')
 {
-    return '<div class="container" style="margin:20px 5px;font-family: Arial, Helvetica, sans-serif;">
+    return '<div style="margin:20px 5px;font-family: Arial, Helvetica, sans-serif;">
     <h2 style="text-align:center;"><b>' . $title . '</b></h2>
     <hr />
     <h3>Dear ' . $nickname . ',</h3>
@@ -440,7 +440,7 @@ function email_build_body($title, $nickname, $content, $description = '')
     <hr />
     <div style="text-align:center;">
         <p>Need our help ?</p>
-        <p><a href="' . setURL('clientarea/tickets', '', array('action' => 'add')) . '">We are here to help you out !</a></p>
+        <p><a href="' . setURL('clientarea/tickets', '', array('action' => 'add')) . '" target="_blank">We are here to help you out !</a></p>
         <p><b>UIISC</b></p>
     </div>
 </div>';
