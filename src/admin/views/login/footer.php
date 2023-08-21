@@ -27,9 +27,9 @@
     </footer>
     <div id="hidden-area"><?php getMessage(); ?></div>
 
-    <script src="<?php echo $site_cdnpublic; ?>/jquery/1.12.4/jquery.min.js"></script>
-    <script src="<?php echo $site_cdnpublic; ?>/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="<?php echo $site_url; ?>/assets/layer/layer.js"></script>
+    <script src="<?php echo $site_cdnpublic; ?>jquery/1.12.4/jquery.min.js"></script>
+    <script src="<?php echo $site_cdnpublic; ?>twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="<?php echo $site_cdnpublic; ?>layer/3.1.1/layer.js"></script>
     <script src="<?php echo $site_url; ?>/assets/js/common.js?_=<?php echo $static_release; ?>"></script>
 </body>
 </html>
